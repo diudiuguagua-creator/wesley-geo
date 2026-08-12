@@ -1,61 +1,71 @@
-const header = document.querySelector('[data-header]');
-const nav = document.querySelector('[data-nav]');
-const navToggle = document.querySelector('[data-nav-toggle]');
-const navLabel = navToggle?.querySelector('.sr-only');
-const dialog = document.querySelector('[data-wechat-dialog]');
-const copyStatus = document.querySelector('[data-copy-status]');
-const serviceMenus = document.querySelectorAll('[data-service-menu]');
+const nav = document.querySelector("[data-nav]");
+const navToggle = document.querySelector("[data-nav-toggle]");
+const navLabel = navToggle?.querySelector(".sr-only");
+const serviceMenus = document.querySelectorAll("[data-service-menu]");
+const dialog = document.querySelector("[data-wechat-dialog]");
 
-const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 12);
-updateHeader();
-window.addEventListener('scroll', updateHeader, { passive: true });
+const closeNavigation = () => {
+  nav?.classList.remove("is-open");
+  navToggle?.setAttribute("aria-expanded", "false");
+  document.body.classList.remove("nav-open");
+  if (navLabel) navLabel.textContent = "打开菜单";
+};
 
-navToggle?.addEventListener('click', () => {
-  const open = nav.classList.toggle('is-open');
-  navToggle.setAttribute('aria-expanded', String(open));
-  if (navLabel) navLabel.textContent = open ? '关闭菜单' : '打开菜单';
+navToggle?.addEventListener("click", () => {
+  const open = !nav?.classList.contains("is-open");
+  nav?.classList.toggle("is-open", open);
+  navToggle.setAttribute("aria-expanded", String(open));
+  document.body.classList.toggle("nav-open", open);
+  if (navLabel) navLabel.textContent = open ? "关闭菜单" : "打开菜单";
 });
 
-nav?.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    serviceMenus.forEach((menu) => menu.removeAttribute('open'));
-    nav.classList.remove('is-open');
-    navToggle?.setAttribute('aria-expanded', 'false');
-    if (navLabel) navLabel.textContent = '打开菜单';
+nav?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    serviceMenus.forEach((menu) => menu.removeAttribute("open"));
+    closeNavigation();
   });
 });
 
-document.addEventListener('click', (event) => {
+document.addEventListener("click", (event) => {
   serviceMenus.forEach((menu) => {
-    if (!menu.contains(event.target)) menu.removeAttribute('open');
+    if (!menu.contains(event.target)) menu.removeAttribute("open");
   });
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') serviceMenus.forEach((menu) => menu.removeAttribute('open'));
-});
-
-document.querySelectorAll('[data-wechat-open]').forEach((button) => {
-  button.addEventListener('click', () => {
-    nav?.classList.remove('is-open');
-    navToggle?.setAttribute('aria-expanded', 'false');
-    if (navLabel) navLabel.textContent = '打开菜单';
-    if (typeof dialog?.showModal === 'function') dialog.showModal();
-  });
-});
-
-document.querySelector('[data-wechat-close]')?.addEventListener('click', () => dialog.close());
-dialog?.addEventListener('click', (event) => {
-  if (event.target === dialog) dialog.close();
-});
-
-document.querySelector('[data-copy-wechat]')?.addEventListener('click', async () => {
-  try {
-    await navigator.clipboard.writeText('Wesleyb2b');
-    copyStatus.textContent = '已复制微信号。';
-  } catch {
-    copyStatus.textContent = '复制失败，请手动复制 Wesleyb2b。';
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    serviceMenus.forEach((menu) => menu.removeAttribute("open"));
+    closeNavigation();
   }
 });
 
-document.querySelector('[data-year]').textContent = new Date().getFullYear();
+document.querySelectorAll("[data-wechat-open]").forEach((button) => {
+  button.addEventListener("click", () => {
+    closeNavigation();
+    if (typeof dialog?.showModal === "function") dialog.showModal();
+  });
+});
+
+document
+  .querySelector("[data-wechat-close]")
+  ?.addEventListener("click", () => dialog?.close());
+dialog?.addEventListener("click", (event) => {
+  if (event.target === dialog) dialog.close();
+});
+
+document.querySelectorAll("[data-copy-wechat]").forEach((button) => {
+  button.addEventListener("click", async () => {
+    const scope = button.closest("[data-wechat-scope]") || document;
+    const status = scope.querySelector("[data-copy-status]");
+    try {
+      await navigator.clipboard.writeText("Wesleyb2b");
+      if (status) status.textContent = "已复制微信号 Wesleyb2b。";
+    } catch {
+      if (status) status.textContent = "复制失败，请手动复制 Wesleyb2b。";
+    }
+  });
+});
+
+document.querySelectorAll("[data-year]").forEach((node) => {
+  node.textContent = new Date().getFullYear();
+});

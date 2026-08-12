@@ -1,118 +1,675 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f8fc">
-  <title>外贸独立站建设与运营｜Wesley GEO</title>
-  <meta name="description" content="Wesley GEO 提供外贸 B2B 独立站建设与运营服务，从网站结构、页面表达、搜索基础到上线后的持续迭代。">
-  <link rel="canonical" href="https://wesleyb2b.online/independent-site">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/styles.css">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Service","name":"外贸独立站建设与运营","provider":{"@type":"Person","name":"Wesley","url":"https://wesleyb2b.online/"},"areaServed":"CN","url":"https://wesleyb2b.online/independent-site","description":"从网站结构、页面表达和搜索基础开始建设可持续迭代的外贸 B2B 独立站。"}
-  </script>
-</head>
-<body class="service-page">
-  <a class="skip-link" href="#main">跳到主要内容</a>
-  <header class="site-header" data-header>
-    <div class="shell header-inner">
-      <a class="brand" href="/" aria-label="Wesley GEO 首页"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Wesley <b>GEO</b></span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span class="sr-only">打开菜单</span><i></i><i></i></button>
-      <nav class="site-nav" id="site-nav" aria-label="主要导航" data-nav>
-        <details class="nav-services" data-service-menu><summary>服务 <span aria-hidden="true">⌄</span></summary><div class="nav-service-menu"><a href="/alibaba"><b>ALI</b><span>Alibaba 国际站</span></a><a href="/independent-site" aria-current="page"><b>WEB</b><span>外贸独立站</span></a><a href="/made-in-china"><b>MIC</b><span>中国制造网</span></a></div></details><a href="#scope">服务内容</a><a href="#fit">适合谁</a><a href="#faq">常见问题</a><button class="button button-small" type="button" data-wechat-open>微信咨询</button>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ecf2f6" />
+    <meta
+      name="robots"
+      content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+    />
+    <title>外贸独立站建设与运营｜结构、内容与SEO｜Wesley GEO</title>
+    <meta
+      name="description"
+      content="Wesley GEO 提供外贸 B2B 独立站建设与运营服务，从目标客户、站点地图和页面内容，到技术 SEO、上线检查与持续迭代，建设可长期积累的品牌和搜索资产。"
+    />
+    <link rel="canonical" href="https://wesleyb2b.online/independent-site" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Wesley GEO" />
+    <meta property="og:title" content="外贸独立站建设与运营｜Wesley GEO" />
+    <meta
+      property="og:description"
+      content="从站点地图、内容与技术 SEO 到上线后的持续迭代。"
+    />
+    <meta
+      property="og:url"
+      content="https://wesleyb2b.online/independent-site"
+    />
+    <meta property="og:image" content="https://wesleyb2b.online/og-cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Wesley GEO 外贸 B2B 代运营" />
+    <meta name="twitter:image" content="https://wesleyb2b.online/og-cover.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://wesleyb2b.online/#person",
+            "name": "Wesley",
+            "url": "https://wesleyb2b.online/"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://wesleyb2b.online/independent-site#webpage",
+            "url": "https://wesleyb2b.online/independent-site",
+            "name": "外贸独立站建设与运营",
+            "description": "从网站结构、页面内容、技术 SEO 到上线迭代的外贸 B2B 独立站服务。",
+            "inLanguage": "zh-CN"
+          },
+          {
+            "@type": "Service",
+            "@id": "https://wesleyb2b.online/independent-site#service",
+            "name": "外贸独立站建设与运营",
+            "serviceType": "外贸 B2B 独立站建设与运营服务",
+            "provider": { "@id": "https://wesleyb2b.online/#person" },
+            "url": "https://wesleyb2b.online/independent-site",
+            "description": "围绕目标客户、站点地图、页面内容、技术 SEO、上线检查和持续迭代开展的独立站服务。"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://wesleyb2b.online/independent-site#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "首页",
+                "item": "https://wesleyb2b.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "外贸独立站建设与运营",
+                "item": "https://wesleyb2b.online/independent-site"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://wesleyb2b.online/independent-site#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "可以只做外贸独立站建设，不做长期运营吗？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "可以根据项目范围只完成网站规划、建设和上线检查，也可以在上线后继续开展内容、SEO 和页面迭代。具体交付、维护责任和技术边界需要在开始前确认。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "外贸独立站上线后多久能获得 Google 流量？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "无法在不了解网站基础、市场竞争、内容质量和外部信号时给出可靠时间。技术 SEO 能帮助搜索引擎发现和理解页面，但不能保证排名或流量。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "企业需要为独立站准备哪些内容？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "至少需要确认目标客户、主营产品或服务、目标市场、真实产品资料、企业能力边界和公开联系方式。客户、认证、工厂与项目证据只能使用已确认并获得授权的内容。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "是否可以先做中文网站，以后再翻译成英文？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "可以分阶段推进，但目标市场页面不能依赖未经校对的直译。语言、关键词、买家问题和商业表达需要按实际市场重新确认，具体多语言范围应单独约定。"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="/" aria-label="Wesley GEO 首页"
+          ><span class="brand-mark" aria-hidden="true"
+            ><i></i><i></i><i></i></span
+          ><span>Wesley <b>GEO</b></span></a
+        ><button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          data-nav-toggle
+        >
+          <span class="sr-only">打开菜单</span><i></i><i></i>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="主要导航" data-nav>
+          <details class="nav-services" data-service-menu>
+            <summary>服务 <span aria-hidden="true">⌄</span></summary>
+            <div class="nav-service-menu">
+              <a href="/alibaba"
+                ><b>ALI</b
+                ><span
+                  ><strong>Alibaba 国际站</strong
+                  ><small>产品、关键词与数据复盘</small></span
+                ></a
+              ><a href="/independent-site" aria-current="page"
+                ><b>WEB</b
+                ><span
+                  ><strong>外贸独立站</strong
+                  ><small>结构、内容、SEO 与迭代</small></span
+                ></a
+              ><a href="/made-in-china"
+                ><b>MIC</b
+                ><span
+                  ><strong>中国制造网</strong
+                  ><small>产品信息与持续运营</small></span
+                ></a
+              >
+            </div>
+          </details>
+          <a href="/method">运营方法</a><a href="/insights">运营笔记</a
+          ><a href="/about">关于 Wesley</a
+          ><a class="button button-small" href="/contact">微信咨询</a>
+        </nav>
+      </div>
+    </header>
 
-  <main id="main">
-    <section class="service-hero">
-      <div class="shell service-hero-grid">
-        <div>
-          <nav class="breadcrumb" aria-label="面包屑"><a href="/">首页</a><span>/</span><a href="/#services">代运营服务</a><span>/</span><span>外贸独立站</span></nav>
-          <p class="eyebrow"><span></span> 服务 02 · INDEPENDENT SITE</p>
-          <h1>让独立站从“有页面”，走向<em>能持续积累。</em></h1>
-          <p class="hero-lead">先讲清产品、能力和客户问题，再建立页面与内容结构。网站上线不是结束，而是搜索、内容和转化迭代的开始。</p>
-          <div class="hero-actions"><button class="button" type="button" data-wechat-open>咨询独立站服务</button><a class="text-link" href="#scope">查看服务内容 <span aria-hidden="true">↘</span></a></div>
-          <ul class="service-proofline"><li>网站结构规划</li><li>页面与内容建设</li><li>搜索基础与迭代</li></ul>
-        </div>
-        <figure class="service-console web" aria-label="外贸独立站运营链路示意">
-          <figcaption class="console-top"><span>WEB SYSTEM / 02</span><b>SITE READY</b></figcaption>
-          <div class="console-flow">
-            <div class="flow-node"><span>01</span><div><strong>信息与页面结构</strong><small>让访客快速理解你是谁、做什么</small></div><i></i></div>
-            <div class="flow-node"><span>02</span><div><strong>搜索与内容入口</strong><small>围绕真实问题持续增加有效页面</small></div><i></i></div>
-            <div class="flow-node"><span>03</span><div><strong>访问与咨询反馈</strong><small>根据实际行为修正内容和路径</small></div><i></i></div>
+    <main id="main">
+      <section class="page-hero web">
+        <div class="shell page-hero-grid">
+          <div>
+            <nav class="breadcrumb" aria-label="面包屑">
+              <a href="/">首页</a><span>/</span
+              ><span>外贸独立站建设与运营</span>
+            </nav>
+            <p class="eyebrow">服务 02 · B2B WEBSITE</p>
+            <h1>
+              外贸独立站建设与运营：从网站结构、内容到 SEO <em>持续积累</em>
+            </h1>
+            <p class="lead">
+              独立站不只是把企业资料放到网页上。服务从目标客户和网站任务出发，先建立站点地图与页面清单，再补齐内容、技术
+              SEO、咨询路径和上线后的迭代机制。
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="/contact">咨询外贸独立站</a
+              ><a class="text-link" href="#scope"
+                >查看建设与运营范围 <span>↘</span></a
+              >
+            </div>
+            <ul class="proofline">
+              <li>站点地图与页面规划</li>
+              <li>内容与技术 SEO</li>
+              <li>上线检查与持续迭代</li>
+            </ul>
           </div>
-          <div class="console-bottom"><span>INPUT <strong>业务与产品资料</strong></span><span>OUTPUT <strong>可迭代的网站资产</strong></span></div>
-        </figure>
-      </div>
-    </section>
+          <figure
+            class="workflow-board web"
+            aria-label="外贸独立站建设与运营工作链路示意"
+          >
+            <figcaption>
+              <span>WEB PIPELINE / 02</span><b>工作框架示意</b>
+            </figcaption>
+            <div class="workflow-flow">
+              <div class="workflow-step">
+                <span>01</span>
+                <div>
+                  <strong>搜索需求</strong
+                  ><small>目标客户在验证什么、询问什么</small>
+                </div>
+              </div>
+              <div class="workflow-step">
+                <span>02</span>
+                <div>
+                  <strong>页面结构</strong
+                  ><small>一个页面承担一个明确任务</small>
+                </div>
+              </div>
+              <div class="workflow-step">
+                <span>03</span>
+                <div>
+                  <strong>发现与收录</strong
+                  ><small>导航、内链、canonical 和 sitemap</small>
+                </div>
+              </div>
+              <div class="workflow-step">
+                <span>04</span>
+                <div>
+                  <strong>咨询路径</strong
+                  ><small>让访客知道下一步如何联系</small>
+                </div>
+              </div>
+            </div>
+            <div class="workflow-output">
+              <span>INPUT<b>客户、产品与市场事实</b></span
+              ><span>OUTPUT<b>可迭代的网站资产</b></span>
+            </div>
+          </figure>
+        </div>
+      </section>
+      <nav class="anchor-strip" aria-label="本页目录">
+        <div class="shell anchor-strip-inner">
+          <strong>本页内容</strong><a href="#issues">常见问题</a
+          ><a href="#deliverables">合作产出</a><a href="#scope">服务范围</a
+          ><a href="#process">建设流程</a><a href="#materials">准备资料</a
+          ><a href="#faq">常见问题</a>
+        </div>
+      </nav>
 
-    <section class="service-navstrip"><div class="shell service-navstrip-inner"><p>先确定网站要服务哪类客户、解决什么问题。</p><a href="#boundary">查看合作边界 →</a></div></section>
+      <section class="section section-white" id="issues">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">常见现状</p>
+              <h2>网站已经存在，<br />却没有完成获客任务。</h2>
+            </div>
+            <p>
+              页面数量不是首要判断。先看网站是否能让目标客户理解产品、验证企业、找到相关内容并顺利联系。
+            </p>
+          </div>
+          <div class="issue-grid">
+            <article>
+              <span>ISSUE 01</span>
+              <h3>定位和目标客户不清</h3>
+              <p>
+                首页讲了很多企业信息，却没有直接说明服务谁、解决什么问题和为什么值得继续了解。
+              </p>
+            </article>
+            <article>
+              <span>ISSUE 02</span>
+              <h3>导航与产品结构混乱</h3>
+              <p>
+                页面按内部部门或资料文件组织，访客难以按产品、应用或采购任务找到答案。
+              </p>
+            </article>
+            <article>
+              <span>ISSUE 03</span>
+              <h3>缺少真实信任信息</h3>
+              <p>
+                只用形容词表达实力，没有可确认的产品事实、能力边界、流程或授权证据。
+              </p>
+            </article>
+            <article>
+              <span>ISSUE 04</span>
+              <h3>没有发现与咨询路径</h3>
+              <p>
+                title、H1、内链、sitemap
+                和移动体验不完整，或访客看完页面仍不知道下一步。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <section class="landing-section white">
-      <div class="shell">
-        <div class="landing-heading"><div><p class="section-kicker">合作产出</p><h2>交付的不只是网站，<br>还有后续运营的基础。</h2></div><p>独立站需要承担品牌说明、产品承接、内容沉淀和咨询转化等任务。建设时就应把这些角色放进同一套结构，而不是上线后再临时拼接。</p></div>
-        <div class="outcome-grid">
-          <article class="outcome-card"><span>OUTPUT 01</span><h3>清楚的网站信息架构</h3><p>梳理首页、产品或服务、解决方案、内容与联系路径，让页面各自承担明确任务。</p></article>
-          <article class="outcome-card"><span>OUTPUT 02</span><h3>可持续扩展的内容基础</h3><p>提前规划内容主题与页面关系，避免网站只剩几张长期不更新的介绍页。</p></article>
-          <article class="outcome-card"><span>OUTPUT 03</span><h3>上线后的检查与迭代</h3><p>关注访问入口、页面承接和咨询路径，根据实际反馈持续调整，而不是交付后失去维护。</p></article>
+      <section class="section section-soft" id="deliverables">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">可约定产出</p>
+              <h2>交付的不只是网页，<br />还有后续运营的基础。</h2>
+            </div>
+            <p>
+              网站规模、语言、技术方案和持续运营范围按实际项目确认。以下是可以被检查的核心工作物，而不是排名结果承诺。
+            </p>
+          </div>
+          <div class="deliverable-list">
+            <article class="deliverable-row">
+              <span>OUT 01</span>
+              <h3>站点地图与页面清单</h3>
+              <p>
+                明确首页、产品、服务、应用、内容、关于与联系页面之间的层级和任务。
+              </p>
+            </article>
+            <article class="deliverable-row">
+              <span>OUT 02</span>
+              <h3>关键词与页面映射</h3>
+              <p>
+                让一个核心搜索意图对应一个主页面，避免近义页面重复和关键词相互竞争。
+              </p>
+            </article>
+            <article class="deliverable-row">
+              <span>OUT 03</span>
+              <h3>完整页面内容框架</h3>
+              <p>
+                为每页定义
+                H1、首段答案、事实材料、常见问题、内部链接和下一步行动。
+              </p>
+            </article>
+            <article class="deliverable-row">
+              <span>OUT 04</span>
+              <h3>技术 SEO 与上线清单</h3>
+              <p>
+                检查
+                title、description、canonical、robots、sitemap、结构化数据、移动端和关键链接。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="scope">
+        <div class="shell scope-grid">
+          <div class="split-copy">
+            <p class="section-kicker">建设与运营范围</p>
+            <h2>从信息架构到上线迭代，按阶段推进。</h2>
+            <p>
+              设计和技术都要服务于内容与访客任务。不会为了视觉效果牺牲可读性，也不会用批量
+              AI 内容填充空页面。
+            </p>
+          </div>
+          <div class="scope-list">
+            <article class="scope-row">
+              <span>01</span>
+              <div>
+                <h3>目标客户与站点任务梳理</h3>
+                <p>
+                  确认网站服务谁、主要承接哪些需求，以及需要访客完成什么下一步。
+                </p>
+              </div>
+            </article>
+            <article class="scope-row">
+              <span>02</span>
+              <div>
+                <h3>站点地图、页面与内链规划</h3>
+                <p>建立层级、URL、导航、页面主题和相关内容之间的发现路径。</p>
+              </div>
+            </article>
+            <article class="scope-row">
+              <span>03</span>
+              <div>
+                <h3>页面设计、内容与技术实现</h3>
+                <p>
+                  把真实资料转成易理解的页面，并完成响应式、可访问与基础 SEO
+                  配置。
+                </p>
+              </div>
+            </article>
+            <article class="scope-row">
+              <span>04</span>
+              <div>
+                <h3>上线检查与持续运营</h3>
+                <p>
+                  验证正式域名、抓取、索引入口、链接和页面体验，再根据真实查询与咨询反馈迭代。
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-white" id="process">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">建设流程</p>
+              <h2>先冻结结构与事实，再进入页面制作。</h2>
+            </div>
+            <p>避免页面做完后才发现产品分类、资料口径或目标市场没有统一。</p>
+          </div>
+          <div class="method-detail">
+            <span>STEP 01</span>
+            <h2>发现</h2>
+            <div>
+              <h3>目标与事实</h3>
+              <p>
+                确认目标客户、市场、主营方向、当前网站、域名与企业可以公开的真实材料。
+              </p>
+            </div>
+          </div>
+          <div class="method-detail">
+            <span>STEP 02</span>
+            <h2>架构</h2>
+            <div>
+              <h3>站点地图与关键词</h3>
+              <p>
+                确定
+                URL、页面任务、搜索主题、导航、内部链接、转化路径和待补资料。
+              </p>
+            </div>
+          </div>
+          <div class="method-detail">
+            <span>STEP 03</span>
+            <h2>制作与 QA</h2>
+            <div>
+              <h3>设计、内容和技术</h3>
+              <p>
+                完成页面实现，并检查桌面、移动、键盘操作、链接、结构化数据和内容边界。
+              </p>
+            </div>
+          </div>
+          <div class="method-detail">
+            <span>STEP 04</span>
+            <h2>上线与迭代</h2>
+            <div>
+              <h3>真实环境复核</h3>
+              <p>
+                检查 HTTPS、canonical、robots、sitemap、404
+                和正式页面，再按搜索与咨询反馈更新。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="materials">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">企业需准备</p>
+              <h2>网站内容必须建立在真实资料上。</h2>
+            </div>
+            <p>
+              缺失材料可以进入待办清单，但不能用假客户、假工厂、假资质或通用占位图替代事实。
+            </p>
+          </div>
+          <div class="materials-grid">
+            <ul class="materials-list">
+              <li>目标客户、目标市场和网站的主要业务任务。</li>
+              <li>主营产品或服务的分类、参数、应用和边界。</li>
+              <li>经确认的企业介绍、生产或服务能力信息。</li>
+              <li>可以公开且获得授权的图片、文件和证据。</li>
+              <li>域名、托管、统计与后续维护责任安排。</li>
+              <li>能确认商业信息和页面口径的负责人。</li>
+            </ul>
+            <div>
+              <div class="boundary-note">
+                <h3>SEO 与结果边界</h3>
+                <p>
+                  技术 SEO
+                  帮助搜索引擎发现和理解页面，但不能单独保证收录、排名、流量或询盘。长期结果还取决于内容质量、竞争、外部信号、产品与销售承接。
+                </p>
+              </div>
+              <div class="fit-board fit-single">
+                <article class="fit-panel">
+                  <h3>更适合这样的团队</h3>
+                  <ul>
+                    <li>希望把网站作为长期品牌和搜索资产。</li>
+                    <li>愿意持续补充真实产品与业务内容。</li>
+                    <li>接受结构、内容和技术共同迭代。</li>
+                  </ul>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-white" id="faq">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">常见问题</p>
+              <h2>建站前，先把这些事情说清楚。</h2>
+            </div>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>可以只做外贸独立站建设，不做长期运营吗？</summary>
+              <p>
+                可以根据项目范围只完成网站规划、建设和上线检查，也可以在上线后继续开展内容、SEO
+                和页面迭代。具体交付、维护责任和技术边界需要在开始前确认。
+              </p>
+            </details>
+            <details>
+              <summary>外贸独立站上线后多久能获得 Google 流量？</summary>
+              <p>
+                无法在不了解网站基础、市场竞争、内容质量和外部信号时给出可靠时间。技术
+                SEO 能帮助搜索引擎发现和理解页面，但不能保证排名或流量。
+              </p>
+            </details>
+            <details>
+              <summary>企业需要为独立站准备哪些内容？</summary>
+              <p>
+                至少需要确认目标客户、主营产品或服务、目标市场、真实产品资料、企业能力边界和公开联系方式。客户、认证、工厂与项目证据只能使用已确认并获得授权的内容。
+              </p>
+            </details>
+            <details>
+              <summary>是否可以先做中文网站，以后再翻译成英文？</summary>
+              <p>
+                可以分阶段推进，但目标市场页面不能依赖未经校对的直译。语言、关键词、买家问题和商业表达需要按实际市场重新确认，具体多语言范围应单独约定。
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">相关内容</p>
+              <h2>用上线清单检查结构、内容与技术。</h2>
+            </div>
+          </div>
+          <div class="related-links">
+            <a
+              class="related-feature"
+              href="/insights/b2b-website-launch-checklist"
+              ><span class="tag">独立站建设清单</span>
+              <h3>一个 B2B 独立站上线前，需要讲清楚哪些内容？</h3>
+              <p>
+                从目标客户、页面结构和真实资料，到咨询路径、技术 SEO
+                与移动端检查。
+              </p>
+              <span class="text-link">阅读全文 →</span></a
+            >
+            <div class="related-list">
+              <a href="/method">了解外贸 B2B 代运营流程</a
+              ><a href="/alibaba">查看阿里巴巴国际站代运营</a
+              ><a href="/made-in-china">查看中国制造网代运营</a
+              ><a href="/contact">准备独立站咨询信息</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-panel">
+        <div class="shell contact-panel-grid">
+          <div class="contact-copy">
+            <p class="section-kicker">开始沟通</p>
+            <h2>先说说网站准备承接哪类客户。</h2>
+            <p>
+              添加微信时备注“产品 + 目标市场 +
+              网站现状”，方便先判断需要从结构、内容、技术还是持续运营开始。
+            </p>
+            <div class="contact-action">
+              <a class="button button-light" href="/contact">查看咨询准备清单</a
+              ><button
+                class="button button-secondary"
+                type="button"
+                data-wechat-open
+              >
+                复制微信号
+              </button>
+            </div>
+          </div>
+          <ol class="contact-checklist">
+            <li>
+              <span>01</span>
+              <div>
+                <strong>主营方向</strong><small>产品、服务和主要应用。</small>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <strong>目标客户与市场</strong
+                ><small>网站希望服务谁、覆盖哪里。</small>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <strong>网站现状</strong
+                ><small>从零建设、需要重构，或希望继续运营。</small>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/"
+            ><span class="brand-mark" aria-hidden="true"
+              ><i></i><i></i><i></i></span
+            ><span>Wesley <b>GEO</b></span></a
+          >
+          <p>帮助外贸企业把渠道动作整理成可执行、可追踪、可复盘的运营系统。</p>
+        </div>
+        <div class="footer-column">
+          <h2>代运营服务</h2>
+          <a href="/alibaba">阿里巴巴国际站</a
+          ><a href="/independent-site">外贸独立站</a
+          ><a href="/made-in-china">中国制造网</a>
+        </div>
+        <div class="footer-column">
+          <h2>方法与内容</h2>
+          <a href="/method">运营方法</a><a href="/insights">运营笔记</a
+          ><a href="/about">关于 Wesley</a>
+        </div>
+        <div class="footer-column">
+          <h2>联系与说明</h2>
+          <a href="/contact">微信咨询</a
+          ><button type="button" data-wechat-open>微信：Wesleyb2b</button
+          ><a href="/privacy">隐私说明</a><a href="/sitemap">网站地图</a>
         </div>
       </div>
-    </section>
-
-    <section class="landing-section navy" id="scope">
-      <div class="shell scope-grid">
-        <div class="scope-intro"><p class="section-kicker">服务内容</p><h2>从结构、内容到上线，按阶段推进。</h2><p>具体技术方案与页面数量，需要结合现有域名、主机、素材、产品体系和目标市场确认。</p></div>
-        <div class="scope-list">
-          <article class="scope-row"><span>01</span><div><h3>业务与网站诊断</h3><p>了解产品、客户、现有渠道和网站基础，明确独立站在整体获客中的角色。</p></div></article>
-          <article class="scope-row"><span>02</span><div><h3>网站结构与页面规划</h3><p>确定核心页面、导航关系、内容层级和咨询路径，形成可执行的网站地图。</p></div></article>
-          <article class="scope-row"><span>03</span><div><h3>页面建设与搜索基础</h3><p>推进页面表达、移动端适配、基础技术 SEO、站点地图及必要的上线配置。</p></div></article>
-          <article class="scope-row"><span>04</span><div><h3>上线验收与持续运营</h3><p>检查正式域名、HTTPS、页面与主要交互，并根据后续内容和访问反馈继续迭代。</p></div></article>
-        </div>
+      <div class="shell footer-bottom">
+        <span>© <span data-year></span> Wesley GEO</span>
+        <nav aria-label="页脚补充导航">
+          <a href="/">首页</a><a href="/contact">微信咨询</a>
+        </nav>
       </div>
-    </section>
-
-    <section class="landing-section soft" id="fit">
-      <div class="shell boundary-grid">
-        <div><p class="section-kicker">适合谁</p><h2>更适合想长期经营品牌阵地的团队。</h2></div>
-        <div class="fit-cards">
-          <article class="fit-card"><h3>不想完全依赖平台</h3><p>希望拥有独立域名和可持续维护的网站资产，承接多渠道访客。</p></article>
-          <article class="fit-card"><h3>产品多但表达混乱</h3><p>已有资料和产品，却不知道首页、分类、详情与解决方案如何组织。</p></article>
-          <article class="fit-card"><h3>现有网站缺少运营</h3><p>网站已经上线，但长期不更新，也没有清晰的内容与搜索计划。</p></article>
-          <article class="fit-card"><h3>愿意提供真实资料</h3><p>能配合确认产品、能力和商业信息，不使用未经验证的宣传内容。</p></article>
-        </div>
+    </footer>
+    <dialog
+      class="wechat-dialog"
+      data-wechat-dialog
+      data-wechat-scope
+      aria-labelledby="wechat-title"
+    >
+      <button
+        class="dialog-close"
+        type="button"
+        aria-label="关闭"
+        data-wechat-close
+      >
+        ×
+      </button>
+      <p class="section-kicker">微信咨询</p>
+      <h2 id="wechat-title">添加 Wesley</h2>
+      <p>
+        添加时可备注“产品 + 目标市场 +
+        网站现状”。请勿发送账号密码或客户隐私数据。
+      </p>
+      <div class="wechat-id">
+        <span>Wesleyb2b</span
+        ><button type="button" data-copy-wechat>复制微信号</button>
       </div>
-    </section>
-
-    <section class="landing-section white" id="boundary">
-      <div class="shell boundary-grid">
-        <div><p class="section-kicker">合作边界</p><h2>网站能承接和积累，不能替代业务本身。</h2></div>
-        <ul class="boundary-list">
-          <li>不承诺无法提前保证的搜索排名、自然流量、询盘或订单结果。</li>
-          <li>所有产品参数、资质、项目经验和客户证据必须来自企业确认的真实资料。</li>
-          <li>域名、网站账号和源码或可交付文件的归属，在项目开始前明确约定。</li>
-          <li>第三方付费服务、主题、插件、主机和外部工具费用不默认包含，使用前单独确认。</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="landing-section white" id="faq">
-      <div class="shell"><div class="landing-heading"><div><p class="section-kicker">常见问题</p><h2>建站前，先把这些事情说清楚。</h2></div></div>
-        <div class="faq-list">
-          <details><summary>可以只做网站建设，不做长期运营吗？</summary><p>可以根据项目确定交付边界。但建设阶段仍建议预留清晰的页面和内容结构，避免上线后无法继续扩展。</p></details>
-          <details><summary>网站上线后多久有自然流量？</summary><p>自然搜索需要受到网站基础、内容、竞争程度和持续投入等多项因素影响，无法提前承诺时间和结果。可以先确保技术与内容基础可被持续优化。</p></details>
-          <details><summary>企业需要准备什么资料？</summary><p>至少需要产品或服务资料、目标客户与市场、企业介绍、联系方式及可公开的真实素材。缺失内容会列为待补，不会擅自编造。</p></details>
-        </div>
-      </div>
-    </section>
-
-    <section class="landing-cta"><div class="shell"><p class="section-kicker">开始沟通</p><h2>先说说你的网站<br>准备承接哪类客户。</h2><p>添加微信时备注“产品 + 是否已有域名/网站”，方便先判断是从零建设，还是在现有基础上调整。</p><button class="button button-light" type="button" data-wechat-open>微信咨询 Wesley</button></div></section>
-  </main>
-
-  <footer class="site-footer"><div class="shell footer-top"><a class="brand brand-footer" href="/"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Wesley <b>GEO</b></span></a><p>外贸独立站建设与运营｜结构 · 内容 · 迭代</p><button type="button" data-wechat-open>微信：Wesleyb2b</button></div><div class="shell service-footer-links"><a href="/alibaba">Alibaba 国际站代运营</a><a href="/made-in-china">中国制造网代运营</a></div><div class="shell footer-bottom"><span>© <span data-year></span> Wesley GEO</span><a href="/privacy">隐私说明</a></div></footer>
-
-  <dialog class="wechat-dialog" data-wechat-dialog aria-labelledby="wechat-title"><button class="dialog-close" type="button" aria-label="关闭" data-wechat-close>×</button><p class="section-kicker">微信咨询</p><h2 id="wechat-title">添加 Wesley</h2><p>复制微信号，添加时可备注“公司产品 + 是否已有网站”。</p><div class="wechat-id"><span>Wesleyb2b</span><button type="button" data-copy-wechat>复制微信号</button></div><p class="copy-status" role="status" aria-live="polite" data-copy-status></p></dialog>
-  <script src="/script.js"></script>
-</body>
+      <p
+        class="copy-status"
+        role="status"
+        aria-live="polite"
+        data-copy-status
+      ></p>
+    </dialog>
+    <script src="/script.js" defer></script>
+  </body>
 </html>

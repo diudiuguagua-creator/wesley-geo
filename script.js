@@ -4,6 +4,7 @@ const navToggle = document.querySelector('[data-nav-toggle]');
 const navLabel = navToggle?.querySelector('.sr-only');
 const dialog = document.querySelector('[data-wechat-dialog]');
 const copyStatus = document.querySelector('[data-copy-status]');
+const serviceMenus = document.querySelectorAll('[data-service-menu]');
 
 const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 12);
 updateHeader();
@@ -17,10 +18,21 @@ navToggle?.addEventListener('click', () => {
 
 nav?.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
+    serviceMenus.forEach((menu) => menu.removeAttribute('open'));
     nav.classList.remove('is-open');
     navToggle?.setAttribute('aria-expanded', 'false');
     if (navLabel) navLabel.textContent = '打开菜单';
   });
+});
+
+document.addEventListener('click', (event) => {
+  serviceMenus.forEach((menu) => {
+    if (!menu.contains(event.target)) menu.removeAttribute('open');
+  });
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') serviceMenus.forEach((menu) => menu.removeAttribute('open'));
 });
 
 document.querySelectorAll('[data-wechat-open]').forEach((button) => {

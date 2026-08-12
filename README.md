@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 0.3 seconds
-Output:
 # Wesley GEO website
 
 静态中文个人品牌网站，可直接部署到 Cloudflare Pages。
@@ -27,3 +24,10 @@ npx --yes serve .
 
 网站当前未展示中文姓名、城市、从业年限、个人照片、邮箱或客户案例。
 
+## 页面
+
+- `/`：品牌首页
+- `/alibaba`：Alibaba 国际站代运营
+- `/independent-site`：外贸独立站建设与运营
+- `/made-in-china`：中国制造网代运营
+- `/privacy`：隐私说明

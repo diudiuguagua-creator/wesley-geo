@@ -47,6 +47,20 @@ button { color: inherit; }
 .site-nav { display: flex; align-items: center; gap: 32px; font-size: 14px; font-weight: 650; }
 .site-nav > a { color: #304259; transition: color .2s; }
 .site-nav > a:hover { color: var(--blue); }
+.nav-services { position: relative; color: #304259; }
+.nav-services summary { display: flex; align-items: center; gap: 7px; cursor: pointer; list-style: none; transition: color .2s; }
+.nav-services summary::-webkit-details-marker { display: none; }
+.nav-services summary:hover, .nav-services[open] summary { color: var(--blue); }
+.nav-services summary span { color: var(--orange); font-size: 14px; transition: transform .2s; }
+.nav-services[open] summary span { transform: rotate(180deg); }
+.nav-service-menu { position: absolute; z-index: 60; top: calc(100% + 20px); left: 50%; width: 300px; padding: 10px; border: 1px solid var(--line); border-radius: 12px; background: #fff; box-shadow: 0 20px 54px rgba(17, 48, 83, .16); transform: translateX(-50%); }
+.nav-service-menu::before { content: ""; position: absolute; left: 0; right: 0; top: -21px; height: 21px; }
+.nav-service-menu a { display: grid; grid-template-columns: 44px 1fr; gap: 12px; align-items: center; padding: 11px; border-radius: 8px; transition: background .2s, color .2s; }
+.nav-service-menu a:hover, .nav-service-menu a[aria-current="page"] { color: var(--blue-dark); background: #f0f5ff; }
+.nav-service-menu b { display: grid; place-items: center; width: 42px; height: 34px; border-radius: 6px; color: #fff; background: var(--blue); font: 700 10px/1 "Bahnschrift", sans-serif; letter-spacing: .05em; }
+.nav-service-menu a:nth-child(2) b { background: #127083; }
+.nav-service-menu a:nth-child(3) b { background: var(--orange); }
+.nav-service-menu a span { color: inherit; font-size: 13px; font-weight: 750; transform: none; }
 .nav-toggle { display: none; background: none; border: 0; width: 44px; height: 44px; }
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 24px; border: 1px solid var(--blue); border-radius: 7px; background: var(--blue); color: #fff; font-weight: 700; cursor: pointer; box-shadow: 0 10px 24px rgba(21, 87, 255, .19); transition: transform .2s, background .2s, box-shadow .2s; }
 .button:hover { transform: translateY(-2px); background: #084beb; box-shadow: 0 14px 32px rgba(21, 87, 255, .25); }
@@ -263,6 +277,11 @@ button { color: inherit; }
   .site-nav { position: absolute; inset: 74px 18px auto; display: none; align-items: stretch; padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: #fff; box-shadow: var(--shadow); }
   .site-nav.is-open { display: flex; flex-direction: column; gap: 0; }
   .site-nav > a { padding: 13px 8px; border-bottom: 1px solid var(--line); }
+  .nav-services { border-bottom: 1px solid var(--line); }
+  .nav-services summary { justify-content: space-between; padding: 13px 8px; }
+  .nav-service-menu { position: static; width: auto; padding: 4px 0 12px; border: 0; border-radius: 0; background: transparent; box-shadow: none; transform: none; }
+  .nav-service-menu::before { display: none; }
+  .nav-service-menu a { margin-top: 4px; padding: 9px 8px; }
   .site-nav .button { margin-top: 14px; }
   .hero { padding-top: 128px; }
   .hero-grid, .method-grid, .fit-grid, .about-grid, .service-hero-grid, .scope-grid, .boundary-grid { grid-template-columns: 1fr; gap: 60px; }

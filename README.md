@@ -23,3 +23,11 @@ npx --yes serve .
 - 服务：Alibaba 国际站、外贸独立站、中国制造网代运营
 
 网站当前未展示中文姓名、城市、从业年限、个人照片、邮箱或客户案例。
+
+## 页面
+
+- `/`：品牌首页
+- `/alibaba`：Alibaba 国际站代运营
+- `/independent-site`：外贸独立站建设与运营
+- `/made-in-china`：中国制造网代运营
+- `/privacy`：隐私说明

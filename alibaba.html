@@ -16,6 +16,8 @@
     <link rel="canonical" href="https://wesleyb2b.online/alibaba" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/service-extras.css" />
+    <link rel="stylesheet" href="/site-header-foursets.css" />
     <meta property="og:locale" content="zh_CN" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Wesley GEO" />
@@ -37,9 +39,9 @@
         "@graph": [
           {
             "@type": "Person",
-            "@id": "https://wesleyb2b.online/#person",
+            "@id": "https://wesleyb2b.online/about#person",
             "name": "Wesley",
-            "url": "https://wesleyb2b.online/"
+            "url": "https://wesleyb2b.online/about"
           },
           {
             "@type": "WebPage",
@@ -47,6 +49,9 @@
             "url": "https://wesleyb2b.online/alibaba",
             "name": "阿里巴巴国际站代运营",
             "description": "产品、关键词、页面、流量与询盘反馈的持续运营和阶段复盘。",
+            "isPartOf": { "@id": "https://wesleyb2b.online/#website" },
+            "mainEntity": { "@id": "https://wesleyb2b.online/alibaba#service" },
+            "breadcrumb": { "@id": "https://wesleyb2b.online/alibaba#breadcrumb" },
             "inLanguage": "zh-CN"
           },
           {
@@ -54,7 +59,7 @@
             "@id": "https://wesleyb2b.online/alibaba#service",
             "name": "阿里巴巴国际站代运营",
             "serviceType": "阿里巴巴国际站运营服务",
-            "provider": { "@id": "https://wesleyb2b.online/#person" },
+            "provider": { "@id": "https://wesleyb2b.online/about#person" },
             "url": "https://wesleyb2b.online/alibaba",
             "description": "从现状诊断、产品与关键词规划、发布优化到阶段数据复盘的国际站运营服务。"
           },
@@ -118,7 +123,7 @@
       }
     </script>
   </head>
-  <body>
+  <body class="service-landing service-ali">
     <a class="skip-link" href="#main">跳到主要内容</a>
     <header class="site-header">
       <div class="shell header-inner">
@@ -136,9 +141,17 @@
           <span class="sr-only">打开菜单</span><i></i><i></i>
         </button>
         <nav class="site-nav" id="site-nav" aria-label="主要导航" data-nav>
+          <a href="/">首页</a>
           <details class="nav-services" data-service-menu>
             <summary>服务 <span aria-hidden="true">⌄</span></summary>
             <div class="nav-service-menu">
+              <a href="/services"
+                ><b>ALL</b
+                ><span
+                  ><strong>服务总览</strong
+                  ><small>三项服务与选择方式</small></span
+                ></a
+              >
               <a href="/alibaba" aria-current="page"
                 ><b>ALI</b
                 ><span
@@ -160,8 +173,8 @@
               >
             </div>
           </details>
-          <a href="/method">运营方法</a><a href="/insights">运营笔记</a
-          ><a href="/about">关于 Wesley</a
+          <a href="/insights">运营笔记</a
+          ><a href="/cases">客户案例</a><a href="/tools">运营工具</a><a href="/about">关于 Wesley</a
           ><a class="button button-small" href="/contact">微信咨询</a>
         </nav>
       </div>
@@ -246,9 +259,27 @@
           <strong>本页内容</strong><a href="#issues">常见现状</a
           ><a href="#deliverables">合作产出</a><a href="#scope">服务内容</a
           ><a href="#process">工作流程</a><a href="#materials">准备资料</a
+          ><a href="#workflow-example">流程示例</a><a href="#tools">运营工具</a
           ><a href="#faq">常见问题</a>
         </div>
       </nav>
+
+      <section class="service-decision" aria-label="国际站服务快速判断">
+        <div class="shell service-decision-grid">
+          <div>
+            <span>适合谁</span>
+            <strong>已有国际站账号，运营动作缺少连续判断</strong>
+          </div>
+          <div>
+            <span>先解决</span>
+            <strong>产品、关键词与页面承接关系不清</strong>
+          </div>
+          <div>
+            <span>阶段留下</span>
+            <strong>可检查的动作记录与下一轮清单</strong>
+          </div>
+        </div>
+      </section>
 
       <section class="section section-white" id="issues">
         <div class="shell">
@@ -479,6 +510,62 @@
         </div>
       </section>
 
+      <section class="section section-white service-case" id="workflow-example">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">服务流程 · 虚构示例</p>
+              <h2>如果产品很多、动作不少，<br />先怎样把判断链重新接起来？</h2>
+            </div>
+            <p>
+              以下为虚构流程示例，用于说明服务方法，不代表已服务客户，也不包含真实询盘、排名或订单结果。
+            </p>
+          </div>
+          <article class="scenario-ledger" aria-labelledby="ali-case-title">
+            <div class="scenario-ledger-head">
+              <span>WORKFLOW EXAMPLE / ALIBABA.COM</span
+              ><span class="scenario-status">虚构场景 · 仅用于说明方法</span>
+            </div>
+            <div class="scenario-ledger-main">
+              <div class="scenario-brief">
+                <span>假设场景</span>
+                <h3 id="ali-case-title">假设场景：工业设备出口企业的国际站整理任务</h3>
+                <p>产品数量较多，关键词、页面修改和数据复盘分别进行，团队难以说明下一轮为何调整。</p>
+                <dl>
+                  <div><dt>已有基础</dt><dd>账号、产品资料、历史运营记录</dd></div>
+                  <div><dt>主要缺口</dt><dd>产品与搜索意图没有统一映射</dd></div>
+                </dl>
+              </div>
+              <ol class="scenario-route">
+                <li><span>01 / 归类</span><div><strong>建立产品簇</strong><p>按真实用途、规格差异和目标市场整理主推方向。</p></div></li>
+                <li><span>02 / 对应</span><div><strong>连接关键词与页面</strong><p>明确搜索意图应由哪个产品或落地页面承接。</p></div></li>
+                <li><span>03 / 复盘</span><div><strong>统一时间范围</strong><p>把调整动作、曝光点击和询盘反馈放入同一记录。</p></div></li>
+              </ol>
+            </div>
+            <div class="scenario-ledger-foot">
+              <strong>方法验收方式</strong><span>检查映射表、修改记录和下一轮动作是否可以相互追溯。</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-soft service-tools" id="tools">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">国际站运营工具</p>
+              <h2>先用工具整理现状，<br />再讨论该增加什么动作。</h2>
+            </div>
+            <p>工具在浏览器内使用，不需要登录，也不要输入账号密码或客户隐私。</p>
+          </div>
+          <div class="channel-tool-grid">
+            <a class="channel-tool channel-tool-primary" href="/tools#channel-check"><span>CHECK / 01</span><h3>外贸渠道运营自检</h3><p>检查事实基础、页面承接、渠道追踪与销售反馈，找出当前最低完成层。</p><b>开始国际站自检 →</b></a>
+            <a class="channel-tool" href="/tools#review-template"><span>REVIEW / 02</span><h3>运营动作复盘模板</h3><p>把目标、动作、数据变化、销售反馈和下一轮判断放进同一份记录。</p><b>复制复盘模板 →</b></a>
+            <a class="channel-tool" href="/tools#page-checklist"><span>PAGE / 03</span><h3>产品页面检查表</h3><p>发布或修改页面前，逐项检查事实、搜索主题、证明材料和咨询路径。</p><b>查看页面检查项 →</b></a>
+          </div>
+        </div>
+      </section>
+
       <section class="section section-white" id="faq">
         <div class="shell">
           <div class="section-heading">
@@ -604,14 +691,15 @@
         </div>
         <div class="footer-column">
           <h2>代运营服务</h2>
-          <a href="/alibaba">阿里巴巴国际站</a
+          <a href="/services">服务总览</a
+          ><a href="/alibaba">阿里巴巴国际站</a
           ><a href="/independent-site">外贸独立站</a
           ><a href="/made-in-china">中国制造网</a>
         </div>
         <div class="footer-column">
           <h2>方法与内容</h2>
           <a href="/method">运营方法</a><a href="/insights">运营笔记</a
-          ><a href="/about">关于 Wesley</a>
+          ><a href="/tools">运营工具</a><a href="/about">关于 Wesley</a>
         </div>
         <div class="footer-column">
           <h2>联系与说明</h2>

@@ -24,6 +24,7 @@ npx --yes serve .
 ## 页面
 
 - `/`：外贸 B2B 代运营首页
+- `/services`：三项企业外贸 B2B 代运营服务总览与选择方式
 - `/alibaba`：阿里巴巴国际站代运营
 - `/independent-site`：外贸独立站建设与运营
 - `/made-in-china`：中国制造网代运营
@@ -32,19 +33,30 @@ npx --yes serve .
 - `/insights/alibaba-product-keyword-traffic`：国际站产品、关键词与流量分析
 - `/insights/b2b-website-launch-checklist`：B2B 独立站上线清单
 - `/insights/operation-action-review`：运营动作记录与复盘
-- `/about`：关于 Wesley GEO
+- `/tools`：渠道运营自检、运营动作复盘模板与页面上线检查表
+- `/about`：关于 Wesley
 - `/contact`：公开微信与咨询准备清单
 - `/sitemap`：HTML 网站地图
 - `/privacy`：隐私说明（`noindex,follow`）
 - `/404.html`：自定义错误页（`noindex,follow`）
+- `/cases`：客户案例公开状态与证据标准页（`noindex,follow`；进入主导航但不进入 XML sitemap；取得真实事实与公开授权前不发布具体案例）
 
 ## SEO 文件
 
-- `/sitemap.xml`：12 个 canonical、可索引 URL
+- `/sitemap.xml`：14 个 canonical、可索引 URL（不包含 `/cases`）
 - `/robots.txt`：允许抓取公开页面并声明 XML sitemap
 - `_headers`：安全、缓存与 MIME 响应头
 - `og-cover.png`：1200×630 社交分享图
 - `og-cover.svg`：社交分享图的矢量源文件
+
+## 样式文件
+
+- `/styles.css`：全站基础视觉与通用组件
+- `/service-extras.css`：三项渠道服务页的流程示例与工具卡片
+- `/tools.css`：运营工具页与首页工具预览
+- `/cases.css`：客户案例公开状态与证据标准页
+- `/evidence-system.css`：首页、服务总览与关于页共用的“运营证据系统”视觉母版
+- `/site-header-foursets.css`：全站 Foursets 节奏的蓝白灰页眉与响应式菜单
 
 ## 质量检查
 

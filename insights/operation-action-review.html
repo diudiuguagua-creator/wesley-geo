@@ -19,6 +19,7 @@
     />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/site-header-foursets.css" />
     <meta property="og:locale" content="zh_CN" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Wesley GEO" />
@@ -48,7 +49,7 @@
         "@graph": [
           {
             "@type": "Person",
-            "@id": "https://wesleyb2b.online/#person",
+            "@id": "https://wesleyb2b.online/about#person",
             "name": "Wesley",
             "url": "https://wesleyb2b.online/about"
           },
@@ -61,8 +62,8 @@
             "datePublished": "2026-08-12",
             "dateModified": "2026-08-12",
             "inLanguage": "zh-CN",
-            "author": { "@id": "https://wesleyb2b.online/#person" },
-            "publisher": { "@id": "https://wesleyb2b.online/#person" },
+            "author": { "@id": "https://wesleyb2b.online/about#person" },
+            "publisher": { "@id": "https://wesleyb2b.online/about#person" },
             "mainEntityOfPage": {
               "@id": "https://wesleyb2b.online/insights/operation-action-review#webpage"
             }
@@ -120,9 +121,17 @@
           <span class="sr-only">打开菜单</span><i></i><i></i>
         </button>
         <nav class="site-nav" id="site-nav" aria-label="主要导航" data-nav>
+          <a href="/">首页</a>
           <details class="nav-services" data-service-menu>
             <summary>服务 <span aria-hidden="true">⌄</span></summary>
             <div class="nav-service-menu">
+              <a href="/services"
+                ><b>ALL</b
+                ><span
+                  ><strong>服务总览</strong
+                  ><small>三项服务与选择方式</small></span
+                ></a
+              >
               <a href="/alibaba"
                 ><b>ALI</b
                 ><span
@@ -144,9 +153,8 @@
               >
             </div>
           </details>
-          <a href="/method">运营方法</a
-          ><a href="/insights" aria-current="page">运营笔记</a
-          ><a href="/about">关于 Wesley</a
+          <a href="/insights" aria-current="page">运营笔记</a
+          ><a href="/cases">客户案例</a><a href="/tools">运营工具</a><a href="/about">关于 Wesley</a
           ><a class="button button-small" href="/contact">微信咨询</a>
         </nav>
       </div>
@@ -165,7 +173,7 @@
               月末数字告诉团队“发生了变化”，动作记录帮助解释“这段时间做了什么、还有什么同时发生，以及下一轮该怎么走”。
             </p>
             <div class="article-meta">
-              <span>作者：Wesley</span
+              <span>作者：<a href="/about" rel="author">Wesley</a></span
               ><time datetime="2026-08-12">发布：2026-08-12</time
               ><span>阅读主题：外贸运营复盘</span>
             </div>
@@ -429,14 +437,15 @@
         </div>
         <div class="footer-column">
           <h2>代运营服务</h2>
-          <a href="/alibaba">阿里巴巴国际站</a
+          <a href="/services">服务总览</a
+          ><a href="/alibaba">阿里巴巴国际站</a
           ><a href="/independent-site">外贸独立站</a
           ><a href="/made-in-china">中国制造网</a>
         </div>
         <div class="footer-column">
           <h2>方法与内容</h2>
           <a href="/method">运营方法</a><a href="/insights">运营笔记</a
-          ><a href="/about">关于 Wesley</a>
+          ><a href="/tools">运营工具</a><a href="/about">关于 Wesley</a>
         </div>
         <div class="footer-column">
           <h2>联系与说明</h2>

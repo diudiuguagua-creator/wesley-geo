@@ -1,0 +1,3223 @@
+/*
+  Homepage direction: Foursets scale x Omnius operating structure.
+  All rules are scoped so existing service, tools and About pages stay intact.
+*/
+
+.home-foursets-omnius {
+  --fo-ink: #0b2035;
+  --fo-paper: #f3f6fa;
+  --fo-white: #ffffff;
+  --fo-blue: #2457d6;
+  --fo-blue-soft: #9ab9ff;
+  --fo-muted: #59697a;
+  --fo-sage: color-mix(in srgb, var(--fo-muted) 14%, var(--fo-white));
+  --fo-rule: color-mix(in srgb, var(--fo-muted) 42%, var(--fo-white));
+  --fo-green: var(--fo-blue);
+  --fo-display:
+    Bahnschrift, "Arial Narrow", "Microsoft YaHei UI", "PingFang SC",
+    sans-serif;
+  --fo-body:
+    system-ui, "Segoe UI", "PingFang SC", "Microsoft YaHei UI", sans-serif;
+  color: var(--fo-ink);
+  background: var(--fo-paper);
+  font-family: var(--fo-body);
+}
+
+.home-foursets-omnius main {
+  overflow: clip;
+}
+
+.home-foursets-omnius .shell {
+  width: min(calc(100% - 64px), 1440px);
+}
+
+.home-foursets-omnius h1,
+.home-foursets-omnius h2,
+.home-foursets-omnius h3 {
+  color: inherit;
+  font-family: var(--fo-display);
+  font-stretch: condensed;
+}
+
+.home-foursets-omnius .site-header {
+  border-bottom: 1px solid var(--fo-ink);
+  background: color-mix(in srgb, var(--fo-paper) 94%, transparent);
+  box-shadow: none;
+  backdrop-filter: blur(14px);
+}
+
+.home-foursets-omnius .header-inner {
+  min-height: 86px;
+}
+
+.home-foursets-omnius .site-header .brand::after {
+  content: "INDEPENDENT OPERATOR";
+  margin-left: 12px;
+  padding-left: 14px;
+  border-left: 1px solid var(--fo-rule);
+  color: var(--fo-muted);
+  font: 700 9px/1.2 var(--font-data);
+  letter-spacing: 0.14em;
+}
+
+.home-foursets-omnius .brand-mark i {
+  background: var(--fo-ink);
+}
+
+.home-foursets-omnius .brand-mark i:last-child {
+  background: var(--fo-green);
+}
+
+.home-foursets-omnius .site-nav {
+  gap: clamp(18px, 2vw, 31px);
+  color: var(--fo-ink);
+  font-size: 13px;
+}
+
+.home-foursets-omnius .nav-service-menu,
+.home-foursets-omnius .nav-service-menu a,
+.home-foursets-omnius .nav-service-menu b,
+.home-foursets-omnius .button {
+  border-radius: 0;
+}
+
+.home-foursets-omnius .nav-service-menu {
+  border: 1px solid var(--fo-ink);
+  background: var(--fo-white);
+  box-shadow: 10px 10px 0 var(--fo-green);
+}
+
+.home-foursets-omnius .button {
+  min-height: 52px;
+  padding-inline: 24px;
+  border: 1px solid var(--fo-ink);
+  background: var(--fo-green);
+  box-shadow: none;
+  color: var(--fo-white);
+  font-weight: 800;
+  transition:
+    color 160ms ease,
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.home-foursets-omnius .button:hover {
+  border-color: var(--fo-ink);
+  background: var(--fo-ink);
+  box-shadow: none;
+  color: var(--fo-white);
+  transform: translateY(-3px);
+}
+
+.home-foursets-omnius .button.button-small {
+  min-height: 44px;
+  padding-inline: 17px;
+}
+
+.home-foursets-omnius .text-link {
+  color: var(--fo-ink);
+  font-weight: 800;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
+.home-foursets-omnius .text-link:hover {
+  color: var(--fo-ink);
+  text-decoration-color: var(--fo-green);
+}
+
+/* Foursets-style typographic thesis: the title owns the first viewport. */
+.home-foursets-omnius .evidence-hero {
+  min-height: calc(100svh - 86px);
+  border-bottom: 0;
+  background: var(--fo-paper);
+}
+
+.home-foursets-omnius .evidence-hero::before,
+.home-foursets-omnius .evidence-hero::after {
+  display: none;
+}
+
+.home-foursets-omnius .home-hero {
+  padding: clamp(38px, 5vw, 72px) 0 0;
+}
+
+.home-foursets-omnius .home-hero-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 0 clamp(12px, 1.7vw, 26px);
+}
+
+.home-foursets-omnius .evidence-hero-copy {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 0 clamp(12px, 1.7vw, 26px);
+  max-width: none;
+}
+
+.home-foursets-omnius .eyebrow {
+  grid-column: 1 / 6;
+  margin: 0 0 clamp(30px, 4vw, 58px);
+  color: var(--fo-ink);
+  font-family: var(--font-data);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.home-foursets-omnius .display-title {
+  display: flex;
+  grid-column: 1 / -1;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  font-size: clamp(66px, 8.5vw, 132px);
+  font-weight: 850;
+  line-height: 0.94;
+  letter-spacing: -0.065em;
+  text-wrap: balance;
+}
+
+.home-foursets-omnius .display-title > span,
+.home-foursets-omnius .display-title > em {
+  display: block;
+  transform-origin: left bottom;
+}
+
+.home-foursets-omnius .display-title > span:nth-child(2) {
+  margin-left: clamp(0px, 8vw, 126px);
+}
+
+.home-foursets-omnius .display-title em {
+  position: relative;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 0 0 auto;
+  padding: 0.02em 0.08em 0.11em;
+  background: var(--fo-green);
+  color: var(--fo-white);
+  font-style: normal;
+  line-height: 0.94;
+}
+
+.home-foursets-omnius .lead {
+  grid-column: 8 / -1;
+  max-width: 620px;
+  margin: clamp(38px, 4.5vw, 68px) 0 0;
+  color: var(--fo-ink);
+  font-size: clamp(17px, 1.35vw, 20px);
+  font-weight: 550;
+  line-height: 1.75;
+}
+
+.home-foursets-omnius .evidence-hero-copy > .hero-actions {
+  display: flex;
+  grid-column: 8 / -1;
+  align-items: center;
+  gap: 24px;
+  margin-top: 27px;
+}
+
+.home-foursets-omnius .hero-principles {
+  display: grid;
+  grid-column: 1 / 7;
+  grid-template-columns: repeat(3, 1fr);
+  align-self: end;
+  margin: -72px 0 0;
+  border: 0;
+  border-top: 1px solid var(--fo-ink);
+  border-bottom: 1px solid var(--fo-ink);
+  background: transparent;
+}
+
+.home-foursets-omnius .hero-principles div {
+  padding: 17px 16px 18px 0;
+}
+
+.home-foursets-omnius .hero-principles div + div {
+  padding-left: 18px;
+  border-left: 1px solid var(--fo-rule);
+}
+
+.home-foursets-omnius .hero-principles dt {
+  margin-bottom: 7px;
+  color: var(--fo-ink);
+  font: 800 17px/1 var(--fo-display);
+}
+
+.home-foursets-omnius .hero-principles dd {
+  color: var(--fo-muted);
+  font: 700 10px/1.45 var(--font-data);
+  letter-spacing: 0.04em;
+}
+
+/* The ledger becomes an edge-to-edge channel router rather than a dashboard card. */
+.home-foursets-omnius .ops-ledger {
+  position: relative;
+  grid-column: 1 / -1;
+  width: 100%;
+  margin: clamp(58px, 6vw, 88px) 0 0;
+  border: 0;
+  border-top: 1px solid var(--fo-ink);
+  background: transparent;
+  box-shadow: none;
+}
+
+.home-foursets-omnius .ops-ledger::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -7px;
+  left: 0;
+  height: 7px;
+  background: var(--fo-green);
+  transform-origin: left;
+}
+
+.home-foursets-omnius .ledger-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 18px;
+  border: 0;
+  background: var(--fo-ink);
+  color: var(--fo-white);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.home-foursets-omnius .framework-badge {
+  color: var(--fo-blue-soft);
+}
+
+.home-foursets-omnius .framework-badge::before {
+  background: var(--fo-blue-soft);
+}
+
+.home-foursets-omnius .ledger-columns,
+.home-foursets-omnius .ledger-row {
+  display: grid;
+  grid-template-columns: 92px repeat(3, minmax(0, 1fr));
+  padding: 0;
+  border-right: 1px solid var(--fo-ink);
+  border-bottom: 1px solid var(--fo-ink);
+  border-left: 1px solid var(--fo-ink);
+  background: var(--fo-white);
+}
+
+.home-foursets-omnius .ledger-columns {
+  color: var(--fo-muted);
+  font-size: 9px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.home-foursets-omnius .ledger-columns span,
+.home-foursets-omnius .ledger-row > * {
+  min-width: 0;
+  padding: 13px 17px;
+}
+
+.home-foursets-omnius .ledger-columns span + span,
+.home-foursets-omnius .ledger-row > * + * {
+  border-left: 1px solid var(--fo-rule);
+}
+
+.home-foursets-omnius .ledger-row {
+  transition:
+    color 160ms ease,
+    background 160ms ease;
+}
+
+.home-foursets-omnius .ledger-row:hover {
+  border-color: var(--fo-ink);
+  background: var(--fo-green);
+  color: var(--fo-white);
+  transform: none;
+}
+
+.home-foursets-omnius .ledger-row:hover > * + * {
+  border-left-color: rgba(255, 255, 255, 0.45);
+}
+
+.home-foursets-omnius .ledger-row:hover .ledger-code,
+.home-foursets-omnius .ledger-row:hover strong,
+.home-foursets-omnius .ledger-row:hover small {
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius .ledger-code {
+  display: flex;
+  align-items: center;
+  color: var(--fo-ink);
+  font: 850 clamp(22px, 2.1vw, 32px)/1 var(--fo-display);
+}
+
+.home-foursets-omnius .ledger-row strong {
+  display: block;
+  color: var(--fo-ink);
+  font-size: 14px;
+}
+
+.home-foursets-omnius .ledger-row small {
+  display: block;
+  margin-top: 5px;
+  color: var(--fo-muted);
+  line-height: 1.45;
+}
+
+.home-foursets-omnius .ledger-row:hover small {
+  color: var(--fo-ink);
+}
+
+.home-foursets-omnius .ledger-foot {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+  background: transparent;
+  color: var(--fo-ink);
+}
+
+.home-foursets-omnius .ledger-foot span {
+  padding: 17px 18px 25px;
+  border-right: 1px solid var(--fo-rule);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+.home-foursets-omnius .ledger-foot span:first-child {
+  border-left: 1px solid var(--fo-rule);
+}
+
+.home-foursets-omnius .ledger-foot b {
+  color: var(--fo-ink);
+}
+
+.home-foursets-omnius .signal-strip {
+  border-top: 0;
+  border-bottom: 1px solid var(--fo-ink);
+  background: var(--fo-green);
+}
+
+.home-foursets-omnius .signal-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.55fr);
+  gap: 32px;
+  padding-block: 27px;
+}
+
+.home-foursets-omnius .signal-inner p {
+  color: var(--fo-white);
+  font: 800 clamp(20px, 2.25vw, 34px)/1.15 var(--fo-display);
+  letter-spacing: -0.025em;
+}
+
+.home-foursets-omnius .signal-inner ul {
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius .signal-inner li::before {
+  background: var(--fo-white);
+}
+
+/* Omnius-style editorial chapters: large statements and rule-based rows. */
+.home-foursets-omnius .section {
+  position: relative;
+  padding: clamp(104px, 10vw, 160px) 0;
+  border-bottom: 1px solid var(--fo-ink);
+}
+
+.home-foursets-omnius .section-white,
+.home-foursets-omnius .section-soft {
+  background: var(--fo-paper);
+  background-image: none;
+}
+
+.home-foursets-omnius .system-section::before {
+  content: attr(data-system-code);
+  position: absolute;
+  top: 34px;
+  left: max(32px, calc((100vw - 1440px) / 2));
+  color: var(--fo-muted);
+  font: 800 9px/1 var(--font-data);
+  letter-spacing: 0.16em;
+  writing-mode: horizontal-tb;
+}
+
+.home-foursets-omnius .section-kicker {
+  display: block;
+  margin-bottom: 22px;
+  color: var(--fo-ink);
+  font: 800 10px/1 var(--font-data);
+  letter-spacing: 0.16em;
+}
+
+.home-foursets-omnius .section-kicker::before {
+  display: none;
+}
+
+.home-foursets-omnius .section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 8fr) minmax(280px, 4fr);
+  gap: clamp(48px, 8vw, 120px);
+  align-items: end;
+  margin-bottom: clamp(60px, 7vw, 104px);
+}
+
+.home-foursets-omnius .section-heading h2,
+.home-foursets-omnius .split-copy h2,
+.home-foursets-omnius .contact-copy h2 {
+  max-width: 980px;
+  margin: 0;
+  font-size: clamp(50px, 6.4vw, 96px);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.home-foursets-omnius .section-heading > p,
+.home-foursets-omnius .section-heading > :nth-child(2),
+.home-foursets-omnius .split-copy > p {
+  padding-top: 0;
+  color: var(--fo-muted);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.home-foursets-omnius .problem-board {
+  display: grid;
+  grid-template-columns: minmax(300px, 5fr) minmax(0, 7fr);
+  gap: clamp(64px, 10vw, 150px);
+  align-items: start;
+}
+
+.home-foursets-omnius #problems .split-copy {
+  position: sticky;
+  top: 126px;
+}
+
+.home-foursets-omnius #problems .split-copy h2 {
+  font-size: clamp(54px, 6.6vw, 100px);
+}
+
+.home-foursets-omnius .problem-list {
+  border-top: 1px solid var(--fo-ink);
+}
+
+.home-foursets-omnius .problem-list article {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 24px;
+  padding: 31px 0;
+  border-bottom: 1px solid var(--fo-rule);
+  transition:
+    padding 160ms ease,
+    background 160ms ease;
+}
+
+.home-foursets-omnius .problem-list article:hover {
+  padding-right: 18px;
+  padding-left: 18px;
+  border-color: var(--fo-ink);
+  background: var(--fo-green);
+  color: var(--fo-white);
+  transform: none;
+}
+
+.home-foursets-omnius .problem-list article:hover > span,
+.home-foursets-omnius .problem-list article:hover p {
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius .problem-list article > span {
+  color: var(--fo-muted);
+  font: 800 11px/1.2 var(--font-data);
+}
+
+.home-foursets-omnius .problem-list h3 {
+  margin: 0 0 8px;
+  font-size: clamp(24px, 2.5vw, 38px);
+  line-height: 1.1;
+}
+
+.home-foursets-omnius .problem-list p {
+  max-width: 660px;
+  color: var(--fo-muted);
+  line-height: 1.7;
+}
+
+.home-foursets-omnius .service-ledger {
+  border: 0;
+  border-top: 1px solid var(--fo-ink);
+  background: transparent;
+}
+
+.home-foursets-omnius .service-row {
+  display: grid;
+  grid-template-columns: 94px minmax(280px, 1.4fr) minmax(250px, 0.85fr) minmax(190px, 0.55fr);
+  gap: clamp(24px, 3.5vw, 58px);
+  align-items: start;
+  min-height: 250px;
+  padding: 39px 0 43px;
+  border-bottom: 1px solid var(--fo-ink);
+  background: transparent;
+  transition:
+    padding 180ms ease,
+    background 180ms ease;
+}
+
+.home-foursets-omnius .service-row:hover {
+  padding-right: 24px;
+  padding-left: 24px;
+  background: var(--fo-sage);
+  transform: none;
+}
+
+.home-foursets-omnius .service-row-code {
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--fo-ink);
+  font: 850 clamp(30px, 3.8vw, 58px)/0.9 var(--fo-display);
+}
+
+.home-foursets-omnius .service-row.web .service-row-code,
+.home-foursets-omnius .service-row.mic .service-row-code {
+  background: transparent;
+  color: var(--fo-ink);
+}
+
+.home-foursets-omnius .service-row > div::before,
+.home-foursets-omnius .service-row > ul::before {
+  display: block;
+  margin-bottom: 17px;
+  color: var(--fo-muted);
+  font: 800 9px/1 var(--font-data);
+  letter-spacing: 0.15em;
+}
+
+.home-foursets-omnius .service-row > div::before {
+  content: "SCOPE / 工作范围";
+}
+
+.home-foursets-omnius .service-row > ul::before {
+  content: "ACTIVITIES / 主要动作";
+}
+
+.home-foursets-omnius .service-row h3 {
+  margin: 0 0 13px;
+  font-size: clamp(30px, 3vw, 46px);
+  line-height: 1.05;
+}
+
+.home-foursets-omnius .service-row p {
+  max-width: 610px;
+  color: var(--fo-muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.home-foursets-omnius .service-row ul {
+  margin: 0;
+  padding: 0;
+  color: var(--fo-ink);
+}
+
+.home-foursets-omnius .service-row li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--fo-rule);
+  line-height: 1.45;
+}
+
+.home-foursets-omnius .service-row li::before {
+  content: "↳";
+  color: var(--fo-ink);
+}
+
+.home-foursets-omnius .service-row .text-link {
+  align-self: end;
+  justify-self: end;
+  max-width: 210px;
+  line-height: 1.45;
+}
+
+.home-foursets-omnius .section-dark {
+  background: var(--fo-ink);
+  background-image: none;
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius .section-dark.system-section::before,
+.home-foursets-omnius .section-dark .section-kicker {
+  color: var(--fo-blue-soft);
+}
+
+.home-foursets-omnius .section-dark .section-heading > p {
+  color: #b8c4d0;
+}
+
+.home-foursets-omnius .work-cycle {
+  display: block;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.72);
+  background: transparent;
+}
+
+.home-foursets-omnius .cycle-step {
+  display: grid;
+  grid-template-columns: 150px minmax(220px, 0.65fr) minmax(0, 1.35fr) 60px;
+  gap: clamp(24px, 4vw, 64px);
+  align-items: center;
+  min-height: 0;
+  padding: 36px 0;
+  border-right: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.42);
+  transition:
+    color 180ms ease,
+    padding 180ms ease,
+    background 180ms ease;
+}
+
+.home-foursets-omnius .cycle-step::after {
+  content: "↘";
+  position: static;
+  display: block;
+  align-self: center;
+  justify-self: end;
+  color: var(--fo-blue-soft);
+  font: 500 34px/1 var(--fo-display);
+}
+
+.home-foursets-omnius .cycle-step:last-child::after {
+  content: "↺";
+}
+
+.home-foursets-omnius .cycle-step:hover {
+  padding-right: 24px;
+  padding-left: 24px;
+  background: var(--fo-green);
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius .cycle-step:hover::after {
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius .cycle-step > span {
+  color: var(--fo-blue-soft);
+  font: 800 11px/1 var(--font-data);
+  letter-spacing: 0.12em;
+}
+
+.home-foursets-omnius .cycle-step:hover > span {
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius .cycle-step h3 {
+  margin: 0;
+  font-size: clamp(32px, 3.8vw, 58px);
+  line-height: 1;
+}
+
+.home-foursets-omnius .cycle-step p {
+  max-width: 720px;
+  margin: 0;
+  color: #b8c4d0;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.home-foursets-omnius .cycle-step:hover p {
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius #method > .shell > .hero-actions {
+  margin-top: 42px;
+}
+
+.home-foursets-omnius #method .button {
+  border-color: var(--fo-green);
+}
+
+.home-foursets-omnius .fit-board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--fo-ink);
+}
+
+.home-foursets-omnius .fit-panel {
+  min-height: 440px;
+  padding: clamp(34px, 4.8vw, 70px);
+  border: 0;
+  border-radius: 0;
+  background: var(--fo-green);
+  color: var(--fo-white);
+  box-shadow: none;
+}
+
+.home-foursets-omnius .fit-panel.avoid {
+  border-left: 1px solid var(--fo-ink);
+  background: var(--fo-ink);
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius .fit-panel h3 {
+  margin-bottom: 38px;
+  font-size: clamp(34px, 4vw, 60px);
+}
+
+.home-foursets-omnius .fit-panel li {
+  padding: 13px 0;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 35%, transparent);
+  line-height: 1.6;
+}
+
+.home-foursets-omnius .fit-panel li::before {
+  color: currentColor;
+}
+
+/* Notes read like an editorial desk instead of three equal cards. */
+.home-foursets-omnius .article-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.55fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--fo-ink);
+}
+
+.home-foursets-omnius .article-card {
+  min-height: 280px;
+  padding: clamp(30px, 4vw, 58px);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.home-foursets-omnius .article-card:first-child {
+  grid-row: 1 / 3;
+  min-height: 590px;
+}
+
+.home-foursets-omnius .article-card + .article-card {
+  border-left: 1px solid var(--fo-ink);
+}
+
+.home-foursets-omnius .article-card:nth-child(3) {
+  border-top: 1px solid var(--fo-ink);
+}
+
+.home-foursets-omnius .article-card:hover {
+  background: var(--fo-green);
+  color: var(--fo-white);
+  transform: none;
+}
+
+.home-foursets-omnius .article-card .tag {
+  color: var(--fo-muted);
+  font: 800 9px/1 var(--font-data);
+  letter-spacing: 0.14em;
+}
+
+.home-foursets-omnius .article-card h3 {
+  max-width: 730px;
+  margin-top: 70px;
+  font-size: clamp(29px, 3vw, 46px);
+  line-height: 1.12;
+}
+
+.home-foursets-omnius .article-card:first-child h3 {
+  margin-top: 120px;
+  font-size: clamp(46px, 5vw, 76px);
+  line-height: 1.02;
+}
+
+.home-foursets-omnius .article-card p {
+  max-width: 620px;
+  color: var(--fo-muted);
+  line-height: 1.72;
+}
+
+.home-foursets-omnius .article-card:hover p,
+.home-foursets-omnius .article-card:hover .tag {
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius #tools {
+  background: var(--fo-ink);
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius #tools.system-section::before,
+.home-foursets-omnius #tools .section-kicker {
+  color: var(--fo-blue-soft);
+}
+
+.home-foursets-omnius #tools .section-heading > p {
+  color: #b8c4d0;
+}
+
+.home-foursets-omnius .tool-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.home-foursets-omnius .tool-preview-card {
+  min-height: 390px;
+  padding: clamp(30px, 3.4vw, 52px);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius .tool-preview-card + .tool-preview-card {
+  border-left: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.home-foursets-omnius .tool-preview-card:hover,
+.home-foursets-omnius .tool-preview-primary {
+  background: var(--fo-green);
+  color: var(--fo-white);
+  transform: none;
+}
+
+.home-foursets-omnius .tool-code {
+  color: var(--fo-blue-soft);
+}
+
+.home-foursets-omnius .tool-preview-card:hover .tool-code,
+.home-foursets-omnius .tool-preview-primary .tool-code {
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius .tool-preview-card h3 {
+  margin-top: 84px;
+  font-size: clamp(29px, 3vw, 45px);
+  line-height: 1.08;
+}
+
+.home-foursets-omnius .tool-preview-card p {
+  color: #b8c4d0;
+  line-height: 1.7;
+}
+
+.home-foursets-omnius .tool-preview-card:hover p,
+.home-foursets-omnius .tool-preview-primary p {
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius #about .problem-board {
+  align-items: end;
+}
+
+.home-foursets-omnius #about .split-copy h2 {
+  font-size: clamp(52px, 6.7vw, 102px);
+}
+
+.home-foursets-omnius #about .problem-board > div:last-child {
+  padding: clamp(30px, 4vw, 60px);
+  border: 1px solid var(--fo-ink);
+  background: var(--fo-white);
+  font-size: 17px;
+  line-height: 1.78;
+}
+
+.home-foursets-omnius #about .problem-board > div:last-child p + p {
+  margin-top: 22px;
+}
+
+.home-foursets-omnius #about .text-link {
+  display: inline-block;
+  margin-top: 28px;
+}
+
+.home-foursets-omnius .faq-list {
+  border-top: 1px solid var(--fo-ink);
+}
+
+.home-foursets-omnius .faq-list details {
+  border-bottom: 1px solid var(--fo-ink);
+}
+
+.home-foursets-omnius .faq-list summary {
+  padding: 28px 0;
+  color: var(--fo-ink);
+  font: 750 clamp(20px, 2.2vw, 31px)/1.25 var(--fo-display);
+}
+
+.home-foursets-omnius .faq-list summary::after {
+  color: var(--fo-ink);
+}
+
+.home-foursets-omnius .faq-list details p {
+  max-width: 860px;
+  padding: 0 0 32px;
+  color: var(--fo-muted);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.home-foursets-omnius .evidence-contact {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(84px, 9vw, 138px) 0;
+  background: var(--fo-green);
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius .evidence-contact::after {
+  content: "START / 01";
+  right: 3vw;
+  bottom: -0.07em;
+  color: rgba(255, 255, 255, 0.11);
+  font: 850 clamp(70px, 14vw, 210px)/0.8 var(--fo-display);
+  letter-spacing: -0.06em;
+}
+
+.home-foursets-omnius .evidence-contact .section-kicker,
+.home-foursets-omnius .evidence-contact .contact-copy,
+.home-foursets-omnius .evidence-contact .contact-copy p {
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius .contact-panel-grid {
+  position: relative;
+  z-index: 2;
+  grid-template-columns: minmax(0, 7fr) minmax(360px, 5fr);
+  gap: clamp(64px, 9vw, 140px);
+}
+
+.home-foursets-omnius .contact-checklist {
+  border-top: 1px solid rgba(255, 255, 255, 0.72);
+}
+
+.home-foursets-omnius .contact-checklist li {
+  border-bottom-color: rgba(255, 255, 255, 0.42);
+}
+
+.home-foursets-omnius .contact-checklist span,
+.home-foursets-omnius .contact-checklist small {
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius .evidence-contact .button-light {
+  border-color: var(--fo-white);
+  background: var(--fo-ink);
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius .evidence-contact .button-light:hover {
+  background: var(--fo-white);
+  color: var(--fo-ink);
+}
+
+.home-foursets-omnius .evidence-contact .button-secondary {
+  border-color: var(--fo-white);
+  background: transparent;
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius .evidence-contact .button-secondary:hover {
+  background: var(--fo-white);
+  color: var(--fo-ink);
+}
+
+.home-foursets-omnius .site-footer {
+  background: var(--fo-ink);
+}
+
+.home-foursets-omnius .site-footer .brand-mark i:last-child {
+  background: var(--fo-green);
+}
+
+/* One orchestrated load moment; motion is removed for people who request it. */
+@media (prefers-reduced-motion: no-preference) {
+  .home-foursets-omnius .display-title > span,
+  .home-foursets-omnius .display-title > em {
+    animation: fo-title-in 620ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .home-foursets-omnius .display-title > span:nth-child(2) {
+    animation-delay: 80ms;
+  }
+
+  .home-foursets-omnius .display-title > em {
+    animation-delay: 160ms;
+  }
+
+  .home-foursets-omnius .ops-ledger::after {
+    animation: fo-route-in 720ms 260ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+@keyframes fo-title-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.38em) rotate(1deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes fo-route-in {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width: 1050px) {
+  .home-foursets-omnius .shell {
+    width: min(calc(100% - 40px), 1440px);
+  }
+
+  .home-foursets-omnius .site-header {
+    background: var(--fo-paper);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .home-foursets-omnius .site-header .brand::after {
+    display: none;
+  }
+
+  .home-foursets-omnius .site-nav {
+    border-bottom: 1px solid var(--fo-ink);
+    background: var(--fo-paper);
+  }
+
+  .home-foursets-omnius .display-title {
+    font-size: clamp(62px, 10vw, 104px);
+  }
+
+  .home-foursets-omnius .lead,
+  .home-foursets-omnius .evidence-hero-copy > .hero-actions {
+    grid-column: 7 / -1;
+  }
+
+  .home-foursets-omnius .hero-principles {
+    grid-column: 1 / 6;
+  }
+
+  .home-foursets-omnius .ledger-columns,
+  .home-foursets-omnius .ledger-row {
+    grid-template-columns: 76px repeat(3, minmax(0, 1fr));
+  }
+
+  .home-foursets-omnius .ledger-columns span,
+  .home-foursets-omnius .ledger-row > * {
+    padding-inline: 11px;
+  }
+
+  .home-foursets-omnius .section-heading,
+  .home-foursets-omnius .problem-board {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .home-foursets-omnius #problems .split-copy {
+    position: static;
+  }
+
+  .home-foursets-omnius .section-heading > p {
+    max-width: 680px;
+  }
+
+  .home-foursets-omnius .service-row {
+    grid-template-columns: 80px minmax(260px, 1fr) minmax(220px, 0.8fr);
+  }
+
+  .home-foursets-omnius .service-row .text-link {
+    grid-column: 2 / -1;
+    justify-self: start;
+    max-width: none;
+  }
+
+  .home-foursets-omnius .cycle-step {
+    grid-template-columns: 110px 220px 1fr 42px;
+  }
+
+  .home-foursets-omnius .contact-panel-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .home-foursets-omnius .shell {
+    width: min(calc(100% - 30px), 1440px);
+  }
+
+  .home-foursets-omnius .header-inner {
+    min-height: 72px;
+  }
+
+  .home-foursets-omnius .home-hero {
+    min-height: 0;
+    padding-top: 34px;
+  }
+
+  .home-foursets-omnius .home-hero-grid,
+  .home-foursets-omnius .evidence-hero-copy {
+    display: block;
+  }
+
+  .home-foursets-omnius .eyebrow {
+    margin-bottom: 27px;
+    font-size: 9px;
+  }
+
+  .home-foursets-omnius .display-title {
+    font-size: clamp(47px, 15vw, 72px);
+    line-height: 0.92;
+    letter-spacing: -0.06em;
+  }
+
+  .home-foursets-omnius .display-title > span:nth-child(2) {
+    margin-left: 0;
+  }
+
+  .home-foursets-omnius .display-title em {
+    width: auto;
+    margin: 4px 0 0;
+  }
+
+  .home-foursets-omnius .lead {
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .home-foursets-omnius .evidence-hero-copy > .hero-actions {
+    display: grid;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .home-foursets-omnius .evidence-hero-copy > .hero-actions .button {
+    width: 100%;
+  }
+
+  .home-foursets-omnius .hero-principles {
+    margin: 36px 0 0;
+  }
+
+  .home-foursets-omnius .hero-principles div,
+  .home-foursets-omnius .hero-principles div + div {
+    padding: 14px 7px;
+  }
+
+  .home-foursets-omnius .ops-ledger {
+    margin-top: 40px;
+  }
+
+  .home-foursets-omnius .ledger-head {
+    align-items: center;
+    font-size: 8px;
+  }
+
+  .home-foursets-omnius .ledger-columns {
+    display: none;
+  }
+
+  .home-foursets-omnius .ledger-row {
+    grid-template-columns: 62px 1fr;
+  }
+
+  .home-foursets-omnius .ledger-row > * {
+    padding: 13px;
+  }
+
+  .home-foursets-omnius .ledger-row > * + * {
+    border-left: 1px solid var(--fo-rule);
+  }
+
+  .home-foursets-omnius .ledger-row > div {
+    grid-column: 2;
+  }
+
+  .home-foursets-omnius .ledger-row > div + div {
+    border-top: 1px solid var(--fo-rule);
+  }
+
+  .home-foursets-omnius .ledger-code {
+    grid-row: 1 / 4;
+    align-items: flex-start;
+    padding-top: 17px;
+  }
+
+  .home-foursets-omnius .ledger-foot span {
+    padding: 14px 8px 20px;
+    font-size: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .home-foursets-omnius .signal-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .home-foursets-omnius .signal-inner ul {
+    justify-content: flex-start;
+    gap: 14px;
+    font-size: 11px;
+  }
+
+  .home-foursets-omnius .section {
+    padding: 90px 0;
+  }
+
+  .home-foursets-omnius .system-section::before {
+    top: 24px;
+    left: 15px;
+  }
+
+  .home-foursets-omnius .section-heading {
+    gap: 26px;
+    margin-bottom: 48px;
+  }
+
+  .home-foursets-omnius .section-heading h2,
+  .home-foursets-omnius .split-copy h2,
+  .home-foursets-omnius .contact-copy h2,
+  .home-foursets-omnius #problems .split-copy h2,
+  .home-foursets-omnius #about .split-copy h2 {
+    font-size: clamp(42px, 12.5vw, 62px);
+    line-height: 1;
+  }
+
+  .home-foursets-omnius .problem-list article {
+    grid-template-columns: 42px 1fr;
+    gap: 13px;
+  }
+
+  .home-foursets-omnius .service-row {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 24px 14px;
+    padding: 30px 0 34px;
+  }
+
+  .home-foursets-omnius .service-row:hover {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .home-foursets-omnius .service-row-code {
+    grid-row: 1 / 4;
+    font-size: 28px;
+    writing-mode: vertical-rl;
+  }
+
+  .home-foursets-omnius .service-row > div,
+  .home-foursets-omnius .service-row > ul,
+  .home-foursets-omnius .service-row .text-link {
+    grid-column: 2;
+  }
+
+  .home-foursets-omnius .service-row h3 {
+    font-size: 32px;
+  }
+
+  .home-foursets-omnius .cycle-step {
+    grid-template-columns: 70px 1fr 34px;
+    gap: 13px;
+    padding: 27px 0;
+  }
+
+  .home-foursets-omnius .cycle-step > span {
+    grid-column: 1;
+  }
+
+  .home-foursets-omnius .cycle-step h3 {
+    grid-column: 2;
+    font-size: 34px;
+  }
+
+  .home-foursets-omnius .cycle-step p {
+    grid-column: 2 / -1;
+  }
+
+  .home-foursets-omnius .cycle-step::after {
+    grid-column: 3;
+    grid-row: 1;
+    font-size: 25px;
+  }
+
+  .home-foursets-omnius .fit-board,
+  .home-foursets-omnius .article-grid,
+  .home-foursets-omnius .tool-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-foursets-omnius .fit-panel {
+    min-height: 0;
+  }
+
+  .home-foursets-omnius .fit-panel.avoid {
+    border-top: 1px solid var(--fo-ink);
+    border-left: 0;
+  }
+
+  .home-foursets-omnius .article-grid {
+    grid-template-rows: auto;
+  }
+
+  .home-foursets-omnius .article-card,
+  .home-foursets-omnius .article-card:first-child {
+    grid-row: auto;
+    min-height: 360px;
+  }
+
+  .home-foursets-omnius .article-card + .article-card {
+    border-top: 1px solid var(--fo-ink);
+    border-left: 0;
+  }
+
+  .home-foursets-omnius .article-card h3,
+  .home-foursets-omnius .article-card:first-child h3 {
+    margin-top: 66px;
+    font-size: 37px;
+  }
+
+  .home-foursets-omnius .tool-preview-card {
+    min-height: 320px;
+  }
+
+  .home-foursets-omnius .tool-preview-card + .tool-preview-card {
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    border-left: 0;
+  }
+
+  .home-foursets-omnius .tool-preview-card h3 {
+    margin-top: 56px;
+    font-size: 34px;
+  }
+
+  .home-foursets-omnius #about .problem-board > div:last-child {
+    padding: 25px;
+  }
+
+  .home-foursets-omnius .evidence-contact {
+    padding: 82px 0 104px;
+  }
+
+  .home-foursets-omnius .evidence-contact::after {
+    font-size: 74px;
+  }
+}
+
+@media (max-width: 420px) {
+  .home-foursets-omnius .display-title {
+    font-size: clamp(43px, 14.2vw, 59px);
+  }
+
+  .home-foursets-omnius .display-title em {
+    padding-right: 0.04em;
+    padding-left: 0.04em;
+  }
+
+  .home-foursets-omnius .hero-principles {
+    grid-template-columns: 1fr;
+  }
+
+  .home-foursets-omnius .hero-principles div + div {
+    border-top: 1px solid var(--fo-rule);
+    border-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-foursets-omnius *,
+  .home-foursets-omnius *::before,
+  .home-foursets-omnius *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/*
+  SEO / E-E-A-T / GEO homepage architecture.
+  The content order is answer -> service routing -> diagnosis -> method ->
+  visible evidence -> public proof -> author/context -> decision FAQ -> contact.
+*/
+.home-seo-geo .geo-hero {
+  min-height: 0;
+  padding-bottom: clamp(56px, 7vw, 100px);
+}
+
+.home-seo-geo .display-title {
+  grid-column: 1 / 10;
+  max-width: 1040px;
+  font-size: clamp(58px, 6.6vw, 96px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.home-seo-geo .display-title > span:nth-child(2) {
+  margin-left: 0;
+}
+
+.home-seo-geo .display-title em {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--fo-blue);
+  line-height: 1;
+}
+
+.home-seo-geo .evidence-hero-copy > .lead {
+  grid-column: 1 / 7;
+  margin-top: clamp(30px, 3vw, 44px);
+  font-size: clamp(16px, 1.2vw, 18px);
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.home-seo-geo .evidence-hero-copy > .hero-actions {
+  grid-column: 1 / 7;
+  margin-top: 24px;
+}
+
+.home-seo-geo .hero-answer {
+  grid-column: 1 / 5;
+  margin-top: clamp(58px, 7vw, 96px);
+  padding: clamp(26px, 3vw, 42px);
+  border: 1px solid var(--fo-ink);
+  background: var(--fo-white);
+}
+
+.home-seo-geo .answer-label,
+.home-seo-geo .channel-route-head,
+.home-seo-geo .route-core span,
+.home-seo-geo .responsibility-band > article > span,
+.home-seo-geo .evidence-grid > article > span,
+.home-seo-geo .case-status > div > span,
+.home-seo-geo .resource-tool > span,
+.home-seo-geo .resource-notes a > span,
+.home-seo-geo .trust-grid > article > span {
+  color: var(--fo-muted);
+  font: 800 9px/1.3 var(--font-data);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.home-seo-geo .hero-answer h2 {
+  margin: 22px 0 18px;
+  font-size: clamp(32px, 3vw, 48px);
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.home-seo-geo .hero-answer > p:not(.answer-label) {
+  color: var(--fo-muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.home-seo-geo .hero-answer dl {
+  margin: 28px 0 0;
+  border-top: 1px solid var(--fo-ink);
+}
+
+.home-seo-geo .hero-answer dl div {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 18px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--fo-rule);
+}
+
+.home-seo-geo .hero-answer dt {
+  color: var(--fo-muted);
+  font: 800 10px/1.5 var(--font-data);
+}
+
+.home-seo-geo .hero-answer dd {
+  color: var(--fo-ink);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.home-seo-geo .channel-route {
+  grid-column: 5 / -1;
+  margin-top: clamp(58px, 7vw, 96px);
+  border: 1px solid var(--fo-ink);
+  background: var(--fo-white);
+}
+
+.home-seo-geo .channel-route-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 19px;
+  background: var(--fo-ink);
+  color: var(--fo-white);
+}
+
+.home-seo-geo .channel-route-head span:last-child {
+  color: var(--fo-blue-soft);
+}
+
+.home-seo-geo .route-line {
+  display: grid;
+  grid-template-columns: 94px 1fr 34px;
+  gap: 20px;
+  align-items: center;
+  min-height: 108px;
+  padding: 18px 21px;
+  border-bottom: 1px solid var(--fo-rule);
+  color: var(--fo-ink);
+  text-decoration: none;
+  transition:
+    color 160ms ease,
+    background 160ms ease,
+    padding 160ms ease;
+}
+
+.home-seo-geo .route-line:hover {
+  padding-right: 29px;
+  padding-left: 29px;
+  background: var(--fo-blue);
+  color: var(--fo-white);
+}
+
+.home-seo-geo .route-code {
+  font: 850 clamp(27px, 3vw, 46px)/1 var(--fo-display);
+  letter-spacing: -0.04em;
+}
+
+.home-seo-geo .route-line strong,
+.home-seo-geo .route-line small {
+  display: block;
+}
+
+.home-seo-geo .route-line strong {
+  font-size: clamp(20px, 2vw, 29px);
+  line-height: 1.1;
+}
+
+.home-seo-geo .route-line small {
+  margin-top: 7px;
+  color: var(--fo-muted);
+  line-height: 1.45;
+}
+
+.home-seo-geo .route-line:hover small {
+  color: var(--fo-white);
+}
+
+.home-seo-geo .route-line > span:last-child {
+  justify-self: end;
+  font: 600 27px/1 var(--fo-display);
+}
+
+.home-seo-geo .route-core {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.35fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+  padding: 23px 21px 25px;
+  background: var(--fo-blue);
+  color: var(--fo-white);
+}
+
+.home-seo-geo .route-core span {
+  color: var(--fo-white);
+}
+
+.home-seo-geo .route-core strong {
+  font-size: clamp(17px, 1.65vw, 24px);
+  line-height: 1.35;
+}
+
+.home-seo-geo .service-row > ul::before {
+  content: "VISIBLE OUTPUTS / 可约定工作物";
+}
+
+.home-seo-geo .section {
+  padding: clamp(88px, 8vw, 128px) 0;
+}
+
+.home-seo-geo .section-heading {
+  margin-bottom: clamp(50px, 6vw, 78px);
+}
+
+.home-seo-geo .section-heading h2,
+.home-seo-geo .split-copy h2,
+.home-seo-geo .contact-copy h2 {
+  max-width: 840px;
+  font-size: clamp(40px, 4.5vw, 66px);
+  line-height: 1.07;
+  letter-spacing: -0.045em;
+}
+
+.home-seo-geo #diagnosis .split-copy {
+  position: sticky;
+  top: 126px;
+}
+
+.home-seo-geo #diagnosis .split-copy h2 {
+  font-size: clamp(42px, 4.8vw, 70px);
+}
+
+.home-seo-geo #diagnosis .split-copy .text-link {
+  display: inline-flex;
+  margin-top: 28px;
+}
+
+.home-seo-geo .work-cycle-contract .cycle-step {
+  grid-template-columns: 150px minmax(230px, 0.58fr) minmax(0, 1.42fr) 60px;
+}
+
+.home-seo-geo .step-contract {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(22px, 3vw, 46px);
+}
+
+.home-seo-geo .step-contract p {
+  margin: 0;
+  color: #b8c4d0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.home-seo-geo .step-contract b {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--fo-blue-soft);
+  font: 800 10px/1.2 var(--font-data);
+  letter-spacing: 0.12em;
+}
+
+.home-seo-geo .cycle-step:hover .step-contract p,
+.home-seo-geo .cycle-step:hover .step-contract b {
+  color: var(--fo-white);
+}
+
+.home-seo-geo .responsibility-band {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: clamp(56px, 7vw, 96px);
+  border: 1px solid rgba(255, 255, 255, 0.62);
+}
+
+.home-seo-geo .responsibility-band article {
+  min-height: 330px;
+  padding: clamp(30px, 4vw, 58px);
+}
+
+.home-seo-geo .responsibility-band article + article {
+  border-left: 1px solid rgba(255, 255, 255, 0.62);
+}
+
+.home-seo-geo .responsibility-band > article > span {
+  color: var(--fo-blue-soft);
+}
+
+.home-seo-geo .responsibility-band h3 {
+  max-width: 600px;
+  margin: 70px 0 18px;
+  font-size: clamp(29px, 3.1vw, 47px);
+  line-height: 1.05;
+}
+
+.home-seo-geo .responsibility-band p {
+  max-width: 610px;
+  color: #b8c4d0;
+  line-height: 1.75;
+}
+
+.home-seo-geo #method > .shell > .hero-actions {
+  margin-top: 34px;
+}
+
+.home-seo-geo .evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--fo-ink);
+}
+
+.home-seo-geo .evidence-grid article {
+  min-height: 330px;
+  padding: clamp(27px, 3.2vw, 46px);
+}
+
+.home-seo-geo .evidence-grid article + article {
+  border-left: 1px solid var(--fo-ink);
+}
+
+.home-seo-geo .evidence-grid h3 {
+  margin: 94px 0 18px;
+  font-size: clamp(27px, 2.5vw, 38px);
+  line-height: 1.05;
+}
+
+.home-seo-geo .evidence-grid p {
+  color: var(--fo-muted);
+  line-height: 1.7;
+}
+
+.home-seo-geo .case-status {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(300px, 1fr) minmax(180px, 0.45fr);
+  gap: clamp(32px, 5vw, 76px);
+  align-items: end;
+  margin-top: 24px;
+  padding: clamp(29px, 4vw, 55px);
+  border: 1px solid var(--fo-ink);
+  background: var(--fo-paper);
+}
+
+.home-seo-geo .case-status h3 {
+  margin: 20px 0 0;
+  font-size: clamp(29px, 3.1vw, 48px);
+  line-height: 1.05;
+}
+
+.home-seo-geo .case-status > p {
+  color: var(--fo-muted);
+  line-height: 1.75;
+}
+
+.home-seo-geo .case-status .text-link {
+  justify-self: end;
+  text-align: right;
+}
+
+.home-seo-geo .resource-desk {
+  display: grid;
+  grid-template-columns: minmax(330px, 0.85fr) minmax(0, 1.15fr);
+  border: 1px solid var(--fo-ink);
+}
+
+.home-seo-geo .resource-tool {
+  display: flex;
+  flex-direction: column;
+  min-height: 620px;
+  padding: clamp(34px, 4.5vw, 68px);
+  background: var(--fo-blue);
+  color: var(--fo-white);
+  text-decoration: none;
+  transition: background 160ms ease;
+}
+
+.home-seo-geo .resource-tool:hover {
+  background: var(--fo-ink);
+}
+
+.home-seo-geo .resource-tool > span {
+  color: var(--fo-white);
+}
+
+.home-seo-geo .resource-tool h3 {
+  max-width: 680px;
+  margin: auto 0 25px;
+  font-size: clamp(38px, 4vw, 58px);
+  line-height: 1.03;
+  letter-spacing: -0.04em;
+}
+
+.home-seo-geo .resource-tool p {
+  max-width: 560px;
+  color: var(--fo-white);
+  line-height: 1.75;
+}
+
+.home-seo-geo .resource-tool strong {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 38px;
+  padding-top: 19px;
+  border-top: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.home-seo-geo .resource-tool i {
+  font-style: normal;
+}
+
+.home-seo-geo .resource-notes {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.home-seo-geo .resource-notes a {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(135px, 0.35fr) minmax(0, 1fr) 34px;
+  gap: 25px;
+  align-items: center;
+  padding: clamp(25px, 3.4vw, 48px);
+  color: var(--fo-ink);
+  text-decoration: none;
+  transition:
+    color 160ms ease,
+    background 160ms ease;
+}
+
+.home-seo-geo .resource-notes a + a {
+  border-top: 1px solid var(--fo-ink);
+}
+
+.home-seo-geo .resource-notes a:hover {
+  background: var(--fo-ink);
+  color: var(--fo-white);
+}
+
+.home-seo-geo .resource-notes a:hover > span {
+  color: var(--fo-blue-soft);
+}
+
+.home-seo-geo .resource-notes h3 {
+  margin: 0;
+  font-size: clamp(24px, 2.4vw, 37px);
+  line-height: 1.12;
+}
+
+.home-seo-geo .resource-notes b {
+  justify-self: end;
+  font: 500 27px/1 var(--fo-display);
+}
+
+.home-seo-geo #resources > .shell > .hero-actions {
+  margin-top: 30px;
+}
+
+.home-seo-geo .trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--fo-ink);
+  border-bottom: 1px solid var(--fo-ink);
+}
+
+.home-seo-geo .trust-grid article {
+  min-height: 420px;
+  padding: clamp(30px, 3.6vw, 54px) clamp(24px, 3vw, 45px);
+}
+
+.home-seo-geo .trust-grid article + article {
+  border-left: 1px solid var(--fo-rule);
+}
+
+.home-seo-geo .trust-grid h3 {
+  margin: 100px 0 20px;
+  font-size: clamp(29px, 3vw, 46px);
+  line-height: 1.05;
+}
+
+.home-seo-geo .trust-grid p {
+  color: var(--fo-muted);
+  line-height: 1.75;
+}
+
+.home-seo-geo .profile-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  padding-top: 30px;
+}
+
+.home-seo-geo .profile-line > div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.home-seo-geo .profile-line .author-mark {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  background: var(--fo-ink);
+  color: var(--fo-white);
+  font: 800 13px/1 var(--font-data);
+}
+
+.home-seo-geo .profile-line p,
+.home-seo-geo .profile-line strong,
+.home-seo-geo .profile-line small {
+  display: block;
+  margin: 0;
+}
+
+.home-seo-geo .profile-line small {
+  margin-top: 4px;
+  color: var(--fo-muted);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-seo-geo .channel-route {
+    animation: geo-route-in 680ms 220ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+@keyframes geo-route-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1050px) {
+  .home-seo-geo .hero-answer {
+    grid-column: 1 / 6;
+  }
+
+  .home-seo-geo .channel-route {
+    grid-column: 6 / -1;
+  }
+
+  .home-seo-geo #diagnosis .split-copy {
+    position: static;
+  }
+
+  .home-seo-geo .work-cycle-contract .cycle-step {
+    grid-template-columns: 110px 220px 1fr 42px;
+  }
+
+  .home-seo-geo .step-contract {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .home-seo-geo .evidence-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-seo-geo .evidence-grid article:nth-child(3) {
+    border-top: 1px solid var(--fo-ink);
+    border-left: 0;
+  }
+
+  .home-seo-geo .evidence-grid article:nth-child(4) {
+    border-top: 1px solid var(--fo-ink);
+  }
+
+  .home-seo-geo .case-status {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-seo-geo .case-status .text-link {
+    grid-column: 1 / -1;
+    justify-self: start;
+    text-align: left;
+  }
+
+  .home-seo-geo .resource-desk {
+    grid-template-columns: 1fr;
+  }
+
+  .home-seo-geo .resource-tool {
+    min-height: 500px;
+  }
+
+  .home-seo-geo .resource-notes {
+    border-top: 1px solid var(--fo-ink);
+  }
+}
+
+@media (max-width: 720px) {
+  .home-seo-geo .display-title {
+    max-width: none;
+    font-size: clamp(40px, 11.8vw, 50px);
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+  }
+
+  .home-seo-geo .display-title > span:nth-child(2) {
+    margin-left: 0;
+  }
+
+  .home-seo-geo .display-title em {
+    margin-top: 2px;
+    padding: 0;
+    background: transparent;
+  }
+
+  .home-seo-geo .evidence-hero-copy > .lead,
+  .home-seo-geo .evidence-hero-copy > .hero-actions {
+    grid-column: auto;
+  }
+
+  .home-seo-geo .section-heading h2,
+  .home-seo-geo .split-copy h2,
+  .home-seo-geo .contact-copy h2,
+  .home-seo-geo #diagnosis .split-copy h2 {
+    font-size: clamp(35px, 10.4vw, 45px);
+    line-height: 1.08;
+  }
+
+  .home-seo-geo .hero-answer,
+  .home-seo-geo .channel-route {
+    margin-top: 34px;
+  }
+
+  .home-seo-geo .home-hero-grid {
+    display: block;
+  }
+
+  .home-seo-geo .route-line {
+    grid-template-columns: 58px 1fr 24px;
+    gap: 12px;
+    min-height: 96px;
+    padding: 15px 13px;
+  }
+
+  .home-seo-geo .route-code {
+    font-size: 25px;
+  }
+
+  .home-seo-geo .route-line strong {
+    font-size: 19px;
+  }
+
+  .home-seo-geo .route-line small {
+    font-size: 11px;
+  }
+
+  .home-seo-geo .route-core {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .home-seo-geo .work-cycle-contract .cycle-step {
+    grid-template-columns: 70px 1fr 34px;
+  }
+
+  .home-seo-geo .step-contract {
+    grid-column: 2 / -1;
+  }
+
+  .home-seo-geo .responsibility-band,
+  .home-seo-geo .evidence-grid,
+  .home-seo-geo .trust-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-seo-geo .responsibility-band article {
+    min-height: 0;
+  }
+
+  .home-seo-geo .responsibility-band article + article {
+    border-top: 1px solid rgba(255, 255, 255, 0.62);
+    border-left: 0;
+  }
+
+  .home-seo-geo .responsibility-band h3 {
+    margin-top: 52px;
+  }
+
+  .home-seo-geo .evidence-grid article {
+    min-height: 280px;
+  }
+
+  .home-seo-geo .evidence-grid article + article,
+  .home-seo-geo .evidence-grid article:nth-child(4) {
+    border-top: 1px solid var(--fo-ink);
+    border-left: 0;
+  }
+
+  .home-seo-geo .evidence-grid h3 {
+    margin-top: 70px;
+  }
+
+  .home-seo-geo .case-status {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .home-seo-geo .case-status .text-link {
+    grid-column: auto;
+  }
+
+  .home-seo-geo .resource-tool {
+    min-height: 480px;
+  }
+
+  .home-seo-geo .resource-tool h3 {
+    font-size: 38px;
+  }
+
+  .home-seo-geo .resource-notes a {
+    grid-template-columns: 1fr 26px;
+    gap: 18px;
+  }
+
+  .home-seo-geo .resource-notes a > span {
+    grid-column: 1 / -1;
+  }
+
+  .home-seo-geo .resource-notes h3 {
+    grid-column: 1;
+    font-size: 28px;
+  }
+
+  .home-seo-geo .resource-notes b {
+    grid-column: 2;
+  }
+
+  .home-seo-geo .trust-grid article {
+    min-height: 340px;
+  }
+
+  .home-seo-geo .trust-grid article + article {
+    border-top: 1px solid var(--fo-rule);
+    border-left: 0;
+  }
+
+  .home-seo-geo .trust-grid h3 {
+    margin-top: 72px;
+  }
+
+  .home-seo-geo .profile-line {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/*
+  Soft operating canvas.
+  Major information groups use rounded surfaces and breathing room instead of
+  repeated black rules. The route panel remains the signature composition.
+*/
+.home-foursets-omnius.home-seo-geo {
+  --fo-border-soft: #d8e2ec;
+  --fo-surface-soft: #f8fbff;
+  --fo-surface-blue: #eaf1ff;
+  --fo-radius-control: 12px;
+  --fo-radius-card: 20px;
+  --fo-radius-panel: 28px;
+  --fo-shadow-card: 0 12px 34px rgba(11, 32, 53, 0.07);
+  --fo-shadow-panel: 0 24px 64px rgba(11, 32, 53, 0.1);
+}
+
+.home-foursets-omnius.home-seo-geo .site-header {
+  border-bottom-color: var(--fo-border-soft);
+}
+
+.home-foursets-omnius.home-seo-geo .nav-service-menu {
+  overflow: hidden;
+  border-color: var(--fo-border-soft);
+  border-radius: var(--fo-radius-card);
+  box-shadow: var(--fo-shadow-panel);
+}
+
+.home-foursets-omnius.home-seo-geo .nav-service-menu a,
+.home-foursets-omnius.home-seo-geo .nav-service-menu b {
+  border-radius: var(--fo-radius-control);
+}
+
+.home-foursets-omnius.home-seo-geo .button {
+  border-color: transparent;
+  border-radius: var(--fo-radius-control);
+  box-shadow: 0 8px 20px rgba(36, 87, 214, 0.18);
+}
+
+.home-foursets-omnius.home-seo-geo .button:hover {
+  box-shadow: 0 12px 28px rgba(11, 32, 53, 0.18);
+  transform: translateY(-2px);
+}
+
+.home-foursets-omnius.home-seo-geo :where(a, button, summary):focus-visible {
+  border-radius: var(--fo-radius-control);
+  outline: 3px solid var(--fo-blue);
+  outline-offset: 3px;
+}
+
+.home-foursets-omnius.home-seo-geo :where(.section-dark, .evidence-contact) :where(a, button, summary):focus-visible,
+.home-foursets-omnius.home-seo-geo .resource-tool:focus-visible {
+  outline-color: var(--fo-white);
+}
+
+.home-foursets-omnius.home-seo-geo :where(.channel-route, .resource-desk, .nav-service-menu) a:focus-visible {
+  outline-offset: -4px;
+}
+
+/* Bring the type scale back to a calmer B2B reading rhythm. */
+.home-foursets-omnius.home-seo-geo .display-title {
+  max-width: 900px;
+  font-size: clamp(48px, 4.9vw, 70px);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.home-foursets-omnius.home-seo-geo .section-heading h2,
+.home-foursets-omnius.home-seo-geo .split-copy h2,
+.home-foursets-omnius.home-seo-geo .contact-copy h2,
+.home-foursets-omnius.home-seo-geo #diagnosis .split-copy h2 {
+  max-width: 780px;
+  font-size: clamp(35px, 3.4vw, 50px);
+  line-height: 1.1;
+  letter-spacing: -0.038em;
+}
+
+.home-foursets-omnius.home-seo-geo .section-heading > p,
+.home-foursets-omnius.home-seo-geo .section-heading > :nth-child(2),
+.home-foursets-omnius.home-seo-geo .split-copy > p {
+  font-size: 16px;
+}
+
+.home-foursets-omnius.home-seo-geo .evidence-hero-copy > .lead {
+  font-size: clamp(16px, 1.08vw, 17px);
+}
+
+.home-foursets-omnius.home-seo-geo .section {
+  padding: clamp(76px, 7vw, 108px) 0;
+  border-bottom: 0;
+}
+
+.home-foursets-omnius.home-seo-geo .section + .section {
+  box-shadow: inset 0 1px 0 rgba(216, 226, 236, 0.72);
+}
+
+.home-foursets-omnius.home-seo-geo .system-section::before {
+  top: 26px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  letter-spacing: 0.12em;
+}
+
+.home-foursets-omnius.home-seo-geo .section-dark.system-section::before {
+  background: transparent;
+}
+
+/* Hero: two generous rounded surfaces instead of two framed worksheets. */
+.home-foursets-omnius.home-seo-geo .hero-answer {
+  padding: clamp(25px, 2.7vw, 38px);
+  border-color: var(--fo-border-soft);
+  border-radius: var(--fo-radius-panel);
+  background: var(--fo-white);
+  box-shadow: var(--fo-shadow-card);
+}
+
+.home-foursets-omnius.home-seo-geo .hero-answer h2 {
+  font-size: clamp(28px, 2.5vw, 38px);
+  line-height: 1.08;
+}
+
+.home-foursets-omnius.home-seo-geo .hero-answer dl {
+  border-top-color: var(--fo-border-soft);
+}
+
+.home-foursets-omnius.home-seo-geo .hero-answer dl div {
+  border-bottom-color: var(--fo-border-soft);
+}
+
+.home-foursets-omnius.home-seo-geo .channel-route {
+  overflow: hidden;
+  border-color: var(--fo-border-soft);
+  border-radius: var(--fo-radius-panel);
+  box-shadow: var(--fo-shadow-panel);
+}
+
+.home-foursets-omnius.home-seo-geo .route-line {
+  min-height: 96px;
+  border-bottom-color: var(--fo-border-soft);
+}
+
+.home-foursets-omnius.home-seo-geo .route-line:hover {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.home-foursets-omnius.home-seo-geo .route-code {
+  font-size: clamp(25px, 2.5vw, 38px);
+}
+
+.home-foursets-omnius.home-seo-geo .route-line strong {
+  font-size: clamp(19px, 1.7vw, 25px);
+}
+
+.home-foursets-omnius.home-seo-geo .signal-strip {
+  padding: 0;
+  border-bottom: 1px solid var(--fo-border-soft);
+  background: var(--fo-blue);
+}
+
+.home-foursets-omnius.home-seo-geo .signal-inner {
+  padding: 24px 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.home-foursets-omnius.home-seo-geo .signal-inner p {
+  font-size: clamp(18px, 1.8vw, 26px);
+}
+
+/* Services and diagnosis keep an open row rhythm with softer separators. */
+.home-foursets-omnius.home-seo-geo .service-ledger {
+  display: block;
+  border: 0;
+  border-top: 1px solid var(--fo-border-soft);
+}
+
+.home-foursets-omnius.home-seo-geo .service-row {
+  min-height: 0;
+  padding: clamp(30px, 3vw, 40px) 0;
+  border: 0;
+  border-bottom: 1px solid var(--fo-border-soft);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.home-foursets-omnius.home-seo-geo .service-row:hover {
+  padding: clamp(30px, 3vw, 40px) 20px;
+  border-color: var(--fo-border-soft);
+  border-radius: 16px;
+  background: var(--fo-surface-blue);
+  box-shadow: none;
+  transform: none;
+}
+
+.home-foursets-omnius.home-seo-geo .service-row-code {
+  display: grid;
+  width: 72px;
+  height: 72px;
+  place-items: center;
+  border-radius: 18px;
+  background: var(--fo-surface-blue);
+  color: var(--fo-blue);
+  font-size: clamp(23px, 2.4vw, 34px);
+}
+
+.home-foursets-omnius.home-seo-geo .service-row.web .service-row-code,
+.home-foursets-omnius.home-seo-geo .service-row.mic .service-row-code {
+  background: var(--fo-surface-blue);
+  color: var(--fo-blue);
+}
+
+.home-foursets-omnius.home-seo-geo .service-row h3 {
+  font-size: clamp(25px, 2.3vw, 35px);
+  line-height: 1.12;
+}
+
+.home-foursets-omnius.home-seo-geo .service-row li {
+  border-bottom: 0;
+}
+
+.home-foursets-omnius.home-seo-geo .problem-list {
+  display: block;
+  border: 0;
+  border-top: 1px solid var(--fo-border-soft);
+}
+
+.home-foursets-omnius.home-seo-geo .problem-list article {
+  padding: 24px 0;
+  border: 0;
+  border-bottom: 1px solid var(--fo-border-soft);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.home-foursets-omnius.home-seo-geo .problem-list article:hover {
+  padding: 24px 20px;
+  border-color: var(--fo-border-soft);
+  border-radius: 16px;
+  background: var(--fo-surface-blue);
+  color: var(--fo-ink);
+  transform: none;
+}
+
+.home-foursets-omnius.home-seo-geo .problem-list article:hover > span {
+  color: var(--fo-blue);
+}
+
+.home-foursets-omnius.home-seo-geo .problem-list article:hover p {
+  color: var(--fo-muted);
+}
+
+.home-foursets-omnius.home-seo-geo .problem-list h3 {
+  font-size: clamp(21px, 1.8vw, 28px);
+  line-height: 1.2;
+}
+
+/* The dark method chapter keeps its ordered flow without boxed step cards. */
+.home-foursets-omnius.home-seo-geo .work-cycle {
+  display: block;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.38);
+}
+
+.home-foursets-omnius.home-seo-geo .cycle-step {
+  padding: 29px 0;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 0;
+  background: transparent;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.home-foursets-omnius.home-seo-geo .cycle-step:hover {
+  padding: 29px 20px;
+  border-color: rgba(255, 255, 255, 0.24);
+  border-radius: 16px;
+  background: var(--fo-blue);
+  transform: none;
+}
+
+.home-foursets-omnius.home-seo-geo .cycle-step h3 {
+  font-size: clamp(27px, 2.7vw, 40px);
+}
+
+.home-foursets-omnius.home-seo-geo .responsibility-band {
+  overflow: hidden;
+  gap: 0;
+  border: 0;
+  border-radius: var(--fo-radius-panel);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.home-foursets-omnius.home-seo-geo .responsibility-band article {
+  min-height: 280px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.home-foursets-omnius.home-seo-geo .responsibility-band article + article {
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.home-foursets-omnius.home-seo-geo .responsibility-band h3 {
+  margin-top: 52px;
+  font-size: clamp(25px, 2.5vw, 37px);
+  line-height: 1.12;
+}
+
+/* Evidence, resources and author context use a restrained card rhythm. */
+.home-foursets-omnius.home-seo-geo .evidence-grid {
+  gap: 16px;
+  border: 0;
+}
+
+.home-foursets-omnius.home-seo-geo .evidence-grid article {
+  position: relative;
+  min-height: 270px;
+  border: 0;
+  border-radius: var(--fo-radius-card);
+  background: var(--fo-white);
+  box-shadow: var(--fo-shadow-card);
+}
+
+.home-foursets-omnius.home-seo-geo .evidence-grid article + article {
+  border-left: 0;
+}
+
+.home-foursets-omnius.home-seo-geo .evidence-grid article::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--fo-blue);
+}
+
+.home-foursets-omnius.home-seo-geo .evidence-grid h3 {
+  margin-top: 58px;
+  font-size: clamp(23px, 2vw, 31px);
+  line-height: 1.12;
+}
+
+.home-foursets-omnius.home-seo-geo .case-status {
+  border-color: transparent;
+  border-radius: var(--fo-radius-card);
+  background: var(--fo-surface-blue);
+}
+
+.home-foursets-omnius.home-seo-geo .case-status h3 {
+  font-size: clamp(25px, 2.5vw, 37px);
+  line-height: 1.12;
+}
+
+.home-foursets-omnius.home-seo-geo .resource-desk {
+  overflow: visible;
+  gap: 18px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.home-foursets-omnius.home-seo-geo .resource-tool,
+.home-foursets-omnius.home-seo-geo .resource-notes {
+  overflow: hidden;
+  border-radius: var(--fo-radius-panel);
+  box-shadow: var(--fo-shadow-panel);
+}
+
+.home-foursets-omnius.home-seo-geo .resource-notes {
+  background: var(--fo-white);
+}
+
+.home-foursets-omnius.home-seo-geo .resource-tool {
+  min-height: 520px;
+}
+
+.home-foursets-omnius.home-seo-geo .resource-tool h3 {
+  font-size: clamp(32px, 3.3vw, 47px);
+  line-height: 1.08;
+}
+
+.home-foursets-omnius.home-seo-geo .resource-notes a + a {
+  border-top-color: var(--fo-border-soft);
+}
+
+.home-foursets-omnius.home-seo-geo .resource-notes h3 {
+  font-size: clamp(21px, 2vw, 29px);
+  line-height: 1.2;
+}
+
+.home-foursets-omnius.home-seo-geo .trust-grid {
+  column-gap: clamp(28px, 4vw, 60px);
+  border: 0;
+  border-top: 1px solid var(--fo-border-soft);
+}
+
+.home-foursets-omnius.home-seo-geo .trust-grid article {
+  min-height: 330px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.home-foursets-omnius.home-seo-geo .trust-grid article + article {
+  border-left: 0;
+}
+
+.home-foursets-omnius.home-seo-geo .trust-grid h3 {
+  margin-top: 62px;
+  font-size: clamp(24px, 2.25vw, 34px);
+  line-height: 1.14;
+}
+
+.home-foursets-omnius.home-seo-geo .profile-line {
+  margin-top: 18px;
+  padding: 18px 22px;
+  border-radius: 18px;
+  background: rgba(36, 87, 214, 0.06);
+}
+
+.home-foursets-omnius.home-seo-geo .profile-line .author-mark {
+  border-radius: 50%;
+}
+
+.home-foursets-omnius.home-seo-geo .faq-list {
+  display: grid;
+  gap: 12px;
+  border: 0;
+}
+
+.home-foursets-omnius.home-seo-geo .faq-list details {
+  overflow: hidden;
+  border: 1px solid var(--fo-border-soft);
+  border-radius: 16px;
+  background: var(--fo-white);
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.home-foursets-omnius.home-seo-geo .faq-list details[open] {
+  border-color: #b9cbed;
+  box-shadow: var(--fo-shadow-card);
+}
+
+.home-foursets-omnius.home-seo-geo .faq-list summary {
+  padding: 21px 23px;
+  font-size: clamp(18px, 1.7vw, 24px);
+}
+
+.home-foursets-omnius.home-seo-geo .faq-list details p {
+  padding: 0 23px 23px;
+  font-size: 16px;
+}
+
+.home-foursets-omnius.home-seo-geo .evidence-contact::after {
+  font-size: clamp(60px, 10vw, 145px);
+}
+
+.home-foursets-omnius.home-seo-geo .contact-checklist {
+  display: block;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.52);
+}
+
+.home-foursets-omnius.home-seo-geo .contact-checklist li {
+  padding: 18px 0;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 0;
+  background: transparent;
+}
+
+.home-foursets-omnius.home-seo-geo .evidence-contact .button-light,
+.home-foursets-omnius.home-seo-geo .evidence-contact .button-secondary {
+  border-radius: var(--fo-radius-control);
+}
+
+@media (max-width: 1050px) {
+  .home-foursets-omnius.home-seo-geo .evidence-grid article:nth-child(3),
+  .home-foursets-omnius.home-seo-geo .evidence-grid article:nth-child(4) {
+    border-top: 0;
+  }
+
+  .home-foursets-omnius.home-seo-geo .resource-notes {
+    border-top: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .home-foursets-omnius.home-seo-geo {
+    --fo-radius-control: 11px;
+    --fo-radius-card: 18px;
+    --fo-radius-panel: 22px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .display-title {
+    font-size: clamp(36px, 10.2vw, 43px);
+    line-height: 1.06;
+    letter-spacing: -0.035em;
+  }
+
+  .home-foursets-omnius.home-seo-geo .section-heading h2,
+  .home-foursets-omnius.home-seo-geo .split-copy h2,
+  .home-foursets-omnius.home-seo-geo .contact-copy h2,
+  .home-foursets-omnius.home-seo-geo #diagnosis .split-copy h2 {
+    font-size: clamp(29px, 8.6vw, 36px);
+    line-height: 1.13;
+  }
+
+  .home-foursets-omnius.home-seo-geo .section {
+    padding: 76px 0;
+  }
+
+  .home-foursets-omnius.home-seo-geo .system-section::before {
+    top: 18px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .hero-answer,
+  .home-foursets-omnius.home-seo-geo .channel-route {
+    margin-top: 26px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .hero-answer h2 {
+    font-size: 28px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .signal-strip {
+    padding: 0;
+  }
+
+  .home-foursets-omnius.home-seo-geo .signal-inner {
+    gap: 16px;
+    padding: 22px 0;
+  }
+
+  .home-foursets-omnius.home-seo-geo .service-row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 26px 0;
+  }
+
+  .home-foursets-omnius.home-seo-geo .service-row:hover {
+    padding: 26px 16px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .service-row-code {
+    grid-row: auto;
+    grid-column: 1;
+    width: max-content;
+    height: auto;
+    padding: 9px 12px;
+    border-radius: 999px;
+    font-size: 18px;
+    writing-mode: horizontal-tb;
+  }
+
+  .home-foursets-omnius.home-seo-geo .service-row > div,
+  .home-foursets-omnius.home-seo-geo .service-row > ul,
+  .home-foursets-omnius.home-seo-geo .service-row .text-link {
+    grid-column: 1;
+  }
+
+  .home-foursets-omnius.home-seo-geo .service-row .text-link {
+    justify-self: start;
+  }
+
+  .home-foursets-omnius.home-seo-geo .service-row h3 {
+    font-size: 27px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .problem-list article {
+    grid-template-columns: 34px 1fr;
+    gap: 12px;
+    padding: 20px 0;
+  }
+
+  .home-foursets-omnius.home-seo-geo .problem-list article:hover {
+    padding: 20px 14px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .problem-list h3 {
+    font-size: 21px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .work-cycle-contract .cycle-step {
+    grid-template-columns: 1fr 26px;
+    gap: 12px 16px;
+    padding: 23px 0;
+  }
+
+  .home-foursets-omnius.home-seo-geo .work-cycle-contract .cycle-step:hover {
+    padding: 23px 14px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .cycle-step > span,
+  .home-foursets-omnius.home-seo-geo .cycle-step h3 {
+    grid-column: 1;
+  }
+
+  .home-foursets-omnius.home-seo-geo .cycle-step h3 {
+    font-size: 27px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .step-contract {
+    grid-column: 1 / -1;
+  }
+
+  .home-foursets-omnius.home-seo-geo .cycle-step::after {
+    grid-row: 1 / 3;
+    grid-column: 2;
+  }
+
+  .home-foursets-omnius.home-seo-geo .responsibility-band {
+    gap: 0;
+  }
+
+  .home-foursets-omnius.home-seo-geo .responsibility-band article + article {
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    border-left: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .home-foursets-omnius.home-seo-geo .responsibility-band h3 {
+    margin-top: 38px;
+    font-size: 27px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .evidence-grid,
+  .home-foursets-omnius.home-seo-geo .trust-grid {
+    gap: 12px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .evidence-grid article,
+  .home-foursets-omnius.home-seo-geo .evidence-grid article + article,
+  .home-foursets-omnius.home-seo-geo .evidence-grid article:nth-child(3),
+  .home-foursets-omnius.home-seo-geo .evidence-grid article:nth-child(4) {
+    min-height: 0;
+    border: 0;
+  }
+
+  .home-foursets-omnius.home-seo-geo .trust-grid article,
+  .home-foursets-omnius.home-seo-geo .trust-grid article + article {
+    min-height: 0;
+    border: 0;
+    border-bottom: 1px solid var(--fo-border-soft);
+  }
+
+  .home-foursets-omnius.home-seo-geo .evidence-grid h3,
+  .home-foursets-omnius.home-seo-geo .trust-grid h3 {
+    margin-top: 42px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .resource-tool {
+    min-height: 380px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .resource-desk {
+    gap: 14px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .resource-tool h3 {
+    font-size: 31px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .resource-notes h3 {
+    font-size: 23px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .profile-line {
+    gap: 20px;
+    padding: 18px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .faq-list summary {
+    padding: 19px 20px;
+    font-size: 19px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .faq-list details p {
+    padding: 0 20px 21px;
+    font-size: 15px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .evidence-contact::after {
+    font-size: 62px;
+  }
+}
+
+/* Method backdrop and responsive content-flow preparation. */
+.home-foursets-omnius.home-seo-geo .evidence-hero-copy {
+  align-items: start;
+}
+
+.home-foursets-omnius.home-seo-geo #method {
+  background-color: var(--fo-ink);
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(11, 32, 53, 0.99) 0%,
+      rgba(11, 32, 53, 0.96) 42%,
+      rgba(11, 32, 53, 0.74) 100%
+    ),
+    url("/assets/home/method-loop-background.webp");
+  background-repeat: no-repeat;
+  background-position: center, right 12%;
+  background-size: 100% 100%, min(1280px, 88vw) auto;
+}
+
+.home-foursets-omnius.home-seo-geo .resource-tool h3 {
+  margin: 0 0 20px;
+}
+
+.home-foursets-omnius.home-seo-geo .resource-tool strong {
+  margin-top: 30px;
+}
+
+@media (max-width: 1050px) {
+  .home-foursets-omnius.home-seo-geo #method {
+    background-position: center, 62% 150px;
+    background-size: 100% 100%, 1080px auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-foursets-omnius.home-seo-geo .evidence-hero-copy {
+    grid-template-columns: 1fr;
+  }
+
+  .home-foursets-omnius.home-seo-geo .evidence-hero-copy > :where(
+      .eyebrow,
+      .display-title,
+      .lead,
+      .hero-actions
+    ) {
+    grid-row: auto;
+    grid-column: 1;
+  }
+
+  .home-foursets-omnius.home-seo-geo #diagnosis .split-copy {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .home-foursets-omnius.home-seo-geo #method {
+    background-image:
+      linear-gradient(rgba(11, 32, 53, 0.9), rgba(11, 32, 53, 0.97)),
+      url("/assets/home/method-loop-background.webp");
+    background-position: center, 54% 130px;
+    background-size: 100% 100%, 820px auto;
+  }
+}
+
+/*
+  Background-image correction.
+  The imagery now sits behind the page structure instead of occupying framed
+  content blocks. Text, links and evidence boundaries remain real HTML.
+*/
+.home-foursets-omnius.home-seo-geo .geo-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  background-color: var(--fo-paper);
+}
+
+.home-foursets-omnius.home-seo-geo .hero-backdrop {
+  position: absolute;
+  z-index: 0;
+  inset: 0 0 auto;
+  display: block;
+  width: 100%;
+  height: clamp(620px, 58vw, 790px);
+  margin: 0;
+  opacity: 0.88;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 68%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 68%, transparent 100%);
+}
+
+.home-foursets-omnius.home-seo-geo .hero-backdrop img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% 28%;
+  filter: saturate(0.88) contrast(0.96);
+}
+
+.home-foursets-omnius.home-seo-geo .geo-hero::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: block;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(243, 246, 250, 0.99) 0%,
+      rgba(243, 246, 250, 0.96) 38%,
+      rgba(243, 246, 250, 0.76) 62%,
+      rgba(243, 246, 250, 0.28) 100%
+    ),
+    linear-gradient(180deg, rgba(243, 246, 250, 0.02) 42%, var(--fo-paper) 72%);
+  pointer-events: none;
+}
+
+.home-foursets-omnius.home-seo-geo .home-hero-grid {
+  position: relative;
+  z-index: 2;
+}
+
+.home-foursets-omnius.home-seo-geo .evidence-hero-copy {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.home-foursets-omnius.home-seo-geo .display-title {
+  grid-column: 1 / 10;
+}
+
+.home-foursets-omnius.home-seo-geo #diagnosis {
+  background-color: var(--fo-paper);
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(243, 246, 250, 0.7) 0%,
+      rgba(243, 246, 250, 0.82) 48%,
+      rgba(243, 246, 250, 0.9) 100%
+    ),
+    url("/assets/home/diagnosis-evidence-table.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.home-foursets-omnius.home-seo-geo #diagnosis > .shell {
+  position: relative;
+}
+
+.home-foursets-omnius.home-seo-geo #diagnosis .problem-list article {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.74);
+}
+
+.home-foursets-omnius.home-seo-geo .resource-tool {
+  min-height: 570px;
+  background-color: var(--fo-blue);
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(11, 32, 53, 0.8) 0%,
+      rgba(36, 87, 214, 0.58) 35%,
+      rgba(36, 87, 214, 0.94) 68%,
+      var(--fo-blue) 100%
+    ),
+    url("/assets/home/tools-channel-check-preview.webp");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+.home-foursets-omnius.home-seo-geo .resource-tool:hover {
+  background-color: var(--fo-ink);
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(11, 32, 53, 0.86) 0%,
+      rgba(11, 32, 53, 0.7) 38%,
+      rgba(11, 32, 53, 0.96) 72%,
+      var(--fo-ink) 100%
+    ),
+    url("/assets/home/tools-channel-check-preview.webp");
+}
+
+.home-foursets-omnius.home-seo-geo .resource-tool h3 {
+  margin: auto 0 20px;
+  text-shadow: 0 2px 20px rgba(11, 32, 53, 0.38);
+}
+
+.home-foursets-omnius.home-seo-geo .resource-tool p,
+.home-foursets-omnius.home-seo-geo .resource-tool strong,
+.home-foursets-omnius.home-seo-geo .resource-tool > span {
+  text-shadow: 0 1px 12px rgba(11, 32, 53, 0.44);
+}
+
+@media (max-width: 1050px) {
+  .home-foursets-omnius.home-seo-geo .hero-backdrop {
+    height: 700px;
+    opacity: 0.74;
+  }
+
+  .home-foursets-omnius.home-seo-geo .hero-backdrop img {
+    object-position: 66% 22%;
+  }
+
+  .home-foursets-omnius.home-seo-geo .geo-hero::before {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(243, 246, 250, 0.99) 0%,
+        rgba(243, 246, 250, 0.94) 48%,
+        rgba(243, 246, 250, 0.62) 100%
+      ),
+      linear-gradient(180deg, rgba(243, 246, 250, 0.08) 45%, var(--fo-paper) 76%);
+  }
+}
+
+@media (max-width: 900px) {
+  .home-foursets-omnius.home-seo-geo .evidence-hero-copy {
+    grid-template-columns: 1fr;
+  }
+
+  .home-foursets-omnius.home-seo-geo .evidence-hero-copy > :where(
+      .eyebrow,
+      .display-title,
+      .lead,
+      .hero-actions
+    ) {
+    grid-column: 1;
+  }
+
+  .home-foursets-omnius.home-seo-geo #diagnosis {
+    background-image:
+      linear-gradient(rgba(243, 246, 250, 0.84), rgba(243, 246, 250, 0.93)),
+      url("/assets/home/diagnosis-evidence-table.webp");
+    background-position: 45% center;
+  }
+
+  .home-foursets-omnius.home-seo-geo .resource-tool {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 720px) {
+  .home-foursets-omnius.home-seo-geo .hero-backdrop {
+    height: 650px;
+    opacity: 0.6;
+  }
+
+  .home-foursets-omnius.home-seo-geo .hero-backdrop img {
+    object-position: 58% top;
+    filter: saturate(0.76) contrast(0.94);
+  }
+
+  .home-foursets-omnius.home-seo-geo .geo-hero::before {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(243, 246, 250, 0.94) 0%,
+        rgba(243, 246, 250, 0.78) 68%,
+        rgba(243, 246, 250, 0.48) 100%
+      ),
+      linear-gradient(180deg, rgba(243, 246, 250, 0.3) 0%, rgba(243, 246, 250, 0.76) 55%, var(--fo-paper) 88%);
+  }
+
+  .home-foursets-omnius.home-seo-geo #diagnosis {
+    background-image:
+      linear-gradient(rgba(243, 246, 250, 0.9), rgba(243, 246, 250, 0.96)),
+      url("/assets/home/diagnosis-evidence-table.webp");
+    background-position: 40% center;
+  }
+
+  .home-foursets-omnius.home-seo-geo .resource-tool {
+    min-height: 500px;
+    background-position: 48% top;
+  }
+}
+
+@media (forced-colors: active) {
+  .home-foursets-omnius.home-seo-geo :where(
+      .hero-answer,
+      .channel-route,
+      .responsibility-band,
+      .evidence-grid article,
+      .case-status,
+      .resource-tool,
+      .resource-notes,
+      .faq-list details,
+      .button
+    ) {
+    border: 1px solid CanvasText;
+    box-shadow: none;
+  }
+
+  .home-foursets-omnius.home-seo-geo #method {
+    background-image: none;
+  }
+
+  .home-foursets-omnius.home-seo-geo .hero-backdrop {
+    display: none;
+  }
+
+  .home-foursets-omnius.home-seo-geo :where(#diagnosis, .resource-tool) {
+    background-image: none;
+    text-shadow: none;
+  }
+
+  .home-foursets-omnius.home-seo-geo :where(a, button, summary):focus-visible {
+    outline: 3px solid Highlight;
+  }
+}

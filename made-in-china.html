@@ -16,6 +16,8 @@
     <link rel="canonical" href="https://wesleyb2b.online/made-in-china" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/service-extras.css" />
+    <link rel="stylesheet" href="/site-header-foursets.css" />
     <meta property="og:locale" content="zh_CN" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Wesley GEO" />
@@ -37,9 +39,9 @@
         "@graph": [
           {
             "@type": "Person",
-            "@id": "https://wesleyb2b.online/#person",
+            "@id": "https://wesleyb2b.online/about#person",
             "name": "Wesley",
-            "url": "https://wesleyb2b.online/"
+            "url": "https://wesleyb2b.online/about"
           },
           {
             "@type": "WebPage",
@@ -47,6 +49,9 @@
             "url": "https://wesleyb2b.online/made-in-china",
             "name": "中国制造网代运营",
             "description": "产品信息、平台维护、更新记录与阶段复盘的持续运营服务。",
+            "isPartOf": { "@id": "https://wesleyb2b.online/#website" },
+            "mainEntity": { "@id": "https://wesleyb2b.online/made-in-china#service" },
+            "breadcrumb": { "@id": "https://wesleyb2b.online/made-in-china#breadcrumb" },
             "inLanguage": "zh-CN"
           },
           {
@@ -54,7 +59,7 @@
             "@id": "https://wesleyb2b.online/made-in-china#service",
             "name": "中国制造网代运营",
             "serviceType": "中国制造网店铺与产品运营服务",
-            "provider": { "@id": "https://wesleyb2b.online/#person" },
+            "provider": { "@id": "https://wesleyb2b.online/about#person" },
             "url": "https://wesleyb2b.online/made-in-china",
             "description": "从账号与资料诊断、产品信息规划、平台内容维护到阶段反馈复盘的运营服务。"
           },
@@ -118,7 +123,7 @@
       }
     </script>
   </head>
-  <body>
+  <body class="service-landing service-mic">
     <a class="skip-link" href="#main">跳到主要内容</a>
     <header class="site-header">
       <div class="shell header-inner">
@@ -136,9 +141,17 @@
           <span class="sr-only">打开菜单</span><i></i><i></i>
         </button>
         <nav class="site-nav" id="site-nav" aria-label="主要导航" data-nav>
+          <a href="/">首页</a>
           <details class="nav-services" data-service-menu>
             <summary>服务 <span aria-hidden="true">⌄</span></summary>
             <div class="nav-service-menu">
+              <a href="/services"
+                ><b>ALL</b
+                ><span
+                  ><strong>服务总览</strong
+                  ><small>三项服务与选择方式</small></span
+                ></a
+              >
               <a href="/alibaba"
                 ><b>ALI</b
                 ><span
@@ -160,8 +173,8 @@
               >
             </div>
           </details>
-          <a href="/method">运营方法</a><a href="/insights">运营笔记</a
-          ><a href="/about">关于 Wesley</a
+          <a href="/insights">运营笔记</a
+          ><a href="/cases">客户案例</a><a href="/tools">运营工具</a><a href="/about">关于 Wesley</a
           ><a class="button button-small" href="/contact">微信咨询</a>
         </nav>
       </div>
@@ -242,9 +255,27 @@
           <strong>本页内容</strong><a href="#issues">常见现状</a
           ><a href="#deliverables">合作产出</a><a href="#scope">服务内容</a
           ><a href="#process">工作流程</a><a href="#materials">准备资料</a
+          ><a href="#workflow-example">流程示例</a><a href="#tools">运营工具</a
           ><a href="#faq">常见问题</a>
         </div>
       </nav>
+
+      <section class="service-decision" aria-label="中国制造网服务快速判断">
+        <div class="shell service-decision-grid">
+          <div>
+            <span>适合谁</span>
+            <strong>已有账号，但产品资料和维护任务分散</strong>
+          </div>
+          <div>
+            <span>先解决</span>
+            <strong>资料版本、产品优先级与更新节奏不连续</strong>
+          </div>
+          <div>
+            <span>阶段留下</span>
+            <strong>统一资料底座、维护计划与复盘记录</strong>
+          </div>
+        </div>
+      </section>
 
       <section class="section section-white" id="issues">
         <div class="shell">
@@ -476,6 +507,62 @@
         </div>
       </section>
 
+      <section class="section section-white service-case" id="workflow-example">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">服务流程 · 虚构示例</p>
+              <h2>如果资料版本分散，<br />怎样恢复平台维护的连续性？</h2>
+            </div>
+            <p>
+              以下为虚构流程示例，用于说明代运营如何整理资料和任务，不代表真实客户，也不包含平台曝光、询盘或订单承诺。
+            </p>
+          </div>
+          <article class="scenario-ledger" aria-labelledby="mic-case-title">
+            <div class="scenario-ledger-head">
+              <span>WORKFLOW EXAMPLE / MADE-IN-CHINA</span
+              ><span class="scenario-status">虚构场景 · 仅用于说明方法</span>
+            </div>
+            <div class="scenario-ledger-main">
+              <div class="scenario-brief">
+                <span>假设场景</span>
+                <h3 id="mic-case-title">假设场景：通用机械企业的平台维护任务</h3>
+                <p>账号持续有人维护，但产品参数、图片和页面版本分散在不同人员与文件中。</p>
+                <dl>
+                  <div><dt>已有基础</dt><dd>会员账号、在售产品、历史资料</dd></div>
+                  <div><dt>主要缺口</dt><dd>资料版本与维护优先级不能追溯</dd></div>
+                </dl>
+              </div>
+              <ol class="scenario-route">
+                <li><span>01 / 底账</span><div><strong>统一资料版本</strong><p>建立产品字段表，标记已确认、待补充和不可公开信息。</p></div></li>
+                <li><span>02 / 队列</span><div><strong>安排维护优先级</strong><p>按主推方向、资料完整度和页面状态形成任务清单。</p></div></li>
+                <li><span>03 / 留痕</span><div><strong>记录每轮更新</strong><p>保留更新时间、变更内容、平台反馈和下一轮安排。</p></div></li>
+              </ol>
+            </div>
+            <div class="scenario-ledger-foot">
+              <strong>方法验收方式</strong><span>检查资料底账、维护队列和更新记录能否由企业继续接手。</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-soft service-tools" id="tools">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">中国制造网运营工具</p>
+              <h2>用记录保持维护节奏，<br />避免每个月重新开始。</h2>
+            </div>
+            <p>工具用于整理工作信息，不会连接平台账号，也不会读取任何后台数据。</p>
+          </div>
+          <div class="channel-tool-grid">
+            <a class="channel-tool channel-tool-primary" href="/tools#review-template"><span>REVIEW / 02</span><h3>平台维护复盘模板</h3><p>记录本周期目标、页面动作、平台反馈、销售反馈和下一轮维护安排。</p><b>复制复盘模板 →</b></a>
+            <a class="channel-tool" href="/tools#page-checklist"><span>PAGE / 03</span><h3>产品页面检查表</h3><p>检查参数版本、图片权限、页面主题、证明材料和咨询路径。</p><b>查看页面检查项 →</b></a>
+            <a class="channel-tool" href="/tools#channel-check"><span>CHECK / 01</span><h3>外贸渠道运营自检</h3><p>确认平台维护之外，追踪和销售反馈是否也形成闭环。</p><b>开始渠道自检 →</b></a>
+          </div>
+        </div>
+      </section>
+
       <section class="section section-white" id="faq">
         <div class="shell">
           <div class="section-heading">
@@ -598,14 +685,15 @@
         </div>
         <div class="footer-column">
           <h2>代运营服务</h2>
-          <a href="/alibaba">阿里巴巴国际站</a
+          <a href="/services">服务总览</a
+          ><a href="/alibaba">阿里巴巴国际站</a
           ><a href="/independent-site">外贸独立站</a
           ><a href="/made-in-china">中国制造网</a>
         </div>
         <div class="footer-column">
           <h2>方法与内容</h2>
           <a href="/method">运营方法</a><a href="/insights">运营笔记</a
-          ><a href="/about">关于 Wesley</a>
+          ><a href="/tools">运营工具</a><a href="/about">关于 Wesley</a>
         </div>
         <div class="footer-column">
           <h2>联系与说明</h2>

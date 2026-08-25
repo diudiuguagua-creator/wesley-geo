@@ -16,6 +16,7 @@
     <link rel="canonical" href="https://wesleyb2b.online/method" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/site-header-foursets.css" />
     <meta property="og:locale" content="zh_CN" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Wesley GEO" />
@@ -36,11 +37,28 @@
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "Person",
+            "@id": "https://wesleyb2b.online/about#person",
+            "name": "Wesley",
+            "url": "https://wesleyb2b.online/about"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://wesleyb2b.online/#website",
+            "url": "https://wesleyb2b.online/",
+            "name": "Wesley GEO",
+            "publisher": { "@id": "https://wesleyb2b.online/about#person" },
+            "inLanguage": "zh-CN"
+          },
+          {
             "@type": "WebPage",
             "@id": "https://wesleyb2b.online/method#webpage",
             "url": "https://wesleyb2b.online/method",
             "name": "外贸 B2B 代运营流程",
             "description": "诊断、规划、执行追踪与复盘的外贸 B2B 代运营方法。",
+            "isPartOf": { "@id": "https://wesleyb2b.online/#website" },
+            "about": { "@id": "https://wesleyb2b.online/about#person" },
+            "breadcrumb": { "@id": "https://wesleyb2b.online/method#breadcrumb" },
             "inLanguage": "zh-CN"
           },
           {
@@ -113,9 +131,17 @@
           <span class="sr-only">打开菜单</span><i></i><i></i>
         </button>
         <nav class="site-nav" id="site-nav" aria-label="主要导航" data-nav>
+          <a href="/">首页</a>
           <details class="nav-services" data-service-menu>
             <summary>服务 <span aria-hidden="true">⌄</span></summary>
             <div class="nav-service-menu">
+              <a href="/services"
+                ><b>ALL</b
+                ><span
+                  ><strong>服务总览</strong
+                  ><small>三项服务与选择方式</small></span
+                ></a
+              >
               <a href="/alibaba"
                 ><b>ALI</b
                 ><span
@@ -137,8 +163,7 @@
               >
             </div>
           </details>
-          <a href="/method" aria-current="page">运营方法</a
-          ><a href="/insights">运营笔记</a><a href="/about">关于 Wesley</a
+          <a href="/insights">运营笔记</a><a href="/cases">客户案例</a><a href="/tools">运营工具</a><a href="/about">关于 Wesley</a
           ><a class="button button-small" href="/contact">微信咨询</a>
         </nav>
       </div>
@@ -499,14 +524,15 @@
         </div>
         <div class="footer-column">
           <h2>代运营服务</h2>
-          <a href="/alibaba">阿里巴巴国际站</a
+          <a href="/services">服务总览</a
+          ><a href="/alibaba">阿里巴巴国际站</a
           ><a href="/independent-site">外贸独立站</a
           ><a href="/made-in-china">中国制造网</a>
         </div>
         <div class="footer-column">
           <h2>方法与内容</h2>
           <a href="/method">运营方法</a><a href="/insights">运营笔记</a
-          ><a href="/about">关于 Wesley</a>
+          ><a href="/tools">运营工具</a><a href="/about">关于 Wesley</a>
         </div>
         <div class="footer-column">
           <h2>联系与说明</h2>

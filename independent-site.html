@@ -8,18 +8,20 @@
       name="robots"
       content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
     />
-    <title>外贸独立站建设与运营｜结构、内容与SEO｜Wesley GEO</title>
+    <title>外贸独立站代运营｜建站、内容与SEO｜Wesley GEO</title>
     <meta
       name="description"
-      content="Wesley GEO 提供外贸 B2B 独立站建设与运营服务，从目标客户、站点地图和页面内容，到技术 SEO、上线检查与持续迭代，建设可长期积累的品牌和搜索资产。"
+      content="Wesley GEO 提供外贸 B2B 独立站代运营与建设服务，从目标客户、站点地图和页面内容，到技术 SEO、上线检查与持续迭代，建设可长期积累的品牌和搜索资产。"
     />
     <link rel="canonical" href="https://wesleyb2b.online/independent-site" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/service-extras.css" />
+    <link rel="stylesheet" href="/site-header-foursets.css" />
     <meta property="og:locale" content="zh_CN" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Wesley GEO" />
-    <meta property="og:title" content="外贸独立站建设与运营｜Wesley GEO" />
+    <meta property="og:title" content="外贸独立站代运营与建设｜Wesley GEO" />
     <meta
       property="og:description"
       content="从站点地图、内容与技术 SEO 到上线后的持续迭代。"
@@ -40,16 +42,19 @@
         "@graph": [
           {
             "@type": "Person",
-            "@id": "https://wesleyb2b.online/#person",
+            "@id": "https://wesleyb2b.online/about#person",
             "name": "Wesley",
-            "url": "https://wesleyb2b.online/"
+            "url": "https://wesleyb2b.online/about"
           },
           {
             "@type": "WebPage",
             "@id": "https://wesleyb2b.online/independent-site#webpage",
             "url": "https://wesleyb2b.online/independent-site",
-            "name": "外贸独立站建设与运营",
+            "name": "外贸独立站代运营与建设",
             "description": "从网站结构、页面内容、技术 SEO 到上线迭代的外贸 B2B 独立站服务。",
+            "isPartOf": { "@id": "https://wesleyb2b.online/#website" },
+            "mainEntity": { "@id": "https://wesleyb2b.online/independent-site#service" },
+            "breadcrumb": { "@id": "https://wesleyb2b.online/independent-site#breadcrumb" },
             "inLanguage": "zh-CN"
           },
           {
@@ -57,7 +62,7 @@
             "@id": "https://wesleyb2b.online/independent-site#service",
             "name": "外贸独立站建设与运营",
             "serviceType": "外贸 B2B 独立站建设与运营服务",
-            "provider": { "@id": "https://wesleyb2b.online/#person" },
+            "provider": { "@id": "https://wesleyb2b.online/about#person" },
             "url": "https://wesleyb2b.online/independent-site",
             "description": "围绕目标客户、站点地图、页面内容、技术 SEO、上线检查和持续迭代开展的独立站服务。"
           },
@@ -74,7 +79,7 @@
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "外贸独立站建设与运营",
+                "name": "外贸独立站代运营与建设",
                 "item": "https://wesleyb2b.online/independent-site"
               }
             ]
@@ -121,7 +126,7 @@
       }
     </script>
   </head>
-  <body>
+  <body class="service-landing service-web">
     <a class="skip-link" href="#main">跳到主要内容</a>
     <header class="site-header">
       <div class="shell header-inner">
@@ -139,9 +144,17 @@
           <span class="sr-only">打开菜单</span><i></i><i></i>
         </button>
         <nav class="site-nav" id="site-nav" aria-label="主要导航" data-nav>
+          <a href="/">首页</a>
           <details class="nav-services" data-service-menu>
             <summary>服务 <span aria-hidden="true">⌄</span></summary>
             <div class="nav-service-menu">
+              <a href="/services"
+                ><b>ALL</b
+                ><span
+                  ><strong>服务总览</strong
+                  ><small>三项服务与选择方式</small></span
+                ></a
+              >
               <a href="/alibaba"
                 ><b>ALI</b
                 ><span
@@ -163,8 +176,8 @@
               >
             </div>
           </details>
-          <a href="/method">运营方法</a><a href="/insights">运营笔记</a
-          ><a href="/about">关于 Wesley</a
+          <a href="/insights">运营笔记</a
+          ><a href="/cases">客户案例</a><a href="/tools">运营工具</a><a href="/about">关于 Wesley</a
           ><a class="button button-small" href="/contact">微信咨询</a>
         </nav>
       </div>
@@ -176,11 +189,11 @@
           <div>
             <nav class="breadcrumb" aria-label="面包屑">
               <a href="/">首页</a><span>/</span
-              ><span>外贸独立站建设与运营</span>
+              ><span>外贸独立站代运营与建设</span>
             </nav>
             <p class="eyebrow">服务 02 · B2B WEBSITE</p>
             <h1>
-              外贸独立站建设与运营：从网站结构、内容到 SEO <em>持续积累</em>
+              外贸独立站代运营与建设：从网站结构、内容到 SEO <em>持续积累</em>
             </h1>
             <p class="lead">
               独立站不只是把企业资料放到网页上。服务从目标客户和网站任务出发，先建立站点地图与页面清单，再补齐内容、技术
@@ -247,9 +260,27 @@
           <strong>本页内容</strong><a href="#issues">常见问题</a
           ><a href="#deliverables">合作产出</a><a href="#scope">服务范围</a
           ><a href="#process">建设流程</a><a href="#materials">准备资料</a
+          ><a href="#workflow-example">流程示例</a><a href="#tools">运营工具</a
           ><a href="#faq">常见问题</a>
         </div>
       </nav>
+
+      <section class="service-decision" aria-label="独立站服务快速判断">
+        <div class="shell service-decision-grid">
+          <div>
+            <span>适合谁</span>
+            <strong>准备建站，或已有网站但缺少持续运营基础</strong>
+          </div>
+          <div>
+            <span>先解决</span>
+            <strong>网站结构、内容主题与咨询路径没有形成系统</strong>
+          </div>
+          <div>
+            <span>阶段留下</span>
+            <strong>可扩展的网站地图、页面基础与迭代清单</strong>
+          </div>
+        </div>
+      </section>
 
       <section class="section section-white" id="issues">
         <div class="shell">
@@ -489,6 +520,62 @@
         </div>
       </section>
 
+      <section class="section section-white service-case" id="workflow-example">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">服务流程 · 虚构示例</p>
+              <h2>如果网站已有内容，<br />怎样重新建立清楚的获客结构？</h2>
+            </div>
+            <p>
+              以下为虚构流程示例，用于展示独立站项目的工作逻辑，不代表真实客户或已经取得的 SEO、流量与询盘结果。
+            </p>
+          </div>
+          <article class="scenario-ledger" aria-labelledby="web-case-title">
+            <div class="scenario-ledger-head">
+              <span>WORKFLOW EXAMPLE / B2B WEBSITE</span
+              ><span class="scenario-status">虚构场景 · 仅用于说明方法</span>
+            </div>
+            <div class="scenario-ledger-main">
+              <div class="scenario-brief">
+                <span>假设场景</span>
+                <h3 id="web-case-title">假设场景：工业零部件企业的网站重构任务</h3>
+                <p>网站已有企业介绍和产品内容，但导航、页面主题与咨询入口缺少统一规划。</p>
+                <dl>
+                  <div><dt>已有基础</dt><dd>域名、旧网站、产品与企业资料</dd></div>
+                  <div><dt>主要缺口</dt><dd>采购者无法沿着问题找到合适页面</dd></div>
+                </dl>
+              </div>
+              <ol class="scenario-route">
+                <li><span>01 / 架构</span><div><strong>重画网站地图</strong><p>按产品、应用、能力证明和买家问题组织页面层级。</p></div></li>
+                <li><span>02 / 页面</span><div><strong>确定页面任务</strong><p>为核心页面确定目标客户、搜索主题和咨询动作。</p></div></li>
+                <li><span>03 / 上线</span><div><strong>完成技术检查</strong><p>核对移动端、内链、canonical、结构化数据和追踪基础。</p></div></li>
+              </ol>
+            </div>
+            <div class="scenario-ledger-foot">
+              <strong>方法验收方式</strong><span>检查网站地图、页面清单、上线检查表和后续迭代责任是否明确。</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-soft service-tools" id="tools">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">独立站运营工具</p>
+              <h2>把页面上线标准，<br />变成团队可以逐项确认的清单。</h2>
+            </div>
+            <p>工具只帮助检查和排序，不会自动判断关键词价值，也不能代替真实的客户与市场研究。</p>
+          </div>
+          <div class="channel-tool-grid">
+            <a class="channel-tool channel-tool-primary" href="/tools#page-checklist"><span>PAGE / 03</span><h3>B2B 页面上线检查</h3><p>从目标客户、真实资料、搜索主题到移动端和技术 SEO，逐项检查页面基础。</p><b>查看十项检查表 →</b></a>
+            <a class="channel-tool" href="/tools#channel-check"><span>CHECK / 01</span><h3>外贸渠道运营自检</h3><p>判断当前短板更接近事实、页面、追踪，还是销售反馈。</p><b>开始渠道自检 →</b></a>
+            <a class="channel-tool" href="/tools#review-template"><span>REVIEW / 02</span><h3>网站迭代复盘模板</h3><p>记录本轮改了什么、观察到什么，以及下一轮应继续还是暂停。</p><b>复制复盘模板 →</b></a>
+          </div>
+        </div>
+      </section>
+
       <section class="section section-white" id="faq">
         <div class="shell">
           <div class="section-heading">
@@ -616,14 +703,15 @@
         </div>
         <div class="footer-column">
           <h2>代运营服务</h2>
-          <a href="/alibaba">阿里巴巴国际站</a
+          <a href="/services">服务总览</a
+          ><a href="/alibaba">阿里巴巴国际站</a
           ><a href="/independent-site">外贸独立站</a
           ><a href="/made-in-china">中国制造网</a>
         </div>
         <div class="footer-column">
           <h2>方法与内容</h2>
           <a href="/method">运营方法</a><a href="/insights">运营笔记</a
-          ><a href="/about">关于 Wesley</a>
+          ><a href="/tools">运营工具</a><a href="/about">关于 Wesley</a>
         </div>
         <div class="footer-column">
           <h2>联系与说明</h2>

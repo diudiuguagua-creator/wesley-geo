@@ -1,0 +1,842 @@
+/*
+  Visual direction A — Operations Evidence System.
+  Scoped to the homepage, service overview and About Wesley page.
+*/
+
+.evidence-system {
+  --evidence-night: #071b2b;
+  --evidence-night-2: #0d2a3d;
+  --evidence-paper: #f9fcfd;
+  --evidence-grid: #d8e3e9;
+  --evidence-blue: #2458e6;
+  --evidence-teal: #087b82;
+  --evidence-copper: #c24a1b;
+  --evidence-display:
+    Bahnschrift, "Arial Narrow", "Microsoft YaHei UI", "PingFang SC",
+    sans-serif;
+  color: var(--ink);
+  background: var(--evidence-paper);
+}
+
+.evidence-system main {
+  overflow-x: clip;
+}
+
+.evidence-system .site-header {
+  border-bottom-color: rgba(111, 137, 152, 0.34);
+  background: rgba(249, 252, 253, 0.94);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.evidence-system .header-inner {
+  min-height: 78px;
+}
+
+.evidence-system .site-header .brand::after {
+  content: "OPERATIONS SYSTEM";
+  margin-left: 5px;
+  padding-left: 16px;
+  border-left: 1px solid var(--line);
+  color: #6a7e8c;
+  font: 700 9px/1.2 var(--font-data);
+  letter-spacing: 0.12em;
+}
+
+.evidence-system .site-nav {
+  gap: 25px;
+  font-size: 13px;
+}
+
+.evidence-system .nav-service-menu,
+.evidence-system .nav-service-menu a,
+.evidence-system .nav-service-menu b,
+.evidence-system .button {
+  border-radius: 1px;
+}
+
+.evidence-system .nav-service-menu {
+  border-color: #aebfc9;
+  box-shadow: 10px 10px 0 rgba(8, 28, 44, 0.08);
+}
+
+.evidence-system .button {
+  position: relative;
+  min-height: 52px;
+  padding-inline: 24px;
+  box-shadow: 4px 4px 0 rgba(7, 27, 43, 0.13);
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.evidence-system .button:hover {
+  box-shadow: 1px 1px 0 rgba(7, 27, 43, 0.12);
+  transform: translate(2px, 2px);
+}
+
+.evidence-system .button.button-small {
+  min-height: 42px;
+  padding-inline: 16px;
+}
+
+.evidence-system .eyebrow,
+.evidence-system .section-kicker,
+.evidence-system .data-label {
+  color: var(--evidence-blue);
+  font-family: var(--font-data);
+  letter-spacing: 0.14em;
+}
+
+.evidence-system .section-kicker {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.evidence-system .section-kicker::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: var(--evidence-copper);
+  box-shadow: 11px 0 0 rgba(194, 74, 27, 0.28);
+}
+
+.evidence-system h1,
+.evidence-system h2,
+.evidence-system h3 {
+  text-wrap: balance;
+}
+
+.evidence-system .display-title,
+.evidence-system .simple-hero h1,
+.evidence-system .section-heading h2,
+.evidence-system .split-copy h2,
+.evidence-system .contact-copy h2 {
+  font-family: var(--evidence-display);
+  font-stretch: condensed;
+}
+
+/* Hero thesis and the evidence trace rail. */
+.evidence-system .evidence-hero,
+.evidence-system .evidence-profile-hero {
+  position: relative;
+  isolation: isolate;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(104deg, rgba(249, 252, 253, 0.98) 0 61%, rgba(229, 238, 244, 0.96) 61%),
+    var(--evidence-paper);
+}
+
+.evidence-system .evidence-hero::before,
+.evidence-system .evidence-profile-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.55;
+  background-image:
+    linear-gradient(rgba(83, 111, 128, 0.11) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(83, 111, 128, 0.11) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(90deg, transparent 0, #000 14%, #000 100%);
+}
+
+.evidence-system .evidence-hero::after,
+.evidence-system .evidence-profile-hero::after {
+  content: "INPUT  /  ACTION  /  EVIDENCE  /  NEXT DECISION";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: clamp(14px, 2.3vw, 38px);
+  color: #66808f;
+  font: 700 9px/1 var(--font-data);
+  letter-spacing: 0.13em;
+  writing-mode: vertical-rl;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.evidence-system .home-hero {
+  padding: 94px 0 96px;
+}
+
+.evidence-system .home-hero-grid,
+.evidence-system .evidence-profile-grid {
+  position: relative;
+  z-index: 2;
+  grid-template-columns: minmax(0, 7fr) minmax(420px, 5fr);
+  gap: clamp(52px, 6vw, 88px);
+}
+
+.evidence-system .evidence-hero-copy {
+  max-width: 735px;
+}
+
+.evidence-system .display-title {
+  max-width: 760px;
+  font-size: clamp(50px, 5.7vw, 78px);
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+}
+
+.evidence-system .display-title em {
+  display: block;
+  margin-top: 6px;
+  color: var(--evidence-blue);
+}
+
+.evidence-system .keep-phrase {
+  white-space: nowrap;
+}
+
+.evidence-system .lead {
+  color: #3c5362;
+  line-height: 1.82;
+}
+
+.evidence-system .hero-principles {
+  margin-top: 46px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.evidence-system .hero-principles div {
+  padding: 17px 18px;
+}
+
+.evidence-system .hero-principles div + div {
+  padding-left: 18px;
+}
+
+.evidence-system .hero-principles dt {
+  font-family: var(--evidence-display);
+  font-size: 15px;
+}
+
+.evidence-system .hero-principles dd {
+  font-family: var(--font-data);
+  font-size: 10px;
+}
+
+.evidence-system .ops-ledger {
+  border-color: #8ea4b1;
+  border-radius: 1px;
+  box-shadow:
+    13px 13px 0 rgba(7, 27, 43, 0.1),
+    0 24px 48px rgba(7, 27, 43, 0.08);
+}
+
+.evidence-system .ops-ledger::after {
+  top: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--evidence-blue) 0 34%,
+    var(--evidence-teal) 34% 67%,
+    var(--evidence-copper) 67%
+  );
+  animation: none;
+  transform: none;
+}
+
+.evidence-system .ledger-head {
+  min-height: 52px;
+  padding-inline: 20px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    var(--evidence-night);
+  background-size: 22px 100%;
+}
+
+.evidence-system .framework-badge::before {
+  border-radius: 1px;
+}
+
+.evidence-system .ledger-columns {
+  background: #eef4f7;
+}
+
+.evidence-system .ledger-row {
+  transition: background 0.18s ease;
+}
+
+.evidence-system .ledger-row:hover {
+  background: #f1f6f8;
+}
+
+.evidence-system .ledger-code,
+.evidence-system .service-row-code {
+  border-radius: 1px;
+  box-shadow: 3px 3px 0 rgba(7, 27, 43, 0.11);
+}
+
+.evidence-system .ledger-foot {
+  background: var(--evidence-night);
+}
+
+.evidence-system .signal-strip {
+  background: var(--evidence-paper);
+}
+
+.evidence-system .signal-inner {
+  min-height: 86px;
+}
+
+.evidence-system .signal-inner p {
+  font-family: var(--evidence-display);
+  font-size: 17px;
+}
+
+.evidence-system .signal-inner li {
+  font-family: var(--font-data);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+
+.evidence-system .signal-inner li::before {
+  border-radius: 1px;
+}
+
+/* Section rhythm and system labels. */
+.evidence-system .section {
+  position: relative;
+  padding: 112px 0;
+  border-bottom: 1px solid rgba(139, 160, 173, 0.28);
+}
+
+.evidence-system .section-white {
+  background: #fff;
+}
+
+.evidence-system .section-soft {
+  background:
+    linear-gradient(rgba(109, 137, 153, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(109, 137, 153, 0.055) 1px, transparent 1px),
+    var(--blueprint);
+  background-size: 36px 36px;
+}
+
+.evidence-system .section-dark {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    var(--evidence-night);
+  background-size: 44px 44px;
+}
+
+.evidence-system .system-section::before {
+  content: attr(data-system-code);
+  position: absolute;
+  top: 112px;
+  left: max(18px, calc((100vw - 1200px) / 2 - 64px));
+  color: #728793;
+  font: 700 9px/1 var(--font-data);
+  letter-spacing: 0.12em;
+  writing-mode: vertical-rl;
+}
+
+.evidence-system .section-dark.system-section::before {
+  color: #6e8796;
+}
+
+.evidence-system .section-dark .section-kicker,
+.evidence-system .evidence-contact .section-kicker {
+  color: #78d7d8;
+}
+
+.evidence-system .section-heading {
+  grid-template-columns: minmax(0, 7fr) minmax(280px, 5fr);
+  gap: clamp(46px, 7vw, 98px);
+  align-items: start;
+  margin-bottom: 56px;
+}
+
+.evidence-system .section-heading h2,
+.evidence-system .split-copy h2,
+.evidence-system .contact-copy h2 {
+  max-width: 760px;
+  font-size: clamp(38px, 4.5vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.evidence-system .section-heading > p,
+.evidence-system .section-heading > :nth-child(2),
+.evidence-system .split-copy > p {
+  padding-top: 31px;
+}
+
+.evidence-system .problem-board {
+  grid-template-columns: minmax(300px, 5fr) minmax(0, 7fr);
+  gap: clamp(58px, 8vw, 110px);
+}
+
+.evidence-system .problem-list {
+  border-top-color: #9fb2bd;
+}
+
+.evidence-system .problem-list article {
+  padding: 25px 0;
+  transition:
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.evidence-system .problem-list article:hover {
+  border-color: var(--evidence-blue);
+  transform: translateX(5px);
+}
+
+.evidence-system .service-ledger {
+  border: 1px solid #aebfc9;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.evidence-system .service-row {
+  min-height: 184px;
+  padding: 30px 32px;
+  border-bottom-color: var(--line);
+  transition: background 0.18s ease;
+}
+
+.evidence-system .service-row:last-child {
+  border-bottom: 0;
+}
+
+.evidence-system .service-row:hover {
+  background: #f1f6f8;
+  transform: none;
+}
+
+.evidence-system .service-row h3 {
+  font-family: var(--evidence-display);
+  font-size: 27px;
+}
+
+.evidence-system .work-cycle {
+  border-color: #385061;
+  background: rgba(4, 20, 31, 0.34);
+}
+
+.evidence-system .cycle-step {
+  min-height: 300px;
+  padding: 30px;
+}
+
+.evidence-system .cycle-step h3 {
+  font-family: var(--evidence-display);
+  font-size: 26px;
+}
+
+.evidence-about #principles .cycle-step::after {
+  display: none;
+}
+
+.evidence-system .fit-panel,
+.evidence-system .article-card,
+.evidence-system .responsibility-card,
+.evidence-system .principle-card,
+.evidence-system .disclosure {
+  border-radius: 0;
+  box-shadow: 7px 7px 0 rgba(7, 27, 43, 0.055);
+}
+
+.evidence-system .fit-panel {
+  padding: 34px;
+  border-color: #b5c5ce;
+}
+
+.evidence-system .fit-panel h3,
+.evidence-system .principle-card h2,
+.evidence-system .principle-card h3,
+.evidence-system .responsibility-card h3 {
+  font-family: var(--evidence-display);
+}
+
+.evidence-system .article-grid {
+  gap: 0;
+  border: 1px solid #afc0ca;
+}
+
+.evidence-system .article-card {
+  min-height: 340px;
+  padding: 30px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.evidence-system .article-card + .article-card {
+  border-left: 1px solid var(--line);
+}
+
+.evidence-system .article-card:hover {
+  background: #f2f7f9;
+  transform: none;
+}
+
+.evidence-system .article-card h3 {
+  font-family: var(--evidence-display);
+  font-size: 25px;
+  line-height: 1.35;
+}
+
+.evidence-system .tool-preview-grid {
+  gap: 0;
+  border: 1px solid #afc0ca;
+}
+
+.evidence-system .tool-preview-card {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.evidence-system .tool-preview-card + .tool-preview-card {
+  border-left: 1px solid var(--line);
+}
+
+.evidence-system .tool-preview-card:hover {
+  transform: none;
+}
+
+.evidence-system .boundary-note {
+  border-top: 1px solid #e4b29f;
+  border-right: 1px solid #e4b29f;
+  border-bottom: 1px solid #e4b29f;
+  box-shadow: 7px 7px 0 rgba(194, 74, 27, 0.08);
+}
+
+.evidence-system .evidence-contact {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    var(--evidence-night);
+  background-size: 44px 44px;
+}
+
+.evidence-system .evidence-contact::after {
+  content: "NEXT DECISION";
+  position: absolute;
+  right: 4vw;
+  bottom: 20px;
+  color: rgba(255, 255, 255, 0.08);
+  font: 800 clamp(34px, 7vw, 92px)/1 var(--evidence-display);
+  letter-spacing: -0.04em;
+  pointer-events: none;
+}
+
+/* About Wesley: a public-facts operator record instead of invented biography. */
+.evidence-system .evidence-profile-hero {
+  padding: 82px 0 86px;
+}
+
+.evidence-system .evidence-profile-grid {
+  display: grid;
+  align-items: center;
+}
+
+.evidence-system .evidence-profile-copy h1 {
+  max-width: 720px;
+  font-size: clamp(56px, 6vw, 82px);
+  line-height: 0.98;
+}
+
+.evidence-system .evidence-profile-copy .lead {
+  max-width: 720px;
+}
+
+.evidence-system .operator-record {
+  border: 1px solid #456070;
+  background: var(--evidence-night);
+  color: #edf5f8;
+  box-shadow:
+    13px 13px 0 rgba(7, 27, 43, 0.12),
+    0 24px 48px rgba(7, 27, 43, 0.09);
+}
+
+.evidence-system .operator-record-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 17px 20px;
+  border-bottom: 1px solid #385061;
+  color: #a9bdc8;
+  font: 700 10px/1.3 var(--font-data);
+  letter-spacing: 0.1em;
+}
+
+.evidence-system .operator-record-head span:last-child {
+  color: #79d7b0;
+}
+
+.evidence-system .operator-record dl {
+  margin: 0;
+}
+
+.evidence-system .operator-record dl > div {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 22px;
+  padding: 21px 20px;
+  border-bottom: 1px solid #294252;
+}
+
+.evidence-system .operator-record dt {
+  color: #89aaff;
+  font: 700 10px/1.6 var(--font-data);
+  letter-spacing: 0.08em;
+}
+
+.evidence-system .operator-record dd {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+.evidence-system .operator-record > p {
+  margin: 0;
+  padding: 17px 20px;
+  color: #9cafba;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.evidence-system .evidence-about-nav {
+  position: sticky;
+  z-index: 45;
+  top: 78px;
+  background: rgba(249, 252, 253, 0.96);
+  backdrop-filter: blur(12px);
+}
+
+.evidence-about .system-section {
+  scroll-margin-top: 68px;
+}
+
+.evidence-system .anchor-strip-inner {
+  min-height: 66px;
+}
+
+.evidence-system .anchor-strip a {
+  font-family: var(--font-data);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+}
+
+.evidence-system .principle-card {
+  min-height: 230px;
+  padding: 30px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.evidence-system .principle-card h2,
+.evidence-system .principle-card h3 {
+  margin-top: 42px;
+  font-size: 28px;
+}
+
+.evidence-system .disclosure {
+  padding: 34px;
+  border-color: #afc0ca;
+}
+
+@media (max-width: 1320px) {
+  .evidence-system .system-section::before {
+    display: none;
+  }
+}
+
+@media (max-width: 1050px) {
+  .evidence-system .site-header {
+    background: var(--evidence-paper);
+    backdrop-filter: none;
+  }
+
+  .evidence-system .site-header .brand::after {
+    display: none;
+  }
+
+  .evidence-system .site-nav {
+    font-size: 17px;
+  }
+
+  .evidence-system .evidence-hero::after,
+  .evidence-system .evidence-profile-hero::after {
+    display: none;
+  }
+
+  .evidence-system .evidence-hero,
+  .evidence-system .evidence-profile-hero {
+    background:
+      linear-gradient(to bottom, rgba(249, 252, 253, 0.98) 0 53%, rgba(229, 238, 244, 0.96) 53%),
+      var(--evidence-paper);
+  }
+
+  .evidence-system .home-hero-grid,
+  .evidence-system .evidence-profile-grid,
+  .evidence-system .problem-board {
+    grid-template-columns: 1fr;
+  }
+
+  .evidence-system .home-hero-grid,
+  .evidence-system .evidence-profile-grid {
+    gap: 58px;
+  }
+
+  .evidence-system .section-heading {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .evidence-system .section-heading > p,
+  .evidence-system .section-heading > :nth-child(2),
+  .evidence-system .split-copy > p {
+    padding-top: 0;
+  }
+
+  .evidence-system .article-grid,
+  .evidence-system .tool-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .evidence-system .article-card + .article-card,
+  .evidence-system .tool-preview-card + .tool-preview-card {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .evidence-system .evidence-about-nav {
+    top: 78px;
+  }
+}
+
+@media (max-width: 680px) {
+  .evidence-system .home-hero,
+  .evidence-system .evidence-profile-hero {
+    padding: 58px 0 66px;
+  }
+
+  .evidence-system .evidence-hero::before,
+  .evidence-system .evidence-profile-hero::before {
+    background-size: 30px 30px;
+  }
+
+  .evidence-system .display-title,
+  .evidence-system .evidence-profile-copy h1 {
+    font-size: clamp(40px, 10.8vw, 46px);
+    line-height: 1.06;
+  }
+
+  .evidence-system .cycle-step {
+    min-height: 220px;
+    padding: 24px;
+  }
+
+  .evidence-system .display-title em {
+    margin-top: 3px;
+    font-size: 0.9em;
+    line-height: 1.04;
+  }
+
+  .evidence-system .section-heading h2,
+  .evidence-system .split-copy h2,
+  .evidence-system .contact-copy h2 {
+    font-size: clamp(32px, 9vw, 35px);
+    line-height: 1.16;
+  }
+
+  .evidence-system .hero-principles {
+    background: rgba(255, 255, 255, 0.86);
+  }
+
+  .evidence-system .ops-ledger,
+  .evidence-system .operator-record {
+    box-shadow: 7px 7px 0 rgba(7, 27, 43, 0.1);
+  }
+
+  .evidence-system .section {
+    padding: 76px 0;
+  }
+
+  .evidence-system .section-heading {
+    margin-bottom: 38px;
+  }
+
+  .evidence-system .section-heading h2,
+  .evidence-system .split-copy h2,
+  .evidence-system .contact-copy h2 {
+    font-size: 37px;
+    line-height: 1.12;
+  }
+
+  .evidence-system .service-ledger {
+    border-right: 0;
+    border-left: 0;
+  }
+
+  .evidence-system .service-row {
+    padding: 28px 20px;
+  }
+
+  .evidence-system .service-row h3 {
+    font-size: 25px;
+  }
+
+  .evidence-system .article-card {
+    min-height: 300px;
+    padding: 26px;
+  }
+
+  .evidence-system .operator-record dl > div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .evidence-system .evidence-about-nav {
+    position: static;
+    backdrop-filter: none;
+  }
+
+  .evidence-about .system-section {
+    scroll-margin-top: 0;
+  }
+
+  .evidence-system .anchor-strip-inner {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 14px;
+    min-height: 0;
+  }
+
+  .evidence-system .anchor-strip strong {
+    grid-column: 1 / -1;
+    min-height: 32px;
+  }
+
+  .evidence-system .anchor-strip a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .evidence-system .evidence-contact::after {
+    display: none;
+  }
+
+  .evidence-system .principle-card {
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .evidence-system .ops-ledger::after {
+    animation: none;
+  }
+}

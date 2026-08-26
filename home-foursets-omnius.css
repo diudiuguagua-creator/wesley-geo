@@ -28,7 +28,7 @@
 }
 
 .home-foursets-omnius .shell {
-  width: min(calc(100% - 80px), 1200px);
+  width: min(calc(100% - 64px), 1440px);
 }
 
 .home-foursets-omnius h1,
@@ -139,7 +139,7 @@
 }
 
 .home-foursets-omnius .home-hero {
-  padding: clamp(40px, 4vw, 54px) 0 0;
+  padding: clamp(38px, 5vw, 72px) 0 0;
 }
 
 .home-foursets-omnius .home-hero-grid {
@@ -1085,7 +1085,7 @@
 
 @media (max-width: 1050px) {
   .home-foursets-omnius .shell {
-    width: min(calc(100% - 48px), 1200px);
+    width: min(calc(100% - 40px), 1440px);
   }
 
   .home-foursets-omnius .site-header {
@@ -1161,7 +1161,7 @@
 
 @media (max-width: 720px) {
   .home-foursets-omnius .shell {
-    width: min(calc(100% - 40px), 1200px);
+    width: min(calc(100% - 30px), 1440px);
   }
 
   .home-foursets-omnius .header-inner {
@@ -1170,7 +1170,7 @@
 
   .home-foursets-omnius .home-hero {
     min-height: 0;
-    padding-top: 28px;
+    padding-top: 34px;
   }
 
   .home-foursets-omnius .home-hero-grid,
@@ -1461,7 +1461,7 @@
 */
 .home-seo-geo .geo-hero {
   min-height: 0;
-  padding-bottom: clamp(44px, 4.6vw, 62px);
+  padding-bottom: clamp(56px, 7vw, 100px);
 }
 
 .home-seo-geo .display-title {
@@ -1488,10 +1488,10 @@
 
 .home-seo-geo .evidence-hero-copy > .lead {
   grid-column: 1 / 7;
-  margin-top: clamp(22px, 2.2vw, 30px);
+  margin-top: clamp(30px, 3vw, 44px);
   font-size: clamp(16px, 1.2vw, 18px);
   font-weight: 500;
-  line-height: 1.72;
+  line-height: 1.8;
 }
 
 .home-seo-geo .evidence-hero-copy > .hero-actions {
@@ -1523,7 +1523,7 @@
 }
 
 .home-seo-geo .hero-answer h2 {
-  margin: 18px 0 14px;
+  margin: 22px 0 18px;
   font-size: clamp(32px, 3vw, 48px);
   line-height: 1;
   letter-spacing: -0.035em;
@@ -1536,15 +1536,15 @@
 }
 
 .home-seo-geo .hero-answer dl {
-  margin: 22px 0 0;
+  margin: 28px 0 0;
   border-top: 1px solid var(--fo-ink);
 }
 
 .home-seo-geo .hero-answer dl div {
   display: grid;
-  grid-template-columns: 84px 1fr;
-  gap: 16px;
-  padding: 12px 0;
+  grid-template-columns: 92px 1fr;
+  gap: 18px;
+  padding: 15px 0;
   border-bottom: 1px solid var(--fo-rule);
 }
 
@@ -1660,7 +1660,7 @@
 }
 
 .home-seo-geo .section-heading {
-  margin-bottom: clamp(38px, 4.2vw, 54px);
+  margin-bottom: clamp(50px, 6vw, 78px);
 }
 
 .home-seo-geo .section-heading h2,
@@ -1719,13 +1719,13 @@
 .home-seo-geo .responsibility-band {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: clamp(44px, 4.6vw, 64px);
+  margin-top: clamp(56px, 7vw, 96px);
   border: 1px solid rgba(255, 255, 255, 0.62);
 }
 
 .home-seo-geo .responsibility-band article {
   min-height: 330px;
-  padding: clamp(30px, 3.4vw, 42px);
+  padding: clamp(30px, 4vw, 58px);
 }
 
 .home-seo-geo .responsibility-band article + article {
@@ -1913,7 +1913,7 @@
 
 .home-seo-geo .trust-grid article {
   min-height: 420px;
-  padding: clamp(30px, 3.2vw, 42px) clamp(24px, 2.8vw, 38px);
+  padding: clamp(30px, 3.6vw, 54px) clamp(24px, 3vw, 45px);
 }
 
 .home-seo-geo .trust-grid article + article {
@@ -2261,8 +2261,8 @@
 
 /* Bring the type scale back to a calmer B2B reading rhythm. */
 .home-foursets-omnius.home-seo-geo .display-title {
-  max-width: 780px;
-  font-size: clamp(48px, 4.25vw, 56px);
+  max-width: 900px;
+  font-size: clamp(48px, 4.9vw, 70px);
   line-height: 1.04;
   letter-spacing: -0.04em;
 }
@@ -2288,7 +2288,7 @@
 }
 
 .home-foursets-omnius.home-seo-geo .section {
-  padding: clamp(64px, 5.4vw, 80px) 0;
+  padding: clamp(76px, 7vw, 108px) 0;
   border-bottom: 0;
 }
 
@@ -2310,7 +2310,7 @@
 
 /* Hero: two generous rounded surfaces instead of two framed worksheets. */
 .home-foursets-omnius.home-seo-geo .hero-answer {
-  padding: clamp(24px, 2.3vw, 30px);
+  padding: clamp(25px, 2.7vw, 38px);
   border-color: var(--fo-border-soft);
   border-radius: var(--fo-radius-panel);
   background: var(--fo-white);
@@ -2318,7 +2318,7 @@
 }
 
 .home-foursets-omnius.home-seo-geo .hero-answer h2 {
-  font-size: clamp(26px, 2.2vw, 32px);
+  font-size: clamp(28px, 2.5vw, 38px);
   line-height: 1.08;
 }
 
@@ -2478,7 +2478,7 @@
 }
 
 .home-foursets-omnius.home-seo-geo .cycle-step {
-  padding: 24px 0;
+  padding: 29px 0;
   border: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 0;
@@ -2490,7 +2490,7 @@
 }
 
 .home-foursets-omnius.home-seo-geo .cycle-step:hover {
-  padding: 24px 20px;
+  padding: 29px 20px;
   border-color: rgba(255, 255, 255, 0.24);
   border-radius: 16px;
   background: var(--fo-blue);
@@ -2510,7 +2510,7 @@
 }
 
 .home-foursets-omnius.home-seo-geo .responsibility-band article {
-  min-height: 240px;
+  min-height: 280px;
   border: 0;
   border-radius: 0;
   background: transparent;
@@ -2521,7 +2521,7 @@
 }
 
 .home-foursets-omnius.home-seo-geo .responsibility-band h3 {
-  margin-top: 40px;
+  margin-top: 52px;
   font-size: clamp(25px, 2.5vw, 37px);
   line-height: 1.12;
 }
@@ -2534,7 +2534,7 @@
 
 .home-foursets-omnius.home-seo-geo .evidence-grid article {
   position: relative;
-  min-height: 230px;
+  min-height: 270px;
   border: 0;
   border-radius: var(--fo-radius-card);
   background: var(--fo-white);
@@ -2557,7 +2557,7 @@
 }
 
 .home-foursets-omnius.home-seo-geo .evidence-grid h3 {
-  margin-top: 48px;
+  margin-top: 58px;
   font-size: clamp(23px, 2vw, 31px);
   line-height: 1.12;
 }
@@ -2594,7 +2594,7 @@
 }
 
 .home-foursets-omnius.home-seo-geo .resource-tool {
-  min-height: 440px;
+  min-height: 520px;
 }
 
 .home-foursets-omnius.home-seo-geo .resource-tool h3 {
@@ -2618,7 +2618,7 @@
 }
 
 .home-foursets-omnius.home-seo-geo .trust-grid article {
-  min-height: 270px;
+  min-height: 330px;
   border: 0;
   border-radius: 0;
   background: transparent;
@@ -2630,7 +2630,7 @@
 }
 
 .home-foursets-omnius.home-seo-geo .trust-grid h3 {
-  margin-top: 48px;
+  margin-top: 62px;
   font-size: clamp(24px, 2.25vw, 34px);
   line-height: 1.14;
 }
@@ -2681,10 +2681,6 @@
   font-size: clamp(60px, 10vw, 145px);
 }
 
-.home-foursets-omnius.home-seo-geo .evidence-contact {
-  padding: clamp(72px, 6vw, 84px) 0;
-}
-
 .home-foursets-omnius.home-seo-geo .contact-checklist {
   display: block;
   border: 0;
@@ -2692,7 +2688,7 @@
 }
 
 .home-foursets-omnius.home-seo-geo .contact-checklist li {
-  padding: 16px 0;
+  padding: 18px 0;
   border: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 0;
@@ -2723,8 +2719,8 @@
   }
 
   .home-foursets-omnius.home-seo-geo .display-title {
-    font-size: clamp(32px, 8.6vw, 34px);
-    line-height: 1.07;
+    font-size: clamp(36px, 10.2vw, 43px);
+    line-height: 1.06;
     letter-spacing: -0.035em;
   }
 
@@ -2732,12 +2728,12 @@
   .home-foursets-omnius.home-seo-geo .split-copy h2,
   .home-foursets-omnius.home-seo-geo .contact-copy h2,
   .home-foursets-omnius.home-seo-geo #diagnosis .split-copy h2 {
-    font-size: clamp(27px, 7.6vw, 32px);
+    font-size: clamp(29px, 8.6vw, 36px);
     line-height: 1.13;
   }
 
   .home-foursets-omnius.home-seo-geo .section {
-    padding: 52px 0;
+    padding: 76px 0;
   }
 
   .home-foursets-omnius.home-seo-geo .system-section::before {
@@ -2746,11 +2742,11 @@
 
   .home-foursets-omnius.home-seo-geo .hero-answer,
   .home-foursets-omnius.home-seo-geo .channel-route {
-    margin-top: 22px;
+    margin-top: 26px;
   }
 
   .home-foursets-omnius.home-seo-geo .hero-answer h2 {
-    font-size: 25px;
+    font-size: 28px;
   }
 
   .home-foursets-omnius.home-seo-geo .signal-strip {
@@ -2997,7 +2993,7 @@
   inset: 0 0 auto;
   display: block;
   width: 100%;
-  height: clamp(560px, 50vw, 660px);
+  height: clamp(620px, 58vw, 790px);
   margin: 0;
   opacity: 0.88;
   pointer-events: none;
@@ -3069,7 +3065,7 @@
 }
 
 .home-foursets-omnius.home-seo-geo .resource-tool {
-  min-height: 440px;
+  min-height: 570px;
   background-color: var(--fo-blue);
   background-image:
     linear-gradient(
@@ -3111,7 +3107,7 @@
 
 @media (max-width: 1050px) {
   .home-foursets-omnius.home-seo-geo .hero-backdrop {
-    height: 620px;
+    height: 700px;
     opacity: 0.74;
   }
 
@@ -3153,13 +3149,13 @@
   }
 
   .home-foursets-omnius.home-seo-geo .resource-tool {
-    min-height: 420px;
+    min-height: 520px;
   }
 }
 
 @media (max-width: 720px) {
   .home-foursets-omnius.home-seo-geo .hero-backdrop {
-    height: 590px;
+    height: 650px;
     opacity: 0.6;
   }
 
@@ -3187,7 +3183,7 @@
   }
 
   .home-foursets-omnius.home-seo-geo .resource-tool {
-    min-height: 360px;
+    min-height: 500px;
     background-position: 48% top;
   }
 }
@@ -3228,8 +3224,8 @@
 
 /* 2026-08-25: two-track information architecture and image-led case previews. */
 .home-foursets-omnius.home-seo-geo .home-hero-grid {
-  grid-template-columns: minmax(0, 1.22fr) minmax(390px, 0.78fr);
-  gap: clamp(32px, 4vw, 54px);
+  grid-template-columns: minmax(0, 7fr) minmax(310px, 5fr);
+  gap: clamp(34px, 6vw, 86px);
   align-items: center;
 }
 
@@ -3244,7 +3240,7 @@
 .home-foursets-omnius.home-seo-geo .split-copy h2,
 .home-foursets-omnius.home-seo-geo .contact-copy h2,
 .home-foursets-omnius.home-seo-geo #diagnosis .split-copy h2 {
-  font-size: clamp(31px, 2.9vw, 40px);
+  font-size: clamp(30px, 3.2vw, 44px);
   line-height: 1.13;
 }
 
@@ -3258,9 +3254,9 @@
   position: relative;
   display: grid;
   grid-template-rows: auto auto 1fr;
-  gap: 22px;
+  gap: 28px;
   min-width: 0;
-  padding: clamp(28px, 3.2vw, 34px);
+  padding: clamp(28px, 4vw, 44px);
   overflow: hidden;
   border: 1px solid rgba(113, 140, 158, 0.3);
   border-radius: 24px;
@@ -3290,15 +3286,15 @@
 
 .home-foursets-omnius.home-seo-geo .track-code,
 .home-foursets-omnius.home-seo-geo .case-code {
-  margin: 0 0 14px;
+  margin: 0 0 18px;
   color: var(--fo-blue);
   font: 750 10px/1.4 var(--font-data);
   letter-spacing: 0.1em;
 }
 
 .home-foursets-omnius.home-seo-geo .business-track h3 {
-  margin: 0 0 12px;
-  font-size: clamp(27px, 2.8vw, 35px);
+  margin: 0 0 14px;
+  font-size: clamp(27px, 3vw, 38px);
   line-height: 1.08;
   letter-spacing: -0.035em;
 }
@@ -3352,8 +3348,8 @@
   grid-template-columns: auto 1fr auto;
   gap: 5px 12px;
   align-items: center;
-  min-height: 88px;
-  padding: 14px;
+  min-height: 104px;
+  padding: 18px;
   border: 1px solid rgba(113, 140, 158, 0.27);
   border-radius: 16px;
   background: rgba(239, 245, 250, 0.76);
@@ -3692,7 +3688,7 @@
 }
 
 .home-foursets-omnius.home-seo-geo .ledger-context {
-  padding: clamp(28px, 3vw, 34px) clamp(24px, 3vw, 34px) 20px;
+  padding: clamp(28px, 4vw, 42px) clamp(24px, 4vw, 38px) 24px;
 }
 
 .home-foursets-omnius.home-seo-geo .ledger-context p {
@@ -3715,7 +3711,7 @@
 }
 
 .home-foursets-omnius.home-seo-geo .ledger-rows {
-  margin: 0 clamp(18px, 2.5vw, 26px) 20px;
+  margin: 0 clamp(18px, 3vw, 30px) 24px;
   padding: 0;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -3730,8 +3726,8 @@
   grid-template-columns: 36px minmax(0, 1fr) auto;
   gap: 14px;
   align-items: center;
-  min-height: 68px;
-  padding: 12px 16px;
+  min-height: 82px;
+  padding: 15px 18px;
 }
 
 .home-foursets-omnius.home-seo-geo .ledger-rows li + li {
@@ -3857,7 +3853,7 @@
   }
 
   .home-foursets-omnius.home-seo-geo .home-hero-grid > .hero-answer {
-    margin-top: 24px;
+    margin-top: 30px;
   }
 }
 

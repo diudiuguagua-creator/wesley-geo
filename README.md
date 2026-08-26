@@ -18,13 +18,14 @@ npx --yes serve .
 
 - 品牌：Wesley GEO
 - 微信：Wesleyb2b
-- 服务：阿里巴巴国际站、外贸独立站、中国制造网代运营
+- 两条主营业务：B2B 平台运营、独立站 SEO/GEO
+- 平台渠道入口：阿里巴巴国际站、中国制造网
 - 不公开：中文姓名、城市、从业年限、照片、邮箱、未授权客户案例和未经确认的业绩数据
 
 ## 页面
 
 - `/`：外贸 B2B 代运营首页
-- `/services`：三项企业外贸 B2B 代运营服务总览与选择方式
+- `/services`：两类外贸 B2B 业务与三条渠道入口的分工和选择方式
 - `/alibaba`：阿里巴巴国际站代运营
 - `/independent-site`：外贸独立站建设与运营
 - `/made-in-china`：中国制造网代运营
@@ -33,35 +34,40 @@ npx --yes serve .
 - `/insights/alibaba-product-keyword-traffic`：国际站产品、关键词与流量分析
 - `/insights/b2b-website-launch-checklist`：B2B 独立站上线清单
 - `/insights/operation-action-review`：运营动作记录与复盘
-- `/tools`：渠道运营自检、运营动作复盘模板与页面上线检查表
+- `/tools`：Wesley 自研运营工具中心；基础自检与模板作为辅助资源单独保留
+- `/cases`：匿名外贸 B2B 项目案例总览
+- `/cases/hygiene-products-seo-geo`：卫生用品独立站 SEO/GEO 两年匿名项目
+- `/cases/pump-b2b-operations`：水泵国际站与独立站协同运营三年匿名项目
 - `/about`：关于 Wesley
 - `/contact`：公开微信与咨询准备清单
 - `/sitemap`：HTML 网站地图
 - `/privacy`：隐私说明（`noindex,follow`）
 - `/404.html`：自定义错误页（`noindex,follow`）
-- `/cases`：客户案例公开状态与证据标准页（`noindex,follow`；进入主导航但不进入 XML sitemap；取得真实事实与公开授权前不发布具体案例）
 
 ## SEO 文件
 
-- `/sitemap.xml`：14 个 canonical、可索引 URL（不包含 `/cases`）
+- `/sitemap.xml`：17 个 canonical、可索引 URL（包含案例总览与两个匿名项目详情页）
 - `/robots.txt`：允许抓取公开页面并声明 XML sitemap
 - `_headers`：安全、缓存与 MIME 响应头
+- `favicon.png`：网站标签页使用的品牌图标
 - `og-cover.png`：1200×630 社交分享图
 - `og-cover.svg`：社交分享图的矢量源文件
+- `/assets/brand/`：网页优化版品牌标志与原始来源图
+- `/assets/cases/`：卫生用品与水泵两套案例主视觉；各含 640、960、1536 WebP 和 1200×630 社交图
 
 ## 样式文件
 
 - `/styles.css`：全站基础视觉与通用组件
-- `/service-extras.css`：三项渠道服务页的流程示例与工具卡片
-- `/tools.css`：运营工具页与首页工具预览
-- `/cases.css`：客户案例公开状态与证据标准页
+- `/service-extras.css`：渠道服务页的流程示例与工具卡片
+- `/tools.css`：自研运营工具中心与辅助资源页面样式
+- `/cases.css`：案例总览、匿名项目详情页、项目快照、工作流与配图系统
 - `/evidence-system.css`：首页、服务总览与关于页共用的“运营证据系统”视觉母版
 - `/site-header-foursets.css`：全站 Foursets 节奏的蓝白灰页眉与响应式菜单
 
 ## 质量检查
 
 ```powershell
-npx --yes html-validate "*.html" "insights/*.html"
+npx --yes html-validate "*.html" "insights/*.html" "cases/*.html"
 node --check script.js
 git diff --check
 ```

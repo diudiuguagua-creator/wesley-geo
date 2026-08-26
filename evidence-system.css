@@ -18,6 +18,26 @@
   background: var(--evidence-paper);
 }
 
+/* Keep the About page aligned with the two top-level business directions. */
+.evidence-system .capability-links {
+  display: grid;
+  gap: 8px;
+  align-content: center;
+}
+
+.evidence-system .capability-links .text-link {
+  min-height: 34px;
+}
+
+@media (max-width: 680px) {
+  .evidence-system .capability-links {
+    grid-column: auto;
+    grid-template-columns: repeat(2, minmax(0, auto));
+    justify-content: start;
+    gap: 10px 20px;
+  }
+}
+
 .evidence-system main {
   overflow-x: clip;
 }

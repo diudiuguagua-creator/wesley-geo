@@ -4,12 +4,113 @@ const navLabel = navToggle?.querySelector(".sr-only");
 const serviceMenus = document.querySelectorAll("[data-service-menu]");
 const dialog = document.querySelector("[data-wechat-dialog]");
 
-const closeNavigation = () => {
+nav?.querySelectorAll(":scope > a:not(.button)").forEach((link) => {
+  if (link.querySelector(".nav-row-arrow")) return;
+  const arrow = document.createElement("span");
+  arrow.className = "nav-row-arrow";
+  arrow.setAttribute("aria-hidden", "true");
+  arrow.textContent = "↘";
+  link.append(arrow);
+});
+
+serviceMenus.forEach((menu) => {
+  const panel = menu.querySelector(".nav-service-menu");
+  if (!panel || panel.querySelector(".nav-service-heading")) return;
+
+  const heading = document.createElement("p");
+  heading.className = "nav-service-heading";
+  heading.textContent = "服务选择 / SERVICE ROUTES";
+
+  const context = document.createElement("aside");
+  context.className = "nav-service-context";
+  const contextTitle = document.createElement("strong");
+  contextTitle.textContent = "先判断，再安排动作";
+  const contextCopy = document.createElement("p");
+  contextCopy.textContent =
+    "平台、页面、内容和销售反馈被拆成可检查的运营路线。";
+  const contextNote = document.createElement("p");
+  contextNote.textContent = "当前目标：找到最先该修的环节。";
+  context.append(contextTitle, contextCopy, contextNote);
+
+  const supportRoutes = [
+    {
+      code: "MET",
+      title: "运营方法",
+      copy: "诊断、规划、执行与复盘",
+      href: "/method",
+    },
+    {
+      code: "TOOL",
+      title: "运营工具",
+      copy: "自研工具目录与使用边界",
+      href: "/tools",
+    },
+  ];
+
+  const supportLinks = supportRoutes.map((route) => {
+    const link = document.createElement("a");
+    link.className = "nav-service-support";
+    link.href = route.href;
+    if (window.location.pathname === route.href) {
+      link.setAttribute("aria-current", "page");
+    }
+    const code = document.createElement("b");
+    code.textContent = route.code;
+    const content = document.createElement("span");
+    const title = document.createElement("strong");
+    title.textContent = route.title;
+    const copy = document.createElement("small");
+    copy.textContent = route.copy;
+    content.append(title, copy);
+    link.append(code, content);
+    return link;
+  });
+
+  const footer = document.createElement("a");
+  footer.className = "nav-service-footer";
+  footer.href = "/services";
+  if (window.location.pathname === "/services") {
+    footer.setAttribute("aria-current", "page");
+  }
+  const footerLabel = document.createElement("span");
+  footerLabel.textContent = "不知道选哪条？先看服务总览";
+  const footerArrow = document.createElement("span");
+  footerArrow.setAttribute("aria-hidden", "true");
+  footerArrow.textContent = "↘";
+  footer.append(footerLabel, footerArrow);
+
+  panel.prepend(heading);
+  panel.append(...supportLinks, context, footer);
+});
+
+const pageSurfaces = document.querySelectorAll("main, footer");
+const syncPageInert = () => {
+  const navigationIsOpen = Boolean(nav?.classList.contains("is-open"));
+  const serviceIsOpen = [...serviceMenus].some((menu) =>
+    menu.hasAttribute("open"),
+  );
+  pageSurfaces.forEach((surface) => {
+    surface.inert = navigationIsOpen || serviceIsOpen;
+  });
+};
+
+const closeNavigation = ({ restoreFocus = false } = {}) => {
+  const mobileMenuWasOpen = nav?.classList.contains("is-open");
+  const openServiceSummary = [...serviceMenus]
+    .find((menu) => menu.hasAttribute("open"))
+    ?.querySelector("summary");
+
   nav?.classList.remove("is-open");
   navToggle?.setAttribute("aria-expanded", "false");
   serviceMenus.forEach((menu) => menu.removeAttribute("open"));
   document.body.classList.remove("nav-open");
+  syncPageInert();
   if (navLabel) navLabel.textContent = "打开菜单";
+
+  if (restoreFocus) {
+    if (mobileMenuWasOpen) navToggle?.focus();
+    else openServiceSummary?.focus();
+  }
 };
 
 navToggle?.addEventListener("click", () => {
@@ -17,12 +118,45 @@ navToggle?.addEventListener("click", () => {
   nav?.classList.toggle("is-open", open);
   navToggle.setAttribute("aria-expanded", String(open));
   document.body.classList.toggle("nav-open", open);
+  syncPageInert();
   if (navLabel) navLabel.textContent = open ? "关闭菜单" : "打开菜单";
 });
 
 const desktopNavigation = window.matchMedia("(min-width: 1051px)");
-desktopNavigation.addEventListener?.("change", (event) => {
-  if (event.matches) closeNavigation();
+const hoverNavigation = window.matchMedia(
+  "(hover: hover) and (pointer: fine) and (min-width: 1051px)",
+);
+
+desktopNavigation.addEventListener?.("change", () => {
+  closeNavigation();
+});
+
+serviceMenus.forEach((menu) => {
+  menu.addEventListener("toggle", syncPageInert);
+
+  menu.addEventListener("pointerenter", () => {
+    if (hoverNavigation.matches) menu.setAttribute("open", "");
+  });
+
+  menu.addEventListener("pointerleave", () => {
+    if (hoverNavigation.matches && !menu.matches(":focus-within")) {
+      menu.removeAttribute("open");
+    }
+  });
+
+  menu.addEventListener("focusin", () => {
+    if (desktopNavigation.matches) menu.setAttribute("open", "");
+  });
+
+  menu.addEventListener("focusout", (event) => {
+    const nextTarget = event.relatedTarget;
+    if (
+      desktopNavigation.matches &&
+      (!(nextTarget instanceof Node) || !menu.contains(nextTarget))
+    ) {
+      menu.removeAttribute("open");
+    }
+  });
 });
 
 nav?.querySelectorAll("a").forEach((link) => {
@@ -40,8 +174,24 @@ document.addEventListener("click", (event) => {
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
-    serviceMenus.forEach((menu) => menu.removeAttribute("open"));
-    closeNavigation();
+    closeNavigation({ restoreFocus: true });
+  }
+
+  if (event.key === "Tab" && nav?.classList.contains("is-open")) {
+    const focusable = [
+      navToggle,
+      ...nav.querySelectorAll('a, summary, button:not([disabled]), [tabindex="0"]'),
+    ].filter(Boolean);
+    const first = focusable[0];
+    const last = focusable.at(-1);
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last?.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first?.focus();
+    }
   }
 });
 

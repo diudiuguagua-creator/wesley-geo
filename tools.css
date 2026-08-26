@@ -171,6 +171,7 @@
   color: #eef5f8;
 }
 .score-ring {
+  --score: 0;
   display: grid;
   place-content: center;
   width: 126px;
@@ -180,6 +181,54 @@
     radial-gradient(circle at center, var(--ops-navy) 59%, transparent 60%),
     conic-gradient(#78a0ff calc(var(--score) * 1%), #294252 0);
   text-align: center;
+}
+
+.score-ring[data-score-percent="8"] {
+  --score: 8;
+}
+
+.score-ring[data-score-percent="17"] {
+  --score: 17;
+}
+
+.score-ring[data-score-percent="25"] {
+  --score: 25;
+}
+
+.score-ring[data-score-percent="33"] {
+  --score: 33;
+}
+
+.score-ring[data-score-percent="42"] {
+  --score: 42;
+}
+
+.score-ring[data-score-percent="50"] {
+  --score: 50;
+}
+
+.score-ring[data-score-percent="58"] {
+  --score: 58;
+}
+
+.score-ring[data-score-percent="67"] {
+  --score: 67;
+}
+
+.score-ring[data-score-percent="75"] {
+  --score: 75;
+}
+
+.score-ring[data-score-percent="83"] {
+  --score: 83;
+}
+
+.score-ring[data-score-percent="92"] {
+  --score: 92;
+}
+
+.score-ring[data-score-percent="100"] {
+  --score: 100;
 }
 .score-ring strong {
   font: 800 34px/1 var(--font-data);

@@ -256,7 +256,7 @@ if (assessment) {
     )[0];
 
     scoreNode.textContent = String(score);
-    scoreRing?.style.setProperty("--score", String(percent));
+    scoreRing?.setAttribute("data-score-percent", String(percent));
     if (statusNode) statusNode.textContent = "";
 
     if (score === 0) {

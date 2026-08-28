@@ -1,0 +1,2032 @@
+/* Reference-channel pages v8: scoped to Alibaba and Made-in-China routes. */
+body.reference-channel-v8 {
+  --rc-navy: #001536;
+  --rc-navy-2: #032047;
+  --rc-blue: #0758f2;
+  --rc-blue-deep: #0038b7;
+  --rc-teal: #016a81;
+  --rc-orange: #f59a23;
+  --rc-ink: #001b3e;
+  --rc-muted: #55637d;
+  --rc-line: #dce4ef;
+  --rc-soft: #f5f8fc;
+  --rc-pale-blue: #eaf1f9;
+  --rc-white: #fff;
+  background: #fff;
+  color: var(--rc-ink);
+}
+
+body.reference-channel-v8 .rc-main,
+body.reference-channel-v8 .rc-main *,
+body.reference-channel-v8 .rc-main *::before,
+body.reference-channel-v8 .rc-main *::after {
+  box-sizing: border-box;
+}
+
+body.reference-channel-v8 .rc-main {
+  overflow: clip;
+  background: #fff;
+  color: var(--rc-ink);
+  font-family: Inter, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+}
+
+body.reference-channel-v8 .rc-main :where(h1, h2, h3, p, ol, ul, figure) {
+  margin: 0;
+}
+
+body.reference-channel-v8 .rc-main :where(ol, ul) {
+  padding: 0;
+}
+
+body.reference-channel-v8 .rc-main :where(a) {
+  color: inherit;
+  text-decoration: none;
+}
+
+body.reference-channel-v8 .rc-main :where(a, button, summary):focus-visible {
+  outline: 3px solid #ffb321;
+  outline-offset: 4px;
+}
+
+body.reference-channel-v8 .rc-shell {
+  width: min(calc(100% - 48px), 1380px);
+  margin-inline: auto;
+}
+
+body.reference-channel-v8 .rc-section {
+  padding: clamp(52px, 5vw, 78px) 0;
+}
+
+body.reference-channel-v8 .rc-overline {
+  margin-bottom: 18px;
+  color: var(--rc-blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+body.reference-channel-v8 .rc-centered-heading {
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+body.reference-channel-v8 .rc-centered-heading > p,
+body.reference-channel-v8 .rc-process-heading > p {
+  margin-bottom: 8px;
+  color: var(--rc-blue);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+body.reference-channel-v8 .rc-centered-heading h2,
+body.reference-channel-v8 .rc-process-heading h2,
+body.reference-channel-v8 .rc-faq-section > .rc-shell > h2,
+body.reference-channel-v8 .rc-mic-scope h2,
+body.reference-channel-v8 .rc-responsibility > .rc-shell > h2 {
+  color: var(--rc-ink);
+  font-size: clamp(28px, 2.35vw, 36px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.22;
+}
+
+/* Alibaba hero */
+body.reference-channel-v8 .rc-hero {
+  position: relative;
+  isolation: isolate;
+}
+
+body.reference-channel-v8 .rc-ali-hero {
+  min-height: clamp(540px, 43vw, 620px);
+  background: #fff;
+}
+
+body.reference-channel-v8 .rc-ali-hero-image {
+  position: absolute;
+  z-index: -3;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 61% 48%;
+}
+
+body.reference-channel-v8 .rc-hero-wash {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      #fff 0%,
+      rgba(255, 255, 255, 0.98) 27%,
+      rgba(255, 255, 255, 0.82) 44%,
+      rgba(255, 255, 255, 0.2) 62%,
+      rgba(255, 255, 255, 0.04) 100%
+    ),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(232, 238, 245, 0.2));
+}
+
+body.reference-channel-v8 .rc-ali-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(390px, 0.78fr);
+  gap: clamp(36px, 5vw, 76px);
+  align-items: center;
+  min-height: inherit;
+  padding-block: 44px;
+}
+
+body.reference-channel-v8 .rc-hero-copy {
+  max-width: 710px;
+}
+
+body.reference-channel-v8 .rc-hero-copy h1 {
+  max-width: 700px;
+  color: var(--rc-ink);
+  font-size: clamp(44px, 4vw, 58px);
+  font-weight: 850;
+  letter-spacing: -0.055em;
+  line-height: 1.15;
+}
+
+body.reference-channel-v8 .rc-hero-copy h1 span,
+body.reference-channel-v8 .rc-hero-copy h1 em {
+  display: block;
+}
+
+body.reference-channel-v8 .rc-hero-copy h1 em {
+  color: var(--rc-blue);
+  font-style: normal;
+}
+
+body.reference-channel-v8 .rc-hero-lead {
+  max-width: 650px;
+  margin-top: 24px;
+  color: #283b5d;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+body.reference-channel-v8 .rc-hero-principles {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 650px;
+  margin-top: 38px;
+  list-style: none;
+}
+
+body.reference-channel-v8 .rc-hero-principles li {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+body.reference-channel-v8 .rc-hero-principles i {
+  color: var(--rc-blue);
+  font-size: 25px;
+  line-height: 1;
+}
+
+body.reference-channel-v8 .rc-hero-principles span,
+body.reference-channel-v8 .rc-hero-principles b,
+body.reference-channel-v8 .rc-hero-principles small {
+  display: block;
+}
+
+body.reference-channel-v8 .rc-hero-principles b {
+  color: var(--rc-ink);
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+body.reference-channel-v8 .rc-hero-principles small {
+  margin-top: 6px;
+  color: var(--rc-muted);
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+body.reference-channel-v8 .rc-workbench {
+  position: relative;
+  align-self: center;
+  width: min(100%, 420px);
+  margin-left: auto;
+  padding: 27px 28px 23px;
+  border: 1px solid rgba(111, 165, 241, 0.22);
+  border-radius: 16px;
+  background: linear-gradient(145deg, #001536, #01275c);
+  box-shadow: 0 24px 64px rgba(0, 21, 54, 0.22);
+  color: #fff;
+}
+
+body.reference-channel-v8 .rc-workbench h2 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 750;
+}
+
+body.reference-channel-v8 .rc-workbench ol {
+  list-style: none;
+}
+
+body.reference-channel-v8 .rc-workbench li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 14px;
+  align-items: center;
+  min-height: 68px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+body.reference-channel-v8 .rc-workbench li:last-child {
+  border-bottom: 0;
+}
+
+body.reference-channel-v8 .rc-workbench li > i {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 21px;
+}
+
+body.reference-channel-v8 .rc-workbench li span,
+body.reference-channel-v8 .rc-workbench li b,
+body.reference-channel-v8 .rc-workbench li small {
+  display: block;
+}
+
+body.reference-channel-v8 .rc-workbench li b {
+  font-size: 16px;
+}
+
+body.reference-channel-v8 .rc-workbench li small {
+  margin-top: 4px;
+  color: #c9d7ec;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+body.reference-channel-v8 .rc-workbench > img {
+  position: absolute;
+  right: -18px;
+  bottom: -18px;
+  width: 58px;
+  height: 58px;
+  border: 3px solid var(--rc-orange);
+  border-radius: 50%;
+}
+
+/* Alibaba scope bar */
+body.reference-channel-v8 .rc-ali-scope {
+  color: #fff;
+  background: linear-gradient(90deg, #0038b7 0%, #013d8c 55%, #016a81 100%);
+}
+
+body.reference-channel-v8 .rc-ali-scope-grid {
+  display: grid;
+  grid-template-columns: 150px repeat(5, minmax(0, 1fr));
+  min-height: 126px;
+}
+
+body.reference-channel-v8 .rc-ali-scope h2,
+body.reference-channel-v8 .rc-ali-scope a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px 22px;
+}
+
+body.reference-channel-v8 .rc-ali-scope h2 {
+  color: #fff;
+  font-size: 24px;
+}
+
+body.reference-channel-v8 .rc-ali-scope a {
+  min-height: 96px;
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+body.reference-channel-v8 .rc-ali-scope a:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+body.reference-channel-v8 .rc-ali-scope b,
+body.reference-channel-v8 .rc-ali-scope span {
+  display: block;
+}
+
+body.reference-channel-v8 .rc-ali-scope b {
+  font-size: 15px;
+}
+
+body.reference-channel-v8 .rc-ali-scope span {
+  margin-top: 8px;
+  color: #dceafa;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Shared issue cards */
+body.reference-channel-v8 .rc-issues {
+  background: #fff;
+}
+
+body.reference-channel-v8 .rc-issue-grid {
+  display: grid;
+  gap: 16px;
+}
+
+body.reference-channel-v8 .rc-issue-grid-five {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+body.reference-channel-v8 .rc-issue-grid article {
+  min-height: 214px;
+  padding: 24px 22px;
+  border: 1px solid var(--rc-line);
+  border-radius: 10px;
+  background: #fff;
+}
+
+body.reference-channel-v8 .rc-issue-grid article > i {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 18px;
+  border: 1px solid #b9cff6;
+  border-radius: 8px;
+  color: var(--rc-blue);
+  font-size: 22px;
+}
+
+body.reference-channel-v8 .rc-issue-grid article:last-child > i {
+  border-color: #ffc46a;
+  color: var(--rc-orange);
+}
+
+body.reference-channel-v8 .rc-issue-grid h3 {
+  margin-bottom: 16px;
+  color: var(--rc-ink);
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+body.reference-channel-v8 .rc-issue-grid ul {
+  list-style: none;
+}
+
+body.reference-channel-v8 .rc-issue-grid li {
+  position: relative;
+  padding-left: 13px;
+  color: #42516d;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+body.reference-channel-v8 .rc-issue-grid li::before {
+  position: absolute;
+  left: 0;
+  color: var(--rc-blue);
+  content: "•";
+}
+
+/* Shared process */
+body.reference-channel-v8 .rc-process-wrap {
+  padding-block: 0;
+  background: #fff !important;
+}
+
+body.reference-channel-v8 .rc-process-panel {
+  padding: 28px 34px 22px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--rc-navy), #012a62);
+  box-shadow: 0 18px 44px rgba(0, 21, 54, 0.12);
+  color: #fff;
+}
+
+body.reference-channel-v8 .rc-process-heading {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+body.reference-channel-v8 .rc-process-heading > p {
+  color: #6ea3ff;
+}
+
+body.reference-channel-v8 .rc-process-heading h2 {
+  color: #fff;
+}
+
+body.reference-channel-v8 .rc-process-heading-left {
+  text-align: left;
+}
+
+body.reference-channel-v8 .rc-step-line {
+  display: grid;
+  gap: 0;
+  list-style: none;
+}
+
+body.reference-channel-v8 .rc-step-line-six {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+body.reference-channel-v8 .rc-step-line-five {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+body.reference-channel-v8 .rc-step-line > li {
+  position: relative;
+  min-width: 0;
+  padding: 0 11px 12px;
+  text-align: center;
+}
+
+body.reference-channel-v8 .rc-step-line > li > .ri-arrow-right-line {
+  position: absolute;
+  z-index: 2;
+  top: 18px;
+  right: -12px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  color: #80aee8;
+  font-size: 24px;
+}
+
+body.reference-channel-v8 .rc-step-node {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 13px;
+  border: 3px solid var(--rc-blue);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+body.reference-channel-v8 .rc-step-node-accent {
+  border-color: var(--rc-orange);
+}
+
+body.reference-channel-v8 .rc-step-line h3 {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+body.reference-channel-v8 .rc-step-line p {
+  min-height: 48px;
+  margin-top: 8px;
+  color: #d2dff1;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+body.reference-channel-v8 .rc-step-line small {
+  display: block;
+  color: #fff;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+body.reference-channel-v8 .rc-loop-note {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 84%;
+  min-height: 34px;
+  margin: 4px auto 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.62);
+  color: #dce8f8;
+  font-size: 13px;
+}
+
+body.reference-channel-v8 .rc-loop-note i {
+  color: #61a3ff;
+  font-size: 19px;
+}
+
+/* Collaboration flow and boundaries */
+body.reference-channel-v8 .rc-collaboration {
+  background: #fff;
+}
+
+body.reference-channel-v8 .rc-node-flow {
+  display: grid;
+  gap: 24px;
+  list-style: none;
+}
+
+body.reference-channel-v8 .rc-node-flow-five {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+body.reference-channel-v8 .rc-node-flow-four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+body.reference-channel-v8 .rc-node-flow li {
+  position: relative;
+  text-align: center;
+}
+
+body.reference-channel-v8 .rc-node-flow li > span {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: var(--rc-blue);
+  color: #fff;
+  font-size: 27px;
+}
+
+body.reference-channel-v8 .rc-node-flow li:nth-child(even) > span {
+  background: var(--rc-teal);
+}
+
+body.reference-channel-v8 .rc-node-flow li > .rc-node-brand {
+  background: var(--rc-orange);
+  font-size: 25px;
+  font-weight: 800;
+}
+
+body.reference-channel-v8 .rc-node-flow li > .ri-arrow-right-line {
+  position: absolute;
+  top: 17px;
+  right: -27px;
+  color: #235bbd;
+  font-size: 25px;
+}
+
+body.reference-channel-v8 .rc-node-flow h3 {
+  color: var(--rc-ink);
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+body.reference-channel-v8 .rc-node-flow p {
+  max-width: 180px;
+  margin: 8px auto 0;
+  color: var(--rc-muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+body.reference-channel-v8 .rc-collab-summary {
+  max-width: 1180px;
+  margin: 30px auto 24px;
+  padding: 12px 24px;
+  border-radius: 7px;
+  background: var(--rc-pale-blue);
+  color: #1349a0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.55;
+  text-align: center;
+}
+
+body.reference-channel-v8 .rc-boundary-grid {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--rc-line);
+  border-radius: 11px;
+  background: #fff;
+}
+
+body.reference-channel-v8 .rc-boundary-grid-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body.reference-channel-v8 .rc-boundary-grid-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+}
+
+body.reference-channel-v8 .rc-boundary-grid article {
+  position: relative;
+  min-height: 236px;
+  padding: 30px 30px 26px 76px;
+  border-right: 1px solid var(--rc-line);
+}
+
+body.reference-channel-v8 .rc-boundary-grid article:last-child {
+  border-right: 0;
+}
+
+body.reference-channel-v8 .rc-boundary-grid article > i {
+  position: absolute;
+  top: 30px;
+  left: 28px;
+  color: var(--rc-blue);
+  font-size: 32px;
+}
+
+body.reference-channel-v8 .rc-boundary-grid h3 {
+  margin-bottom: 14px;
+  color: var(--rc-ink);
+  font-size: 19px;
+}
+
+body.reference-channel-v8 .rc-boundary-grid ul {
+  list-style: none;
+}
+
+body.reference-channel-v8 .rc-boundary-grid li {
+  position: relative;
+  padding-left: 14px;
+  color: #42516d;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+body.reference-channel-v8 .rc-boundary-grid li::before {
+  position: absolute;
+  left: 0;
+  color: var(--rc-blue);
+  content: "•";
+}
+
+body.reference-channel-v8 .rc-boundary-note {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  color: #40506b;
+  font-size: 13px;
+  text-align: center;
+}
+
+body.reference-channel-v8 .rc-boundary-note i {
+  color: var(--rc-blue);
+  font-size: 18px;
+}
+
+/* FAQ and CTA */
+body.reference-channel-v8 .rc-faq-section {
+  padding-top: 48px;
+  padding-bottom: 0;
+  background: #fff;
+}
+
+body.reference-channel-v8 .rc-faq-section > .rc-shell > h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+body.reference-channel-v8 .rc-faq-cta-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.94fr) minmax(360px, 1.04fr);
+  gap: 34px;
+  align-items: start;
+}
+
+body.reference-channel-v8 .rc-faq-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: row;
+  grid-auto-rows: min-content;
+  gap: 0;
+  align-content: start;
+  align-self: start;
+  max-width: none;
+  border-top: 0;
+}
+
+body.reference-channel-v8 .rc-faq-list details {
+  margin: 0;
+  border: 1px solid var(--rc-line);
+  border-bottom: 0;
+  border-radius: 0;
+  background: #fff;
+}
+
+body.reference-channel-v8 .rc-faq-list details:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+body.reference-channel-v8 .rc-faq-list details:last-child {
+  border-bottom: 1px solid var(--rc-line);
+  border-radius: 0 0 8px 8px;
+}
+
+body.reference-channel-v8 .rc-faq-list summary {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 11px 46px 11px 16px;
+  color: var(--rc-ink);
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.45;
+  cursor: pointer;
+  list-style: none;
+}
+
+body.reference-channel-v8 .rc-faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+body.reference-channel-v8 .rc-faq-list summary::after {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  width: auto;
+  height: auto;
+  border: 0;
+  color: var(--rc-blue);
+  content: "+";
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+  transform: translateY(-50%);
+  transition: none;
+}
+
+body.reference-channel-v8 .rc-faq-list details[open] summary::after {
+  content: "−";
+  transform: translateY(-50%);
+}
+
+body.reference-channel-v8 .rc-faq-list details p {
+  padding: 0 16px 16px;
+  color: var(--rc-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+body.reference-channel-v8 .rc-faq-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 260px;
+  padding: 34px 42px;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #022d86, #0758f2);
+  color: #fff;
+  box-shadow: 0 18px 48px rgba(4, 46, 139, 0.18);
+}
+
+body.reference-channel-v8 .rc-faq-cta > p {
+  color: #a8c7ff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+body.reference-channel-v8 .rc-faq-cta h2 {
+  margin-top: 10px;
+  color: #fff;
+  font-size: clamp(28px, 2.5vw, 38px);
+  letter-spacing: -0.035em;
+}
+
+body.reference-channel-v8 .rc-faq-cta > span {
+  margin-top: 14px;
+  color: #e6eeff;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+body.reference-channel-v8 .rc-button {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 13px 22px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.35;
+  text-align: center;
+}
+
+body.reference-channel-v8 .rc-faq-cta .rc-button {
+  align-self: flex-start;
+  margin-top: 24px;
+}
+
+body.reference-channel-v8 .rc-button-light {
+  background: #fff;
+  color: #0644ad;
+}
+
+body.reference-channel-v8 .rc-button-primary {
+  background: var(--rc-blue);
+  color: #fff;
+}
+
+body.reference-channel-v8 .rc-button-outline {
+  border-color: rgba(255, 255, 255, 0.56);
+  background: transparent;
+  color: #fff;
+}
+
+body.reference-channel-v8 .rc-faq-cta > small {
+  margin-top: 12px;
+  color: #d9e6ff;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+body.reference-channel-v8 .rc-inline-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 18px;
+}
+
+body.reference-channel-v8 .rc-inline-links a {
+  min-height: 28px;
+  color: #dbe7ff;
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Made-in-China hero */
+body.reference-channel-v8 .rc-mic-hero {
+  min-height: clamp(520px, 39vw, 585px);
+  background: #fff;
+}
+
+body.reference-channel-v8 .rc-mic-hero .rc-shell {
+  width: min(calc(100% - 64px), 1320px);
+}
+
+body.reference-channel-v8 .rc-mic-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.76fr) minmax(0, 1.24fr);
+  min-height: inherit;
+}
+
+body.reference-channel-v8 .rc-mic-hero-copy {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 44px 34px 44px 8px;
+  background: #fff;
+}
+
+body.reference-channel-v8 .rc-mic-hero-copy::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: -90px;
+  bottom: 0;
+  width: 130px;
+  background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0));
+  content: "";
+}
+
+body.reference-channel-v8 .rc-mic-hero-copy h1 {
+  color: var(--rc-ink);
+  font-size: clamp(45px, 4vw, 58px);
+  font-weight: 850;
+  letter-spacing: -0.055em;
+  line-height: 1.12;
+}
+
+body.reference-channel-v8 .rc-mic-hero-copy h1 span {
+  display: block;
+  margin-top: 14px;
+  font-size: 0.72em;
+  letter-spacing: -0.035em;
+}
+
+body.reference-channel-v8 .rc-mic-tagline {
+  margin-top: 30px;
+  color: #263b60;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+body.reference-channel-v8 .rc-mic-principles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 390px;
+  margin-top: 34px;
+}
+
+body.reference-channel-v8 .rc-mic-principles article {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 10px;
+  min-height: 78px;
+  padding: 16px;
+  border: 1px solid var(--rc-line);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+body.reference-channel-v8 .rc-mic-principles article:nth-child(3) {
+  grid-column: 1;
+}
+
+body.reference-channel-v8 .rc-mic-principles i {
+  color: var(--rc-blue);
+  font-size: 23px;
+}
+
+body.reference-channel-v8 .rc-mic-principles h2 {
+  color: var(--rc-ink);
+  font-size: 16px;
+}
+
+body.reference-channel-v8 .rc-mic-principles p {
+  margin-top: 5px;
+  color: var(--rc-muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+body.reference-channel-v8 .rc-mic-hero-media {
+  position: relative;
+  min-height: inherit;
+  overflow: hidden;
+}
+
+body.reference-channel-v8 .rc-mic-hero-media > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 46% 50%;
+}
+
+body.reference-channel-v8 .rc-cycle-card {
+  position: absolute;
+  top: 9%;
+  right: 3%;
+  width: min(45%, 370px);
+  min-width: 320px;
+  padding: 25px 24px 23px;
+  border: 1px solid rgba(111, 165, 241, 0.24);
+  border-radius: 14px;
+  background: rgba(0, 27, 63, 0.96);
+  box-shadow: 0 22px 54px rgba(0, 20, 53, 0.24);
+  color: #fff;
+}
+
+body.reference-channel-v8 .rc-cycle-card h2 {
+  color: #fff;
+  font-size: 23px;
+  text-align: center;
+}
+
+body.reference-channel-v8 .rc-cycle-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 46px 34px;
+  margin-top: 23px;
+}
+
+body.reference-channel-v8 .rc-cycle-grid > div {
+  text-align: center;
+}
+
+body.reference-channel-v8 .rc-cycle-grid b,
+body.reference-channel-v8 .rc-cycle-grid strong,
+body.reference-channel-v8 .rc-cycle-grid small {
+  display: block;
+}
+
+body.reference-channel-v8 .rc-cycle-grid b {
+  color: #4b91ff;
+  font-size: 12px;
+}
+
+body.reference-channel-v8 .rc-cycle-grid strong {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+body.reference-channel-v8 .rc-cycle-grid small {
+  margin-top: 4px;
+  color: #bfcde0;
+  font-size: 10px;
+}
+
+body.reference-channel-v8 .rc-cycle-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 86px;
+  height: 86px;
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--rc-blue);
+  border-radius: 50%;
+  color: var(--rc-blue);
+}
+
+body.reference-channel-v8 .rc-cycle-asset {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 94px;
+  height: 94px;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
+
+body.reference-channel-v8 .rc-cycle-icon .ri-file-list-3-line {
+  font-size: 31px;
+}
+
+body.reference-channel-v8 .rc-cycle-icon .ri-refresh-line {
+  position: absolute;
+  inset: -13px;
+  display: grid;
+  place-items: center;
+  font-size: 111px;
+  opacity: 0.62;
+}
+
+/* Made-in-China service scope */
+body.reference-channel-v8 .rc-mic-scope {
+  padding-block: 36px 46px;
+  background: #fff;
+}
+
+body.reference-channel-v8 .rc-mic-scope .rc-shell,
+body.reference-channel-v8 .rc-mic-issues .rc-shell,
+body.reference-channel-v8 .rc-mic-process .rc-shell,
+body.reference-channel-v8 .rc-mic-collaboration .rc-shell,
+body.reference-channel-v8 .rc-responsibility .rc-shell,
+body.reference-channel-v8 .rc-mic-faq .rc-shell {
+  width: min(calc(100% - 64px), 1320px);
+}
+
+body.reference-channel-v8 .rc-mic-scope h2 {
+  margin-bottom: 26px;
+  font-size: 28px;
+}
+
+body.reference-channel-v8 .rc-service-grid-six {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid var(--rc-line);
+  border-radius: 9px;
+  background: #fff;
+}
+
+body.reference-channel-v8 .rc-service-grid-six article {
+  min-height: 174px;
+  padding: 25px 20px;
+  border-right: 1px solid var(--rc-line);
+  text-align: center;
+}
+
+body.reference-channel-v8 .rc-service-grid-six article:last-child {
+  border-right: 0;
+}
+
+body.reference-channel-v8 .rc-service-grid-six i {
+  color: var(--rc-blue);
+  font-size: 36px;
+}
+
+body.reference-channel-v8 .rc-service-grid-six h3 {
+  margin-top: 14px;
+  color: var(--rc-ink);
+  font-size: 16px;
+}
+
+body.reference-channel-v8 .rc-service-grid-six p {
+  margin-top: 9px;
+  color: var(--rc-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Made-in-China issues */
+body.reference-channel-v8 .rc-mic-issues {
+  padding-block: 0 26px;
+  background: #fff;
+}
+
+body.reference-channel-v8 .rc-mic-issues-grid {
+  display: grid;
+  grid-template-columns: minmax(330px, 0.75fr) minmax(0, 1.25fr);
+  min-height: 470px;
+  overflow: hidden;
+  border: 1px solid var(--rc-line);
+  border-radius: 10px;
+}
+
+body.reference-channel-v8 .rc-question-list {
+  padding: 30px 28px;
+  background: #fff;
+}
+
+body.reference-channel-v8 .rc-question-list h2 {
+  margin-bottom: 18px;
+  color: var(--rc-ink);
+  font-size: 25px;
+  line-height: 1.3;
+}
+
+body.reference-channel-v8 .rc-question-list ul {
+  list-style: none;
+}
+
+body.reference-channel-v8 .rc-question-list li {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  gap: 8px;
+  align-items: center;
+  min-height: 57px;
+  border-bottom: 1px dashed #cfd8e6;
+  color: #263957;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+body.reference-channel-v8 .rc-question-list li:last-child {
+  border-bottom: 0;
+}
+
+body.reference-channel-v8 .rc-question-list i {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--rc-orange);
+  color: #fff;
+  font-size: 15px;
+}
+
+body.reference-channel-v8 .rc-mic-issue-media {
+  position: relative;
+  min-height: 470px;
+  overflow: hidden;
+}
+
+body.reference-channel-v8 .rc-mic-issue-media > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  opacity: 1;
+  filter: none;
+}
+
+body.reference-channel-v8 .rc-mic-issue-media figcaption {
+  position: absolute;
+  z-index: 2;
+  right: 28px;
+  bottom: 28px;
+  width: min(42%, 310px);
+  min-width: 260px;
+  padding: 24px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 16px 38px rgba(0, 27, 62, 0.14);
+  backdrop-filter: blur(8px);
+  opacity: 1;
+  transform: none;
+}
+
+body.reference-channel-v8 .rc-mic-issue-media figcaption h3 {
+  margin-bottom: 12px;
+  color: var(--rc-ink);
+  font-size: 18px;
+}
+
+body.reference-channel-v8 .rc-mic-issue-media figcaption ul {
+  list-style: none;
+}
+
+body.reference-channel-v8 .rc-mic-issue-media figcaption li {
+  display: grid;
+  grid-template-columns: 16px 1fr;
+  gap: 6px;
+  align-items: start;
+  padding: 5px 0;
+  color: #31445f;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+body.reference-channel-v8 .rc-mic-issue-media figcaption li > i {
+  color: #2f7bf4;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+/* Made-in-China process */
+body.reference-channel-v8 .rc-mic-process {
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(120deg, #00103a, #03264f);
+}
+
+body.reference-channel-v8 .rc-mic-process .rc-step-line {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+body.reference-channel-v8 .rc-mic-process .rc-step-line > li {
+  min-height: 160px;
+  padding-top: 17px;
+  border-right: 1px dotted rgba(255, 255, 255, 0.22);
+}
+
+body.reference-channel-v8 .rc-mic-process .rc-step-line > li:last-child {
+  border-right: 0;
+}
+
+body.reference-channel-v8 .rc-mic-process .rc-step-node {
+  width: 46px;
+  height: 46px;
+  border: 2px solid #91b2e9;
+  font-size: 14px;
+}
+
+body.reference-channel-v8 .rc-mic-process .rc-step-line p {
+  min-height: 42px;
+}
+
+body.reference-channel-v8 .rc-mic-process .rc-step-line small {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 999px;
+}
+
+body.reference-channel-v8 .rc-process-outcomes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 6px -34px -22px;
+  border-top: 1px solid #e0e6ef;
+  background: #fff;
+  color: var(--rc-ink);
+}
+
+body.reference-channel-v8 .rc-process-outcomes article {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 12px;
+  align-items: center;
+  min-height: 78px;
+  padding: 14px 22px;
+  border-right: 1px solid var(--rc-line);
+}
+
+body.reference-channel-v8 .rc-process-outcomes article:last-child {
+  border-right: 0;
+}
+
+body.reference-channel-v8 .rc-process-outcomes i {
+  color: var(--rc-blue);
+  font-size: 28px;
+}
+
+body.reference-channel-v8 .rc-process-outcomes span,
+body.reference-channel-v8 .rc-process-outcomes b,
+body.reference-channel-v8 .rc-process-outcomes small {
+  display: block;
+}
+
+body.reference-channel-v8 .rc-process-outcomes b {
+  font-size: 14px;
+}
+
+body.reference-channel-v8 .rc-process-outcomes small {
+  margin-top: 4px;
+  color: var(--rc-muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+/* Made-in-China collaboration */
+body.reference-channel-v8 .rc-mic-collaboration {
+  padding-bottom: 24px;
+  background: #fff;
+}
+
+body.reference-channel-v8 .rc-mic-collab-card {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1.38fr);
+  gap: 34px;
+  padding: 28px;
+  border: 1px solid var(--rc-line);
+  border-radius: 10px;
+  background: #fafbfd;
+}
+
+body.reference-channel-v8 .rc-mic-collab-copy h2 {
+  color: var(--rc-ink);
+  font-size: 27px;
+  line-height: 1.3;
+}
+
+body.reference-channel-v8 .rc-mic-collab-copy > p {
+  margin-top: 12px;
+  color: var(--rc-muted);
+  font-size: 14px;
+}
+
+body.reference-channel-v8 .rc-mic-collab-copy ul {
+  margin-top: 18px;
+  list-style: none;
+}
+
+body.reference-channel-v8 .rc-mic-collab-copy li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-top: 10px;
+  color: #354863;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+body.reference-channel-v8 .rc-mic-collab-copy i {
+  color: var(--rc-blue);
+  font-size: 17px;
+}
+
+body.reference-channel-v8 .rc-mic-collab-card .rc-node-flow {
+  align-items: center;
+}
+
+body.reference-channel-v8 .rc-mic-collab-card .rc-node-flow li {
+  min-height: 164px;
+  padding: 18px 12px;
+  border: 1px solid var(--rc-line);
+  border-radius: 9px;
+  background: #fff;
+}
+
+body.reference-channel-v8 .rc-mic-collab-card .rc-node-flow li > span {
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  background: #edf4ff;
+  color: var(--rc-blue);
+  font-size: 24px;
+}
+
+body.reference-channel-v8 .rc-mic-collab-card .rc-node-flow li:nth-child(even) > span {
+  background: #edf4ff;
+  color: var(--rc-blue);
+}
+
+body.reference-channel-v8 .rc-mic-collab-card .rc-node-flow li > .ri-arrow-right-line {
+  top: 66px;
+}
+
+/* Made-in-China responsibility and FAQ */
+body.reference-channel-v8 .rc-responsibility {
+  padding-top: 0;
+  padding-bottom: 34px;
+  background: #fff;
+}
+
+body.reference-channel-v8 .rc-responsibility > .rc-shell {
+  padding: 28px 22px 22px;
+  border: 1px solid var(--rc-line);
+  border-radius: 10px;
+}
+
+body.reference-channel-v8 .rc-responsibility > .rc-shell > h2 {
+  margin-bottom: 22px;
+  font-size: 27px;
+}
+
+body.reference-channel-v8 .rc-boundary-grid-two article {
+  min-height: 195px;
+  border: 1px solid var(--rc-line);
+  border-radius: 9px;
+  background: #fff;
+}
+
+body.reference-channel-v8 .rc-mic-faq {
+  padding-top: 0;
+  padding-bottom: 28px;
+}
+
+body.reference-channel-v8 .rc-faq-list-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 28px;
+}
+
+body.reference-channel-v8 .rc-faq-list-two details,
+body.reference-channel-v8 .rc-faq-list-two details:first-child,
+body.reference-channel-v8 .rc-faq-list-two details:last-child {
+  border: 0;
+  border-bottom: 1px solid var(--rc-line);
+  border-radius: 0;
+}
+
+/* Made-in-China CTA */
+body.reference-channel-v8 .rc-channel-cta {
+  background: linear-gradient(115deg, #001b3e, #032653);
+  color: #fff;
+}
+
+body.reference-channel-v8 .rc-channel-cta-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(360px, 1.25fr) minmax(210px, 0.58fr) minmax(210px, 0.58fr);
+  gap: 28px;
+  align-items: center;
+  min-height: 154px;
+  padding-block: 26px;
+}
+
+body.reference-channel-v8 .rc-channel-cta-grid > div > p {
+  color: #78a7f2;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+body.reference-channel-v8 .rc-channel-cta-grid > div > h2 {
+  margin-top: 5px;
+  color: #fff;
+  font-size: clamp(25px, 2.2vw, 34px);
+  line-height: 1.25;
+}
+
+body.reference-channel-v8 .rc-channel-cta-grid > div > span {
+  display: block;
+  margin-top: 7px;
+  color: #cbd8eb;
+  font-size: 13px;
+}
+
+body.reference-channel-v8 .rc-channel-cta .rc-button {
+  position: relative;
+  flex-wrap: wrap;
+  min-height: 68px;
+}
+
+body.reference-channel-v8 .rc-channel-cta .rc-button small {
+  flex-basis: 100%;
+  color: inherit;
+  font-size: 10px;
+  font-weight: 500;
+  opacity: 0.78;
+}
+
+body.reference-channel-v8 .rc-cta-resources {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  display: flex;
+  gap: 14px;
+}
+
+body.reference-channel-v8 .rc-cta-resources a {
+  min-height: 26px;
+  color: #aebdd2;
+  font-size: 10px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  body.reference-channel-v8 .rc-shell,
+  body.reference-channel-v8 .rc-mic-hero .rc-shell,
+  body.reference-channel-v8 .rc-mic-scope .rc-shell,
+  body.reference-channel-v8 .rc-mic-issues .rc-shell,
+  body.reference-channel-v8 .rc-mic-collaboration .rc-shell,
+  body.reference-channel-v8 .rc-responsibility .rc-shell,
+  body.reference-channel-v8 .rc-mic-faq .rc-shell {
+    width: min(calc(100% - 40px), 920px);
+  }
+
+  body.reference-channel-v8 .rc-ali-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.75fr);
+    gap: 26px;
+  }
+
+  body.reference-channel-v8 .rc-hero-copy h1 {
+    font-size: clamp(39px, 5vw, 48px);
+  }
+
+  body.reference-channel-v8 .rc-hero-principles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.reference-channel-v8 .rc-workbench {
+    padding-inline: 24px;
+  }
+
+  body.reference-channel-v8 .rc-ali-scope-grid {
+    grid-template-columns: 120px repeat(5, minmax(135px, 1fr));
+    overflow-x: auto;
+  }
+
+  body.reference-channel-v8 .rc-issue-grid-five {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  body.reference-channel-v8 .rc-step-line-six,
+  body.reference-channel-v8 .rc-step-line-five {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px 0;
+  }
+
+  body.reference-channel-v8 .rc-step-line > li:nth-child(3n) > .ri-arrow-right-line,
+  body.reference-channel-v8 .rc-step-line > li:last-child > .ri-arrow-right-line {
+    display: none;
+  }
+
+  body.reference-channel-v8 .rc-node-flow-five {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 34px;
+  }
+
+  body.reference-channel-v8 .rc-node-flow-five li:nth-child(3) > .ri-arrow-right-line {
+    display: none;
+  }
+
+  body.reference-channel-v8 .rc-mic-hero-grid {
+    grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr);
+  }
+
+  body.reference-channel-v8 .rc-cycle-card {
+    right: 3%;
+    width: 66%;
+    min-width: 300px;
+  }
+
+  body.reference-channel-v8 .rc-service-grid-six {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  body.reference-channel-v8 .rc-service-grid-six article:nth-child(3) {
+    border-right: 0;
+  }
+
+  body.reference-channel-v8 .rc-service-grid-six article:nth-child(-n + 3) {
+    border-bottom: 1px solid var(--rc-line);
+  }
+
+  body.reference-channel-v8 .rc-mic-issues-grid {
+    grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.1fr);
+  }
+
+  body.reference-channel-v8 .rc-mic-collab-card {
+    grid-template-columns: 1fr;
+  }
+
+  body.reference-channel-v8 .rc-node-flow-four {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  body.reference-channel-v8 .rc-channel-cta-grid {
+    grid-template-columns: 1fr 0.65fr 0.65fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  body.reference-channel-v8 .rc-shell,
+  body.reference-channel-v8 .rc-mic-hero .rc-shell,
+  body.reference-channel-v8 .rc-mic-scope .rc-shell,
+  body.reference-channel-v8 .rc-mic-issues .rc-shell,
+  body.reference-channel-v8 .rc-mic-collaboration .rc-shell,
+  body.reference-channel-v8 .rc-responsibility .rc-shell,
+  body.reference-channel-v8 .rc-mic-faq .rc-shell {
+    width: min(calc(100% - 28px), 620px);
+  }
+
+  body.reference-channel-v8 .rc-section {
+    padding-block: 44px;
+  }
+
+  body.reference-channel-v8 .rc-ali-hero {
+    min-height: auto;
+    padding-bottom: 28px;
+  }
+
+  body.reference-channel-v8 .rc-ali-hero-image {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 230px;
+    object-position: 58% 50%;
+  }
+
+  body.reference-channel-v8 .rc-hero-wash {
+    bottom: auto;
+    height: 230px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), #fff 100%);
+  }
+
+  body.reference-channel-v8 .rc-ali-hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding-block: 26px 0;
+  }
+
+  body.reference-channel-v8 .rc-hero-copy {
+    order: 1;
+  }
+
+  body.reference-channel-v8 .rc-workbench {
+    order: 2;
+    width: 100%;
+    margin: 0;
+  }
+
+  body.reference-channel-v8 .rc-overline {
+    margin-bottom: 12px;
+    font-size: 10px;
+  }
+
+  body.reference-channel-v8 .rc-hero-copy h1,
+  body.reference-channel-v8 .rc-mic-hero-copy h1 {
+    font-size: clamp(34px, 10.3vw, 44px);
+  }
+
+  body.reference-channel-v8 .rc-hero-lead {
+    margin-top: 18px;
+    font-size: 15px;
+  }
+
+  body.reference-channel-v8 .rc-hero-principles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 26px;
+  }
+
+  body.reference-channel-v8 .rc-ali-scope-grid {
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
+
+  body.reference-channel-v8 .rc-ali-scope h2 {
+    min-height: 68px;
+    padding-bottom: 8px;
+  }
+
+  body.reference-channel-v8 .rc-ali-scope a {
+    min-height: 76px;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    border-left: 0;
+  }
+
+  body.reference-channel-v8 .rc-issue-grid-five {
+    grid-template-columns: 1fr;
+  }
+
+  body.reference-channel-v8 .rc-issue-grid article {
+    min-height: auto;
+  }
+
+  body.reference-channel-v8 .rc-process-panel {
+    padding: 30px 20px 22px;
+    border-radius: 10px;
+  }
+
+  body.reference-channel-v8 .rc-step-line-six,
+  body.reference-channel-v8 .rc-step-line-five {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  body.reference-channel-v8 .rc-step-line > li {
+    display: grid;
+    grid-template-columns: 54px 1fr;
+    gap: 4px 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    text-align: left;
+  }
+
+  body.reference-channel-v8 .rc-step-line > li:last-child {
+    border-bottom: 0;
+  }
+
+  body.reference-channel-v8 .rc-step-node {
+    grid-row: 1 / span 3;
+    width: 48px;
+    height: 48px;
+    margin: 0;
+  }
+
+  body.reference-channel-v8 .rc-step-line h3,
+  body.reference-channel-v8 .rc-step-line p,
+  body.reference-channel-v8 .rc-step-line small {
+    grid-column: 2;
+  }
+
+  body.reference-channel-v8 .rc-step-line p {
+    min-height: 0;
+    margin-top: 2px;
+  }
+
+  body.reference-channel-v8 .rc-step-line > li > .ri-arrow-right-line {
+    display: none;
+  }
+
+  body.reference-channel-v8 .rc-loop-note {
+    width: 100%;
+  }
+
+  body.reference-channel-v8 .rc-node-flow-five,
+  body.reference-channel-v8 .rc-node-flow-four {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  body.reference-channel-v8 .rc-node-flow li {
+    display: grid;
+    grid-template-columns: 58px 1fr;
+    gap: 4px 14px;
+    min-height: 82px;
+    text-align: left;
+  }
+
+  body.reference-channel-v8 .rc-node-flow li > span {
+    grid-row: 1 / span 2;
+    margin: 0;
+  }
+
+  body.reference-channel-v8 .rc-node-flow h3,
+  body.reference-channel-v8 .rc-node-flow p {
+    grid-column: 2;
+    max-width: none;
+    margin-inline: 0;
+  }
+
+  body.reference-channel-v8 .rc-node-flow li > .ri-arrow-right-line {
+    display: none;
+  }
+
+  body.reference-channel-v8 .rc-boundary-grid-three,
+  body.reference-channel-v8 .rc-boundary-grid-two {
+    grid-template-columns: 1fr;
+  }
+
+  body.reference-channel-v8 .rc-boundary-grid article {
+    min-height: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--rc-line);
+  }
+
+  body.reference-channel-v8 .rc-boundary-grid article:last-child {
+    border-bottom: 0;
+  }
+
+  body.reference-channel-v8 .rc-faq-cta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.reference-channel-v8 .rc-faq-cta {
+    min-height: 0;
+    padding: 34px 26px;
+  }
+
+  body.reference-channel-v8 .rc-mic-hero {
+    min-height: auto;
+  }
+
+  body.reference-channel-v8 .rc-mic-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.reference-channel-v8 .rc-mic-hero-copy {
+    padding: 34px 0 26px;
+  }
+
+  body.reference-channel-v8 .rc-mic-hero-copy::after {
+    display: none;
+  }
+
+  body.reference-channel-v8 .rc-mic-tagline {
+    margin-top: 20px;
+    font-size: 19px;
+  }
+
+  body.reference-channel-v8 .rc-mic-principles {
+    grid-template-columns: 1fr;
+    max-width: none;
+    margin-top: 24px;
+  }
+
+  body.reference-channel-v8 .rc-mic-principles article:nth-child(3) {
+    grid-column: auto;
+  }
+
+  body.reference-channel-v8 .rc-mic-hero-media {
+    min-height: 420px;
+    margin-inline: -14px;
+  }
+
+  body.reference-channel-v8 .rc-mic-hero-media > img {
+    height: 250px;
+  }
+
+  body.reference-channel-v8 .rc-cycle-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: calc(100% - 28px);
+    min-width: 0;
+    margin: -20px auto 0;
+  }
+
+  body.reference-channel-v8 .rc-cycle-grid {
+    gap: 54px 28px;
+  }
+
+  body.reference-channel-v8 .rc-service-grid-six {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.reference-channel-v8 .rc-service-grid-six article {
+    border-right: 1px solid var(--rc-line);
+    border-bottom: 1px solid var(--rc-line);
+  }
+
+  body.reference-channel-v8 .rc-service-grid-six article:nth-child(even) {
+    border-right: 0;
+  }
+
+  body.reference-channel-v8 .rc-service-grid-six article:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  body.reference-channel-v8 .rc-mic-issues-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.reference-channel-v8 .rc-question-list {
+    padding: 24px 20px;
+  }
+
+  body.reference-channel-v8 .rc-mic-issue-media {
+    min-height: 410px;
+  }
+
+  body.reference-channel-v8 .rc-mic-issue-media figcaption {
+    right: 16px;
+    bottom: 16px;
+    width: calc(100% - 32px);
+    min-width: 0;
+  }
+
+  body.reference-channel-v8 .rc-process-outcomes {
+    grid-template-columns: 1fr;
+    margin: 8px -20px -22px;
+  }
+
+  body.reference-channel-v8 .rc-process-outcomes article {
+    border-right: 0;
+    border-bottom: 1px solid var(--rc-line);
+  }
+
+  body.reference-channel-v8 .rc-process-outcomes article:last-child {
+    border-bottom: 0;
+  }
+
+  body.reference-channel-v8 .rc-mic-collab-card {
+    padding: 22px 18px;
+  }
+
+  body.reference-channel-v8 .rc-mic-collab-card .rc-node-flow li {
+    display: grid;
+    min-height: 90px;
+  }
+
+  body.reference-channel-v8 .rc-faq-list-two {
+    grid-template-columns: 1fr;
+  }
+
+  body.reference-channel-v8 .rc-channel-cta-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding-block: 34px 48px;
+  }
+
+  body.reference-channel-v8 .rc-channel-cta .rc-button {
+    min-height: 60px;
+  }
+
+  body.reference-channel-v8 .rc-cta-resources {
+    position: static;
+    flex-wrap: wrap;
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 430px) {
+  body.reference-channel-v8 .rc-hero-principles {
+    grid-template-columns: 1fr;
+  }
+
+  body.reference-channel-v8 .rc-workbench {
+    padding: 24px 18px 22px;
+  }
+
+  body.reference-channel-v8 .rc-service-grid-six {
+    grid-template-columns: 1fr;
+  }
+
+  body.reference-channel-v8 .rc-service-grid-six article,
+  body.reference-channel-v8 .rc-service-grid-six article:nth-child(even),
+  body.reference-channel-v8 .rc-service-grid-six article:nth-last-child(-n + 2) {
+    border-right: 0;
+    border-bottom: 1px solid var(--rc-line);
+  }
+
+  body.reference-channel-v8 .rc-service-grid-six article:last-child {
+    border-bottom: 0;
+  }
+
+  body.reference-channel-v8 .rc-cycle-card {
+    padding-inline: 16px;
+  }
+
+  body.reference-channel-v8 .rc-cycle-grid {
+    gap: 54px 14px;
+  }
+
+  body.reference-channel-v8 .rc-boundary-grid article {
+    padding: 72px 22px 24px;
+  }
+
+  body.reference-channel-v8 .rc-boundary-grid article > i {
+    top: 22px;
+    left: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.reference-channel-v8 .rc-main *,
+  body.reference-channel-v8 .rc-main *::before,
+  body.reference-channel-v8 .rc-main *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Final source-faithful override: the approved Alibaba reference uses one
+   vertical FAQ list. The legacy fusion sheet targets #faq with higher
+   specificity and otherwise restores its old two-column matrix. */
+body.reference-channel-v8.service-ali #faq .faq-list.rc-faq-list {
+  grid-template-columns: 1fr;
+  grid-auto-flow: row;
+  grid-auto-rows: min-content;
+  align-content: start;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+}
+
+body.reference-channel-v8.service-ali #faq .faq-list.rc-faq-list details,
+body.reference-channel-v8.service-ali #faq .faq-list.rc-faq-list details:nth-child(2n),
+body.reference-channel-v8.service-ali #faq .faq-list.rc-faq-list details:nth-last-child(-n + 2) {
+  border: 1px solid var(--rc-line);
+  border-bottom: 0;
+  border-radius: 0;
+}
+
+body.reference-channel-v8.service-ali #faq .faq-list.rc-faq-list details:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+body.reference-channel-v8.service-ali #faq .faq-list.rc-faq-list details:last-child {
+  border-bottom: 1px solid var(--rc-line);
+  border-radius: 0 0 8px 8px;
+}

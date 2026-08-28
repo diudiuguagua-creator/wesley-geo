@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="/styles.css?v=20260826.2" />
     <link rel="stylesheet" href="/service-extras.css?v=20260826.2" />
     <link rel="stylesheet" href="/site-header-foursets.css?v=20260826.2" />
+    <link rel="stylesheet" href="/selected-inner-pages.css?v=20260827-2" />
+    <link rel="stylesheet" href="/confirmed-inner-fusion.css?v=20260828-7" />
+    <link rel="stylesheet" href="/assets/icons/remixicon/remixicon.css?v=20260828-1" />
+    <link rel="stylesheet" href="/reference-channel-pages-v8.css?v=20260828-1" />
     <meta property="og:locale" content="zh_CN" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Wesley GEO" />
@@ -31,7 +35,10 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Wesley GEO 外贸 B2B 代运营" />
-    <meta name="twitter:image" content="https://wesleyb2b.online/og-cover.png" />
+    <meta
+      name="twitter:image"
+      content="https://wesleyb2b.online/og-cover.png"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <script type="application/ld+json">
       {
@@ -50,8 +57,12 @@
             "name": "中国制造网代运营",
             "description": "产品信息、平台维护、更新记录与阶段复盘的持续运营服务。",
             "isPartOf": { "@id": "https://wesleyb2b.online/#website" },
-            "mainEntity": { "@id": "https://wesleyb2b.online/made-in-china#service" },
-            "breadcrumb": { "@id": "https://wesleyb2b.online/made-in-china#breadcrumb" },
+            "mainEntity": {
+              "@id": "https://wesleyb2b.online/made-in-china#service"
+            },
+            "breadcrumb": {
+              "@id": "https://wesleyb2b.online/made-in-china#breadcrumb"
+            },
             "inLanguage": "zh-CN"
           },
           {
@@ -116,6 +127,38 @@
                   "@type": "Answer",
                   "text": "需要。账号、域名、客户数据和平台资产应归企业所有，代运营按实际工作需要使用适当权限，并在合作结束时完成必要交接。"
                 }
+              },
+              {
+                "@type": "Question",
+                "name": "产品图片和证明材料不足时可以先发布吗？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "应先标记资料缺口和可确认范围。图片、参数、认证、应用和商业信息需要由企业确认后再使用，不能用猜测内容替代真实资料。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "是否可以只整理中国制造网的资料与维护清单？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "可以先围绕账号、产品范围、资料版本和维护任务进行诊断与整理，再根据问题、企业资源和双方确认的范围决定是否进入持续维护。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "平台更新后为什么还要保留记录？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "记录更新时间、变更内容、资料依据和待确认事项，能帮助企业区分已完成、仍缺资料和需要复盘的工作，并便于后续人员协作。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "合作结束后资料和维护记录如何交接？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "账号、客户数据和平台资产继续归企业所有。双方可按开始前确认的权限与资料范围交接已整理的清单、记录和待办事项，不转移企业资产所有权。"
+                }
               }
             ]
           }
@@ -123,14 +166,18 @@
       }
     </script>
   </head>
-  <body class="service-landing service-mic">
+  <body class="service-landing service-mic reference-channel-v8 rc-mic-page">
     <a class="skip-link" href="#main">跳到主要内容</a>
     <header class="site-header">
       <div class="shell header-inner">
         <a class="brand" href="/" aria-label="Wesley GEO 首页"
-          ><span class="brand-mark" aria-hidden="true"
-            ><i></i><i></i><i></i></span
-          ><span>Wesley <b>GEO</b></span></a
+          ><img
+            class="brand-logo"
+            src="/assets/brand/wesley-mark-256.png"
+            width="32"
+            height="32"
+            alt=""
+          /><span>Wesley <b>GEO</b></span></a
         ><button
           class="nav-toggle"
           type="button"
@@ -173,405 +220,134 @@
               >
             </div>
           </details>
-          <a href="/insights">运营笔记</a
-          ><a href="/cases">客户案例</a><a href="/tools">运营工具</a><a href="/about">关于 Wesley</a
-          ><a class="button button-small" href="/contact">微信咨询</a>
+          <a href="/insights">运营笔记</a><a href="/cases">客户案例</a
+          ><a href="/tools">运营工具</a><a href="/about">关于 Wesley</a
+          ><a class="button button-small" href="/contact">说说目前卡点</a>
         </nav>
       </div>
     </header>
 
-    <main id="main">
-      <section class="page-hero mic">
-        <div class="shell page-hero-grid">
-          <div>
-            <nav class="breadcrumb" aria-label="面包屑">
-              <a href="/">首页</a><span>/</span><span>中国制造网代运营</span>
-            </nav>
-            <p class="eyebrow">服务 03 · MADE-IN-CHINA</p>
-            <h1>
-              中国制造网代运营：让产品信息、平台维护和阶段复盘<em>保持连续</em>
-            </h1>
-            <p class="lead">
-              服务先统一企业能够确认的产品资料与商业信息，再安排平台维护重点，记录每一轮更新与反馈。这样运营不会因为人员变化或临时任务反复从头开始。
-            </p>
-            <div class="hero-actions">
-              <a class="button" href="/contact">咨询中国制造网代运营</a
-              ><a class="text-link" href="#scope"
-                >查看服务内容 <span>↘</span></a
-              >
+
+    <main id="main" class="rc-main rc-mic-main">
+      <section class="rc-hero rc-mic-hero" aria-labelledby="mic-page-title">
+        <div class="rc-shell rc-mic-hero-grid">
+          <div class="rc-mic-hero-copy">
+            <p class="rc-overline">MADE-IN-CHINA OPERATIONS</p>
+            <h1 id="mic-page-title">中国制造网代运营<span>产品信息与持续运营</span></h1>
+            <p class="rc-mic-tagline">先建立资料底座，再保持维护连续</p>
+            <div class="rc-mic-principles" role="group" aria-label="中国制造网运营原则">
+              <article><i class="ri-checkbox-circle-line" aria-hidden="true"></i><div><h2>版本</h2><p>有序管理，清晰可追溯</p></div></article>
+              <article><i class="ri-checkbox-circle-line" aria-hidden="true"></i><div><h2>维护</h2><p>定期更新，保证信息有效</p></div></article>
+              <article><i class="ri-checkbox-circle-line" aria-hidden="true"></i><div><h2>复盘</h2><p>总结优化，形成运营闭环</p></div></article>
             </div>
-            <ul class="proofline">
-              <li>产品资料版本统一</li>
-              <li>平台内容持续维护</li>
-              <li>更新记录与阶段复盘</li>
-            </ul>
           </div>
-          <figure
-            class="workflow-board mic"
-            aria-label="中国制造网代运营工作链路示意"
-          >
-            <figcaption>
-              <span>MIC LOOP / 03</span><b>工作框架示意</b>
+          <figure class="rc-mic-hero-media">
+            <img src="/assets/inner/made-in-china-engineering-hero.webp" width="1600" height="900" alt="机械零部件、工程图纸和生产资料组成的中国制造网运营工作台" fetchpriority="high" />
+            <figcaption class="rc-cycle-card">
+              <h2>平台内容维护闭环</h2>
+              <div class="rc-cycle-grid">
+                <div><b>01</b><strong>建立资料底座</strong><small>产品、图片、详情</small></div>
+                <div><b>02</b><strong>日常维护更新</strong><small>信息管理、同步修改</small></div>
+                <div><b>03</b><strong>复盘优化迭代</strong><small>问题总结、持续优化</small></div>
+                <div><b>04</b><strong>信息持续校正</strong><small>问题追踪、版本统一</small></div>
+                <img
+                  class="rc-cycle-asset"
+                  src="/assets/inner/made-in-china-maintenance-loop-v2.webp"
+                  width="1254"
+                  height="1254"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </div>
             </figcaption>
-            <div class="workflow-flow">
-              <div class="workflow-step">
-                <span>01</span>
-                <div>
-                  <strong>产品资料</strong
-                  ><small>确认参数、应用和对外商业信息</small>
-                </div>
-              </div>
-              <div class="workflow-step">
-                <span>02</span>
-                <div>
-                  <strong>页面展示</strong
-                  ><small>按产品重点组织信息与维护计划</small>
-                </div>
-              </div>
-              <div class="workflow-step">
-                <span>03</span>
-                <div>
-                  <strong>平台反馈</strong
-                  ><small>查看阶段表现与需要补充的问题</small>
-                </div>
-              </div>
-              <div class="workflow-step">
-                <span>04</span>
-                <div>
-                  <strong>更新清单</strong
-                  ><small>记录继续、暂停、补充和下一轮安排</small>
-                </div>
-              </div>
-            </div>
-            <div class="workflow-output">
-              <span>INPUT<b>真实资料与账号现状</b></span
-              ><span>OUTPUT<b>持续维护与复盘清单</b></span>
-            </div>
           </figure>
         </div>
       </section>
-      <nav class="anchor-strip" aria-label="本页目录">
-        <div class="shell anchor-strip-inner">
-          <strong>本页内容</strong><a href="#issues">常见现状</a
-          ><a href="#deliverables">合作产出</a><a href="#scope">服务内容</a
-          ><a href="#process">工作流程</a><a href="#materials">准备资料</a
-          ><a href="#workflow-example">流程示例</a><a href="#tools">运营工具</a
-          ><a href="#faq">常见问题</a>
-        </div>
-      </nav>
 
-      <section class="service-decision" aria-label="中国制造网服务快速判断">
-        <div class="shell service-decision-grid">
-          <div>
-            <span>适合谁</span>
-            <strong>已有账号，但产品资料和维护任务分散</strong>
-          </div>
-          <div>
-            <span>先解决</span>
-            <strong>资料版本、产品优先级与更新节奏不连续</strong>
-          </div>
-          <div>
-            <span>阶段留下</span>
-            <strong>统一资料底座、维护计划与复盘记录</strong>
+      <section class="rc-section rc-mic-scope" id="scope" aria-labelledby="mic-scope-title">
+        <div class="rc-shell">
+          <h2 id="mic-scope-title">我们的服务范围</h2>
+          <div class="rc-service-grid-six">
+            <article><i class="ri-file-list-3-line" aria-hidden="true"></i><h3>企业与工厂资料</h3><p>公司介绍、工厂实力、生产设备、资质证书</p></article>
+            <article><i class="ri-box-3-line" aria-hidden="true"></i><h3>产品信息管理</h3><p>产品参数、规格、材质、应用领域、包装运输</p></article>
+            <article><i class="ri-image-line" aria-hidden="true"></i><h3>图片与视频管理</h3><p>产品图、细节图、场景图、主图与应用图</p></article>
+            <article><i class="ri-file-search-line" aria-hidden="true"></i><h3>关键词与类目</h3><p>关键词布局、类目选择及搜索导向表达</p></article>
+            <article><i class="ri-question-answer-line" aria-hidden="true"></i><h3>FAQ 与内容页</h3><p>常见问题、应用场景、解决方案与技术说明</p></article>
+            <article><i class="ri-code-box-line" aria-hidden="true"></i><h3>持续维护与优化</h3><p>定期更新、信息校验、复盘优化与内容迭代</p></article>
           </div>
         </div>
       </section>
 
-      <section class="section section-white" id="issues">
-        <div class="shell">
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker">常见现状</p>
-              <h2>平台在维护，<br />但资料和节奏经常断开。</h2>
-            </div>
-            <p>
-              持续运营先解决信息一致性、产品优先级和过程记录，再根据平台反馈调整重点。
-            </p>
-          </div>
-          <div class="issue-grid">
-            <article>
-              <span>ISSUE 01</span>
-              <h3>资料版本不一致</h3>
-              <p>
-                同一产品在不同文件和页面中的参数、应用或商业表述没有统一确认。
-              </p>
-            </article>
-            <article>
-              <span>ISSUE 02</span>
-              <h3>维护动作零散</h3>
-              <p>
-                任务来自临时消息，没有阶段清单、负责人和完成状态，容易重复或遗漏。
-              </p>
-            </article>
-            <article>
-              <span>ISSUE 03</span>
-              <h3>产品没有优先级</h3>
-              <p>
-                所有产品平均处理，没有根据企业方向、资料完整度和平台反馈安排重点。
-              </p>
-            </article>
-            <article>
-              <span>ISSUE 04</span>
-              <h3>阶段反馈不回流</h3>
-              <p>
-                页面更新完成后没有复盘，销售端的询盘质量和买家问题也没有进入下一轮。
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-soft" id="deliverables">
-        <div class="shell">
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker">可约定产出</p>
-              <h2>用清单和记录保持运营连续。</h2>
-            </div>
-            <p>
-              产出数量和具体格式取决于账号基础、产品范围、企业资料和阶段目标，不用固定上品数量代替有效工作。
-            </p>
-          </div>
-          <div class="deliverable-list">
-            <article class="deliverable-row">
-              <span>OUT 01</span>
-              <h3>资料与问题清单</h3>
-              <p>
-                标记缺失、冲突或待企业确认的产品与商业信息，形成可持续维护的资料基础。
-              </p>
-            </article>
-            <article class="deliverable-row">
-              <span>OUT 02</span>
-              <h3>产品维护计划</h3>
-              <p>
-                确定阶段优先产品、需要更新的页面和对应资料负责人，避免所有任务同时推进。
-              </p>
-            </article>
-            <article class="deliverable-row">
-              <span>OUT 03</span>
-              <h3>页面更新记录</h3>
-              <p>
-                保留修改内容、时间、原因和状态，为人员协作与后续比较提供依据。
-              </p>
-            </article>
-            <article class="deliverable-row">
-              <span>OUT 04</span>
-              <h3>阶段反馈与下一轮清单</h3>
-              <p>
-                结合平台表现与业务反馈，明确继续、暂停、补充或重新确认的工作。
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-dark" id="scope">
-        <div class="shell scope-grid">
-          <div class="split-copy">
-            <p class="section-kicker">服务内容</p>
-            <h2>从资料基础到阶段复盘，保持同一条工作链。</h2>
-            <p>
-              平台具体功能和服务范围会随账号、会员与项目条件变化；实际执行以当前账号可用能力和双方确认范围为准。
-            </p>
-          </div>
-          <div class="scope-list">
-            <article class="scope-row">
-              <span>01</span>
-              <div>
-                <h3>账号、店铺与资料诊断</h3>
-                <p>
-                  梳理现有产品、页面、资料版本、历史维护方式和当前最需要解决的问题。
-                </p>
-              </div>
-            </article>
-            <article class="scope-row">
-              <span>02</span>
-              <div>
-                <h3>产品信息与维护规划</h3>
-                <p>按真实资料、企业方向和页面需要建立阶段优先级与更新清单。</p>
-              </div>
-            </article>
-            <article class="scope-row">
-              <span>03</span>
-              <div>
-                <h3>平台内容持续维护</h3>
-                <p>
-                  推进已确认的产品和页面工作，记录变更、资料来源和待企业确认事项。
-                </p>
-              </div>
-            </article>
-            <article class="scope-row">
-              <span>04</span>
-              <div>
-                <h3>反馈整理与阶段复盘</h3>
-                <p>
-                  结合平台表现和销售反馈，判断下一轮继续、补充、暂停或调整。
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-white" id="process">
-        <div class="shell">
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker">工作流程</p>
-              <h2>先建立可维护的资料底座。</h2>
-            </div>
-            <p>
-              如果产品事实和商业口径没有确认，任何页面优化都容易在下一轮被推翻。
-            </p>
-          </div>
-          <div class="method-detail">
-            <span>STEP 01</span>
-            <h2>诊断</h2>
-            <div>
-              <h3>账号与资料</h3>
-              <p>
-                确认账号现状、产品范围、页面基础、资料来源和目前的维护责任。
-              </p>
-            </div>
-          </div>
-          <div class="method-detail">
-            <span>STEP 02</span>
-            <h2>规划</h2>
-            <div>
-              <h3>优先级与清单</h3>
-              <p>
-                按产品方向、资料完整度和阶段目标安排更新，标记需要企业确认的事实。
-              </p>
-            </div>
-          </div>
-          <div class="method-detail">
-            <span>STEP 03</span>
-            <h2>维护与记录</h2>
-            <div>
-              <h3>页面与版本</h3>
-              <p>执行已确认工作，保留变更、时间、原因、资料依据与完成状态。</p>
-            </div>
-          </div>
-          <div class="method-detail">
-            <span>STEP 04</span>
-            <h2>反馈与复盘</h2>
-            <div>
-              <h3>下一轮安排</h3>
-              <p>
-                查看平台表现和业务端反馈，更新维护重点、资料缺口和下一轮计划。
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-soft" id="materials">
-        <div class="shell">
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker">企业需准备</p>
-              <h2>平台内容以企业确认的真实资料为准。</h2>
-            </div>
-            <p>
-              代运营可以整理表达和维护流程，但不能代替企业确认产品事实、认证、交付能力或商业条款。
-            </p>
-          </div>
-          <div class="materials-grid">
-            <ul class="materials-list">
-              <li>当前账号、会员、店铺和产品范围说明。</li>
-              <li>阶段主推产品与目标市场。</li>
-              <li>经确认的参数、应用、图片、认证与商业信息。</li>
-              <li>现有页面、历史资料和已知版本差异。</li>
-              <li>销售端常见买家问题与阶段反馈。</li>
-              <li>负责资料与业务确认的企业对接人。</li>
+      <section class="rc-section rc-mic-issues" id="issues" aria-labelledby="mic-issues-title">
+        <div class="rc-shell rc-mic-issues-grid">
+          <div class="rc-question-list">
+            <h2 id="mic-issues-title">运营起点：先解决这些问题</h2>
+            <ul>
+              <li><i class="ri-question-line" aria-hidden="true"></i>产品信息不完整，客户看不懂、信任度低？</li>
+              <li><i class="ri-question-line" aria-hidden="true"></i>图片杂乱、尺寸不一、应用场景不清晰？</li>
+              <li><i class="ri-question-line" aria-hidden="true"></i>参数、材质、包装等关键信息缺失或不一致？</li>
+              <li><i class="ri-question-line" aria-hidden="true"></i>关键词与类目设置随意，搜索曝光不足？</li>
+              <li><i class="ri-question-line" aria-hidden="true"></i>信息长期不更新，页面陈旧、影响询盘质量？</li>
+              <li><i class="ri-question-line" aria-hidden="true"></i>没有版本记录与复盘，问题反复出现？</li>
             </ul>
-            <div>
-              <div class="boundary-note">
-                <h3>合作与结果边界</h3>
-                <p>
-                  不承诺无法提前保证的曝光、询盘或订单。账号和客户资产归企业所有；权限、资料使用和交接方式在开始前明确。
-                </p>
-              </div>
-              <div class="fit-board fit-single">
-                <article class="fit-panel">
-                  <h3>更适合这样的团队</h3>
-                  <ul>
-                    <li>需要统一产品资料和页面口径。</li>
-                    <li>平台维护缺少连续清单。</li>
-                    <li>愿意根据反馈持续调整。</li>
-                  </ul>
-                </article>
-              </div>
+          </div>
+          <figure class="rc-mic-issue-media">
+            <img src="/assets/inner/made-in-china-content-workstation-v2.webp" width="1536" height="1024" alt="工厂中的产品管理后台、机械零部件与工程资料组成的平台内容维护场景" loading="lazy" />
+            <figcaption><h3>我们的起点</h3><ul><li><i class="ri-checkbox-circle-line" aria-hidden="true"></i>不急于发布，先梳理与完善</li><li><i class="ri-checkbox-circle-line" aria-hidden="true"></i>不追求数量，先保证信息与一致</li><li><i class="ri-checkbox-circle-line" aria-hidden="true"></i>不一次到位，先建立持续机制</li><li><i class="ri-checkbox-circle-line" aria-hidden="true"></i>不只做一次，持续维护与优化</li></ul></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="rc-section rc-process-wrap" id="process" aria-labelledby="mic-process-title">
+        <div class="rc-shell">
+          <div class="rc-process-panel rc-mic-process">
+            <header class="rc-process-heading rc-process-heading-left"><p>我们的运营流程</p><h2 id="mic-process-title">建立并保持产品信息的持续维护</h2></header>
+            <ol class="rc-step-line rc-step-line-five">
+              <li><span class="rc-step-node">01</span><h3>资料收集与梳理</h3><p>收集现有资料，梳理结构，识别缺失与问题</p><small>输出：资料清单</small><i class="ri-arrow-right-line" aria-hidden="true"></i></li>
+              <li><span class="rc-step-node">02</span><h3>信息核证与完善</h3><p>补全产品信息，规范表达，整理图片与视频</p><small>输出：完整资料包</small><i class="ri-arrow-right-line" aria-hidden="true"></i></li>
+              <li><span class="rc-step-node">03</span><h3>发布与基础设置</h3><p>上传产品信息，设置类目、关键词与基础内容页</p><small>输出：上线版本</small><i class="ri-arrow-right-line" aria-hidden="true"></i></li>
+              <li><span class="rc-step-node">04</span><h3>日常维护与更新</h3><p>信息校验、内容更新、新增产品、资料补充</p><small>输出：更新记录</small><i class="ri-arrow-right-line" aria-hidden="true"></i></li>
+              <li><span class="rc-step-node">05</span><h3>复盘与持续优化</h3><p>问题总结，根据业务反馈优化内容与结构</p><small>输出：优化方案</small></li>
+            </ol>
+            <div class="rc-process-outcomes" id="deliverables">
+              <article><i class="ri-history-line" aria-hidden="true"></i><span><b>版本可追溯</b><small>每次变更有记录，清晰可查</small></span></article>
+              <article><i class="ri-file-copy-2-line" aria-hidden="true"></i><span><b>信息一致性</b><small>多页面信息统一，减少误差</small></span></article>
+              <article><i class="ri-shield-check-line" aria-hidden="true"></i><span><b>持续维护</b><small>定期更新，保持信息有效</small></span></article>
+              <article><i class="ri-bar-chart-grouped-line" aria-hidden="true"></i><span><b>长期价值沉淀</b><small>内容资产积累，运营更稳健</small></span></article>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section section-white service-case" id="workflow-example">
-        <div class="shell">
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker">服务流程 · 虚构示例</p>
-              <h2>如果资料版本分散，<br />怎样恢复平台维护的连续性？</h2>
+      <section class="rc-section rc-mic-collaboration" id="materials" aria-labelledby="mic-collab-title">
+        <div class="rc-shell">
+          <div class="rc-mic-collab-card">
+            <div class="rc-mic-collab-copy">
+              <h2 id="mic-collab-title">信息协作：资料共享，信息同步</h2><p>高效的资料协作，是持续运营的基础。</p>
+              <ul><li><i class="ri-checkbox-circle-line" aria-hidden="true"></i>资料集中管理，减少重复沟通</li><li><i class="ri-checkbox-circle-line" aria-hidden="true"></i>信息变更同步，避免版本混乱</li><li><i class="ri-checkbox-circle-line" aria-hidden="true"></i>沟通留痕可追溯，协作更高效</li></ul>
             </div>
-            <p>
-              以下为虚构流程示例，用于说明代运营如何整理资料和任务，不代表真实客户，也不包含平台曝光、询盘或订单承诺。
-            </p>
-          </div>
-          <article class="scenario-ledger" aria-labelledby="mic-case-title">
-            <div class="scenario-ledger-head">
-              <span>WORKFLOW EXAMPLE / MADE-IN-CHINA</span
-              ><span class="scenario-status">虚构场景 · 仅用于说明方法</span>
-            </div>
-            <div class="scenario-ledger-main">
-              <div class="scenario-brief">
-                <span>假设场景</span>
-                <h3 id="mic-case-title">假设场景：通用机械企业的平台维护任务</h3>
-                <p>账号持续有人维护，但产品参数、图片和页面版本分散在不同人员与文件中。</p>
-                <dl>
-                  <div><dt>已有基础</dt><dd>会员账号、在售产品、历史资料</dd></div>
-                  <div><dt>主要缺口</dt><dd>资料版本与维护优先级不能追溯</dd></div>
-                </dl>
-              </div>
-              <ol class="scenario-route">
-                <li><span>01 / 底账</span><div><strong>统一资料版本</strong><p>建立产品字段表，标记已确认、待补充和不可公开信息。</p></div></li>
-                <li><span>02 / 队列</span><div><strong>安排维护优先级</strong><p>按主推方向、资料完整度和页面状态形成任务清单。</p></div></li>
-                <li><span>03 / 留痕</span><div><strong>记录每轮更新</strong><p>保留更新时间、变更内容、平台反馈和下一轮安排。</p></div></li>
-              </ol>
-            </div>
-            <div class="scenario-ledger-foot">
-              <strong>方法验收方式</strong><span>检查资料底账、维护队列和更新记录能否由企业继续接手。</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section section-soft service-tools" id="tools">
-        <div class="shell">
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker">中国制造网运营工具</p>
-              <h2>用记录保持维护节奏，<br />避免每个月重新开始。</h2>
-            </div>
-            <p>工具用于整理工作信息，不会连接平台账号，也不会读取任何后台数据。</p>
-          </div>
-          <div class="channel-tool-grid">
-            <a class="channel-tool channel-tool-primary" href="/tools#review-template"><span>REVIEW / 02</span><h3>平台维护复盘模板</h3><p>记录本周期目标、页面动作、平台反馈、销售反馈和下一轮维护安排。</p><b>复制复盘模板 →</b></a>
-            <a class="channel-tool" href="/tools#page-checklist"><span>PAGE / 03</span><h3>产品页面检查表</h3><p>检查参数版本、图片权限、页面主题、证明材料和咨询路径。</p><b>查看页面检查项 →</b></a>
-            <a class="channel-tool" href="/tools#channel-check"><span>CHECK / 01</span><h3>外贸渠道运营自检</h3><p>确认平台维护之外，追踪和销售反馈是否也形成闭环。</p><b>开始渠道自检 →</b></a>
+            <ol class="rc-node-flow rc-node-flow-four">
+              <li><span><i class="ri-file-upload-line" aria-hidden="true"></i></span><h3>资料提交</h3><p>企业提供原始资料、图片、文档、参数等</p><i class="ri-arrow-right-line" aria-hidden="true"></i></li>
+              <li><span><i class="ri-draft-line" aria-hidden="true"></i></span><h3>信息处理</h3><p>整理、规范、补充，统一维护表达</p><i class="ri-arrow-right-line" aria-hidden="true"></i></li>
+              <li><span><i class="ri-chat-check-line" aria-hidden="true"></i></span><h3>同步确认</h3><p>与您确认内容，确保准确一致</p><i class="ri-arrow-right-line" aria-hidden="true"></i></li>
+              <li><span><i class="ri-refresh-line" aria-hidden="true"></i></span><h3>持续更新</h3><p>信息变更同步，保持资料有效</p></li>
+            </ol>
           </div>
         </div>
       </section>
 
-      <section class="section section-white" id="faq">
-        <div class="shell">
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker">常见问题</p>
-              <h2>合作前，先确认账号和资料基础。</h2>
-            </div>
+      <section class="rc-section rc-responsibility" id="workflow-example" aria-labelledby="mic-responsibility-title">
+        <div class="rc-shell">
+          <h2 id="mic-responsibility-title">协作机制：我们负责做什么，您负责配合什么</h2>
+          <div class="rc-boundary-grid rc-boundary-grid-two">
+            <article><i class="ri-user-settings-line" aria-hidden="true"></i><h3>我们负责</h3><ul><li>资料梳理与结构搭建，完善产品信息</li><li>图片与视频规范整理，内容预写与优化</li><li>关键词与类目配置，基础设置与发布</li><li>日常维护、版本管理、复盘与持续优化</li></ul></article>
+            <article><i class="ri-team-line" aria-hidden="true"></i><h3>您需要配合</h3><ul><li>提供真实、完整的企业与产品资料</li><li>确认关键信息与内容表达</li><li>及时反馈变更信息与新增资料</li><li>配合定期复盘与优化建议</li></ul></article>
           </div>
-          <div class="faq-list">
+        </div>
+      </section>
+
+      <section class="rc-section rc-faq-section rc-mic-faq" id="faq" aria-labelledby="mic-faq-title">
+        <div class="rc-shell"><h2 id="mic-faq-title">常见问题 FAQ</h2><div class="faq-list rc-faq-list rc-faq-list-two">
             <details>
               <summary>中国制造网代运营从哪里开始？</summary>
               <p>
@@ -596,79 +372,39 @@
                 需要。账号、域名、客户数据和平台资产应归企业所有，代运营按实际工作需要使用适当权限，并在合作结束时完成必要交接。
               </p>
             </details>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-soft">
-        <div class="shell">
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker">相关内容</p>
-              <h2>用复盘记录保持平台运营连续。</h2>
-            </div>
-          </div>
-          <div class="related-links">
-            <a class="related-feature" href="/insights/operation-action-review"
-              ><span class="tag">运营复盘方法</span>
-              <h3>为什么记录运营动作，比只看月末数字更重要？</h3>
+            <details>
+              <summary>产品图片和证明材料不足时可以先发布吗？</summary>
               <p>
-                把目标、动作、时间背景、数据变化和下一轮判断放进同一份复盘记录。
+                应先标记资料缺口和可确认范围。图片、参数、认证、应用和商业信息需要由企业确认后再使用，不能用猜测内容替代真实资料。
               </p>
-              <span class="text-link">阅读全文 →</span></a
-            >
-            <div class="related-list">
-              <a href="/method">了解外贸 B2B 代运营流程</a
-              ><a href="/alibaba">查看阿里巴巴国际站代运营</a
-              ><a href="/independent-site">查看外贸独立站建设与运营</a
-              ><a href="/contact">准备中国制造网咨询信息</a>
-            </div>
-          </div>
-        </div>
+            </details>
+            <details>
+              <summary>是否可以只整理中国制造网的资料与维护清单？</summary>
+              <p>
+                可以先围绕账号、产品范围、资料版本和维护任务进行诊断与整理，再根据问题、企业资源和双方确认的范围决定是否进入持续维护。
+              </p>
+            </details>
+            <details>
+              <summary>平台更新后为什么还要保留记录？</summary>
+              <p>
+                记录更新时间、变更内容、资料依据和待确认事项，能帮助企业区分已完成、仍缺资料和需要复盘的工作，并便于后续人员协作。
+              </p>
+            </details>
+            <details>
+              <summary>合作结束后资料和维护记录如何交接？</summary>
+              <p>
+                账号、客户数据和平台资产继续归企业所有。双方可按开始前确认的权限与资料范围交接已整理的清单、记录和待办事项，不转移企业资产所有权。
+              </p>
+            </details>
+          </div></div>
       </section>
 
-      <section class="contact-panel">
-        <div class="shell contact-panel-grid">
-          <div class="contact-copy">
-            <p class="section-kicker">开始沟通</p>
-            <h2>先说说中国制造网目前由谁在维护。</h2>
-            <p>
-              添加微信时备注“产品 + 账号现状 +
-              主要问题”，方便判断需要先整理资料、页面，还是运营节奏。
-            </p>
-            <div class="contact-action">
-              <a class="button button-light" href="/contact">查看咨询准备清单</a
-              ><button
-                class="button button-secondary"
-                type="button"
-                data-wechat-open
-              >
-                复制微信号
-              </button>
-            </div>
-          </div>
-          <ol class="contact-checklist">
-            <li>
-              <span>01</span>
-              <div>
-                <strong>主营产品</strong><small>当前优先推进的方向。</small>
-              </div>
-            </li>
-            <li>
-              <span>02</span>
-              <div>
-                <strong>账号状态</strong
-                ><small>已有账号、正在维护或准备开通。</small>
-              </div>
-            </li>
-            <li>
-              <span>03</span>
-              <div>
-                <strong>主要问题</strong
-                ><small>资料、页面、维护或阶段复盘。</small>
-              </div>
-            </li>
-          </ol>
+      <section class="rc-channel-cta" id="contact-cta" aria-labelledby="mic-cta-title">
+        <div class="rc-shell rc-channel-cta-grid">
+          <div><p>从产品信息底座开始</p><h2 id="mic-cta-title">先把产品信息底座打好，运营才有持续空间。</h2><span>可理解、可查找、可持续迭代，从这里开始。</span></div>
+          <a class="rc-button rc-button-primary" href="/contact">说说日常卡点 <i class="ri-arrow-right-line" aria-hidden="true"></i><small>适合：先沟通问题与目标</small></a>
+          <a class="rc-button rc-button-outline" href="/services">查看服务流程 <i class="ri-arrow-right-line" aria-hidden="true"></i><small>适合：了解具体工作方式</small></a>
+          <nav class="rc-cta-resources" id="tools" aria-label="中国制造网运营相关资源"><a href="/tools#review-template">复盘模板</a><a href="/tools#page-checklist">页面检查</a><a href="/tools#channel-check">渠道自检</a><a href="/insights/operation-action-review">运营笔记</a><a href="/method">运营方法</a></nav>
         </div>
       </section>
     </main>
@@ -677,18 +413,22 @@
       <div class="shell footer-grid">
         <div class="footer-brand">
           <a class="brand" href="/"
-            ><span class="brand-mark" aria-hidden="true"
-              ><i></i><i></i><i></i></span
-            ><span>Wesley <b>GEO</b></span></a
+            ><img
+              class="brand-logo"
+              src="/assets/brand/wesley-mark-256.png"
+              width="32"
+              height="32"
+              alt=""
+            /><span>Wesley <b>GEO</b></span></a
           >
           <p>帮助外贸企业把渠道动作整理成可执行、可追踪、可复盘的运营系统。</p>
         </div>
         <div class="footer-column">
           <h2>代运营服务</h2>
           <a href="/services">服务总览</a
-          ><a href="/alibaba">阿里巴巴国际站</a
-          ><a href="/independent-site">外贸独立站</a
-          ><a href="/made-in-china">中国制造网</a>
+          ><a href="/alibaba">阿里巴巴国际站代运营</a
+          ><a href="/independent-site">外贸独立站代运营</a
+          ><a href="/made-in-china">中国制造网代运营</a>
         </div>
         <div class="footer-column">
           <h2>方法与内容</h2>

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/styles.css?v=20260826.2" />
     <link rel="stylesheet" href="/cases.css?v=20260826.2" />
     <link rel="stylesheet" href="/site-header-foursets.css?v=20260826.2" />
+    <link rel="stylesheet" href="/inner-selected-fusion.css?v=20260826-1" />
     <meta property="og:locale" content="zh_CN" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Wesley GEO" />
@@ -110,14 +111,15 @@
       }
     </script>
   </head>
-  <body class="evidence-system case-system case-collection">
+  <body class="evidence-system case-system case-collection inner-selected-fusion page-cases">
     <a class="skip-link" href="#main">跳到主要内容</a>
     <header class="site-header">
       <div class="shell header-inner">
-        <a class="brand" href="/" aria-label="Wesley GEO 首页"
-          ><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span
-          ><span>Wesley <b>GEO</b></span></a
-        ><button
+        <a class="brand" href="/" aria-label="Wesley GEO 首页">
+          <img class="brand-logo" src="/assets/brand/wesley-mark-256.png" width="32" height="32" alt="" />
+          <span>Wesley <b>GEO</b></span>
+        </a>
+        <button
           class="nav-toggle"
           type="button"
           aria-expanded="false"
@@ -161,26 +163,55 @@
           </details>
           <a href="/insights">运营笔记</a
           ><a href="/cases" aria-current="page">客户案例</a><a href="/tools">运营工具</a><a href="/about">关于 Wesley</a
-          ><a class="button button-small" href="/contact">微信咨询</a>
+          ><a class="button button-small" href="/contact">说说目前卡点</a>
         </nav>
       </div>
     </header>
 
     <main id="main">
-      <section class="simple-hero case-overview-hero">
-        <div class="shell">
-          <nav class="breadcrumb" aria-label="面包屑">
-            <a href="/">首页</a><span>/</span><span>客户案例</span>
-          </nav>
-          <p class="eyebrow">TWO BUSINESS TRACKS · FIRST-PARTY RECORDS</p>
-          <h1>两条业务主线，两个匿名项目</h1>
-          <p class="lead">
-            卫生用品项目对应独立站 SEO/GEO；水泵项目对应 B2B 平台与独立站协同运营。页面公开由 Wesley 本人确认的行业、渠道、周期、动作和交付物，不公开客户身份与经营数据。
-          </p>
+      <section class="simple-hero case-overview-hero inner-page-hero cases-hero" aria-labelledby="cases-title">
+        <div class="shell case-hero-grid inner-hero-grid">
+          <div class="case-hero-copy inner-hero-copy">
+            <nav class="breadcrumb" aria-label="面包屑">
+              <a href="/">首页</a><span>/</span><span>客户案例</span>
+            </nav>
+            <p class="eyebrow">匿名项目记录 / PROJECT RECORDS</p>
+            <h1 id="cases-title">两条业务主线，两个匿名项目</h1>
+            <p class="lead">
+              卫生用品项目对应独立站 SEO/GEO；水泵项目对应 B2B 平台与独立站协同运营。页面公开由 Wesley 本人确认的行业、渠道、周期、动作和交付物，不公开客户身份与经营数据。
+            </p>
+          </div>
+          <aside class="cases-hero-index" aria-labelledby="case-index-title">
+            <div class="cases-hero-index-head">
+              <p class="data-label">PROCESS EVIDENCE INDEX</p>
+              <h2 id="case-index-title">过程证据索引</h2>
+              <p>选择一条业务主线，查看对应项目的过程证据。</p>
+            </div>
+            <nav class="case-index-routes inner-route-map" aria-label="匿名项目索引">
+              <img class="case-index-route-art" src="/assets/home/cta-route-connector-v2.png" width="2103" height="748" alt="" aria-hidden="true" />
+              <a href="/cases/hygiene-products-seo-geo">
+                <span>卫生用品 · 独立站 SEO/GEO · 2 年</span>
+                <small>查看该项目的过程证据</small>
+              </a>
+              <a href="/cases/pump-b2b-operations">
+                <span>水泵及机械设备 · 国际站与独立站 · 3 年</span>
+                <small>查看该项目的过程证据</small>
+              </a>
+              <img class="case-index-logo" src="/assets/brand/wesley-mark-256.png" width="58" height="58" alt="" />
+            </nav>
+            <p class="case-index-boundary">标注周期与合作业务范围，不代表任何经营结果。</p>
+          </aside>
         </div>
       </section>
 
-      <section class="section section-white">
+      <section class="signal-strip inner-signal-strip case-signal-strip" aria-label="案例公开原则">
+        <div class="shell signal-inner">
+          <p>公开工作方法与证据结构，不公开客户身份与经营数据。</p>
+          <ul><li>第一方确认</li><li>匿名处理</li><li>不作结果保证</li></ul>
+        </div>
+      </section>
+
+      <section class="section section-white case-records-section" id="case-list">
         <div class="shell">
           <div class="section-heading">
             <div>
@@ -191,13 +222,13 @@
               两个案例只呈现 Wesley 第一方确认的工作范围，不代表客户公开背书或第三方审计。生成图片只帮助区分行业和方法，不作为项目证据。
             </p>
           </div>
-          <div class="case-showcase-list" id="case-list">
-            <article class="case-showcase">
+          <div class="case-showcase-list case-record-list">
+            <article class="case-showcase case-record-row hygiene-record">
               <figure class="case-showcase-visual">
                 <picture>
                   <source
                     srcset="/assets/cases/hygiene-seo-geo-workbench-640.webp 640w, /assets/cases/hygiene-seo-geo-workbench-960.webp 960w, /assets/cases/hygiene-seo-geo-workbench-1536.webp 1536w"
-                    sizes="(max-width: 900px) 100vw, 46vw"
+                    sizes="(max-width: 1050px) 100vw, 46vw"
                     type="image/webp"
                   />
                   <img
@@ -221,16 +252,22 @@
                   <div><dt>渠道</dt><dd>外贸 B2B 独立站</dd></div>
                   <div><dt>工作流</dt><dd>结构 / 内容 / SEO / GEO / 更新</dd></div>
                 </dl>
+                <dl class="case-evidence-summary">
+                  <div><dt>项目背景</dt><dd>卫生用品领域、面向海外市场的外贸 B2B 独立站。</dd></div>
+                  <div><dt>服务范围</dt><dd>网站结构、关键词与页面映射、核心内容、技术 SEO、GEO 表达和持续复盘。</dd></div>
+                  <div><dt>核心问题</dt><dd>产品分类、搜索主题和页面任务需要建立清楚的对应关系。</dd></div>
+                  <div><dt>过程证据</dt><dd>网站内容结构、页面任务表、内容计划、技术检查和旧页更新记录。</dd></div>
+                </dl>
                 <a class="button" href="/cases/hygiene-products-seo-geo">查看卫生用品完整案例 <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
-            <article class="case-showcase reverse">
+            <article class="case-showcase case-record-row pump-record reverse">
               <figure class="case-showcase-visual">
                 <picture>
                   <source
                     srcset="/assets/cases/pump-dual-channel-workbench-640.webp 640w, /assets/cases/pump-dual-channel-workbench-960.webp 960w, /assets/cases/pump-dual-channel-workbench-1536.webp 1536w"
-                    sizes="(max-width: 900px) 100vw, 46vw"
+                    sizes="(max-width: 1050px) 100vw, 46vw"
                     type="image/webp"
                   />
                   <img
@@ -254,6 +291,12 @@
                   <div><dt>渠道</dt><dd>阿里巴巴国际站 / 外贸独立站</dd></div>
                   <div><dt>工作流</dt><dd>产品事实 / 平台 / 网站 / 协同复盘</dd></div>
                 </dl>
+                <dl class="case-evidence-summary">
+                  <div><dt>国际站运营</dt><dd>产品资料、关键词、平台页面、阶段动作与反馈记录。</dd></div>
+                  <div><dt>独立站内容与 SEO</dt><dd>分类页、产品页、应用页、技术 SEO、结构化数据与持续更新。</dd></div>
+                  <div><dt>协作机制</dt><dd>共享产品事实和市场方向，分别安排平台与独立站任务。</dd></div>
+                  <div><dt>过程证据</dt><dd>产品—关键词—市场映射、渠道任务、页面清单与跨渠道复盘。</dd></div>
+                </dl>
                 <a class="button" href="/cases/pump-b2b-operations">查看水泵完整案例 <span aria-hidden="true">→</span></a>
               </div>
             </article>
@@ -261,18 +304,18 @@
         </div>
       </section>
 
-      <section class="section section-dark">
+      <section class="section section-dark case-proof-section">
         <div class="shell">
           <div class="section-heading">
             <div>
               <p class="section-kicker">可检查的工作资产</p>
-              <h2>案例展示工作物与机制，不用结果口号代替过程。</h2>
+              <h2>案例页真正能验证什么？</h2>
             </div>
             <p>
-              以下三组资产会因项目范围不同而调整；具体案例页只列该项目实际形成或持续使用的材料。
+              以下四组资产会因项目范围不同而调整；具体案例页只列该项目实际形成或持续使用的材料。
             </p>
           </div>
-          <div class="case-asset-groups">
+          <div class="case-asset-groups case-proof-steps">
             <article>
               <span>01 / DIAGNOSIS</span>
               <h3>诊断与映射</h3>
@@ -288,11 +331,100 @@
               <h3>复盘与来源记录</h3>
               <p>动作版本、阶段观察、销售反馈、下一轮建议，以及商业事实的来源与确认状态。</p>
             </article>
+            <article>
+              <span>04 / BOUNDARY</span>
+              <h3>复盘与边界</h3>
+              <p>区分可公开的工作范围、需要匿名的客户信息，以及不能由案例推导的经营结果。</p>
+            </article>
+          </div>
+          <div class="case-proof-ledger inner-process-ledger">
+            <div class="case-proof-ledger-head">
+              <p class="data-label">PROCESS EVIDENCE LEDGER</p>
+              <h3>过程证据台账</h3>
+              <p>以下只说明公开状态与匿名边界，不把过程记录写成结果证明。</p>
+            </div>
+            <div class="case-proof-table-wrap">
+              <table>
+                <caption class="sr-only">两个匿名项目的过程证据公开状态</caption>
+                <thead><tr><th scope="col">项目</th><th scope="col">项目事实</th><th scope="col">诊断与计划</th><th scope="col">执行记录</th><th scope="col">复盘与边界</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">卫生用品独立站 SEO/GEO · 2 年</th><td>行业、渠道与周期可公开</td><td>方法与工作范围可公开</td><td>内容与版本记录匿名处理</td><td>客户数据与经营结果不公开</td></tr>
+                  <tr><th scope="row">水泵双渠道运营 · 3 年</th><td>行业、渠道与周期可公开</td><td>方法与工作范围可公开</td><td>平台和网站记录匿名处理</td><td>客户数据与经营结果不公开</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="case-proof-legend">
+              <li><strong>可公开</strong>由 Wesley 第一方确认</li>
+              <li><strong>匿名化</strong>不出现客户和账号信息</li>
+              <li><strong>不公开</strong>不展示客户经营数据与结果</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section class="section section-soft">
+      <section class="section section-white case-comparison-section" aria-labelledby="case-comparison-title">
+        <div class="shell case-comparison-layout">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">项目对照</p>
+              <h2 id="case-comparison-title">两个项目，问题不同，方法底座一致。</h2>
+            </div>
+            <p>可复用的是诊断、映射、记录和复盘的方法，不是行业数据、页面文案或结果。</p>
+          </div>
+          <div class="case-comparison-board">
+            <div class="case-comparison-table-wrap">
+              <table>
+                <caption class="sr-only">卫生用品独立站项目与水泵双渠道项目的工作范围对照</caption>
+                <thead>
+                  <tr><th scope="col">对照维度</th><th scope="col">卫生用品独立站 SEO/GEO</th><th scope="col">水泵与机械设备双渠道运营</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">渠道任务</th><td>独立站为主，构建内容与搜索可见路径</td><td>国际站与独立站分别承接平台发现和长期搜索</td></tr>
+                  <tr><th scope="row">内容对象</th><td>产品分类、解决方案、知识文章与 FAQ</td><td>产品页、应用内容、技术文章与 FAQ</td></tr>
+                  <tr><th scope="row">技术工作</th><td>页面结构、技术 SEO、GEO 表达与旧页更新</td><td>技术 SEO、渠道差异、结构化数据与站内链接</td></tr>
+                  <tr><th scope="row">运营节奏</th><td>持续检查收录、搜索入口和页面任务</td><td>国际站动作、独立站更新与销售反馈协同复盘</td></tr>
+                  <tr><th scope="row">过程资产</th><td>页面任务表、内容计划、技术检查和更新记录</td><td>产品事实、渠道任务、页面清单与跨渠道复盘</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft case-trace-section" aria-labelledby="case-trace-title">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">从动作到资产</p>
+              <h2 id="case-trace-title">从一次动作，到一份可追踪资产。</h2>
+            </div>
+            <p>每一条任务都记录目标、执行内容、相关页面或产品，以及进入下一轮判断时需要保留的边界。</p>
+          </div>
+          <ol class="case-trace-flow">
+            <li><span>01</span><strong>问题卡</strong><small>记录现状、目标与资料缺口</small></li>
+            <li><span>02</span><strong>阶段计划</strong><small>确认范围、责任人与检查节点</small></li>
+            <li><span>03</span><strong>执行记录</strong><small>保留页面、内容与渠道动作</small></li>
+            <li><span>04</span><strong>复盘清单</strong><small>区分事实、观察和未知</small></li>
+            <li><span>05</span><strong>下一轮判断</strong><small>决定继续、暂停、调整或补资料</small></li>
+          </ol>
+          <div class="case-trace-ledger inner-process-ledger">
+            <div class="case-trace-ledger-head">
+              <p class="data-label">OPERATIONS RECORD FIELDS</p>
+              <h3>运营记录台账字段</h3>
+              <p>这里只展示记录结构，不展示客户账号、后台数据或经营结果。</p>
+            </div>
+            <dl class="case-trace-fields">
+              <div><dt>阶段</dt><dd>内容规划、内容生产、页面优化或阶段复盘</dd></div>
+              <div><dt>任务主题</dt><dd>本轮需要解决的产品、渠道或页面问题</dd></div>
+              <div><dt>主要动作</dt><dd>实际执行内容与对应版本</dd></div>
+              <div><dt>关联资产</dt><dd>页面清单、内容记录、检查表或复盘说明</dd></div>
+              <div><dt>公开状态</dt><dd>可公开、匿名说明或不公开</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft case-disclosure-section">
         <div class="shell">
           <div class="section-heading">
             <div>
@@ -303,7 +435,7 @@
               两个项目由 Wesley 第一方确认工作范围，未作第三方独立审计，也不代表客户公开背书。
             </p>
           </div>
-          <div class="case-policy-grid">
+          <div class="case-policy-grid case-disclosure-grid">
             <article>
               <span>PUBLIC / 可以确认</span>
               <h3>行业、渠道、周期、动作与交付物</h3>
@@ -324,7 +456,44 @@
         </div>
       </section>
 
-      <section class="contact-panel">
+      <section class="section section-white case-related-section" aria-labelledby="case-related-title">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">相关服务与方法</p>
+              <h2 id="case-related-title">沿着项目问题，继续查看对应工作。</h2>
+            </div>
+            <p>服务页说明范围，方法页说明过程；案例页本身不替代对企业现状的诊断。</p>
+          </div>
+          <nav class="case-related-grid" aria-label="相关服务与方法">
+            <a href="/services"><span>PLATFORM</span><strong>B2B 平台运营</strong><small>阿里巴巴国际站与中国制造网的产品、关键词、页面和阶段复盘。</small><b>了解更多 →</b></a>
+            <a href="/independent-site"><span>WEBSITE</span><strong>独立站 SEO / GEO</strong><small>网站结构、搜索内容、技术 SEO、GEO 表达和持续迭代。</small><b>了解更多 →</b></a>
+            <a href="/method"><span>METHOD</span><strong>运营方法论</strong><small>诊断、规划、执行与追踪、复盘，以及每一步留下的工作资产。</small><b>了解更多 →</b></a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="section section-soft case-faq-section" aria-labelledby="case-faq-title">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">常见问题</p>
+              <h2 id="case-faq-title">先把案例能够说明的边界讲清楚。</h2>
+            </div>
+            <p>如果你的情况与案例不同，应先说明产品、渠道和当前问题，再判断哪些方法可以参考。</p>
+          </div>
+          <div class="case-faq-grid">
+            <details><summary>为什么所有案例都是匿名的？</summary><p>客户名称、账号、后台数据、询盘、订单和营收属于客户经营信息；未经明确授权不会公开。</p></details>
+            <details><summary>匿名处理后，过程证据还有参考价值吗？</summary><p>可以参考的是诊断顺序、工作范围、页面和内容记录方式，以及如何区分事实、判断和未知；客户经营信息不会因此公开。</p></details>
+            <details><summary>页面上的图片都是项目现场吗？</summary><p>不是。图片只帮助区分行业和方法，相关图注已经明确说明它们不是客户产品、后台、现场或经营数据。</p></details>
+            <details><summary>案例能保证其他企业获得同样结果吗？</summary><p>不能。产品、市场、竞争、平台环境、网站基础和销售承接均不同，案例不能作为排名、询盘、订单或营收预测。</p></details>
+            <details><summary>可以看到客户账号或后台数据吗？</summary><p>不公开客户账号、后台、询盘、订单或其他能够识别项目的信息；沟通时也不要求先发送账号密码。</p></details>
+            <details><summary>合作前，我们可以讨论哪些内容？</summary><p>可以先说明主营产品、当前渠道、主要卡点和已有资料，再判断适合平台运营、独立站 SEO/GEO，或分阶段协同。</p></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-panel inner-final-cta">
         <div class="shell contact-panel-grid">
           <div class="contact-copy">
             <p class="section-kicker">从一个真实问题开始</p>
@@ -335,11 +504,19 @@
               ><a class="button button-secondary" href="/services">查看服务范围</a>
             </div>
           </div>
-          <ol class="contact-checklist">
-            <li><span>01</span><div><strong>产品</strong><small>主营什么产品。</small></div></li>
-            <li><span>02</span><div><strong>渠道</strong><small>正在运营哪些平台或网站。</small></div></li>
-            <li><span>03</span><div><strong>问题</strong><small>当前最想先解决什么。</small></div></li>
-          </ol>
+          <div class="case-cta-side">
+            <ol class="contact-checklist contact-brief-list">
+              <li><span>01</span><div><strong>产品</strong><small>主营什么产品。</small></div></li>
+              <li><span>02</span><div><strong>渠道</strong><small>正在运营哪些平台或网站。</small></div></li>
+              <li><span>03</span><div><strong>问题</strong><small>当前最想先解决什么。</small></div></li>
+            </ol>
+            <nav class="contact-route-map inner-route-map" aria-label="两条服务路线">
+              <img class="contact-route-art" src="/assets/home/cta-route-connector-v2.png" width="2103" height="748" alt="" aria-hidden="true" />
+              <a href="/services"><span>B2B 平台运营</span><small>国际站 / 中国制造网</small></a>
+              <a href="/independent-site"><span>独立站 SEO / GEO</span><small>结构 / 内容 / 技术 / 迭代</small></a>
+              <img class="contact-route-logo" src="/assets/brand/wesley-mark-256.png" width="58" height="58" alt="" />
+            </nav>
+          </div>
         </div>
       </section>
     </main>
@@ -347,18 +524,18 @@
     <footer class="site-footer">
       <div class="shell footer-grid">
         <div class="footer-brand">
-          <a class="brand" href="/"
-            ><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span
-            ><span>Wesley <b>GEO</b></span></a
-          >
+          <a class="brand" href="/">
+            <img class="brand-logo" src="/assets/brand/wesley-mark-256.png" width="32" height="32" alt="" />
+            <span>Wesley <b>GEO</b></span>
+          </a>
           <p>帮助外贸企业把渠道动作整理成可执行、可追踪、可复盘的运营系统。</p>
         </div>
         <div class="footer-column">
           <h2>代运营服务</h2>
           <a href="/services">服务总览</a
-          ><a href="/alibaba">阿里巴巴国际站</a
-          ><a href="/independent-site">外贸独立站</a
-          ><a href="/made-in-china">中国制造网</a>
+          ><a href="/alibaba">阿里巴巴国际站代运营</a
+          ><a href="/independent-site">外贸独立站代运营</a
+          ><a href="/made-in-china">中国制造网代运营</a>
         </div>
         <div class="footer-column">
           <h2>方法与内容</h2>

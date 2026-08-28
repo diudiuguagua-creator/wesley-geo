@@ -1,0 +1,316 @@
+/*
+  Selected local fusion, 2026-08-27
+  /services: scheme 1; /alibaba: scheme 1; /independent-site: scheme 3 with scheme 2 SEO/GEO;
+  /made-in-china: scheme 2; /insights: scheme 2.
+  The shared header and footer intentionally inherit the approved homepage language.
+*/
+
+:root {
+  --selected-navy: #062a4a;
+  --selected-blue: #1769ff;
+  --selected-teal: #008c9c;
+  --selected-paper: #f5f8fc;
+  --selected-line: #d8e4f0;
+  --selected-orange: #f5a623;
+}
+
+/* Shared inner-page framing: preserve the approved home header/footer hierarchy. */
+.page-services .site-header,
+.service-landing .site-header,
+.evidence-insights .site-header {
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid rgba(8, 40, 71, 0.08);
+  box-shadow: 0 8px 28px rgba(8, 40, 71, 0.045);
+}
+
+.service-landing .brand-mark,
+.service-landing .site-footer .brand-mark {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  background: url('/assets/brand/wesley-mark-256.png') center / contain no-repeat;
+}
+
+.service-landing .brand-mark i,
+.service-landing .site-footer .brand-mark i {
+  display: none;
+}
+
+/* Detail pages use the same calm header treatment as the approved homepage, not the older dotted variant. */
+.service-landing .site-header .site-nav > a:not(.button)::before,
+.service-landing .site-header .nav-services > summary::before {
+  display: none;
+}
+
+.service-landing .site-header .site-nav > a.button,
+.service-landing .site-header .site-nav > a.button[aria-current="page"] {
+  border-color: var(--selected-navy);
+  background: var(--selected-navy);
+  color: #fff;
+}
+
+.service-landing .site-header .site-nav > a.button:hover {
+  border-color: var(--selected-blue);
+  background: var(--selected-blue);
+  color: #fff;
+}
+
+.page-services .site-footer,
+.service-landing .site-footer,
+.evidence-insights .site-footer {
+  background: var(--selected-navy);
+  border-top: 1px solid rgba(109, 170, 255, 0.22);
+}
+
+/* Shared hero treatment: light workbench photo, strong navy copy and a single proof panel. */
+.page-services .services-hero,
+.service-landing .page-hero,
+.evidence-insights .insights-page-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: #f5f8fc;
+  background-image:
+    linear-gradient(90deg, rgba(247, 250, 253, 0.985) 0%, rgba(247, 250, 253, 0.92) 43%, rgba(247, 250, 253, 0.32) 100%),
+    url('/assets/home/hero-operations-workbench-1536.webp');
+  background-position: center;
+  background-size: cover;
+  border-bottom: 0;
+}
+
+.page-services .services-hero::after,
+.service-landing .page-hero::after,
+.evidence-insights .insights-page-hero::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: auto -7rem -9rem auto;
+  width: 27rem;
+  height: 27rem;
+  border: 1px solid rgba(23, 105, 255, 0.16);
+  border-radius: 50%;
+}
+
+.page-services .inner-hero-grid,
+.service-landing .page-hero-grid,
+.evidence-insights .insights-hero-grid {
+  min-height: 466px;
+  align-items: center;
+  gap: clamp(2rem, 6vw, 7rem);
+}
+
+.page-services .display-title,
+.service-landing .page-hero h1,
+.evidence-insights .insights-page-hero h1 {
+  max-width: 16ch;
+  color: var(--selected-navy);
+  font-size: clamp(2.35rem, 4.7vw, 4.65rem);
+  line-height: 1.05;
+  letter-spacing: -0.065em;
+}
+
+.page-services .inner-hero-copy .lead,
+.service-landing .page-hero .lead,
+.evidence-insights .insights-page-hero .lead {
+  max-width: 46rem;
+  color: #3a536a;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.page-services .hero-actions .button,
+.service-landing .hero-actions .button,
+.evidence-insights .hero-actions .button {
+  box-shadow: 0 9px 18px rgba(23, 105, 255, 0.19);
+}
+
+/* /services — chosen scheme 1: less ledger density, clearer two-route service panel. */
+.page-services .services-hero-card {
+  width: min(100%, 32rem);
+  justify-self: end;
+  border: 1px solid rgba(93, 159, 255, 0.3);
+  border-radius: 18px;
+  background: rgba(5, 39, 70, 0.96);
+  box-shadow: 0 20px 48px rgba(7, 35, 65, 0.24);
+}
+
+.page-services .services-hero-card-head { padding: 1.5rem 1.55rem 0.55rem; }
+.page-services .services-hero-card-head h2 { font-size: 1.35rem; }
+.page-services .services-hero-card-head .framework-badge,
+.page-services .services-hero-columns,
+.page-services .ledger-foot { display: none; }
+.page-services .services-hero-lines { padding: 0.45rem 1.2rem 0.55rem; }
+.page-services .services-hero-line {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  min-height: auto;
+  gap: 0.8rem;
+  padding: 1rem 0.35rem;
+  border-top: 1px solid rgba(174, 210, 243, 0.16);
+}
+.page-services .services-hero-line > div:not(:first-of-type) { display: none; }
+.page-services .services-hero-line .ledger-code { align-self: start; }
+.page-services .services-hero-line strong { font-size: 1.08rem; }
+.page-services .services-hero-line small { margin-top: 0.35rem; color: #c4d8e9; line-height: 1.55; }
+.page-services .services-hero-boundary { margin: 0.2rem 1.55rem 1.35rem; color: #c4d8e9; }
+
+.page-services .services-hero-principles {
+  display: flex;
+  width: min(100%, 39rem);
+  margin-top: 1.8rem;
+  overflow: hidden;
+  border: 1px solid var(--selected-line);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.86);
+}
+.page-services .services-hero-principles > div { flex: 1; padding: 0.85rem 1rem; }
+.page-services .services-hero-principles > div + div { border-left: 1px solid var(--selected-line); }
+
+.page-services .inner-anchor-strip,
+.service-landing .anchor-strip,
+.evidence-insights .inner-signal-strip {
+  border-block: 0;
+  background: linear-gradient(90deg, #0751bd, #007c90);
+  color: white;
+}
+.page-services .anchor-strip strong,
+.page-services .anchor-strip a,
+.service-landing .anchor-strip a {
+  color: rgba(255,255,255,.92);
+}
+.page-services .anchor-strip a {
+  border-color: rgba(255,255,255,.3);
+  background: rgba(1,24,52,.1);
+}
+body.page-services .anchor-strip a {
+  border-color: rgba(255,255,255,.3);
+  background: rgba(1,24,52,.1);
+}
+
+.page-services .service-route-board { gap: 1.6rem; }
+.page-services .service-route-card {
+  border-color: #d5e2f0;
+  border-radius: 16px;
+  box-shadow: 0 13px 30px rgba(10, 47, 81, 0.06);
+}
+.page-services .service-choice-board {
+  border: 1px solid #dde7f0;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fff 0%, #f1f8fb 100%);
+}
+
+/* Detail pages — first-choice service system with stable section rhythm. */
+.service-landing .page-hero { padding-block: clamp(3.6rem, 6vw, 5.75rem); }
+.service-landing .page-hero h1 em { color: var(--selected-blue); font-style: normal; }
+.service-landing .workflow-board {
+  max-width: 33rem;
+  justify-self: end;
+  border: 1px solid rgba(95, 168, 255, 0.34);
+  border-radius: 18px;
+  background: rgba(5, 39, 70, 0.965);
+  box-shadow: 0 21px 50px rgba(7, 35, 65, 0.24);
+}
+.service-landing .workflow-board figcaption { padding: 1.35rem 1.45rem 0.75rem; }
+.service-landing .workflow-flow { padding: 0 1.45rem 0.85rem; }
+.service-landing .workflow-step { padding: 0.75rem 0; border-top-color: rgba(175, 213, 248, 0.17); }
+.service-landing .workflow-step span { color: #63bcff; }
+.service-landing .workflow-output { border-top-color: rgba(175, 213, 248, 0.17); }
+.service-landing .service-decision {
+  background: #fff;
+  border-bottom: 1px solid var(--selected-line);
+}
+.service-landing .service-decision-grid > div {
+  position: relative;
+  padding: 1.2rem 1.35rem;
+  border-color: var(--selected-line);
+}
+.service-landing .section { padding-block: clamp(4rem, 7vw, 7rem); }
+.service-landing .section-dark { background: var(--selected-navy); }
+.service-landing .section-soft { background: #f3f7fb; }
+.service-landing .section-heading { max-width: 100%; }
+.service-landing .section-heading h2 { color: var(--selected-navy); font-size: clamp(1.85rem, 3vw, 3.3rem); letter-spacing: -0.055em; }
+.service-landing .section-dark .section-heading h2,
+.service-landing .section-dark .section-heading p { color: white; }
+.service-landing .issue-grid article,
+.service-landing .deliverable-row,
+.service-landing .method-detail,
+.service-landing .materials-grid > *,
+.service-landing .related-feature,
+.service-landing .related-list {
+  border-color: #d8e4f0;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(11, 45, 75, 0.045);
+}
+
+/* /independent-site — scheme 3 default, with scheme 2's explicit SEO/GEO relationship. */
+.service-web .page-hero,
+.service-landing:has(.page-hero.web) .page-hero {
+  background-image:
+    linear-gradient(90deg, rgba(247,250,253,.99) 0%, rgba(247,250,253,.92) 46%, rgba(247,250,253,.36) 100%),
+    url('/assets/home/diagnosis-workbench-v2.webp');
+}
+.service-landing:has(.page-hero.web) .service-decision-grid { position: relative; }
+.service-landing:has(.page-hero.web) .service-decision-grid::after {
+  content: 'SEO 与 GEO 共同服务于可理解、可发现、可持续迭代的网站资产';
+  display: block;
+  grid-column: 1 / -1;
+  margin: 0 0 1rem;
+  color: var(--selected-teal);
+  font-weight: 800;
+  text-align: center;
+}
+
+/* /made-in-china — scheme 2's product-information foundation. */
+.service-mic .page-hero,
+.service-landing:has(.page-hero.mic) .page-hero {
+  background-image:
+    linear-gradient(90deg, rgba(247,250,253,.99) 0%, rgba(247,250,253,.93) 45%, rgba(247,250,253,.35) 100%),
+    url('/assets/cases/pump-dual-channel-workbench-1536.webp');
+}
+.service-landing:has(.page-hero.mic) .service-decision-grid > div:first-child strong::before {
+  content: '产品信息底座｜';
+  color: var(--selected-blue);
+}
+
+/* /insights — chosen scheme 2: clear map, primary article, dense but readable decision record. */
+.evidence-insights .insights-page-hero { padding-block: clamp(3.7rem, 6vw, 5.9rem); }
+.evidence-insights .insights-hero-map {
+  width: min(100%, 32rem);
+  justify-self: end;
+  border: 1px solid rgba(96, 168, 255, 0.36);
+  border-radius: 18px;
+  background: rgba(5, 39, 70, 0.965);
+  box-shadow: 0 21px 50px rgba(7, 35, 65, 0.24);
+}
+.evidence-insights .insights-hero-map h2 { color: white; }
+.evidence-insights .insights-hero-map-list a { border-color: rgba(175, 213, 248, 0.17); }
+.evidence-insights .insights-feature-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.75fr);
+  gap: 1.3rem;
+}
+.evidence-insights .insights-feature-primary { grid-row: span 2; min-height: 31rem; }
+.evidence-insights .insights-feature-card { border-radius: 15px; border-color: #d8e4f0; box-shadow: 0 10px 25px rgba(11, 45, 75, 0.05); }
+.evidence-insights .insights-method-band { background: var(--selected-navy); }
+.evidence-insights .insights-method-grid { border: 1px solid rgba(148, 193, 238, 0.25); border-radius: 16px; overflow: hidden; }
+.evidence-insights .insights-method-grid .deliverable-row { border-color: rgba(148, 193, 238, 0.22); }
+
+@media (max-width: 900px) {
+  .page-services .inner-hero-grid,
+  .service-landing .page-hero-grid,
+  .evidence-insights .insights-hero-grid { min-height: auto; }
+  .page-services .services-hero-card,
+  .service-landing .workflow-board,
+  .evidence-insights .insights-hero-map { width: 100%; justify-self: stretch; }
+  .page-services .services-hero-principles { width: 100%; }
+  .evidence-insights .insights-feature-grid { grid-template-columns: 1fr; }
+  .evidence-insights .insights-feature-primary { grid-row: auto; min-height: auto; }
+}
+
+@media (max-width: 620px) {
+  .page-services .services-hero-principles { display: grid; grid-template-columns: 1fr; }
+  .page-services .services-hero-principles > div + div { border-top: 1px solid var(--selected-line); border-left: 0; }
+  .page-services .display-title,
+  .service-landing .page-hero h1,
+  .evidence-insights .insights-page-hero h1 { font-size: clamp(2.15rem, 11vw, 3.35rem); }
+}

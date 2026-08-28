@@ -1,16 +1,27 @@
 :root {
-  --ops-navy: #081c2c;
-  --ops-navy-2: #102b3d;
-  --blueprint: #ecf2f6;
+  /* Wesley GEO visual responsibility tokens. */
+  --brand-authority: #0b2035;
+  --brand-cobalt: #2457d6;
+  --brand-search: #0e7b83;
+  --brand-gold: #f4a51c;
+  --surface-mist: #f3f6fa;
+  --surface-warm: #f8f6f1;
+  --text-support: #59697a;
+  --status-review: #648774;
+
+  /* Existing component aliases inherit the shared responsibility tokens. */
+  --ops-navy: var(--brand-authority);
+  --ops-navy-2: #12324a;
+  --blueprint: var(--surface-mist);
   --paper: #fcfeff;
   --white: #ffffff;
-  --ink: #081c2c;
-  --muted: #526575;
+  --ink: var(--brand-authority);
+  --muted: var(--text-support);
   --line: #cbd7df;
   --line-dark: #294252;
-  --cobalt: #2155d7;
+  --cobalt: var(--brand-cobalt);
   --cobalt-soft: #e7edff;
-  --teal: #0e7b83;
+  --teal: var(--brand-search);
   --teal-soft: #e4f3f3;
   --copper: #b84317;
   --copper-soft: #faebe4;
@@ -1009,6 +1020,12 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
+}
+.footer-bottom nav a {
+  display: inline-flex;
+  align-items: center;
+  min-width: 24px;
+  min-height: 24px;
 }
 
 /* Service and internal page heroes */

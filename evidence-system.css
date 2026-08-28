@@ -4,12 +4,12 @@
 */
 
 .evidence-system {
-  --evidence-night: #071b2b;
-  --evidence-night-2: #0d2a3d;
-  --evidence-paper: #f9fcfd;
+  --evidence-night: var(--brand-authority);
+  --evidence-night-2: #12324a;
+  --evidence-paper: var(--surface-mist);
   --evidence-grid: #d8e3e9;
-  --evidence-blue: #2458e6;
-  --evidence-teal: #087b82;
+  --evidence-blue: var(--brand-cobalt);
+  --evidence-teal: var(--brand-search);
   --evidence-copper: #c24a1b;
   --evidence-display:
     Bahnschrift, "Arial Narrow", "Microsoft YaHei UI", "PingFang SC",

@@ -4,12 +4,16 @@
 */
 
 .home-foursets-omnius {
-  --fo-ink: #0b2035;
-  --fo-paper: #f3f6fa;
-  --fo-white: #ffffff;
-  --fo-blue: #2457d6;
+  --fo-ink: var(--brand-authority);
+  --fo-night: var(--brand-authority);
+  --fo-paper: var(--surface-mist);
+  --fo-warm: var(--surface-warm);
+  --fo-white: var(--white);
+  --fo-blue: var(--brand-cobalt);
+  --fo-teal: var(--brand-search);
+  --fo-gold: var(--brand-gold);
   --fo-blue-soft: #9ab9ff;
-  --fo-muted: #59697a;
+  --fo-muted: var(--text-support);
   --fo-sage: color-mix(in srgb, var(--fo-muted) 14%, var(--fo-white));
   --fo-rule: color-mix(in srgb, var(--fo-muted) 42%, var(--fo-white));
   --fo-green: var(--fo-blue);
@@ -2207,9 +2211,9 @@
   repeated black rules. The route panel remains the signature composition.
 */
 .home-foursets-omnius.home-seo-geo {
-  --fo-border-soft: #d8e2ec;
-  --fo-surface-soft: #f8fbff;
-  --fo-surface-blue: #eaf1ff;
+  --fo-border-soft: color-mix(in srgb, var(--fo-muted) 24%, var(--fo-white));
+  --fo-surface-soft: var(--fo-paper);
+  --fo-surface-blue: color-mix(in srgb, var(--fo-blue) 8%, var(--fo-white));
   --fo-radius-control: 12px;
   --fo-radius-card: 20px;
   --fo-radius-panel: 28px;
@@ -3487,6 +3491,620 @@
   }
 }
 
+/*
+  Visual priority system — 2026-08-26.
+  The cascade is deliberately collected here: one responsibility per color,
+  one strongest action per viewport, and an operations-ledger signature.
+*/
+.home-foursets-omnius.home-seo-geo {
+  --fo-surface-teal: color-mix(in srgb, var(--fo-teal) 9%, var(--fo-white));
+  --fo-surface-gold: color-mix(in srgb, var(--fo-gold) 14%, var(--fo-white));
+  --fo-shadow-card: 0 14px 34px rgba(11, 32, 53, 0.065);
+  --fo-shadow-panel: 0 24px 60px rgba(11, 32, 53, 0.1);
+}
+
+/* Section surfaces encode content responsibility instead of decorating cards. */
+.home-foursets-omnius.home-seo-geo #services,
+.home-foursets-omnius.home-seo-geo #evidence {
+  background: var(--fo-white);
+}
+
+.home-foursets-omnius.home-seo-geo #resources,
+.home-foursets-omnius.home-seo-geo #faq {
+  background: var(--fo-paper);
+}
+
+.home-foursets-omnius.home-seo-geo #about {
+  background: var(--fo-warm);
+}
+
+.home-foursets-omnius.home-seo-geo .section-heading h2,
+.home-foursets-omnius.home-seo-geo .split-copy h2,
+.home-foursets-omnius.home-seo-geo .contact-copy h2,
+.home-foursets-omnius.home-seo-geo #diagnosis .split-copy h2 {
+  font-size: clamp(32px, 3.4vw, 46px);
+  line-height: 1.12;
+}
+
+.home-foursets-omnius.home-seo-geo .section-heading > p,
+.home-foursets-omnius.home-seo-geo .section-heading > :nth-child(2),
+.home-foursets-omnius.home-seo-geo .split-copy > p {
+  color: var(--fo-muted);
+}
+
+/* L1 — the hero thesis and its single primary action. */
+.home-foursets-omnius.home-seo-geo .geo-hero {
+  min-height: 0;
+  padding: clamp(64px, 6.2vw, 92px) 0 clamp(76px, 7vw, 104px);
+}
+
+.home-foursets-omnius.home-seo-geo .hero-backdrop {
+  height: clamp(650px, 58vw, 820px);
+  opacity: 0.92;
+}
+
+.home-foursets-omnius.home-seo-geo .geo-hero::before {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--fo-paper) 95%, transparent) 0%,
+      color-mix(in srgb, var(--fo-paper) 88%, transparent) 40%,
+      color-mix(in srgb, var(--fo-paper) 62%, transparent) 67%,
+      color-mix(in srgb, var(--fo-paper) 20%, transparent) 100%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--fo-paper) 4%, transparent) 46%,
+      var(--fo-paper) 90%
+    );
+}
+
+.home-foursets-omnius.home-seo-geo .home-hero-grid {
+  grid-template-columns: minmax(0, 7.2fr) minmax(330px, 4.8fr);
+  gap: clamp(42px, 6vw, 92px);
+  align-items: center;
+}
+
+.home-foursets-omnius.home-seo-geo .display-title {
+  max-width: 920px;
+  color: var(--fo-ink);
+  font-size: clamp(44px, 5vw, 68px);
+  font-weight: 850;
+  line-height: 1.03;
+}
+
+.home-foursets-omnius.home-seo-geo .display-title em {
+  color: var(--fo-blue);
+}
+
+.home-foursets-omnius.home-seo-geo .evidence-hero-copy > .lead {
+  max-width: 720px;
+  color: var(--fo-ink);
+  font-size: clamp(16px, 1.15vw, 18px);
+  line-height: 1.78;
+}
+
+.home-foursets-omnius.home-seo-geo .evidence-hero-copy > .hero-actions .button {
+  min-height: 54px;
+  background: var(--fo-blue);
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--fo-blue) 24%, transparent);
+}
+
+.home-foursets-omnius.home-seo-geo .evidence-hero-copy > .hero-actions .button:hover {
+  background: color-mix(in srgb, var(--fo-blue) 82%, var(--fo-ink));
+}
+
+.home-foursets-omnius.home-seo-geo .hero-answer {
+  border-color: color-mix(in srgb, var(--fo-muted) 20%, var(--fo-white));
+  background: color-mix(in srgb, var(--fo-white) 88%, transparent);
+  box-shadow: 0 16px 42px rgba(11, 32, 53, 0.075);
+  backdrop-filter: blur(10px);
+}
+
+.home-foursets-omnius.home-seo-geo .hero-answer .answer-label {
+  color: var(--fo-muted);
+}
+
+.home-foursets-omnius.home-seo-geo .signal-strip {
+  border: 0;
+  background: var(--fo-ink);
+}
+
+.home-foursets-omnius.home-seo-geo .signal-inner {
+  min-height: 78px;
+  padding: 18px 0;
+}
+
+.home-foursets-omnius.home-seo-geo .signal-inner p {
+  font-size: clamp(18px, 1.65vw, 24px);
+}
+
+/* L3 — equal business choices, distinguished by stable semantic accents. */
+.home-foursets-omnius.home-seo-geo .business-track {
+  --track-accent: var(--fo-blue);
+  border-color: var(--fo-border-soft);
+  background: var(--fo-white);
+  box-shadow: var(--fo-shadow-card);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.home-foursets-omnius.home-seo-geo .business-track.website-track {
+  --track-accent: var(--fo-teal);
+}
+
+.home-foursets-omnius.home-seo-geo .business-track::before,
+.home-foursets-omnius.home-seo-geo .business-track.website-track::before {
+  height: 6px;
+  background: var(--track-accent);
+}
+
+.home-foursets-omnius.home-seo-geo .business-track:hover {
+  border-color: color-mix(in srgb, var(--track-accent) 48%, var(--fo-white));
+  box-shadow: var(--fo-shadow-panel);
+  transform: translateY(-3px);
+}
+
+.home-foursets-omnius.home-seo-geo .business-track .track-code,
+.home-foursets-omnius.home-seo-geo .business-track .track-contract dt,
+.home-foursets-omnius.home-seo-geo .business-track .track-channels b {
+  color: var(--track-accent);
+}
+
+.home-foursets-omnius.home-seo-geo .business-track .track-output-list li::before {
+  background: var(--track-accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--track-accent) 12%, transparent);
+}
+
+.home-foursets-omnius.home-seo-geo .business-track .track-channels a {
+  border-color: var(--fo-border-soft);
+  background: color-mix(in srgb, var(--track-accent) 5%, var(--fo-white));
+  box-shadow: inset 4px 0 0 var(--track-accent);
+}
+
+.home-foursets-omnius.home-seo-geo .business-track .track-channels a:hover {
+  border-color: var(--track-accent);
+  background: color-mix(in srgb, var(--track-accent) 9%, var(--fo-white));
+}
+
+.home-foursets-omnius.home-seo-geo .track-channels a > span {
+  background: var(--fo-night);
+}
+
+/* L4 — diagnosis is a decision path, with one restrained recommendation cue. */
+.home-foursets-omnius.home-seo-geo #diagnosis {
+  background-color: var(--fo-paper);
+  background-image:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--fo-paper) 80%, transparent),
+      color-mix(in srgb, var(--fo-paper) 94%, transparent)
+    ),
+    url("/assets/home/diagnosis-evidence-table.webp");
+}
+
+.home-foursets-omnius.home-seo-geo .decision-cue {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  width: max-content;
+  margin: 0 0 20px;
+  padding: 8px 11px 8px 9px;
+  border-radius: 999px;
+  background: var(--fo-gold);
+  color: var(--fo-ink);
+  font: 800 11px/1 var(--font-data);
+  letter-spacing: 0.04em;
+}
+
+.home-foursets-omnius.home-seo-geo .decision-cue span {
+  display: grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--fo-ink);
+  color: var(--fo-white);
+  font-size: 9px;
+}
+
+.home-foursets-omnius.home-seo-geo .problem-list article:first-child {
+  margin: 0 0 4px;
+  padding: 24px 20px;
+  border-left: 4px solid var(--fo-gold);
+  border-radius: 0 18px 18px 0;
+  background: var(--fo-surface-gold);
+}
+
+.home-foursets-omnius.home-seo-geo .problem-list article:first-child > span {
+  color: var(--fo-ink);
+  font-weight: 900;
+}
+
+.home-foursets-omnius.home-seo-geo .problem-list article:hover {
+  border-color: var(--fo-border-soft);
+  background: color-mix(in srgb, var(--fo-white) 84%, transparent);
+}
+
+.home-foursets-omnius.home-seo-geo .problem-list article:first-child:hover {
+  padding: 24px 20px;
+  background: color-mix(in srgb, var(--fo-gold) 20%, var(--fo-white));
+}
+
+/* L2 — method and proof use the authority surface and ledger semantics. */
+.home-foursets-omnius.home-seo-geo #method {
+  background-color: var(--fo-ink);
+  background-image:
+    linear-gradient(
+      color-mix(in srgb, var(--fo-ink) 92%, transparent),
+      color-mix(in srgb, var(--fo-ink) 97%, transparent)
+    ),
+    url("/assets/home/method-loop-background.webp");
+  background-position: center, 78% 48%;
+  background-size: auto, min(880px, 72vw) auto;
+}
+
+.home-foursets-omnius.home-seo-geo .cycle-step > span,
+.home-foursets-omnius.home-seo-geo .cycle-step::after {
+  color: var(--fo-gold);
+}
+
+.home-foursets-omnius.home-seo-geo .cycle-step:hover {
+  background: color-mix(in srgb, var(--fo-blue) 22%, transparent);
+}
+
+.home-foursets-omnius.home-seo-geo .step-contract p {
+  padding-left: 14px;
+  border-left: 2px solid color-mix(in srgb, var(--fo-blue) 72%, var(--fo-white));
+}
+
+.home-foursets-omnius.home-seo-geo .step-contract p:last-child {
+  border-left-color: var(--fo-gold);
+}
+
+.home-foursets-omnius.home-seo-geo .step-contract p:first-child b {
+  color: var(--fo-blue-soft);
+}
+
+.home-foursets-omnius.home-seo-geo .step-contract p:last-child b,
+.home-foursets-omnius.home-seo-geo .responsibility-band article:last-child > span {
+  color: var(--fo-gold);
+}
+
+.home-foursets-omnius.home-seo-geo #method > .shell > .hero-actions .button {
+  border-color: var(--fo-blue);
+  background: var(--fo-blue);
+}
+
+.home-foursets-omnius.home-seo-geo .operations-proof {
+  grid-template-columns: minmax(0, 0.72fr) minmax(540px, 1.28fr);
+  gap: clamp(38px, 5vw, 74px);
+  align-items: center;
+}
+
+.home-foursets-omnius.home-seo-geo .proof-copy > h3 {
+  font-size: clamp(28px, 2.6vw, 38px);
+}
+
+.home-foursets-omnius.home-seo-geo .proof-question-list li > span,
+.home-foursets-omnius.home-seo-geo .proof-label {
+  color: var(--fo-muted);
+}
+
+.home-foursets-omnius.home-seo-geo .operations-ledger {
+  border-color: color-mix(in srgb, var(--fo-blue) 34%, var(--fo-ink));
+  background:
+    linear-gradient(color-mix(in srgb, var(--fo-white) 7%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--fo-white) 7%, transparent) 1px, transparent 1px),
+    radial-gradient(circle at 88% 8%, color-mix(in srgb, var(--fo-teal) 30%, transparent), transparent 34%),
+    linear-gradient(145deg, var(--fo-ink), color-mix(in srgb, var(--fo-ink) 78%, var(--fo-teal)));
+  background-size: 28px 28px, 28px 28px, auto, auto;
+  box-shadow: 0 30px 72px rgba(11, 32, 53, 0.2);
+  transition:
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.home-foursets-omnius.home-seo-geo .operations-ledger:hover {
+  box-shadow: 0 36px 82px rgba(11, 32, 53, 0.24);
+  transform: translateY(-3px);
+}
+
+.home-foursets-omnius.home-seo-geo .ledger-status.status-wait {
+  border-color: color-mix(in srgb, var(--fo-white) 18%, transparent);
+  background: color-mix(in srgb, var(--fo-muted) 35%, transparent);
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius.home-seo-geo .ledger-status.status-active {
+  border-color: color-mix(in srgb, var(--fo-blue) 68%, var(--fo-white));
+  background: var(--fo-blue);
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius.home-seo-geo .ledger-status.status-record {
+  border-color: var(--fo-gold);
+  background: var(--fo-gold);
+  color: var(--fo-ink);
+}
+
+.home-foursets-omnius.home-seo-geo .ledger-status.status-review {
+  border-color: color-mix(in srgb, var(--status-review) 70%, var(--fo-white));
+  background: color-mix(in srgb, var(--status-review) 72%, transparent);
+  color: var(--fo-white);
+}
+
+/* L3/L4 — a real tool preview beside a quieter editorial notes desk. */
+.home-foursets-omnius.home-seo-geo .resource-tool,
+.home-foursets-omnius.home-seo-geo .resource-tool:hover {
+  background-color: var(--fo-ink);
+  background-image:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--fo-ink) 68%, transparent) 0%,
+      color-mix(in srgb, var(--fo-teal) 72%, transparent) 46%,
+      color-mix(in srgb, var(--fo-ink) 96%, transparent) 100%
+    ),
+    linear-gradient(color-mix(in srgb, var(--fo-white) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--fo-white) 8%, transparent) 1px, transparent 1px),
+    url("/assets/home/tools-channel-check-preview.webp");
+  background-position: center, center, center, center top;
+  background-size: auto, 46px 46px, 46px 46px, cover;
+}
+
+.home-foursets-omnius.home-seo-geo .resource-tool > span,
+.home-foursets-omnius.home-seo-geo .resource-tool strong i {
+  color: var(--fo-gold);
+}
+
+.home-foursets-omnius.home-seo-geo .resource-tool:hover {
+  transform: translateY(-3px);
+}
+
+.home-foursets-omnius.home-seo-geo .resource-notes {
+  border: 1px solid var(--fo-border-soft);
+  background: var(--fo-white);
+  box-shadow: none;
+}
+
+.home-foursets-omnius.home-seo-geo .resource-notes a:hover {
+  background: var(--fo-surface-teal);
+  color: var(--fo-ink);
+}
+
+.home-foursets-omnius.home-seo-geo .resource-notes a:hover > span,
+.home-foursets-omnius.home-seo-geo .resource-notes a:hover > b {
+  color: var(--fo-teal);
+}
+
+/* L4 — person and authorship use a warmer, human surface without a fake portrait. */
+.home-foursets-omnius.home-seo-geo .trust-grid {
+  grid-template-columns: minmax(0, 1.25fr) repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 38px);
+  border: 0;
+}
+
+.home-foursets-omnius.home-seo-geo .trust-grid article {
+  min-height: 320px;
+  padding: clamp(28px, 3.2vw, 42px);
+}
+
+.home-foursets-omnius.home-seo-geo .trust-grid article:first-child {
+  border-radius: 24px;
+  background: color-mix(in srgb, var(--fo-white) 84%, var(--fo-warm));
+  box-shadow: var(--fo-shadow-card);
+}
+
+.home-foursets-omnius.home-seo-geo .trust-grid h3 {
+  margin-top: 48px;
+}
+
+.home-foursets-omnius.home-seo-geo .trust-grid article:first-child h3 {
+  font-size: clamp(26px, 2.45vw, 36px);
+}
+
+.home-foursets-omnius.home-seo-geo .profile-line {
+  border-left: 4px solid var(--fo-gold);
+  background: color-mix(in srgb, var(--fo-gold) 9%, var(--fo-white));
+}
+
+/* L5 — FAQ stays quiet and gives focus/open state enough contrast. */
+.home-foursets-omnius.home-seo-geo #faq .section-heading {
+  margin-bottom: 38px;
+}
+
+.home-foursets-omnius.home-seo-geo #faq .section-heading h2 {
+  max-width: 720px;
+  font-size: clamp(30px, 3vw, 40px);
+}
+
+.home-foursets-omnius.home-seo-geo .faq-list {
+  max-width: 980px;
+}
+
+.home-foursets-omnius.home-seo-geo .faq-list details,
+.home-foursets-omnius.home-seo-geo .faq-list details[open] {
+  border-color: var(--fo-border-soft);
+  background: color-mix(in srgb, var(--fo-white) 82%, var(--fo-paper));
+  box-shadow: none;
+}
+
+.home-foursets-omnius.home-seo-geo .faq-list details[open] {
+  border-color: color-mix(in srgb, var(--fo-blue) 30%, var(--fo-white));
+}
+
+/* L1 — a clear page ending, with gold reserved for guidance and step numbers. */
+.home-foursets-omnius.home-seo-geo .contact-panel.evidence-contact {
+  background-color: var(--fo-ink);
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--fo-white) 4%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--fo-white) 4%, transparent) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.home-foursets-omnius.home-seo-geo .evidence-contact .section-kicker {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.home-foursets-omnius.home-seo-geo .evidence-contact .section-kicker::before {
+  display: block;
+  width: 34px;
+  height: 3px;
+  flex: 0 0 auto;
+  background: var(--fo-gold);
+  content: "";
+}
+
+.home-foursets-omnius.home-seo-geo .contact-checklist span {
+  color: var(--fo-gold);
+}
+
+.home-foursets-omnius.home-seo-geo .evidence-contact .button-light {
+  border-color: var(--fo-blue);
+  background: var(--fo-blue);
+  color: var(--fo-white);
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--fo-blue) 28%, transparent);
+}
+
+.home-foursets-omnius.home-seo-geo .evidence-contact .button-light:hover {
+  border-color: color-mix(in srgb, var(--fo-blue) 82%, var(--fo-white));
+  background: color-mix(in srgb, var(--fo-blue) 82%, var(--fo-ink));
+  color: var(--fo-white);
+}
+
+.home-foursets-omnius.home-seo-geo .site-footer {
+  border-top: 1px solid color-mix(in srgb, var(--fo-white) 12%, transparent);
+  background: var(--fo-ink);
+}
+
+.home-foursets-omnius.home-seo-geo :where(a, button, summary):active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 1050px) {
+  .home-foursets-omnius.home-seo-geo .operations-proof {
+    grid-template-columns: 1fr;
+  }
+
+  .home-foursets-omnius.home-seo-geo .operations-ledger {
+    width: 100%;
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-foursets-omnius.home-seo-geo .geo-hero::before {
+    background:
+      linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--fo-paper) 95%, transparent),
+        color-mix(in srgb, var(--fo-paper) 72%, transparent)
+      ),
+      linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--fo-paper) 18%, transparent) 42%,
+        var(--fo-paper) 88%
+      );
+  }
+
+  .home-foursets-omnius.home-seo-geo .home-hero-grid,
+  .home-foursets-omnius.home-seo-geo .trust-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-foursets-omnius.home-seo-geo .hero-answer {
+    max-width: 680px;
+  }
+
+  .home-foursets-omnius.home-seo-geo #diagnosis {
+    background-image:
+      linear-gradient(
+        color-mix(in srgb, var(--fo-paper) 90%, transparent),
+        color-mix(in srgb, var(--fo-paper) 96%, transparent)
+      ),
+      url("/assets/home/diagnosis-evidence-table.webp");
+  }
+
+  .home-foursets-omnius.home-seo-geo .trust-grid article {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .home-foursets-omnius.home-seo-geo .geo-hero {
+    padding: 46px 0 64px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .hero-backdrop {
+    height: 700px;
+    opacity: 0.76;
+  }
+
+  .home-foursets-omnius.home-seo-geo .display-title {
+    font-size: clamp(39px, 10.5vw, 46px);
+    line-height: 1.04;
+  }
+
+  .home-foursets-omnius.home-seo-geo .evidence-hero-copy > .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .evidence-hero-copy > .hero-actions .button {
+    width: 100%;
+  }
+
+  .home-foursets-omnius.home-seo-geo .business-track {
+    padding: 26px 22px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .problem-list article:first-child {
+    padding: 22px 16px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .work-cycle-contract .cycle-step {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .step-contract {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .cycle-step::after {
+    display: none;
+  }
+
+  .home-foursets-omnius.home-seo-geo .ledger-rows small {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+  }
+
+  .home-foursets-omnius.home-seo-geo .resource-tool {
+    min-height: 510px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .trust-grid article:first-child {
+    border-radius: 20px;
+  }
+
+  .home-foursets-omnius.home-seo-geo .contact-action {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .home-foursets-omnius.home-seo-geo .contact-action .button {
+    width: 100%;
+  }
+}
+
 /* The home page links to the self-built tool library; it does not preview one specific tool. */
 .home-foursets-omnius.home-seo-geo .resource-tool,
 .home-foursets-omnius.home-seo-geo .resource-tool:hover {
@@ -3892,4 +4510,74 @@
     border-top: 1px solid var(--fo-border-soft);
     border-left: 0;
   }
+}
+
+/* Final cascade guard for the legacy content-preview rules above. */
+.home-foursets-omnius.home-seo-geo .resource-tool,
+.home-foursets-omnius.home-seo-geo .resource-tool:hover {
+  background-color: var(--fo-ink);
+  background-image:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--fo-ink) 68%, transparent) 0%,
+      color-mix(in srgb, var(--fo-teal) 72%, transparent) 46%,
+      color-mix(in srgb, var(--fo-ink) 96%, transparent) 100%
+    ),
+    linear-gradient(color-mix(in srgb, var(--fo-white) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--fo-white) 8%, transparent) 1px, transparent 1px),
+    url("/assets/home/tools-channel-check-preview.webp");
+  background-position: center, center, center, center top;
+  background-size: auto, 46px 46px, 46px 46px, cover;
+}
+
+.home-foursets-omnius.home-seo-geo .operations-proof {
+  grid-template-columns: minmax(0, 0.72fr) minmax(540px, 1.28fr);
+  gap: clamp(38px, 5vw, 74px);
+  align-items: center;
+}
+
+.home-foursets-omnius.home-seo-geo .proof-copy > h3 {
+  font-size: clamp(28px, 2.6vw, 38px);
+}
+
+.home-foursets-omnius.home-seo-geo .proof-label,
+.home-foursets-omnius.home-seo-geo .proof-question-list li > span {
+  color: var(--fo-muted);
+}
+
+.home-foursets-omnius.home-seo-geo .operations-ledger {
+  border-color: color-mix(in srgb, var(--fo-blue) 34%, var(--fo-ink));
+  background:
+    linear-gradient(color-mix(in srgb, var(--fo-white) 7%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--fo-white) 7%, transparent) 1px, transparent 1px),
+    radial-gradient(circle at 88% 8%, color-mix(in srgb, var(--fo-teal) 30%, transparent), transparent 34%),
+    linear-gradient(145deg, var(--fo-ink), color-mix(in srgb, var(--fo-ink) 78%, var(--fo-teal)));
+  background-size: 28px 28px, 28px 28px, auto, auto;
+  box-shadow: 0 30px 72px rgba(11, 32, 53, 0.2);
+}
+
+.home-foursets-omnius.home-seo-geo .ledger-status.status-active {
+  border-color: color-mix(in srgb, var(--fo-blue) 68%, var(--fo-white));
+  background: var(--fo-blue);
+  color: var(--fo-white);
+}
+
+@media (max-width: 1050px) {
+  .home-foursets-omnius.home-seo-geo .operations-proof {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .home-foursets-omnius.home-seo-geo .ledger-rows small {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+  }
+}
+
+/* Keep the new gold decision cue readable after legacy paragraph rules. */
+.home-foursets-omnius.home-seo-geo #diagnosis .decision-cue {
+  color: var(--fo-ink);
+  font: 800 11px/1 var(--font-data);
 }

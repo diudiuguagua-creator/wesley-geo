@@ -1,0 +1,8 @@
+
+#stripe-payment-data p {font-weight: 700;color: #000;margin-bottom: 0;}
+.woocommerce-checkout #payment div.payment_box #stripe-payment-data .form-row {margin: 0;padding: 1vw 0;}
+.woocommerce form #stripe-payment-data .form-row label {font-weight: 600;color: #000;}
+.woocommerce-checkout #payment .wc_payment_method.payment_method_stripe div.payment_box .wc-stripe-elements-field {padding: 1vw;}
+input[type="radio"] {border-radius: 100%;position: relative;background-color: #fff;padding: 4px;height: 30px;width: 30px;border: 2px solid #000;-webkit-appearance: none;outline: none !important;}
+input[type="radio"]:after {border-radius: 100%;content: '';display: block;position: relative;background-color: #ddd;height: 18px;width: 18px;}
+input[type="radio"]:checked:after {background-color: #000;}

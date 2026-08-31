@@ -31,6 +31,8 @@ npx --yes serve .
 - `/made-in-china`：中国制造网代运营
 - `/method`：诊断、规划、执行与复盘方法
 - `/insights`：运营笔记中心
+- `/insights/all`：全部文章，支持主题、形式筛选与排序
+- `/insights/quiet`、`/insights/all-quiet`：减少动效版本（不索引，canonical 指向主版本）
 - `/insights/alibaba-product-keyword-traffic`：国际站产品、关键词与流量分析
 - `/insights/b2b-website-launch-checklist`：B2B 独立站上线清单
 - `/insights/operation-action-review`：运营动作记录与复盘
@@ -46,7 +48,7 @@ npx --yes serve .
 
 ## SEO 文件
 
-- `/sitemap.xml`：17 个 canonical、可索引 URL（包含案例总览与两个匿名项目详情页）
+- `/sitemap.xml`：18 个 canonical、可索引 URL（包含案例页与全部文章目录）
 - `/robots.txt`：允许抓取公开页面并声明 XML sitemap
 - `_headers`：安全、缓存与 MIME 响应头
 - `favicon.png`：网站标签页使用的品牌图标
@@ -63,6 +65,7 @@ npx --yes serve .
 - `/cases.css`：案例总览、匿名项目详情页、项目快照、工作流与配图系统
 - `/evidence-system.css`：首页、服务总览与关于页共用的“运营证据系统”视觉母版
 - `/site-header-foursets.css`：全站 Foursets 节奏的蓝白灰页眉与响应式菜单
+- `/assets/wesley-blog/`：博客隔离样式、脚本与三张内容示意图；动态脚本兼容现有严格 CSP，保留脚本中的第三方版权说明
 
 ## 质量检查
 

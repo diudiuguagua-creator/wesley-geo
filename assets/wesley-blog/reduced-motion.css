@@ -1,0 +1,20 @@
+html.blog-reduced-motion{scroll-behavior:auto!important}
+.blog-reduced-motion *, .blog-reduced-motion *::before, .blog-reduced-motion *::after{animation:none!important;transition:none!important}
+.blog-reduced-motion #page-transition,.blog-reduced-motion canvas,.blog-reduced-motion .hero-rulers,.blog-reduced-motion .fixed-datas,.blog-reduced-motion .booter{display:none!important}
+.blog-reduced-motion .nhh-gridh{opacity:.6!important}
+.blog-reduced-motion .nhh-title{color:var(--title-color,#fff)!important;clip-path:none!important}
+.blog-reduced-motion .nhh-title .nnh-red{color:#1769ff!important}
+.blog-reduced-motion .letter-window{opacity:1!important;width:auto!important}
+.blog-reduced-motion .letter-window::before{content:attr(data-letter)}
+.blog-reduced-motion .home-theme-loop,.blog-reduced-motion .nhh-toptitle,.blog-reduced-motion .globe-h{opacity:1!important;transform:none!important;visibility:visible!important}
+.blog-reduced-motion .h-texts,.blog-reduced-motion .h-texts-h{margin:0!important;overflow:visible!important}
+.blog-reduced-motion .pin-height,.blog-reduced-motion .pin-spacer{height:auto!important;min-height:0!important;padding:0!important}
+.blog-reduced-motion #white-section{padding-bottom:8vw!important}
+.blog-reduced-motion .wpkoi_homeflip{padding-top:15vw!important}
+.blog-reduced-motion .home-content .grid{padding-bottom:6vw}
+.blog-reduced-motion [data-wpkoireveal]{opacity:1!important;visibility:visible!important}
+.blog-reduced-motion .wpkoi_homeflip .nhh-toptitle{position:relative!important;top:auto!important;left:auto!important;margin:0 3vw 2rem!important;width:auto!important;max-height:none!important;font-size:clamp(18px,2.4vw,36px)!important;line-height:1.5!important}
+.blog-reduced-motion .wpkoi_homeflip .nhh-toptitle::before{display:none!important}
+.blog-reduced-motion .globe-h,.blog-reduced-motion .home-content .hero-datas{display:none!important}
+.blog-reduced-motion .home-content .h-texts .paragraph{position:relative!important;transform:none!important;opacity:1!important;visibility:visible!important}
+.blog-reduced-motion .h-texts .pin-height{position:relative!important;min-height:25vw!important;padding:6vw 3vw!important}

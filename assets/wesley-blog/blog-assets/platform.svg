@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+<defs><pattern id="g" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#fff" stroke-opacity=".1"/></pattern></defs>
+<rect width="1200" height="1600" fill="#1769ff"/><rect width="1200" height="1600" fill="url(#g)"/>
+<g fill="#fff" font-family="Arial,Microsoft YaHei,sans-serif"><text x="72" y="92" font-size="28" letter-spacing="4">WESLEY / FIELD NOTES</text><text x="72" y="247" font-size="106" font-weight="800">产品。</text><text x="72" y="379" font-size="106" font-weight="800">关键词。</text><text x="72" y="511" font-size="106" font-weight="800">流量。</text><text x="76" y="587" font-size="30">先看什么，再做判断？</text></g>
+<g fill="none" stroke="#fff" stroke-width="4"><circle cx="410" cy="868" r="212"/><circle cx="790" cy="868" r="212"/><circle cx="600" cy="1155" r="212"/></g>
+<g fill="#fff" font-family="Arial,Microsoft YaHei,sans-serif" text-anchor="middle"><text x="357" y="870" font-size="36">产品事实</text><text x="845" y="870" font-size="36">页面意图</text><text x="600" y="1230" font-size="36">阶段观察</text></g>
+<path d="M72 1440H1128" stroke="#fff"/><g fill="#fff" font-family="Arial,Microsoft YaHei,sans-serif"><text x="72" y="1508" font-size="26">平台运营 / 判断方法</text><text x="1128" y="1508" font-size="20" text-anchor="end">文章主题示意</text></g>
+</svg>

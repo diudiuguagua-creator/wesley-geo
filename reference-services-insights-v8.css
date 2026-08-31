@@ -2219,3 +2219,34 @@ body.reference-insights-v8
     background: transparent;
   }
 }
+
+/* Narrow desktop / 125% equivalent viewport only (821-1050px).
+   Keep the approved materials-and-FAQ composition, but let the image yield
+   width to the six deliverable labels instead of enforcing a 250px minimum.
+   Existing <=820px layouts and all other page routes remain unchanged. */
+@media (min-width: 821px) and (max-width: 1050px) {
+  body.reference-services-v8
+    main.ref8-services-main
+    section#collaboration.ref8-materials-faq
+    .ref8-materials-body {
+    grid-template-columns: minmax(140px, 0.7fr) minmax(0, 1fr);
+    gap: 16px;
+    align-items: center;
+  }
+
+  body.reference-services-v8
+    main.ref8-services-main
+    section#collaboration.ref8-materials-faq
+    .ref8-materials-body img {
+    min-width: 0;
+    align-self: center;
+  }
+
+  body.reference-services-v8
+    main.ref8-services-main
+    section#collaboration.ref8-materials-faq
+    .ref8-materials-body ul {
+    min-width: 0;
+    margin: 0;
+  }
+}

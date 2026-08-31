@@ -1,0 +1,129 @@
+/*
+ * Reference calibration, 2026-08-31: one desktop header/footer across routes.
+ * The approved 1360px outer rail remains in desktop-scale-125.css.
+ * These rules do not change the compact/mobile navigation or reading columns.
+ */
+@media (min-width: 1051px) {
+  :root { --reference-header-height: 76px; }
+  :root body { --header-height: var(--reference-header-height); }
+
+  :root body .site-header.site-header,
+  :root body .site-header .header-inner {
+    height: var(--reference-header-height);
+    min-height: var(--reference-header-height);
+  }
+  :root body .site-header.site-header {
+    border-bottom: 1px solid rgba(8, 38, 66, .07);
+    background: rgba(255, 255, 255, .98);
+    box-shadow: 0 8px 24px rgba(8, 38, 66, .035);
+  }
+  :root body .site-header .header-inner { gap: 28px; padding-block: 0; }
+  :root body .site-header .header-inner .brand {
+    gap: 10px;
+    font-family: var(--font-sans);
+    font-size: 20px;
+    font-weight: 820;
+  }
+  :root body .site-header .brand-logo,
+  :root body .site-header .brand-mark {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+    border-radius: 50%;
+    object-fit: contain;
+  }
+  :root body .site-header .site-nav {
+    min-height: var(--reference-header-height);
+    gap: 20px;
+    font-family: var(--font-mono, ui-monospace, Consolas, monospace);
+    letter-spacing: normal;
+  }
+  :root body .site-header .site-nav > a,
+  :root body .site-header .nav-services > summary {
+    min-height: var(--reference-header-height);
+    padding-block: 0;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+  :root body .site-header .site-nav > a:not(.button)::before,
+  :root body .site-header .nav-services > summary::before { display: none; }
+  :root body .site-header .site-nav > a.button,
+  :root body .site-header .site-nav > a.button[aria-current="page"] {
+    flex-basis: 150px;
+    width: 150px;
+    min-height: 48px;
+    margin-left: 0;
+    padding: 0 20px;
+    border: 1px solid #1260df;
+    border-radius: 8px;
+    color: #fff;
+    background: #1260df;
+    box-shadow: 0 8px 20px rgba(18, 96, 223, .2);
+    font-family: inherit;
+    font-size: 14px;
+  }
+  :root body .site-header .site-nav > a.button:hover { background: #0c52c6; }
+  :root body .site-header .site-nav > a.button::after { display: none; }
+
+  :root body .site-footer {
+    min-height: 205px;
+    padding: 18px 0 8px;
+    color: #b8c6d3;
+    background: #011a34;
+  }
+  :root body .site-footer .footer-grid {
+    grid-template-columns: 1.25fr repeat(3, minmax(0, .75fr));
+    gap: 42px;
+    padding-bottom: 6px;
+  }
+  :root body .site-footer .brand { gap: 10px; color: #fff; font-size: 24px; }
+  :root body .site-footer .brand-logo,
+  :root body .site-footer .brand-mark { width: 34px; height: 34px; flex-basis: 34px; }
+  :root body .site-footer .footer-brand > p {
+    max-width: 430px;
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1.55;
+  }
+  :root body .site-footer .footer-column h2 {
+    margin: 0 0 7px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  :root body .site-footer .footer-column a,
+  :root body .site-footer .footer-column button {
+    display: flex;
+    min-height: 23px;
+    align-items: center;
+    padding: 2px 0;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+  :root body .site-footer .footer-bottom {
+    min-height: 32px;
+    margin-top: 6px;
+    padding-top: 7px;
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root { --reference-header-height: 82px; }
+  :root body .site-header .header-inner { gap: 32px; }
+  :root body .site-header .header-inner .brand { gap: 12px; font-size: 24px; }
+  :root body .site-header .brand-logo,
+  :root body .site-header .brand-mark { width: 42px; height: 42px; flex-basis: 42px; }
+  :root body .site-header .site-nav { gap: 28px; }
+  :root body .site-header .site-nav > a,
+  :root body .site-header .nav-services > summary { font-size: 16px; }
+  :root body .site-header .site-nav > a.button,
+  :root body .site-header .site-nav > a.button[aria-current="page"] {
+    flex-basis: 196px;
+    width: 196px;
+    min-height: 52px;
+    padding-inline: 24px;
+    font-size: 15px;
+  }
+}

@@ -3304,3 +3304,22 @@ body.evidence-insights .footer-bottom {
     grid-column: 1 / -1;
   }
 }
+
+/* Narrow desktop / 125% equivalent viewport only (821-1050px).
+   Backdrop filtering makes this header a containing block for the fixed nav,
+   reducing the open menu to the header's height. Preserve the shared viewport
+   positioning, and leave every <=820px mobile rule unchanged. */
+@media (min-width: 821px) and (max-width: 1050px) {
+  body.page-services .site-header.site-header,
+  body.service-landing .site-header.site-header,
+  body.evidence-insights .site-header.site-header {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  body.page-services .site-header .site-nav.is-open,
+  body.service-landing .site-header .site-nav.is-open,
+  body.evidence-insights .site-header .site-nav.is-open {
+    gap: 0;
+  }
+}

@@ -984,13 +984,54 @@ body.service-web.reference-ui-v8 #process > .shell {
     min-height: 400px;
   }
 
-  .rweb-deliverables-grid,
-  .rweb-boundaries-grid {
-    grid-template-columns: 0.82fr 1.18fr;
+  .rweb-deliverables-grid {
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
   }
 
-  .rweb-faq-cta-grid {
-    grid-template-columns: 0.85fr 1.15fr;
+  .rweb-deliverable-cards {
+    grid-auto-rows: minmax(112px, auto);
+  }
+
+  .rweb-boundaries-grid {
+    grid-template-columns: minmax(0, 1.8fr) minmax(240px, 1fr);
+  }
+
+  .rweb-deliverables-grid > figure,
+  .rweb-boundaries-grid > figure {
+    position: relative;
+    align-self: stretch;
+    height: auto;
+    min-height: 0;
+  }
+
+  .rweb-boundaries-grid > figure {
+    min-height: 240px;
+  }
+
+  .rweb-deliverables-grid > figure > img,
+  .rweb-boundaries-grid > figure > img {
+    position: absolute;
+    inset: 0;
+  }
+
+  /* Override the legacy #faq .shell grid only in this desktop band. */
+  body.service-web.reference-ui-v8 #faq > .rweb-faq-cta-grid {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 22px;
+    align-items: start;
+  }
+
+  .rweb-cta-card {
+    grid-template-columns: minmax(0, 1fr) minmax(120px, 0.48fr);
+    min-height: 0;
+  }
+
+  .rweb-cta-card > div {
+    padding: 22px 8px 22px 22px;
+  }
+
+  .rweb-cta-card > img {
+    height: 100%;
   }
 }
 

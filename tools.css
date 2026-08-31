@@ -431,6 +431,18 @@
   grid-template-columns: minmax(0, 1.08fr) minmax(380px, 0.92fr);
 }
 
+/* The unpublished directory has one content node, not two tool columns.
+   Keep the existing <=820px presentation unchanged. */
+@media (min-width: 821px) {
+  body.page-tools .tools-library-empty .tool-library-main {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body.page-tools .tools-library-empty .tool-library-empty-copy {
+    color: var(--inner-ink, #082642);
+  }
+}
+
 .tool-library-empty {
   display: flex;
   min-height: 430px;
@@ -596,6 +608,24 @@
   .tool-listing-standard {
     border-top: 1px solid rgba(185, 215, 236, 0.15);
     border-left: 0;
+  }
+}
+
+/* Keep the short introduction beside its worksheet at narrow desktop widths. */
+@media (min-width: 821px) and (max-width: 1050px) {
+  body.page-tools .template-layout {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 32px;
+  }
+
+  body.page-tools .template-layout h2 {
+    font-size: clamp(30px, 3.2vw, 34px);
+  }
+
+  body.page-tools .template-sheet li {
+    grid-template-columns: 24px minmax(96px, 0.85fr) minmax(0, 1fr);
+    gap: 12px;
+    padding-inline: 16px;
   }
 }
 

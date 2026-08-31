@@ -2852,3 +2852,99 @@ body.page-about .boundary-note {
     max-width: none;
   }
 }
+
+/* Desktop zoom / compact laptop adjustments. These deliberately start above
+   820px so the approved mobile layout remains unchanged. */
+@media (min-width: 821px) and (max-width: 1180px) {
+  body.page-tools .inner-page-hero h1 {
+    font-size: clamp(36px, 3.9vw, 46px);
+    text-wrap: balance;
+  }
+}
+
+@media (min-width: 821px) and (max-width: 1050px) {
+  body.page-tools .tools-hero-system-grid {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr) 44px;
+    gap: 12px;
+    padding: 20px 16px;
+  }
+
+  body.page-tools .tools-hero-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  body.page-tools .section {
+    padding-block: 56px;
+  }
+
+  body.page-tools .section-heading {
+    gap: 28px;
+    margin-bottom: 28px;
+  }
+
+  body.inner-selected-fusion .footer-grid {
+    grid-template-columns: minmax(0, 1.25fr) repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  body.inner-selected-fusion .footer-brand {
+    grid-column: auto;
+  }
+}
+
+/* The HTML sitemap uses the existing inner-page tokens on desktop only. */
+@media (min-width: 821px) {
+  body.page-sitemap .simple-hero {
+    padding-block: 48px;
+  }
+
+  body.page-sitemap .simple-hero h1 {
+    font-size: clamp(36px, 3.5vw, 46px);
+  }
+
+  body.page-sitemap .simple-hero .lead {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  body.page-sitemap .section {
+    padding-block: 56px;
+  }
+
+  body.page-sitemap .sitemap-grid {
+    align-items: start;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  body.page-sitemap .sitemap-group {
+    min-width: 0;
+    padding: 24px;
+    border-color: var(--inner-border);
+    border-radius: 14px;
+    background: var(--inner-white);
+  }
+
+  body.page-sitemap .sitemap-group h2 {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+
+  body.page-sitemap .sitemap-group a {
+    padding-block: 7px;
+    color: var(--inner-muted);
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  body.page-sitemap .sitemap-group a:hover {
+    color: var(--inner-blue);
+  }
+}
+
+@media (min-width: 821px) and (max-width: 1050px) {
+  body.page-sitemap .sitemap-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

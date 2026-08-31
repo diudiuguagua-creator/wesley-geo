@@ -1,0 +1,697 @@
+/*
+ * Desktop calibration against the user's 2026-08-31 page captures.
+ * The approved 1360px outer rail is owned by desktop-scale-125.css.
+ * This file changes only tools/about/cases body components, never chrome,
+ * copy, assets, URLs, mobile rules, or the behavior of the working tools.
+ */
+@media (min-width: 1051px) {
+  /* In these reference pages the section title is quieter than the hero.
+     Restore that hierarchy; the old density layer enlarged H2 but not data. */
+  body:is(.page-tools, .page-about, .page-cases) .section-heading h2 {
+    font-size: clamp(34px, 3.06vw, 44px);
+    line-height: 1.18;
+  }
+
+  /* Legacy vertical section labels are not in these selected captures.
+     At the newly approved rail they collide with the actual section title. */
+  body:is(.page-tools, .page-about, .page-cases) .system-section::before {
+    content: none;
+    display: none;
+  }
+
+  body:is(.page-tools, .page-about, .page-cases) .section-heading {
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr);
+    gap: clamp(46px, 4.45vw, 64px);
+    margin-bottom: 44px;
+  }
+
+  body:is(.page-tools, .page-about, .page-cases) .section-heading > p {
+    font-size: clamp(15px, 1.18vw, 17px);
+    line-height: 1.75;
+  }
+
+  body:is(.page-tools, .page-about, .page-cases) .section {
+    padding-block: clamp(82px, 6.67vw, 96px);
+  }
+
+  body:is(.page-tools, .page-about, .page-cases) .inner-hero-grid {
+    grid-template-columns: minmax(0, 1.08fr) minmax(360px, .92fr);
+    gap: clamp(48px, 4.45vw, 64px);
+  }
+
+  body:is(.page-tools, .page-about, .page-cases) .inner-page-hero {
+    padding-block: 64px 60px;
+  }
+
+  body:is(.page-tools, .page-about, .page-cases) .inner-page-hero .lead {
+    font-size: clamp(17px, 1.39vw, 20px);
+    line-height: 1.65;
+  }
+
+  body:is(.page-about, .page-cases) .inner-page-hero h1 {
+    font-size: clamp(48px, 4.3vw, 62px);
+    line-height: 1.08;
+  }
+
+  body:is(.page-tools, .page-about, .page-cases) .inner-signal-strip .signal-inner,
+  body.page-tools .tools-principle-inner {
+    min-height: 70px;
+  }
+
+  body:is(.page-about, .page-cases) .signal-inner p,
+  body.page-tools .tools-principle-inner h2 {
+    font-size: 17px;
+  }
+
+  /* About: the source operator record has six generous, readable rows. */
+  body.page-about .operator-record-head {
+    padding: 22px 26px;
+  }
+
+  body.page-about .operator-record-head h2 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  body.page-about .operator-record dl > div {
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 24px;
+    padding: 26px;
+  }
+
+  body.page-about .operator-record dd {
+    font-size: clamp(14px, 1.12vw, 16px);
+    line-height: 1.65;
+  }
+
+  body.page-about .operator-record dt {
+    font-size: 11px;
+  }
+
+  body.page-about .operator-record > p {
+    padding: 22px 26px;
+    font-size: 13px;
+  }
+
+  body.page-about .service-row {
+    grid-template-columns: 88px minmax(0, 1.14fr) minmax(0, .86fr) auto;
+    min-height: 184px;
+    gap: 28px;
+    padding-block: 30px;
+  }
+
+  body.page-about .service-row-code {
+    width: 74px;
+    height: 74px;
+  }
+
+  body.page-about .service-row h3 {
+    font-size: clamp(26px, 2.1vw, 30px);
+  }
+
+  body.page-about .service-row p,
+  body.page-about .service-row ul {
+    font-size: 16px;
+  }
+
+  body.page-about .about-method-band .section-heading h2 {
+    max-width: 540px;
+  }
+
+  body.page-about .about-method-band .section-heading > div:last-child > p {
+    font-size: clamp(17px, 1.39vw, 20px);
+    line-height: 1.65;
+  }
+
+  body.page-about .about-method-steps article {
+    grid-template-columns: 70px 180px minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: 22px;
+    padding-block: 25px;
+  }
+
+  body.page-about .about-method-steps h3 {
+    font-size: 24px;
+  }
+
+  body.page-about .about-method-steps strong {
+    font-size: 14px;
+  }
+
+  body.page-about .about-method-steps p {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  body.page-about .about-disclosure-grid .cycle-step {
+    min-height: 310px;
+    padding: 30px;
+  }
+
+  body.page-about .about-disclosure-grid .cycle-step h3 {
+    margin-top: 78px;
+    font-size: 26px;
+  }
+
+  body.page-about .about-disclosure-grid .cycle-step p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  body.page-about .about-industry-grid article,
+  body.page-about .about-content-links article {
+    min-height: 258px;
+    padding: 32px;
+  }
+
+  body.page-about .about-industry-grid article:first-child,
+  body.page-about .about-industry-grid article:last-child {
+    padding-right: 46%;
+  }
+
+  body.page-about :is(.about-industry-grid, .about-ai-ledger, .about-content-links) h3 {
+    font-size: 22px;
+    line-height: 1.35;
+    margin-bottom: 14px;
+  }
+
+  body.page-about :is(.about-industry-grid, .about-ai-ledger, .about-content-links) p,
+  body.page-about .about-ai-ledger li {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  body.page-about .about-ai-ledger > * {
+    padding: 34px;
+    min-height: 380px;
+  }
+
+  body.page-about #about-ai-title {
+    max-width: 500px;
+  }
+
+  body.page-about .boundary-note {
+    padding: 32px 36px;
+  }
+
+  body.page-about .boundary-note h3 {
+    font-size: 22px;
+  }
+
+  body.page-about .boundary-note p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  body.page-about .about-faq-grid summary {
+    min-height: 66px;
+    padding-block: 19px;
+    font-size: 16px;
+  }
+
+  body.page-about .contact-copy h2 {
+    max-width: 660px;
+    font-size: clamp(34px, 2.92vw, 42px);
+    line-height: 1.18;
+  }
+
+  /* Tool hub: keep an honest empty directory, with the source's readable
+     worksheet rows and roomy working surfaces rather than inflated H2s. */
+  body.page-tools .inner-page-hero h1 {
+    max-width: 620px;
+    font-size: clamp(50px, 4.45vw, 64px);
+    line-height: 1.06;
+    text-wrap: wrap;
+  }
+
+  body.page-tools .tool-console-head {
+    padding: 18px 22px;
+    font-size: 11px;
+  }
+
+  body.page-tools .tools-hero-system-grid {
+    grid-template-columns: minmax(130px, .85fr) minmax(180px, 1.15fr) 62px;
+    gap: 22px;
+    padding: 32px 30px;
+  }
+
+  body.page-tools .tools-hero-stages li {
+    min-height: 50px;
+  }
+
+  body.page-tools .tools-hero-stages strong,
+  body.page-tools .tools-hero-routes strong {
+    font-size: 16px;
+  }
+
+  body.page-tools .tools-hero-routes p {
+    padding: 18px 16px;
+  }
+
+  body.page-tools .tool-console > p {
+    padding: 20px 22px;
+    font-size: 14px;
+  }
+
+  body.page-tools .tools-library-columns {
+    padding-block: 16px;
+    font-size: 11px;
+  }
+
+  body.page-tools .tool-library-main {
+    min-height: 265px;
+    padding: 36px;
+  }
+
+  body.page-tools .tool-library-empty-copy h3 {
+    color: var(--inner-ink);
+    font-size: 28px;
+  }
+
+  body.page-tools .tool-library-empty-copy p:last-child {
+    font-size: 16px;
+  }
+
+  body.page-tools .tools-release-gate-grid li {
+    min-height: 210px;
+    padding: 28px;
+  }
+
+  body.page-tools .tools-release-gate-grid h3 {
+    margin-top: 34px;
+    font-size: 21px;
+  }
+
+  body.page-tools .tools-release-gate-grid p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  body.page-tools .tools-route-card {
+    padding: 34px;
+  }
+
+  body.page-tools .tools-route-card h3 {
+    font-size: 29px;
+    margin-bottom: 22px;
+  }
+
+  body.page-tools .tools-route-card li {
+    padding-block: 14px;
+  }
+
+  body.page-tools .tools-route-card li strong {
+    font-size: 19px;
+  }
+
+  body.page-tools .tools-route-card li span {
+    font-size: 15px;
+  }
+
+  body.page-tools .starter-resource-nav a {
+    min-height: 96px;
+    grid-template-columns: 96px minmax(185px, .7fr) minmax(0, 1.5fr) auto;
+    padding: 18px 24px;
+  }
+
+  body.page-tools .starter-resource-nav strong {
+    font-size: 18px;
+  }
+
+  body.page-tools .starter-resource-nav small {
+    font-size: 14px;
+  }
+
+  body.page-tools .assessment fieldset {
+    padding: 36px;
+  }
+
+  body.page-tools .assessment legend {
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+
+  body.page-tools .assessment label {
+    padding-block: 13px;
+    font-size: 17px;
+  }
+
+  body.page-tools .assessment input {
+    width: 21px;
+    height: 21px;
+  }
+
+  body.page-tools .assessment-result {
+    grid-template-columns: 190px minmax(0, 1fr);
+    padding: 40px;
+  }
+
+  body.page-tools .score-ring {
+    width: 154px;
+    height: 154px;
+  }
+
+  body.page-tools .assessment-result h3 {
+    font-size: 28px;
+  }
+
+  body.page-tools .assessment-result h3 + p {
+    font-size: 16px;
+  }
+
+  body.page-tools .template-layout h2 {
+    max-width: 400px;
+    font-size: clamp(40px, 3.6vw, 52px);
+    text-wrap: wrap;
+  }
+
+  body.page-tools .template-layout > div:first-child > p:not(.section-kicker):not(.copy-status) {
+    font-size: 19px;
+    line-height: 1.7;
+  }
+
+  body.page-tools .template-sheet li {
+    min-height: 88px;
+    grid-template-columns: 50px 184px minmax(0, 1fr);
+    padding: 16px 24px;
+  }
+
+  body.page-tools .template-sheet b {
+    font-size: 17px;
+  }
+
+  body.page-tools .template-sheet li span {
+    font-size: 16px;
+  }
+
+  body.page-tools .launch-checklist li {
+    min-height: 156px;
+    padding-block: 30px;
+    grid-template-columns: 58px minmax(0, 1fr);
+  }
+
+  body.page-tools .launch-checklist b {
+    font-size: 21px;
+  }
+
+  body.page-tools .launch-checklist p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  body.page-tools .tools-build-flow-grid {
+    padding: 42px;
+    grid-template-columns: minmax(0, 1.2fr) minmax(330px, .8fr);
+  }
+
+  body.page-tools .tools-build-flow h2 {
+    max-width: 580px;
+    font-size: 38px;
+    line-height: 1.25;
+  }
+
+  body.page-tools .tools-build-flow-steps strong {
+    font-size: 16px;
+  }
+
+  body.page-tools .tools-build-flow-steps small {
+    font-size: 13px;
+  }
+
+  body.page-tools .tools-spec-sample dl div {
+    padding-block: 11px;
+  }
+
+  body.page-tools .tools-spec-sample dt {
+    font-size: 13px;
+  }
+
+  body.page-tools .tools-trust-grid article {
+    padding: 30px;
+  }
+
+  body.page-tools .tools-trust-grid h3 {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+  body.page-tools .tools-trust-grid p,
+  body.page-tools .tools-faq-contact p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  body.page-tools .tools-faq-grid > div > h2 {
+    font-size: 36px;
+    line-height: 1.3;
+  }
+
+  body.page-tools .tools-faq .faq-list summary {
+    min-height: 64px;
+    font-size: 16px;
+    padding-block: 18px;
+  }
+
+  /* Case records: restore the tall editorial image/copy pair and the small
+     evidence-ledger typography seen in the selected screenshot. */
+  body.page-cases .cases-hero-index {
+    padding: 36px 34px;
+  }
+
+  body.page-cases .cases-hero-index :is(h2, h3) {
+    font-size: 24px;
+  }
+
+  body.page-cases .cases-hero-index-head > p:last-child,
+  body.page-cases .case-index-boundary {
+    font-size: 15px;
+  }
+
+  body.page-cases .case-index-routes a {
+    min-height: 84px;
+    padding: 12px 16px;
+  }
+
+  body.page-cases .case-records-section .section-heading h2 {
+    max-width: 520px;
+  }
+
+  body.page-cases .case-index-routes a span {
+    font-size: 19px;
+  }
+
+  body.page-cases .case-index-routes a small {
+    font-size: 15px;
+  }
+
+  body.page-cases .case-showcase,
+  body.page-cases .case-record-row {
+    gap: 46px;
+    padding-block: 34px;
+  }
+
+  body.page-cases .case-showcase-copy h3 {
+    font-size: clamp(28px, 2.64vw, 38px);
+    line-height: 1.22;
+    text-wrap: wrap;
+  }
+
+  body.page-cases .case-showcase-copy > p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  body.page-cases .case-showcase-visual {
+    min-height: clamp(560px, 55vw, 792px);
+  }
+
+  body.page-cases .case-showcase-visual img {
+    aspect-ratio: auto;
+  }
+
+  body.page-cases .case-facts {
+    margin-block: 32px;
+  }
+
+  body.page-cases .case-facts div {
+    padding: 18px 20px;
+  }
+
+  body.page-cases .case-facts dt {
+    font-size: 11px;
+  }
+
+  body.page-cases .case-facts dd {
+    font-size: 15px;
+  }
+
+  body.page-cases .case-evidence-summary {
+    margin-block: 22px;
+  }
+
+  body.page-cases .case-evidence-summary div {
+    padding: 14px 16px 14px 0;
+  }
+
+  body.page-cases .case-evidence-summary dt,
+  body.page-cases .case-evidence-summary dd {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  body.page-cases .case-proof-steps article {
+    min-height: 250px;
+    padding: 26px;
+  }
+
+  body.page-cases .case-proof-steps h3 {
+    margin-top: 40px;
+    font-size: 20px;
+  }
+
+  body.page-cases .case-proof-steps p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  body.page-cases .case-proof-ledger,
+  body.page-cases .case-trace-ledger {
+    padding: 30px;
+  }
+
+  body.page-cases :is(.case-proof-ledger-head, .case-trace-ledger-head) h3 {
+    font-size: 25px;
+  }
+
+  body.page-cases :is(.case-proof-ledger-head, .case-trace-ledger-head) p:last-child {
+    font-size: 14px;
+  }
+
+  body.page-cases .case-proof-table-wrap :is(th, td) {
+    padding: 16px;
+    font-size: 13px;
+  }
+
+  body.page-cases .case-proof-legend {
+    font-size: 13px;
+  }
+
+  body.page-cases .case-comparison-table-wrap :is(th, td) {
+    padding: 18px;
+    font-size: 15px;
+  }
+
+  body.page-cases .case-trace-flow li {
+    min-height: 164px;
+    padding: 24px;
+  }
+
+  body.page-cases .case-trace-flow strong {
+    font-size: 17px;
+  }
+
+  body.page-cases .case-trace-flow small {
+    font-size: 13px;
+  }
+
+  body.page-cases .case-trace-fields div {
+    padding: 18px;
+  }
+
+  body.page-cases .case-trace-fields dt {
+    font-size: 12px;
+  }
+
+  body.page-cases .case-trace-fields dd {
+    font-size: 13px;
+  }
+
+  body.page-cases .case-policy-grid article {
+    min-height: 320px;
+    padding: 30px;
+  }
+
+  body.page-cases .case-policy-grid h3 {
+    font-size: 25px;
+    margin-top: 68px;
+  }
+
+  body.page-cases .case-policy-grid article:nth-child(-n + 2) h3 {
+    max-width: 300px;
+  }
+
+  body.page-cases .case-policy-grid p,
+  body.page-cases .case-policy-link {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  body.page-cases .case-related-grid a {
+    min-height: 244px;
+    padding: 28px;
+  }
+
+  body.page-cases .case-related-grid strong {
+    font-size: 21px;
+  }
+
+  body.page-cases .case-related-grid small {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  body.page-cases .case-faq-grid details {
+    padding: 26px;
+  }
+
+  body.page-cases .case-faq-grid summary {
+    min-height: 54px;
+    font-size: 16px;
+  }
+}
+
+/* Preserve two usable columns in compact desktop windows; the phone/tablet
+   stylesheet below 1051px is untouched by this entire calibration. */
+@media (min-width: 1051px) and (max-width: 1199px) {
+  body.page-about .service-row {
+    grid-template-columns: 62px minmax(0, 1fr) minmax(140px, .65fr) auto;
+    gap: 18px;
+  }
+
+  body.page-about .service-row-code {
+    width: 56px;
+    height: 56px;
+  }
+
+  body.page-about .about-method-steps article {
+    grid-template-columns: 44px 130px minmax(0, 1fr) minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  body.page-tools .tools-hero-system-grid {
+    grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr) 44px;
+    padding: 22px 18px;
+    gap: 12px;
+  }
+
+  body.page-tools .tools-hero-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  body.page-tools .template-sheet li {
+    grid-template-columns: 30px 120px minmax(0, 1fr);
+    gap: 12px;
+    padding-inline: 18px;
+  }
+
+  body.page-tools .tools-build-flow-grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(300px, .8fr);
+    gap: 28px;
+    padding: 32px;
+  }
+
+  body.page-tools .starter-resource-nav a {
+    grid-template-columns: 64px minmax(165px, .7fr) minmax(0, 1.5fr) auto;
+    gap: 14px;
+  }
+}

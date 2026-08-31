@@ -1,0 +1,91 @@
+/*
+ * Home reference: codex-clipboard-1a8cdaf3-fd9f-48df-9f3b-5587cbafc247.png.
+ * Desktop optical calibration only. The approved copy, assets, Dot Grid,
+ * module order, semantic headings and all mobile rules stay intact.
+ */
+@media (min-width: 1051px) {
+  body.home-selected-fusion .business-tracks { max-width: none; }
+}
+
+@media (min-width: 1280px) {
+  /* The hero uses the full left measure and a 500px explanation card. */
+  body.home-selected-fusion .home-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(390px, 500px);
+  }
+  body.home-selected-fusion .evidence-hero-copy { max-width: none; }
+  body.home-selected-fusion .display-title { font-size: clamp(54px, calc(3.75vw + 6px), 60px); }
+  body.home-selected-fusion .evidence-hero-copy .lead { max-width: 810px; }
+
+  /* Restore the broad parallel tracks rather than a narrow nested container. */
+  body.home-selected-fusion .business-tracks { gap: 84px; }
+  body.home-selected-fusion .business-track h3 { font-size: 36px; }
+  body.home-selected-fusion .track-output-list li::before,
+  body.home-selected-fusion .track-contract div::before { left: -46px; width: 10px; height: 10px; }
+  body.home-selected-fusion .business-track header > p:last-child,
+  body.home-selected-fusion .track-output-list li,
+  body.home-selected-fusion .track-contract div { font-size: 15px; }
+  body.home-selected-fusion .track-channels strong { font-size: 12px; }
+  body.home-selected-fusion .track-channels small { font-size: 10px; }
+
+  /* A deeper connector places the shared decision mark below both headings. */
+  body.home-selected-fusion .diagnosis-route-art { height: 214px; }
+  body.home-selected-fusion .diagnosis-route-logo { top: 134px; width: 56px; height: 56px; }
+  body.home-selected-fusion .diagnosis-lane li { font-size: 14px; }
+  body.home-selected-fusion .diagnosis-paths { min-height: 260px; }
+
+  body.home-selected-fusion .step-contract p { font-size: 14px; }
+  body.home-selected-fusion .responsibility-band p { font-size: 13px; }
+
+  /* The evidence index and ledger regain the same readable document scale. */
+  body.home-selected-fusion .operations-proof {
+    grid-template-columns: minmax(300px, 400px) 170px minmax(0, 1fr);
+  }
+  body.home-selected-fusion .proof-question-list strong { font-size: 13px; }
+  body.home-selected-fusion .proof-copy > h3 { max-width: 300px; text-wrap: balance; }
+  body.home-selected-fusion .proof-question-list p { font-size: 11px; }
+  body.home-selected-fusion .proof-question-list li { padding-block: 8px; }
+  body.home-selected-fusion .ledger-index-panel { min-height: 315px; padding-block: 23px; }
+  body.home-selected-fusion .ledger-index-panel > p { font-size: 14px; }
+  body.home-selected-fusion .ledger-index-panel li { min-height: 54px; }
+  body.home-selected-fusion .ledger-index-panel strong { font-size: 12px; }
+  body.home-selected-fusion .ledger-index-panel small { font-size: 10px; }
+  body.home-selected-fusion .operations-ledger { min-height: 395px; }
+  body.home-selected-fusion .ledger-head { min-height: 38px; font-size: 10px; }
+  body.home-selected-fusion .ledger-context p,
+  body.home-selected-fusion .ledger-context small { font-size: 10px; }
+  body.home-selected-fusion .ledger-context h3 { font-size: 28px; }
+  body.home-selected-fusion .ledger-rows li { min-height: 52px; }
+  body.home-selected-fusion .ledger-rows strong { font-size: 13px; }
+  body.home-selected-fusion .ledger-rows small,
+  body.home-selected-fusion .ledger-status,
+  body.home-selected-fusion .operations-ledger figcaption { font-size: 10px; }
+
+  body.home-selected-fusion .resource-tool > small { font-size: 13px; }
+  body.home-selected-fusion .resource-tool > span { font-size: 11px; }
+  body.home-selected-fusion .resource-tool strong { font-size: 15px; }
+  body.home-selected-fusion .resource-notes a { min-height: 74px; }
+  body.home-selected-fusion .resource-notes time,
+  body.home-selected-fusion .resource-notes a > span { font-size: 11px; }
+  body.home-selected-fusion .resource-notes h4 { font-size: 16px; }
+
+  body.home-selected-fusion .about-grid {
+    grid-template-columns: minmax(300px, 380px) minmax(0, 1fr);
+  }
+  body.home-selected-fusion .about-intro > p:not(.section-kicker) { font-size: 13px; }
+  body.home-selected-fusion .profile-line small { font-size: 12px; }
+  body.home-selected-fusion .profile-line .text-link { font-size: 13px; }
+  body.home-selected-fusion .author-mark { width: 52px; height: 52px; font-size: 13px; }
+  body.home-selected-fusion .trust-grid span { font-size: 11px; }
+  body.home-selected-fusion .trust-grid h3 { font-size: 18px; }
+  body.home-selected-fusion .trust-grid p { font-size: 13px; }
+
+  body.home-selected-fusion .faq-layout {
+    grid-template-columns: minmax(0, 1.4fr) minmax(340px, .6fr);
+    gap: 74px;
+  }
+  body.home-selected-fusion .faq-main .section-heading > p { font-size: 11px; }
+  body.home-selected-fusion .faq-contact p { font-size: 16px; }
+  body.home-selected-fusion .contact-route-map a span { font-size: 16px; }
+  body.home-selected-fusion .contact-route-map a small { font-size: 11px; }
+  body.home-selected-fusion .contact-route-map .contact-route-logo { width: 64px; height: 64px; }
+}

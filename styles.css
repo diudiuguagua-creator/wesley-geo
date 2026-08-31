@@ -2521,3 +2521,16 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Narrow desktop: keep the brand and the three navigation groups in one row.
+   Mobile footer stacking at <=820px remains owned by the original rules. */
+@media (min-width: 821px) and (max-width: 1050px) {
+  .site-footer .footer-grid {
+    grid-template-columns: minmax(0, 1.25fr) repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .site-footer .footer-brand {
+    grid-column: auto;
+  }
+}

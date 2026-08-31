@@ -1,0 +1,1226 @@
+/*
+ * Desktop fidelity pass for the user's nine-page screenshot set, 2026-08-31.
+ * This layer is deliberately limited to the three channel page bodies.
+ * The shared 1360px shell, header/footer, HTML, images, URLs, and <=1050px
+ * styles remain owned by the existing site. No zoom or transform scaling.
+ */
+@media (min-width: 1051px) {
+  /* Alibaba: the reference headline is already close. Restore the larger
+     workbench, supporting copy, scope strip, and evidence-card rhythm. */
+  body.reference-channel-v8.service-ali .rc-ali-hero {
+    min-height: clamp(620px, 46.3vw, 667px);
+  }
+
+  body.reference-channel-v8.service-ali .rc-hero-copy {
+    max-width: 760px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-overline {
+    margin-bottom: 23px;
+    font-size: 15px;
+    line-height: 1.3;
+  }
+
+  body.reference-channel-v8.service-ali .rc-hero-lead {
+    max-width: 760px;
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 1.75;
+  }
+
+  body.reference-channel-v8.service-ali .rc-hero-principles {
+    max-width: 760px;
+    gap: 20px;
+    margin-top: 46px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-hero-principles li {
+    grid-template-columns: 38px 1fr;
+    gap: 12px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-hero-principles i {
+    font-size: 30px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-hero-principles b {
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  body.reference-channel-v8.service-ali .rc-hero-principles small {
+    margin-top: 7px;
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+  body.reference-channel-v8.service-ali .rc-workbench {
+    width: min(100%, 520px);
+    min-height: 488px;
+    padding: 34px 35px 29px;
+    border-radius: 18px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-workbench h2 {
+    margin-bottom: 25px;
+    font-size: 30px;
+    line-height: 1.45;
+  }
+
+  body.reference-channel-v8.service-ali .rc-workbench li {
+    grid-template-columns: 49px 1fr;
+    gap: 17px;
+    min-height: 85px;
+    padding-block: 12px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-workbench li > i {
+    width: 47px;
+    height: 47px;
+    font-size: 26px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-workbench li b {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  body.reference-channel-v8.service-ali .rc-workbench li small {
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  body.reference-channel-v8.service-ali .rc-workbench > img {
+    right: -20px;
+    bottom: -20px;
+    width: 70px;
+    height: 70px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-ali-scope-grid {
+    grid-template-columns: 180px repeat(5, minmax(0, 1fr));
+    min-height: 154px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-ali-scope h2,
+  body.reference-channel-v8.service-ali .rc-ali-scope a {
+    padding: 22px 25px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-ali-scope h2 {
+    font-size: 28px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-ali-scope b {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  body.reference-channel-v8.service-ali .rc-ali-scope span {
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+  body.reference-channel-v8.service-ali #issues {
+    padding-block: 48px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-centered-heading {
+    margin-bottom: 45px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-centered-heading > p,
+  body.reference-channel-v8 .rc-process-heading > p {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  body.reference-channel-v8 .rc-centered-heading h2,
+  body.reference-channel-v8 .rc-process-heading h2,
+  body.reference-channel-v8 .rc-mic-scope h2 {
+    font-size: 36px;
+    line-height: 1.22;
+  }
+
+  body.reference-channel-v8.service-ali .rc-issue-grid-five {
+    gap: 20px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-issue-grid article {
+    min-height: 267px;
+    padding: 30px 27px;
+    border-radius: 12px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-issue-grid article > i {
+    width: 47px;
+    height: 47px;
+    margin-bottom: 22px;
+    font-size: 27px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-issue-grid h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-issue-grid li {
+    padding-left: 16px;
+    font-size: 16px;
+  }
+
+  body.reference-channel-v8.service-ali #process {
+    padding-block: 50px;
+  }
+
+  body.reference-channel-v8 .rc-process-panel {
+    padding: 35px 42px 28px;
+    border-radius: 14px;
+  }
+
+  body.reference-channel-v8 .rc-process-heading {
+    margin-bottom: 25px;
+  }
+
+  body.reference-channel-v8 .rc-step-line > li {
+    padding-inline: 14px;
+  }
+
+  /* The desktop scale layer added 28px above each Alibaba node. The
+     reference starts the sequence immediately below its short heading gap. */
+  body.reference-channel-v8.service-ali .rc-process-heading {
+    margin-bottom: 19px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-step-line > li {
+    padding-top: 0;
+  }
+
+  body.reference-channel-v8 .rc-step-node {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 16px;
+    font-size: 21px;
+  }
+
+  body.reference-channel-v8 .rc-step-line > li > .ri-arrow-right-line {
+    top: 43px;
+    width: 30px;
+    height: 30px;
+    font-size: 29px;
+    line-height: 1;
+  }
+
+  body.reference-channel-v8.service-ali .rc-step-line > li > .ri-arrow-right-line {
+    top: 15px;
+  }
+
+  body.reference-channel-v8 .rc-step-line h3 {
+    font-size: 25px;
+    line-height: 1.35;
+  }
+
+  body.reference-channel-v8 .rc-step-line p {
+    min-height: 60px;
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  body.reference-channel-v8 .rc-step-line small {
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+  body.reference-channel-v8.service-ali .rc-loop-note {
+    min-height: 48px;
+    margin-top: 5px;
+    font-size: 16px;
+  }
+
+  body.reference-channel-v8.service-ali #materials {
+    padding-block: 48px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-node-flow-five {
+    max-width: none;
+    gap: 30px;
+  }
+
+  body.reference-channel-v8 .rc-node-flow li > span {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 17px;
+    font-size: 33px;
+  }
+
+  body.reference-channel-v8 .rc-node-flow li > .rc-node-brand {
+    font-size: 31px;
+  }
+
+  body.reference-channel-v8 .rc-node-flow li > .ri-arrow-right-line {
+    top: 21px;
+    right: -31px;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  body.reference-channel-v8 .rc-node-flow h3 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+  body.reference-channel-v8 .rc-node-flow p {
+    max-width: 225px;
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  body.reference-channel-v8.service-ali .rc-collab-summary {
+    max-width: none;
+    margin: 37px auto 30px;
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-boundary-grid article {
+    min-height: 294px;
+    padding: 37px 32px 32px 93px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-boundary-grid article > i {
+    top: 37px;
+    left: 34px;
+    font-size: 40px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-boundary-grid h3 {
+    margin-bottom: 17px;
+    font-size: 23px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-boundary-grid li {
+    padding-left: 17px;
+    font-size: 16px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-boundary-note {
+    min-height: 67px;
+    font-size: 16px;
+  }
+
+  body.reference-channel-v8.service-ali #faq {
+    padding-top: 58px;
+    padding-bottom: 50px;
+  }
+
+  body.reference-channel-v8 .rc-faq-section > .rc-shell > h2 {
+    margin-bottom: 25px;
+    font-size: 30px;
+    line-height: 1.3;
+  }
+
+  body.reference-channel-v8.service-ali .rc-faq-cta-grid {
+    gap: 42px;
+  }
+
+  body.reference-channel-v8 #faq .faq-list.rc-faq-list summary {
+    min-height: 60px;
+    padding: 17px 55px 17px 20px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  body.reference-channel-v8 #faq .faq-list.rc-faq-list details p {
+    padding: 0 20px 20px;
+    font-size: 15px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-faq-cta {
+    min-height: 448px;
+    padding: 42px 52px;
+    border-radius: 14px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-faq-cta > p {
+    font-size: 15px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-faq-cta h2 {
+    font-size: 36px;
+    line-height: 1.4;
+  }
+
+  body.reference-channel-v8.service-ali .rc-faq-cta > span {
+    margin-top: 17px;
+    font-size: 20px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-faq-cta .rc-button {
+    min-height: 60px;
+    margin-top: 30px;
+    padding: 16px 27px;
+    font-size: 18px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-faq-cta > small,
+  body.reference-channel-v8.service-ali .rc-inline-links a {
+    font-size: 15px;
+  }
+
+  /* MIC: restore the reference's larger title and approximately 40/60 split. */
+  body.reference-channel-v8.service-mic .rc-mic-hero {
+    min-height: clamp(590px, 46.4vw, 668px);
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-hero-grid {
+    grid-template-columns: minmax(340px, 0.78fr) minmax(0, 1.22fr);
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-hero-copy {
+    padding: 45px 28px 45px 8px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-hero-copy .rc-overline {
+    margin-bottom: 23px;
+    font-size: 15px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-hero-copy h1 {
+    font-size: clamp(43px, 4.1vw, 59px);
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-hero-copy h1 span {
+    margin-top: 17px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-tagline {
+    margin-top: 37px;
+    font-size: 27px;
+    line-height: 1.55;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-principles {
+    max-width: 486px;
+    gap: 15px;
+    margin-top: 42px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-principles article {
+    grid-template-columns: 35px 1fr;
+    gap: 12px;
+    min-height: 118px;
+    padding: 20px;
+    border-radius: 11px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-principles i {
+    font-size: 28px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-principles h2 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-principles p {
+    margin-top: 6px;
+    font-size: 14px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-cycle-card {
+    width: clamp(340px, 30vw, 400px);
+    min-width: 0;
+    padding: 31px 30px 29px;
+    border-radius: 17px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-cycle-card h2 {
+    font-size: 30px;
+    line-height: 1.4;
+  }
+
+  body.reference-channel-v8.service-mic .rc-cycle-grid {
+    gap: 58px 42px;
+    margin-top: 29px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-cycle-grid b {
+    font-size: 15px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-cycle-grid strong {
+    margin-top: 6px;
+    font-size: 16px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-cycle-grid small {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-cycle-asset {
+    width: 116px;
+    height: 116px;
+  }
+
+  body.reference-channel-v8.service-mic #scope {
+    padding-block: 45px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-scope h2 {
+    margin-bottom: 32px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-service-grid-six article {
+    min-height: 244px;
+    padding: 35px 24px 31px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-service-grid-six i {
+    font-size: 45px;
+    line-height: 1.4;
+  }
+
+  body.reference-channel-v8.service-mic .rc-service-grid-six h3 {
+    margin-top: 23px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  body.reference-channel-v8.service-mic .rc-service-grid-six p {
+    margin-top: 11px;
+    font-size: 15px;
+  }
+
+  body.reference-channel-v8.service-mic #issues {
+    padding-block: 38px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-issues-grid,
+  body.reference-channel-v8.service-mic .rc-mic-issue-media {
+    min-height: 600px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-question-list {
+    padding: 37px 35px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-question-list h2 {
+    margin-bottom: 22px;
+    font-size: 31px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-question-list li {
+    grid-template-columns: 32px 1fr;
+    gap: 10px;
+    min-height: 71px;
+    font-size: 17px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-question-list i {
+    width: 30px;
+    height: 30px;
+    font-size: 19px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-issue-media figcaption {
+    right: 35px;
+    bottom: 35px;
+    width: min(42%, 380px);
+    padding: 30px;
+    border-radius: 12px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-issue-media figcaption h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-issue-media figcaption li {
+    grid-template-columns: 20px 1fr;
+    gap: 7px;
+    padding-block: 6px;
+    font-size: 15px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-issue-media figcaption li > i {
+    font-size: 17px;
+  }
+
+  body.reference-channel-v8.service-mic #process {
+    padding-block: 38px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-process .rc-step-line > li {
+    padding: 21px 14px 18px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-process .rc-step-node {
+    width: 57px;
+    height: 57px;
+    font-size: 17px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-process .rc-step-line > li > .ri-arrow-right-line {
+    top: 35px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-process .rc-step-line p {
+    min-height: 52px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-process .rc-step-line small {
+    padding: 6px 12px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-process-outcomes {
+    margin: 8px -42px -28px;
+  }
+
+  body.reference-channel-v8.service-mic #deliverables.rc-process-outcomes {
+    padding-block: 50px 40px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-process-outcomes article {
+    grid-template-columns: 46px 1fr;
+    min-height: 98px;
+    gap: 15px;
+    padding: 18px 27px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-process-outcomes i {
+    font-size: 35px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-process-outcomes b {
+    font-size: 17px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-process-outcomes small {
+    margin-top: 5px;
+    font-size: 13.5px;
+  }
+
+  body.reference-channel-v8.service-mic #materials {
+    padding-block: 48px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-collab-card {
+    grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1.38fr);
+    gap: 42px;
+    padding: 35px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-collab-copy h2 {
+    max-width: 370px;
+    font-size: 33px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-collab-copy > p {
+    margin-top: 15px;
+    font-size: 17px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-collab-copy ul {
+    margin-top: 22px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-collab-copy li {
+    gap: 10px;
+    margin-top: 12px;
+    font-size: 16px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-collab-copy i {
+    font-size: 21px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-collab-card .rc-node-flow {
+    gap: 30px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-collab-card .rc-node-flow li {
+    min-height: 204px;
+    padding: 22px 14px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-collab-card .rc-node-flow li > span {
+    width: 57px;
+    height: 57px;
+    font-size: 29px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-collab-card .rc-node-flow li > .ri-arrow-right-line {
+    top: 82px;
+  }
+
+  body.reference-channel-v8.service-mic #faq {
+    padding-top: 6px;
+    padding-bottom: 50px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-channel-cta-grid {
+    min-height: 192px;
+    padding-block: 32px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-channel-cta-grid > div > p {
+    font-size: 15px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-channel-cta-grid > div > span {
+    font-size: 16px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-channel-cta .rc-button {
+    min-height: 84px;
+    font-size: 18px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-channel-cta .rc-button small,
+  body.reference-channel-v8.service-mic .rc-cta-resources a {
+    font-size: 12px;
+  }
+
+  /* Independent-site: the reference keeps its three-column hero and body
+     measure, while using taller route/relation cards and larger real photos. */
+  body.service-web.reference-ui-v8 .rweb-hero {
+    padding-block: 30px 34px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-hero-grid {
+    min-height: 568px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-pill {
+    margin-bottom: 19px;
+    padding: 7px 15px;
+    font-size: 16px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-accent {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-hero-copy h2 {
+    margin-bottom: 11px;
+    font-size: 23px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-lead {
+    margin-bottom: 28px;
+    font-size: 18px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-proofline {
+    gap: 15px 17px;
+    font-size: 16px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-proofline i {
+    font-size: 25px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-route-card {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    padding: 29px 32px 25px;
+    border-radius: 17px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-route-card ol {
+    flex: 1;
+    grid-template-rows: repeat(4, minmax(80px, 1fr));
+  }
+
+  body.service-web.reference-ui-v8 .rweb-route-card .rweb-card-kicker {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-route-card h2 {
+    margin-bottom: 17px;
+    font-size: 27px;
+    line-height: 1.4;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-route-card li {
+    grid-template-columns: 47px 1fr;
+    gap: 12px;
+    min-height: 80px;
+    padding-block: 10px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-route-card li > span {
+    width: 38px;
+    height: 38px;
+    font-size: 13px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-route-card strong {
+    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-route-card small {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-lock {
+    margin-top: 15px;
+    padding: 11px 14px;
+    font-size: 15px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-lock i {
+    font-size: 23px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-relation-board {
+    grid-template-columns: minmax(0, 1fr) 42px 210px 42px minmax(0, 1fr);
+    padding: 25px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-relation-lane h3 {
+    margin-bottom: 16px;
+    font-size: 22px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-relation-lane article {
+    grid-template-columns: 50px 1fr;
+    gap: 14px;
+    min-height: 84px;
+    margin-top: 10px;
+    padding: 12px 15px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-relation-lane article > i {
+    width: 47px;
+    height: 47px;
+    font-size: 29px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-relation-lane strong {
+    font-size: 18px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-relation-lane p {
+    font-size: 15px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-relation-arrow {
+    height: 263px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-trust-asset {
+    padding: 23px 15px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-trust-asset img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-trust-asset h3 {
+    margin-bottom: 10px;
+    font-size: 23px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-trust-asset p {
+    font-size: 15px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-relation-summary {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 16px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-page .section-kicker {
+    font-size: 15px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-heading-row > p {
+    font-size: 17px;
+  }
+
+  /* Match the quieter section-title tier in the reference. Keep generous
+     leading so these titles remain distinct without inflating their type. */
+  body.service-web.reference-ui-v8 .rweb-heading-row h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-relations > .shell > h2 {
+    margin-bottom: 23px;
+    font-size: 32px;
+  }
+
+  body.service-web.reference-ui-v8 #issues {
+    padding-block: 40px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-six-grid article {
+    padding: 19px 16px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-six-grid i {
+    font-size: 28px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-six-grid h3 {
+    margin: 10px 0 5px;
+    font-size: 17px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-six-grid p {
+    font-size: 15px;
+  }
+
+  body.service-web.reference-ui-v8 #deliverables {
+    padding-block: 40px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-deliverables-grid > figure {
+    height: 350px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-deliverable-cards {
+    grid-auto-rows: 169px;
+    gap: 12px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-deliverable-cards article {
+    padding: 18px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-deliverable-cards i {
+    font-size: 27px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-deliverable-cards h3 {
+    margin: 9px 0 5px;
+    font-size: 17px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-deliverable-cards p {
+    font-size: 15px;
+  }
+
+  body.service-web.reference-ui-v8 #process.rweb-process {
+    padding-block: 44px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-process-list li {
+    min-height: 180px;
+    padding: 20px 18px 18px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-process-list span {
+    font-size: 15px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-process-list h3 {
+    margin: 12px 0 6px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-process-list p {
+    font-size: 14.5px;
+  }
+
+  body.service-web.reference-ui-v8 #scope.rweb-evidence-band {
+    padding-block: 42px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-evidence-band h2 {
+    margin-bottom: 21px;
+    font-size: 28px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-evidence-band li {
+    min-height: 62px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-evidence-band i {
+    font-size: 30px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-evidence-band strong {
+    font-size: 17px;
+  }
+
+  body.service-web.reference-ui-v8 #materials.rweb-boundaries {
+    padding-block: 40px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-boundaries-grid > figure {
+    height: 375px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-boundary-cards {
+    gap: 12px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-boundary-cards article {
+    padding: 22px 20px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-boundary-cards h3 {
+    margin-bottom: 14px;
+    font-size: 18px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-boundary-cards ul {
+    gap: 9px;
+    font-size: 15px;
+  }
+
+  body.service-web.reference-ui-v8 #tools.rweb-tools {
+    padding-block: 42px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-tool-grid a {
+    min-height: 98px;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-tool-grid i {
+    font-size: 31px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-tool-grid strong,
+  body.service-web.reference-ui-v8 .rweb-tools-link a {
+    font-size: 16px;
+  }
+
+  body.service-web.reference-ui-v8 #faq.rweb-faq-cta {
+    padding-block: 52px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-faq-column > h2 {
+    margin-bottom: 16px;
+    font-size: 30px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-faq-list summary {
+    min-height: 69px;
+    padding: 16px 4px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-faq-list details p {
+    padding-bottom: 18px;
+    font-size: 15px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-cta-card {
+    min-height: 350px;
+    border-radius: 18px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-cta-card > div {
+    padding: 35px 8px 31px 35px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-cta-card h2 {
+    margin-bottom: 12px;
+    font-size: 32px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-cta-card p:not(.section-kicker) {
+    font-size: 17px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-cta-actions {
+    gap: 12px;
+    margin-top: 21px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-cta-actions .button {
+    min-height: 52px;
+    padding-inline: 22px;
+    font-size: 16px;
+  }
+}
+
+/* Keep the 1051–1199px desktop band readable without forcing wide-source
+   card padding or six-column text to overflow a narrower desktop viewport. */
+@media (min-width: 1051px) and (max-width: 1199px) {
+  body.reference-channel-v8.service-ali .rc-hero-lead {
+    font-size: 18px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-hero-principles {
+    gap: 14px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-hero-principles li {
+    grid-template-columns: 28px 1fr;
+    gap: 8px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-hero-principles b {
+    font-size: 15px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-workbench {
+    padding-inline: 26px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-workbench h2 {
+    font-size: 27px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-ali-scope-grid {
+    grid-template-columns: 125px repeat(5, minmax(0, 1fr));
+  }
+
+  body.reference-channel-v8.service-ali .rc-ali-scope h2,
+  body.reference-channel-v8.service-ali .rc-ali-scope a {
+    padding-inline: 15px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-issue-grid article {
+    padding-inline: 18px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-issue-grid h3 {
+    font-size: 19px;
+  }
+
+  body.reference-channel-v8 .rc-step-line h3 {
+    font-size: 21px;
+  }
+
+  body.reference-channel-v8 .rc-process-panel {
+    padding-inline: 28px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-boundary-grid article {
+    padding-left: 65px;
+    padding-right: 23px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-boundary-grid article > i {
+    left: 24px;
+    font-size: 30px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-faq-cta {
+    padding-inline: 34px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-tagline {
+    font-size: 21px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-principles article {
+    grid-template-columns: 28px 1fr;
+    padding-inline: 14px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-cycle-card {
+    width: 340px;
+    padding-inline: 23px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-service-grid-six article {
+    padding-inline: 16px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-service-grid-six h3 {
+    font-size: 17px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-question-list {
+    padding-inline: 23px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-question-list h2 {
+    font-size: 27px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-process-outcomes {
+    margin-inline: -28px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-process-outcomes article {
+    padding-inline: 18px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-collab-card {
+    grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1.3fr);
+    gap: 28px;
+    padding: 28px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-collab-card .rc-node-flow {
+    gap: 16px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-collab-card .rc-node-flow h3 {
+    font-size: 17px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-collab-card .rc-node-flow li {
+    padding-inline: 10px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-collab-card .rc-node-flow li > .ri-arrow-right-line {
+    right: -24px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-relation-board {
+    grid-template-columns: minmax(0, 1fr) 28px 170px 28px minmax(0, 1fr);
+    gap: 8px;
+    padding: 20px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-relation-lane h3 {
+    font-size: 19px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-relation-lane article {
+    grid-template-columns: 38px 1fr;
+    gap: 10px;
+    padding-inline: 11px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-relation-lane article > i {
+    width: 36px;
+    height: 36px;
+    font-size: 25px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-heading-row {
+    gap: 28px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-deliverable-cards article {
+    padding: 15px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-deliverable-cards h3,
+  body.service-web.reference-ui-v8 .rweb-boundary-cards h3 {
+    font-size: 16px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-cta-actions .button {
+    padding-inline: 16px;
+    font-size: 14px;
+  }
+}

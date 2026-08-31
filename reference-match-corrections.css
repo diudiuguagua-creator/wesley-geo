@@ -1,0 +1,152 @@
+/*
+ * Wesley GEO — 2026-08-30 screenshot-reference calibration
+ *
+ * This is a deliberately narrow desktop correction layer. It preserves the
+ * existing HTML, real imagery, URLs, canonical tags, JSON-LD, internal links,
+ * and the established mobile breakpoints. It only restores the title measure
+ * and hero rhythm that the supplied page references use.
+ */
+
+/* Alibaba: keep the three intended title lines together with the workbench. */
+@media (min-width: 1200px) {
+  body.reference-channel-v8.service-ali .rc-hero-copy h1 {
+    font-size: clamp(44px, 4vw, 58px);
+  }
+}
+
+/*
+ * Made-in-China: the title needs a usable text column at desktop widths.
+ * Without this page-specific grid the shared 125% headline rule produces a
+ * single-character tail, which is absent from the approved reference.
+ */
+@media (min-width: 1051px) {
+  body.reference-channel-v8.service-mic .rc-mic-hero-grid {
+    grid-template-columns: minmax(340px, 0.9fr) minmax(0, 1.1fr);
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-hero-copy {
+    padding: 36px 20px 36px 8px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-hero-copy h1 {
+    font-size: clamp(42px, 3.35vw, 48px);
+  }
+}
+
+/*
+ * /method retains its approved page body, while its shared chrome now uses
+ * the same compact header/footer language as the homepage. This deliberately
+ * avoids applying the homepage's content-section styles to the method page.
+ */
+@media (min-width: 1051px) {
+  body.page-method {
+    padding-top: 0;
+  }
+
+  body.page-method .site-header.site-header {
+    position: sticky;
+    min-height: 70px;
+    height: 70px;
+    border-bottom: 1px solid rgba(8, 38, 66, 0.07);
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 8px 24px rgba(8, 38, 66, 0.035);
+    backdrop-filter: blur(16px);
+  }
+
+  body.page-method .site-header .header-inner {
+    width: var(--desktop-shell);
+    min-height: 70px;
+    height: 70px;
+    padding: 0;
+    gap: 30px;
+  }
+
+  body.page-method .site-header .site-nav {
+    gap: 27px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  body.page-method .site-header .site-nav > a,
+  body.page-method .site-header .nav-services > summary {
+    min-height: 70px;
+    color: #082642;
+  }
+
+  body.page-method .site-header .site-nav > a:not(.button)::before,
+  body.page-method .site-header .nav-services > summary::before {
+    display: none;
+  }
+
+  body.page-method .site-header .site-nav > a.button,
+  body.page-method .site-header .site-nav > a.button[aria-current="page"] {
+    flex-basis: auto;
+    width: auto;
+    min-height: 42px;
+    margin-left: 0;
+    padding: 0 20px;
+    border: 1px solid #1260df;
+    border-radius: 8px;
+    background: #1260df;
+    box-shadow: 0 8px 20px rgba(18, 96, 223, 0.2);
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: normal;
+  }
+
+  body.page-method .site-header .site-nav > a.button:hover {
+    background: #0c52c6;
+    color: #fff;
+  }
+
+  body.page-method .site-footer {
+    min-height: 164px;
+    padding: 14px 0 6px;
+    color: #b8c6d3;
+    background: #011a34;
+  }
+
+  body.page-method .site-footer .shell {
+    width: var(--desktop-shell);
+  }
+
+  body.page-method .footer-grid {
+    grid-template-columns: 1.25fr repeat(3, minmax(0, 0.75fr));
+    gap: 34px;
+    padding-bottom: 4px;
+  }
+
+  body.page-method .site-footer .brand {
+    color: #fff;
+  }
+
+  body.page-method .footer-brand > p,
+  body.page-method .footer-column a,
+  body.page-method .footer-column button {
+    font-size: 10px;
+    line-height: 1.35;
+  }
+
+  body.page-method .footer-column a,
+  body.page-method .footer-column button {
+    min-height: 18px;
+    padding: 1px 0;
+  }
+
+  body.page-method .footer-column h2 {
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 11px;
+  }
+
+  body.page-method .footer-bottom {
+    min-height: 26px;
+    margin-top: 4px;
+    padding-top: 5px;
+    font-size: 9px;
+  }
+}

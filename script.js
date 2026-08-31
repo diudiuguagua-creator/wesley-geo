@@ -321,3 +321,230 @@ document.querySelectorAll("[data-copy-template]").forEach((button) => {
     }
   });
 });
+
+/*
+ * Homepage Dot Grid
+ *
+ * This is intentionally a progressive-enhancement-only decoration. The
+ * canvas never captures pointer input, keeps content/card areas subdued, and
+ * switches to an entirely static drawing for touch layouts and for visitors
+ * who request reduced motion.
+ */
+const dotGridCanvas = document.querySelector("[data-dot-grid]");
+
+if (dotGridCanvas instanceof HTMLCanvasElement) {
+  const dotGridHero = dotGridCanvas.closest(".home-hero");
+  const dotGridContext = dotGridCanvas.getContext("2d");
+  const dotGridFinePointer = window.matchMedia(
+    "(hover: hover) and (pointer: fine) and (min-width: 1051px)",
+  );
+  const dotGridReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  );
+
+  if (dotGridHero && dotGridContext) {
+    const dotGridState = {
+      width: 0,
+      height: 0,
+      dpr: 1,
+      pointerX: 0,
+      pointerY: 0,
+      targetX: 0,
+      targetY: 0,
+      energy: 0,
+      inside: false,
+      frame: 0,
+      lastFrame: 0,
+      listening: false,
+    };
+
+    const getDotGridProtectedAreas = () =>
+      [
+        dotGridHero.querySelector(".evidence-hero-copy"),
+        dotGridHero.querySelector(".hero-answer"),
+      ]
+        .filter(Boolean)
+        .map((node) => {
+          const heroRect = dotGridHero.getBoundingClientRect();
+          const rect = node.getBoundingClientRect();
+          return {
+            left: rect.left - heroRect.left - 34,
+            top: rect.top - heroRect.top - 26,
+            right: rect.right - heroRect.left + 34,
+            bottom: rect.bottom - heroRect.top + 26,
+          };
+        });
+
+    const isInDotGridProtectedArea = (x, y, protectedAreas) =>
+      protectedAreas.some(
+        (area) =>
+          x >= area.left &&
+          x <= area.right &&
+          y >= area.top &&
+          y <= area.bottom,
+      );
+
+    const drawDotGrid = () => {
+      const { width, height, dpr } = dotGridState;
+      if (!width || !height) return;
+
+      const context = dotGridContext;
+      const spacing = width < 720 ? 30 : 31;
+      const protectedAreas = getDotGridProtectedAreas();
+      const influenceRadius = 148;
+      const hasPointerEffect = dotGridState.energy > 0.008;
+
+      context.setTransform(dpr, 0, 0, dpr, 0, 0);
+      context.clearRect(0, 0, width, height);
+
+      for (let y = spacing / 2; y < height; y += spacing) {
+        for (let x = spacing / 2; x < width; x += spacing) {
+          const protectedArea = isInDotGridProtectedArea(x, y, protectedAreas);
+          const edgeDistance = Math.min(x, width - x, y, height - y);
+          const edgeBoost = Math.min(1, edgeDistance / 110);
+          let alpha = (0.13 + (1 - edgeBoost) * 0.09) * (protectedArea ? 0.2 : 1);
+          let offsetX = 0;
+          let offsetY = 0;
+
+          if (hasPointerEffect) {
+            const xDistance = x - dotGridState.pointerX;
+            const yDistance = y - dotGridState.pointerY;
+            const distance = Math.hypot(xDistance, yDistance);
+
+            if (distance < influenceRadius) {
+              const effect = (1 - distance / influenceRadius) ** 2 * dotGridState.energy;
+              const directionX = distance ? xDistance / distance : 0;
+              const directionY = distance ? yDistance / distance : 0;
+              alpha += effect * (protectedArea ? 0.08 : 0.28);
+              offsetX = directionX * effect * 3.4;
+              offsetY = directionY * effect * 3.4;
+            }
+          }
+
+          context.beginPath();
+          context.fillStyle = `rgba(42, 112, 166, ${Math.min(alpha, 0.48)})`;
+          context.arc(x + offsetX, y + offsetY, 1, 0, Math.PI * 2);
+          context.fill();
+        }
+      }
+    };
+
+    const stopDotGridFrame = () => {
+      if (dotGridState.frame) {
+        window.cancelAnimationFrame(dotGridState.frame);
+        dotGridState.frame = 0;
+      }
+    };
+
+    const animateDotGrid = (timestamp) => {
+      const elapsed = dotGridState.lastFrame
+        ? Math.min(timestamp - dotGridState.lastFrame, 48)
+        : 16;
+      dotGridState.lastFrame = timestamp;
+
+      if (dotGridState.inside) {
+        dotGridState.pointerX += (dotGridState.targetX - dotGridState.pointerX) * 0.22;
+        dotGridState.pointerY += (dotGridState.targetY - dotGridState.pointerY) * 0.22;
+        dotGridState.energy = 1;
+      } else {
+        dotGridState.energy = Math.max(0, dotGridState.energy - elapsed / 300);
+      }
+
+      drawDotGrid();
+
+      if (dotGridState.inside || dotGridState.energy > 0.008) {
+        dotGridState.frame = window.requestAnimationFrame(animateDotGrid);
+      } else {
+        dotGridState.frame = 0;
+        dotGridState.lastFrame = 0;
+      }
+    };
+
+    const requestDotGridFrame = () => {
+      if (!dotGridState.frame) {
+        dotGridState.frame = window.requestAnimationFrame(animateDotGrid);
+      }
+    };
+
+    const updateDotGridPointer = (event) => {
+      const rect = dotGridHero.getBoundingClientRect();
+      dotGridState.targetX = event.clientX - rect.left;
+      dotGridState.targetY = event.clientY - rect.top;
+
+      if (!dotGridState.inside) {
+        dotGridState.pointerX = dotGridState.targetX;
+        dotGridState.pointerY = dotGridState.targetY;
+      }
+
+      dotGridState.inside = true;
+      dotGridState.energy = 1;
+      requestDotGridFrame();
+    };
+
+    const leaveDotGrid = () => {
+      dotGridState.inside = false;
+      requestDotGridFrame();
+    };
+
+    const enableDotGridInteraction = () => {
+      if (dotGridState.listening) return;
+      dotGridHero.addEventListener("pointermove", updateDotGridPointer, { passive: true });
+      dotGridHero.addEventListener("pointerleave", leaveDotGrid, { passive: true });
+      dotGridState.listening = true;
+    };
+
+    const disableDotGridInteraction = () => {
+      if (!dotGridState.listening) return;
+      dotGridHero.removeEventListener("pointermove", updateDotGridPointer);
+      dotGridHero.removeEventListener("pointerleave", leaveDotGrid);
+      dotGridState.listening = false;
+      dotGridState.inside = false;
+      dotGridState.energy = 0;
+      stopDotGridFrame();
+    };
+
+    const syncDotGridMode = () => {
+      const canAnimate = dotGridFinePointer.matches && !dotGridReducedMotion.matches;
+      if (canAnimate) enableDotGridInteraction();
+      else disableDotGridInteraction();
+      drawDotGrid();
+    };
+
+    const resizeDotGrid = () => {
+      const rect = dotGridHero.getBoundingClientRect();
+      const width = Math.max(0, Math.round(rect.width));
+      const height = Math.max(0, Math.round(rect.height));
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+      if (
+        width === dotGridState.width &&
+        height === dotGridState.height &&
+        dpr === dotGridState.dpr
+      ) {
+        return;
+      }
+
+      dotGridState.width = width;
+      dotGridState.height = height;
+      dotGridState.dpr = dpr;
+      dotGridCanvas.width = Math.max(1, width * dpr);
+      dotGridCanvas.height = Math.max(1, height * dpr);
+      dotGridCanvas.style.width = `${width}px`;
+      dotGridCanvas.style.height = `${height}px`;
+      drawDotGrid();
+    };
+
+    if ("ResizeObserver" in window) {
+      const dotGridResizeObserver = new ResizeObserver(resizeDotGrid);
+      dotGridResizeObserver.observe(dotGridHero);
+    } else {
+      window.addEventListener("resize", resizeDotGrid, { passive: true });
+    }
+    dotGridFinePointer.addEventListener?.("change", syncDotGridMode);
+    dotGridReducedMotion.addEventListener?.("change", syncDotGridMode);
+    window.addEventListener("pageshow", resizeDotGrid, { passive: true });
+
+    resizeDotGrid();
+    syncDotGridMode();
+  }
+}

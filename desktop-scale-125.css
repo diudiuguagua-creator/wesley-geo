@@ -1,0 +1,808 @@
+/*
+ * Wesley GEO — desktop 125% visual density layer
+ *
+ * This is deliberately a layout/type scale, not CSS zoom or transform.  It
+ * remains outside the mobile and compact-desktop breakpoints so established
+ * 821–1180px menu and one-column safeguards continue to win unchanged.
+ */
+
+@media (min-width: 1200px) {
+  html { scroll-padding-top: 92px; }
+
+  /* Shared desktop chrome for inner/service pages. */
+  body.page-services,
+  body.service-landing,
+  body.evidence-insights,
+  body.inner-selected-fusion,
+  body.case-system {
+    --header-height: 76px;
+    padding-top: var(--header-height);
+  }
+
+  body.page-services .site-header.site-header,
+  body.service-landing .site-header.site-header,
+  body.evidence-insights .site-header.site-header,
+  body.inner-selected-fusion .site-header.site-header,
+  body.case-system .site-header.site-header {
+    height: var(--header-height);
+    min-height: var(--header-height);
+  }
+
+  body.page-services .site-header .header-inner,
+  body.service-landing .site-header .header-inner,
+  body.evidence-insights .site-header .header-inner,
+  body.inner-selected-fusion .site-header .header-inner,
+  body.case-system .site-header .header-inner {
+    height: var(--header-height);
+    min-height: var(--header-height);
+    padding: 0 44px;
+    gap: clamp(24px, 2.7vw, 48px);
+  }
+
+  body.page-services .site-header .header-inner .brand,
+  body.service-landing .site-header .header-inner .brand,
+  body.evidence-insights .site-header .header-inner .brand,
+  body.inner-selected-fusion .site-header .header-inner .brand,
+  body.case-system .site-header .header-inner .brand {
+    font-size: 20px;
+  }
+
+  body.page-services .site-header .brand-mark,
+  body.service-landing .site-header .brand-mark,
+  body.evidence-insights .site-header .brand-mark,
+  body.inner-selected-fusion .site-header .brand-mark,
+  body.case-system .site-header .brand-mark,
+  body.page-services .site-header .brand-logo,
+  body.service-landing .site-header .brand-logo,
+  body.evidence-insights .site-header .brand-logo,
+  body.inner-selected-fusion .site-header .brand-logo,
+  body.case-system .site-header .brand-logo {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+
+  body.page-services .site-header .site-nav,
+  body.service-landing .site-header .site-nav,
+  body.evidence-insights .site-header .site-nav,
+  body.inner-selected-fusion .site-header .site-nav,
+  body.case-system .site-header .site-nav {
+    min-height: var(--header-height);
+    gap: clamp(21px, 1.95vw, 32px);
+    font-size: 15px;
+  }
+
+  body.page-services .site-header .site-nav > a,
+  body.page-services .site-header .nav-services > summary,
+  body.service-landing .site-header .site-nav > a,
+  body.service-landing .site-header .nav-services > summary,
+  body.evidence-insights .site-header .site-nav > a,
+  body.evidence-insights .site-header .nav-services > summary,
+  body.inner-selected-fusion .site-header .site-nav > a,
+  body.inner-selected-fusion .site-header .nav-services > summary,
+  body.case-system .site-header .site-nav > a,
+  body.case-system .site-header .nav-services > summary {
+    min-height: var(--header-height);
+    font-size: 15px;
+  }
+
+  body.page-services .site-header .site-nav > a.button,
+  body.service-landing .site-header .site-nav > a.button,
+  body.evidence-insights .site-header .site-nav > a.button,
+  body.inner-selected-fusion .site-header .site-nav > a.button,
+  body.case-system .site-header .site-nav > a.button {
+    flex-basis: 168px;
+    width: 168px;
+    min-height: 48px;
+    padding-inline: 22px;
+    font-size: 14px;
+  }
+
+  /* Shared selected inner pages: services/cases/tools/about/sitemap/insights. */
+  body.inner-selected-fusion {
+    --shell: min(1240px, calc(100vw - 64px));
+    font-size: 18px;
+  }
+
+  body.inner-selected-fusion .section { padding-block: 90px; }
+
+  body.inner-selected-fusion .section-heading { gap: 64px; margin-bottom: 44px; }
+
+  body.inner-selected-fusion .section-heading h2,
+  body.inner-selected-fusion .split-copy h2,
+  body.inner-selected-fusion .contact-copy h2 {
+    font-size: clamp(34px, 3.5vw, 48px);
+  }
+
+  body.inner-selected-fusion .section-heading > p,
+  body.inner-selected-fusion .split-copy > p {
+    font-size: 16px;
+  }
+
+  body.inner-selected-fusion .button,
+  body.inner-selected-fusion .text-link,
+  body.inner-selected-fusion .card-link {
+    min-height: 52px;
+    padding-inline: 24px;
+    font-size: 15px;
+  }
+
+  body.inner-selected-fusion .site-footer,
+  body.service-landing .site-footer,
+  body.evidence-insights .site-footer,
+  body.case-system .site-footer {
+    min-height: 198px;
+    padding-top: 16px;
+  }
+
+  body.inner-selected-fusion .footer-column h2,
+  body.service-landing .footer-column h2,
+  body.evidence-insights .footer-column h2,
+  body.case-system .footer-column h2 { font-size: 13px; }
+
+  body.inner-selected-fusion .footer-column a,
+  body.inner-selected-fusion .footer-brand > p,
+  body.service-landing .footer-column a,
+  body.service-landing .footer-brand > p,
+  body.evidence-insights .footer-column a,
+  body.evidence-insights .footer-brand > p,
+  body.case-system .footer-column a,
+  body.case-system .footer-brand > p { font-size: 11px; }
+
+  /* Services and operating insights. */
+  body.reference-services-v8 .ref8-main,
+  body.reference-insights-v8 .ref8-main { font-size: 18px; }
+
+  body.reference-services-v8 .ref8-services-shell { max-width: 1240px; }
+  body.reference-insights-v8 .ref8-insights-shell { max-width: 1180px; }
+
+  body.reference-services-v8 .ref8-section,
+  body.reference-insights-v8 .ref8-section { padding-block: 68px; }
+
+  body.reference-services-v8 .ref8-services-hero-layout {
+    min-height: 630px;
+    padding-block: 64px;
+  }
+
+  body.reference-insights-v8 .ref8-insights-hero { padding-block: 68px 64px; }
+
+  body.reference-services-v8 .ref8-services-hero-copy h1,
+  body.reference-insights-v8 .ref8-insights-hero-copy h1 {
+    font-size: clamp(50px, 4.6vw, 64px);
+  }
+
+  body.reference-services-v8 .ref8-hero-lead { font-size: 22px; }
+
+  body.reference-services-v8 .ref8-hero-support,
+  body.reference-insights-v8 .ref8-insights-hero-copy > p:not(.ref8-kicker) {
+    font-size: 18px;
+  }
+
+  body.reference-services-v8 .ref8-centered-heading,
+  body.reference-insights-v8 .ref8-centered-heading {
+    font-size: clamp(32px, 2.55vw, 40px);
+  }
+
+  body.reference-services-v8 .ref8-button,
+  body.reference-insights-v8 .ref8-button {
+    min-height: 52px;
+    padding: 13px 24px;
+    font-size: 15px;
+  }
+
+  body.reference-services-v8 .ref8-route-card {
+    min-height: 420px;
+    padding: 36px 38px 31px;
+  }
+
+  body.reference-services-v8 .ref8-route-card h3 { font-size: 32px; }
+  body.reference-services-v8 .ref8-method-band h2 { font-size: 33px; }
+
+  /* Alibaba International and Made-in-China. */
+  body.reference-channel-v8 .rc-main { font-size: 18px; }
+  body.reference-channel-v8 .rc-shell { width: min(calc(100% - 64px), 1240px); }
+  body.reference-channel-v8 .rc-section { padding: clamp(64px, 6vw, 94px) 0; }
+
+  body.reference-channel-v8 .rc-hero-copy h1,
+  body.reference-channel-v8 .rc-mic-hero-copy h1 {
+    font-size: clamp(50px, 4.55vw, 66px);
+  }
+
+  body.reference-channel-v8 .rc-hero-lead { font-size: 18px; }
+
+  body.reference-channel-v8 .rc-centered-heading h2,
+  body.reference-channel-v8 .rc-process-heading h2,
+  body.reference-channel-v8 .rc-faq-section > .rc-shell > h2,
+  body.reference-channel-v8 .rc-mic-scope h2,
+  body.reference-channel-v8 .rc-responsibility > .rc-shell > h2 {
+    font-size: clamp(32px, 2.7vw, 42px);
+  }
+
+  body.reference-channel-v8 .rc-workbench h2,
+  body.reference-channel-v8 .rc-cycle-card h2 { font-size: 28px; }
+  body.reference-channel-v8 .rc-step-line h3 { font-size: 20px; }
+  body.reference-channel-v8 .rc-step-line > li { padding-block: 28px; }
+
+  /* Independent-site SEO / GEO page restores the deliberately reduced desktop rhythm. */
+  body.service-web.reference-ui-v8 {
+    --shell: min(1240px, calc(100vw - 64px));
+    font-size: 18px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-page { font-size: 18px; }
+  body.service-web.reference-ui-v8 .rweb-hero { padding: 30px 0 34px; }
+
+  body.service-web.reference-ui-v8 .rweb-hero-grid {
+    min-height: 430px;
+    gap: 22px;
+  }
+
+  body.service-web.reference-ui-v8 .rweb-hero h1 {
+    font-size: clamp(45px, 3.55vw, 55px);
+  }
+
+  body.service-web.reference-ui-v8 .rweb-relations { padding: 52px 0 40px; }
+  body.service-web.reference-ui-v8 .rweb-heading-row { gap: 42px; margin-bottom: 22px; }
+
+  body.service-web.reference-ui-v8 .rweb-heading-row h2,
+  body.service-web.reference-ui-v8 .rweb-relations > .shell > h2 {
+    font-size: clamp(28px, 2.4vw, 37px);
+  }
+
+  body.service-web.reference-ui-v8 .rweb-issues { padding: 38px 0 42px; }
+  body.service-web.reference-ui-v8 .rweb-deliverables,
+  body.service-web.reference-ui-v8 .rweb-process { padding: 46px 0 50px; }
+  body.service-web.reference-ui-v8 .rweb-process-list li {
+    min-height: 170px;
+    padding: 20px 16px 18px;
+  }
+  body.service-web.reference-ui-v8 .rweb-boundaries { padding: 50px 0 54px; }
+  body.service-web.reference-ui-v8 .rweb-tools { padding: 40px 0 42px; }
+  body.service-web.reference-ui-v8 .rweb-faq-cta { padding: 48px 0 52px; }
+
+  /* Cases, tools and sitemap. */
+  body.page-cases .case-overview-hero h1,
+  body.case-detail .case-hero-copy h1 {
+    font-size: clamp(46px, 4.7vw, 62px);
+  }
+
+  body.page-cases .case-showcase-copy h3 { font-size: clamp(31px, 3.35vw, 44px); }
+
+  body.case-detail .case-content-section > h2,
+  body.case-detail .case-related > h2 { font-size: clamp(32px, 3.6vw, 42px); }
+
+  body.page-cases .case-showcase-copy > p,
+  body.case-detail .case-article-body,
+  body.case-detail .case-content-section { font-size: 16px; }
+
+  body.page-tools .tools-hero { padding-bottom: 92px; }
+  body.page-tools .tools-hero-grid { gap: 88px; }
+  body.page-tools .tool-preview-card { min-height: 340px; padding: 34px; }
+  body.page-tools .tool-preview-card h3 { font-size: 26px; }
+  body.page-tools .tool-library-empty { min-height: 500px; }
+
+  body.page-sitemap .simple-hero { padding-block: 60px; }
+  body.page-sitemap .simple-hero h1 { font-size: clamp(40px, 3.9vw, 54px); }
+  body.page-sitemap .sitemap-group { padding: 30px; }
+
+  /* Unfused utility pages remain readable at the same desktop density. */
+  body:not(.home-selected-fusion):not(.inner-selected-fusion):not(.service-landing):not(.case-system) {
+    font-size: 18px;
+  }
+
+  body:not(.home-selected-fusion):not(.inner-selected-fusion):not(.service-landing):not(.case-system) .page-hero,
+  body:not(.home-selected-fusion):not(.inner-selected-fusion):not(.service-landing):not(.case-system) .simple-hero {
+    padding-block: 76px;
+  }
+
+  body:not(.home-selected-fusion):not(.inner-selected-fusion):not(.service-landing):not(.case-system) .page-hero h1,
+  body:not(.home-selected-fusion):not(.inner-selected-fusion):not(.service-landing):not(.case-system) .simple-hero h1 {
+    font-size: clamp(42px, 4.1vw, 58px);
+  }
+}
+
+/* The homepage has a separate safe transition because its title is intentionally locked to two lines. */
+@media (min-width: 1051px) and (max-width: 1279px) {
+  body.home-selected-fusion .home-hero {
+    min-height: 500px;
+    padding: 50px 0 44px;
+  }
+
+  body.home-selected-fusion .home-hero-grid { min-height: 406px; gap: 42px; }
+  body.home-selected-fusion .display-title { font-size: clamp(48px, 4.25vw, 56px); }
+  body.home-selected-fusion .evidence-hero-copy .lead { margin-top: 20px; font-size: 15px; }
+  body.home-selected-fusion .button,
+  body.home-selected-fusion .text-link { min-height: 48px; font-size: 15px; }
+  body.home-selected-fusion .hero-answer { padding: 28px 30px 25px; }
+  body.home-selected-fusion .hero-answer h2 { font-size: 27px; }
+  body.home-selected-fusion .hero-answer dl div {
+    grid-template-columns: 82px minmax(0, 1fr);
+    gap: 11px;
+    padding-block: 8px;
+    font-size: 12px;
+  }
+  body.home-selected-fusion .signal-strip,
+  body.home-selected-fusion .signal-inner { min-height: 74px; }
+  body.home-selected-fusion .signal-inner p { font-size: 16px; }
+}
+
+@media (min-width: 1280px) {
+  body.home-selected-fusion {
+    --header-height: 82px;
+    padding-top: var(--header-height);
+    font-size: 20px;
+  }
+
+  body.home-selected-fusion .site-header.site-header,
+  body.home-selected-fusion .site-header .header-inner {
+    height: var(--header-height);
+    min-height: var(--header-height);
+  }
+
+  body.home-selected-fusion .site-header .header-inner {
+    width: min(1320px, calc(100% - 64px));
+    padding: 0 4px;
+    gap: 38px;
+  }
+
+  body.home-selected-fusion .brand { gap: 12px; font-size: 22px; }
+  body.home-selected-fusion .brand-logo { width: 42px; height: 42px; flex-basis: 42px; }
+  body.home-selected-fusion .site-header .site-nav { min-height: var(--header-height); gap: 30px; }
+
+  body.home-selected-fusion .site-header .site-nav > a,
+  body.home-selected-fusion .site-header .nav-services > summary {
+    min-height: var(--header-height);
+    font-size: 16px;
+  }
+
+  body.home-selected-fusion .site-header .site-nav > a.button,
+  body.home-selected-fusion .site-header .site-nav > a.button[aria-current="page"] {
+    flex-basis: 184px;
+    width: 184px;
+    min-height: 52px;
+    padding-inline: 24px;
+    font-size: 15px;
+  }
+
+  body.home-selected-fusion .home-hero { min-height: 556px; padding: 55px 0 48px; }
+  body.home-selected-fusion .home-hero-grid { min-height: 453px; gap: 56px; }
+  body.home-selected-fusion .display-title { font-size: clamp(57px, 4.45vw, 64px); }
+
+  body.home-selected-fusion .evidence-hero-copy .lead {
+    margin-top: 22px;
+    max-width: 720px;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  body.home-selected-fusion .hero-actions { gap: 26px; margin-top: 25px; }
+  body.home-selected-fusion .button,
+  body.home-selected-fusion .text-link { min-height: 52px; padding-inline: 25px; font-size: 16px; }
+
+  body.home-selected-fusion .hero-answer { padding: 32px 34px 28px; border-radius: 18px; }
+  body.home-selected-fusion .hero-answer h2 { margin-bottom: 10px; font-size: 30px; }
+  body.home-selected-fusion .hero-answer > p:not(.answer-label):not(.answer-boundary) {
+    margin-bottom: 13px;
+    font-size: 15px;
+  }
+  body.home-selected-fusion .hero-answer dl div {
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 12px;
+    padding-block: 9px;
+    font-size: 14px;
+  }
+  body.home-selected-fusion .hero-answer .answer-boundary { margin-top: 10px; font-size: 12px; }
+
+  body.home-selected-fusion .signal-strip,
+  body.home-selected-fusion .signal-inner { min-height: 82px; }
+  body.home-selected-fusion .signal-inner p { font-size: 18px; }
+  body.home-selected-fusion .signal-inner ul { gap: 36px; font-size: 13px; }
+
+  body.home-selected-fusion #services { padding: 26px 0 28px; }
+  body.home-selected-fusion .services-intro { margin-bottom: 31px; }
+  body.home-selected-fusion .services-intro h2 { font-size: 24px; }
+  body.home-selected-fusion .services-intro p { font-size: 14px; }
+  body.home-selected-fusion .business-tracks { gap: 84px; }
+  body.home-selected-fusion .business-track { padding-left: 50px; }
+  body.home-selected-fusion .business-track h3 { font-size: 34px; }
+  body.home-selected-fusion .business-track header > p:last-child,
+  body.home-selected-fusion .track-output-list li,
+  body.home-selected-fusion .track-contract div { font-size: 14px; }
+  body.home-selected-fusion .track-output-list li,
+  body.home-selected-fusion .track-contract div { min-height: 41px; padding-block: 7px; }
+  body.home-selected-fusion .track-contract div { grid-template-columns: 80px minmax(0, 1fr); gap: 12px; }
+
+  body.home-selected-fusion #diagnosis { padding: 26px 0 29px; }
+  body.home-selected-fusion .diagnosis-heading h2 { font-size: 29px; }
+  body.home-selected-fusion .diagnosis-start { min-height: 36px; padding-inline: 14px; font-size: 12px; }
+  body.home-selected-fusion .diagnosis-paths { min-height: 250px; }
+  body.home-selected-fusion .diagnosis-lane { padding: 62px 38px 0; }
+  body.home-selected-fusion .diagnosis-lane h3 { font-size: 20px; }
+  body.home-selected-fusion .diagnosis-lane ul { gap: 14px; }
+  body.home-selected-fusion .diagnosis-lane li { padding-left: 20px; font-size: 13px; }
+
+  body.home-selected-fusion #method { padding: 56px 0 58px; }
+  body.home-selected-fusion #method .section-heading { gap: 62px; margin-bottom: 23px; }
+  body.home-selected-fusion #method .section-heading h2 { font-size: 39px; }
+  body.home-selected-fusion #method .section-heading > p { font-size: 14px; }
+  body.home-selected-fusion .work-cycle-contract .cycle-step {
+    grid-template-columns: 94px 184px minmax(0, 1fr);
+    gap: 22px;
+    min-height: 68px;
+    padding-block: 10px;
+  }
+  body.home-selected-fusion .cycle-step > h3 { font-size: 25px; }
+  body.home-selected-fusion .step-contract { gap: 36px; }
+  body.home-selected-fusion .step-contract p {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 10px;
+    font-size: 13px;
+  }
+  body.home-selected-fusion .responsibility-band { margin-top: 21px; padding-block: 20px; }
+  body.home-selected-fusion .responsibility-band article { padding-inline: 30px; }
+  body.home-selected-fusion .responsibility-band h3 { font-size: 21px; }
+  body.home-selected-fusion .responsibility-band p { font-size: 12px; }
+
+  body.home-selected-fusion #evidence { padding: 26px 0 28px; }
+  body.home-selected-fusion .proof-copy h2 { font-size: 36px; }
+  body.home-selected-fusion .proof-intro,
+  body.home-selected-fusion .proof-question-list li { font-size: 14px; }
+  body.home-selected-fusion .proof-copy > h3 { font-size: 22px; }
+  body.home-selected-fusion .operations-ledger { min-height: 360px; }
+  body.home-selected-fusion .ledger-context h3 { font-size: 26px; }
+  body.home-selected-fusion .ledger-rows strong { font-size: 12px; }
+
+  body.home-selected-fusion #resources { padding: 61px 0; }
+  body.home-selected-fusion .resource-heading h2 { font-size: 31px; }
+  body.home-selected-fusion .resource-column > h3 { font-size: 24px; }
+  body.home-selected-fusion .resource-column > p { font-size: 14px; }
+  body.home-selected-fusion .resource-tool { min-height: 262px; padding: 30px 33px; }
+  body.home-selected-fusion .resource-tool > b { font-size: 30px; }
+  body.home-selected-fusion .resource-notes a { min-height: 68px; }
+  body.home-selected-fusion .resource-notes h4 { font-size: 15px; }
+
+  body.home-selected-fusion #about { padding: 28px 0; }
+  body.home-selected-fusion .about-intro h2,
+  body.home-selected-fusion .faq-main .section-heading h2 { font-size: 33px; }
+  body.home-selected-fusion .trust-grid article { padding: 29px 28px; }
+  body.home-selected-fusion .trust-grid h3 { font-size: 17px; }
+  body.home-selected-fusion .trust-grid p { font-size: 12px; }
+
+  body.home-selected-fusion #faq { padding: 24px 0 26px; }
+  body.home-selected-fusion .faq-list summary {
+    min-height: 49px;
+    padding: 11px 48px 11px 18px;
+    font-size: 15px;
+  }
+  body.home-selected-fusion .faq-list p { padding: 0 18px 14px; font-size: 13px; }
+  body.home-selected-fusion .faq-contact { min-height: 205px; padding: 32px; }
+
+  body.home-selected-fusion .contact-panel.evidence-contact { min-height: 298px; padding: 43px 0; }
+  body.home-selected-fusion .contact-copy h2 { font-size: 36px; }
+  body.home-selected-fusion .contact-copy > p:not(.section-kicker) { font-size: 14px; }
+
+  body.home-selected-fusion .site-footer { min-height: 205px; padding: 18px 0 8px; }
+  body.home-selected-fusion .footer-grid { gap: 42px; padding-bottom: 6px; }
+  body.home-selected-fusion .footer-brand > p,
+  body.home-selected-fusion .footer-column a,
+  body.home-selected-fusion .footer-column button {
+    min-height: 23px;
+    padding-block: 2px;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+  body.home-selected-fusion .footer-column h2 { margin-bottom: 7px; font-size: 14px; }
+  body.home-selected-fusion .footer-bottom { min-height: 32px; margin-top: 6px; padding-top: 7px; font-size: 11px; }
+}
+
+/*
+ * Zoom-aware desktop tiers.
+ *
+ * A 1280px / 1440px desktop window at the user's 125% Chrome zoom exposes
+ * roughly 1024px / 1152px of CSS width.  Keep the compact layout safeguards,
+ * but make the visual-density layer available at those real desktop widths.
+ * These are not phone rules: they deliberately start at 960px.
+ */
+@media (min-width: 960px) and (max-width: 1050px) {
+  /* Keep the existing compact navigation; make the content itself visibly denser. */
+  body.home-selected-fusion { font-size: 17px; }
+  body.home-selected-fusion .home-hero { min-height: 486px; padding: 48px 0 42px; }
+  body.home-selected-fusion .home-hero-grid { min-height: 396px; gap: 32px; }
+  body.home-selected-fusion .display-title { font-size: clamp(45px, 4.65vw, 48px); }
+  body.home-selected-fusion .evidence-hero-copy .lead { margin-top: 19px; font-size: 15px; }
+  body.home-selected-fusion .hero-actions { margin-top: 22px; }
+  body.home-selected-fusion .button,
+  body.home-selected-fusion .text-link { min-height: 48px; font-size: 15px; }
+  body.home-selected-fusion .hero-answer { padding: 27px 28px 24px; }
+  body.home-selected-fusion .hero-answer h2 { font-size: 27px; }
+  body.home-selected-fusion .hero-answer dl div {
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: 10px;
+    padding-block: 8px;
+    font-size: 12px;
+  }
+  body.home-selected-fusion .signal-strip,
+  body.home-selected-fusion .signal-inner { min-height: 74px; }
+  body.home-selected-fusion .signal-inner p { font-size: 16px; }
+  body.home-selected-fusion #method { padding-block: 48px 50px; }
+  body.home-selected-fusion #method .section-heading h2 { font-size: 33px; }
+  body.home-selected-fusion .proof-copy h2 { font-size: 31px; }
+  body.home-selected-fusion .resource-heading h2,
+  body.home-selected-fusion .about-intro h2,
+  body.home-selected-fusion .faq-main .section-heading h2 { font-size: 29px; }
+  body.home-selected-fusion .site-footer { min-height: 180px; }
+}
+
+@media (min-width: 1051px) and (max-width: 1279px) {
+  /* The safe middle tier: full navigation stays visible, title remains two lines. */
+  body.home-selected-fusion {
+    --header-height: 76px;
+    padding-top: var(--header-height);
+    font-size: 18px;
+  }
+
+  body.home-selected-fusion .site-header.site-header,
+  body.home-selected-fusion .site-header .header-inner {
+    height: var(--header-height);
+    min-height: var(--header-height);
+  }
+
+  body.home-selected-fusion .site-header .header-inner { padding-block: 0; }
+  body.home-selected-fusion .site-header .header-inner .brand { font-size: 20px; }
+  body.home-selected-fusion .brand-logo { width: 38px; height: 38px; flex-basis: 38px; }
+
+  body.home-selected-fusion .site-header .site-nav > a,
+  body.home-selected-fusion .site-header .nav-services > summary {
+    min-height: var(--header-height);
+    font-size: 13px;
+  }
+
+  body.home-selected-fusion .site-header .site-nav > a.button,
+  body.home-selected-fusion .site-header .site-nav > a.button[aria-current="page"] {
+    min-height: 48px;
+    font-size: 14px;
+  }
+
+  body.home-selected-fusion .home-hero { min-height: clamp(510px, 47vw, 540px); }
+  body.home-selected-fusion .home-hero-grid { min-height: 430px; }
+  body.home-selected-fusion .display-title { font-size: clamp(48px, 4.7vw, 54px); }
+  body.home-selected-fusion .evidence-hero-copy .lead { font-size: 16px; }
+  body.home-selected-fusion .hero-actions { margin-top: 23px; }
+  body.home-selected-fusion .hero-answer { padding: 30px 31px 26px; }
+  body.home-selected-fusion .hero-answer h2 { font-size: 28px; }
+  body.home-selected-fusion .hero-answer dl div {
+    grid-template-columns: 84px minmax(0, 1fr);
+    font-size: 13px;
+  }
+  body.home-selected-fusion .signal-strip,
+  body.home-selected-fusion .signal-inner { min-height: clamp(76px, 7.1vw, 82px); }
+  body.home-selected-fusion .signal-inner p { font-size: 17px; }
+  body.home-selected-fusion #method { padding-block: 52px 54px; }
+  body.home-selected-fusion #method .section-heading h2 { font-size: 36px; }
+  body.home-selected-fusion .proof-copy h2 { font-size: 33px; }
+  body.home-selected-fusion .resource-heading h2,
+  body.home-selected-fusion .about-intro h2,
+  body.home-selected-fusion .faq-main .section-heading h2 { font-size: 31px; }
+  body.home-selected-fusion .site-footer { min-height: 192px; }
+}
+
+/*
+ * 125%-zoom desktop middle tier for inner pages.  1051px is the smallest
+ * CSS width where the full navigation can safely stay on one line; below it
+ * the existing compact navigation deliberately remains in control.
+ */
+@media (min-width: 1051px) and (max-width: 1199px) {
+  html { scroll-padding-top: 84px; }
+
+  body:not(.home-selected-fusion) { font-size: 17px; }
+
+  body:not(.home-selected-fusion) .site-header.site-header,
+  body:not(.home-selected-fusion) .site-header .header-inner {
+    min-height: clamp(72px, 6.6vw, 76px);
+    height: clamp(72px, 6.6vw, 76px);
+  }
+
+  body:not(.home-selected-fusion) .site-header .header-inner {
+    padding-block: 0;
+    gap: 18px;
+  }
+
+  body:not(.home-selected-fusion) .site-header .header-inner .brand {
+    font-size: clamp(19px, 1.74vw, 20px);
+  }
+  body:not(.home-selected-fusion) .site-header .brand-mark,
+  body:not(.home-selected-fusion) .site-header .brand-logo {
+    width: clamp(36px, 3.3vw, 38px);
+    height: clamp(36px, 3.3vw, 38px);
+    flex-basis: clamp(36px, 3.3vw, 38px);
+  }
+
+  body:not(.home-selected-fusion) .site-header .site-nav {
+    min-height: clamp(72px, 6.6vw, 76px);
+    gap: clamp(14px, 1.45vw, 18px);
+    font-size: 13px;
+  }
+
+  body:not(.home-selected-fusion) .site-header .site-nav > a,
+  body:not(.home-selected-fusion) .site-header .nav-services > summary {
+    min-height: clamp(72px, 6.6vw, 76px);
+    font-size: 13px;
+  }
+
+  body:not(.home-selected-fusion) .site-header .site-nav > a.button {
+    min-height: clamp(44px, 4.2vw, 48px);
+    padding-inline: 18px;
+    font-size: 13px;
+  }
+
+  body.inner-selected-fusion,
+  body.service-landing,
+  body.case-system {
+    --header-height: clamp(72px, 6.6vw, 76px);
+    padding-top: var(--header-height);
+  }
+
+  body.inner-selected-fusion { --shell: min(1240px, calc(100vw - 56px)); }
+
+  body.inner-selected-fusion .section { padding-block: 82px; }
+  body.inner-selected-fusion .section-heading { gap: 46px; margin-bottom: 38px; }
+  body.inner-selected-fusion .section-heading h2,
+  body.inner-selected-fusion .split-copy h2,
+  body.inner-selected-fusion .contact-copy h2 { font-size: clamp(31px, 3vw, 38px); }
+  body.inner-selected-fusion .section-heading > p,
+  body.inner-selected-fusion .split-copy > p { font-size: 15px; }
+  body.inner-selected-fusion .button,
+  body.inner-selected-fusion .text-link,
+  body.inner-selected-fusion .card-link { min-height: 48px; padding-inline: 22px; font-size: 15px; }
+  body.inner-selected-fusion .site-footer { min-height: 190px; }
+
+  body.reference-services-v8 .ref8-main,
+  body.reference-insights-v8 .ref8-main,
+  body.reference-channel-v8 .rc-main { font-size: 17px; }
+
+  body.reference-services-v8 .ref8-services-hero-layout { min-height: 560px; padding-block: 52px; }
+  body.reference-insights-v8 .ref8-insights-hero { padding-block: 58px 54px; }
+  body.reference-services-v8 .ref8-services-hero-copy h1,
+  body.reference-insights-v8 .ref8-insights-hero-copy h1 { font-size: clamp(46px, 4.35vw, 54px); }
+  body.reference-services-v8 .ref8-hero-lead { font-size: 21px; }
+  body.reference-services-v8 .ref8-hero-support,
+  body.reference-insights-v8 .ref8-insights-hero-copy > p:not(.ref8-kicker) { font-size: 17px; }
+  body.reference-services-v8 .ref8-centered-heading,
+  body.reference-insights-v8 .ref8-centered-heading { font-size: clamp(30px, 2.4vw, 34px); }
+  body.reference-services-v8 .ref8-button,
+  body.reference-insights-v8 .ref8-button { min-height: 48px; padding: 12px 22px; font-size: 14px; }
+  body.reference-services-v8 .ref8-route-card { padding: 26px 28px 23px; }
+  body.reference-services-v8 .ref8-route-card h3 { font-size: 25px; }
+  body.reference-services-v8 .ref8-method-band h2 { font-size: 29px; }
+
+  body.reference-channel-v8 .rc-shell { width: min(calc(100% - 56px), 1160px); }
+  body.reference-channel-v8 .rc-section { padding: clamp(56px, 5.4vw, 70px) 0; }
+  body.reference-channel-v8 .rc-hero-copy h1,
+  body.reference-channel-v8 .rc-mic-hero-copy h1 { font-size: clamp(46px, 4.2vw, 54px); }
+  body.reference-channel-v8 .rc-hero-lead { font-size: 17px; }
+  body.reference-channel-v8 .rc-centered-heading h2,
+  body.reference-channel-v8 .rc-process-heading h2,
+  body.reference-channel-v8 .rc-faq-section > .rc-shell > h2,
+  body.reference-channel-v8 .rc-mic-scope h2,
+  body.reference-channel-v8 .rc-responsibility > .rc-shell > h2 { font-size: clamp(30px, 2.45vw, 36px); }
+  body.reference-channel-v8 .rc-workbench h2,
+  body.reference-channel-v8 .rc-cycle-card h2 { font-size: 26px; }
+
+  body.service-web.reference-ui-v8 { font-size: 17px; }
+  body.service-web.reference-ui-v8 .rweb-page { font-size: 17px; }
+  body.service-web.reference-ui-v8 .rweb-hero { padding: 26px 0 30px; }
+  body.service-web.reference-ui-v8 .rweb-hero-grid { min-height: 410px; gap: 20px; }
+  body.service-web.reference-ui-v8 .rweb-hero h1 { font-size: clamp(42px, 3.25vw, 49px); }
+  body.service-web.reference-ui-v8 .rweb-relations { padding: 46px 0 36px; }
+  body.service-web.reference-ui-v8 .rweb-issues { padding: 34px 0 36px; }
+  body.service-web.reference-ui-v8 .rweb-deliverables,
+  body.service-web.reference-ui-v8 .rweb-process { padding: 38px 0 40px; }
+  body.service-web.reference-ui-v8 .rweb-process-list li { min-height: 160px; padding: 18px 15px 16px; }
+  body.service-web.reference-ui-v8 .rweb-boundaries { padding: 42px 0 44px; }
+  body.service-web.reference-ui-v8 .rweb-tools { padding: 34px 0 36px; }
+  body.service-web.reference-ui-v8 .rweb-faq-cta { padding: 38px 0 42px; }
+
+  body.page-cases .case-overview-hero h1,
+  body.case-detail .case-hero-copy h1 { font-size: clamp(42px, 3.9vw, 50px); }
+  body.page-cases .case-showcase-copy h3 { font-size: clamp(28px, 2.85vw, 34px); }
+  body.case-detail .case-content-section > h2,
+  body.case-detail .case-related > h2 { font-size: clamp(30px, 3.3vw, 37px); }
+  body.page-cases .case-showcase-copy > p,
+  body.case-detail .case-article-body,
+  body.case-detail .case-content-section { font-size: 15px; }
+
+  body.page-tools .tools-hero { padding-bottom: 76px; }
+  body.page-tools .tools-hero-grid { gap: 58px; }
+  body.page-tools .tool-preview-card { min-height: 306px; padding: 28px; }
+  body.page-tools .tool-preview-card h3 { font-size: 24px; }
+  body.page-tools .tool-library-empty { min-height: 460px; }
+  body.page-sitemap .simple-hero { padding-block: 54px; }
+  body.page-sitemap .simple-hero h1 { font-size: clamp(38px, 3.55vw, 48px); }
+  body.page-sitemap .sitemap-group { padding: 26px; }
+
+  body:not(.home-selected-fusion):not(.inner-selected-fusion):not(.service-landing):not(.case-system) .page-hero,
+  body:not(.home-selected-fusion):not(.inner-selected-fusion):not(.service-landing):not(.case-system) .simple-hero { padding-block: 64px; }
+  body:not(.home-selected-fusion):not(.inner-selected-fusion):not(.service-landing):not(.case-system) .page-hero h1,
+  body:not(.home-selected-fusion):not(.inner-selected-fusion):not(.service-landing):not(.case-system) .simple-hero h1 { font-size: clamp(40px, 3.9vw, 48px); }
+}
+
+/* Exact selector required to win over the shared home-header brand rule. */
+@media (min-width: 1280px) {
+  body.home-selected-fusion .site-header .header-inner .brand { font-size: 22px; }
+}
+
+/*
+ * Desktop content width, shared by the homepage and every core inner page.
+ * Keep the existing 125% typography and component layouts above. Only the
+ * outer content/header/footer rails change; article reading measures and
+ * all mobile/tablet rules remain owned by their original stylesheets.
+ */
+@media (min-width: 1051px) and (max-width: 1199px) {
+  body.home-selected-fusion .home-hero-grid { gap: 32px; }
+}
+
+@media (min-width: 1051px) {
+  :root {
+    --desktop-content-max: 1360px;
+    --desktop-shell: min(var(--desktop-content-max), calc(100% - 64px));
+  }
+
+  /* Percentage width excludes the scrollbar from the available space. */
+  body,
+  body.inner-selected-fusion,
+  body.service-web.reference-ui-v8 {
+    --shell: var(--desktop-shell);
+  }
+
+  body.home-selected-fusion .shell {
+    width: var(--desktop-shell);
+  }
+
+  body.reference-services-v8 .ref8-services-shell,
+  body.reference-insights-v8 .ref8-insights-shell {
+    width: var(--desktop-shell);
+    max-width: var(--desktop-content-max);
+  }
+
+  /* MIC sections have explicit, more specific widths in their source CSS. */
+  body.reference-channel-v8 .rc-shell,
+  body.reference-channel-v8 :is(
+    .rc-mic-hero,
+    .rc-mic-scope,
+    .rc-mic-issues,
+    .rc-mic-process,
+    .rc-mic-collaboration,
+    .rc-responsibility,
+    .rc-mic-faq
+  ) .rc-shell {
+    width: var(--desktop-shell);
+  }
+
+  body .site-header .header-inner,
+  body:is(
+    .home-selected-fusion,
+    .inner-selected-fusion,
+    .page-services,
+    .service-landing,
+    .evidence-insights,
+    .case-system,
+    .page-method
+  ) .site-header .header-inner {
+    width: var(--desktop-shell);
+    max-width: var(--desktop-content-max);
+    padding-inline: 0;
+  }
+
+  body .site-footer .shell,
+  body:is(
+    .home-selected-fusion,
+    .inner-selected-fusion,
+    .page-services,
+    .service-landing,
+    .evidence-insights,
+    .case-system,
+    .page-method
+  ) .site-footer .shell {
+    width: var(--desktop-shell);
+  }
+}

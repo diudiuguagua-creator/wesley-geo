@@ -2030,3 +2030,65 @@ body.reference-channel-v8.service-ali #faq .faq-list.rc-faq-list details:last-ch
   border-bottom: 1px solid var(--rc-line);
   border-radius: 0 0 8px 8px;
 }
+
+/* Narrow desktop / 125% equivalent viewport only (821-1050px).
+   Use readable three-column rows before the six-step/six-service desktop
+   layouts become cramped. Keep source order, copy, assets and <=820px rules. */
+@media (min-width: 821px) and (max-width: 1050px) {
+  body.reference-channel-v8.service-ali .rc-step-line-six {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 22px;
+  }
+
+  body.reference-channel-v8.service-ali .rc-step-line-six > li {
+    padding-inline: 16px;
+  }
+
+  body.reference-channel-v8.service-ali
+    .rc-step-line-six
+    > li:nth-child(3n)
+    > .ri-arrow-right-line {
+    display: none;
+  }
+
+  /* Give the MIC title a usable text column while retaining the existing photo
+     and crop rules. The smaller fluid type prevents single-character tails. */
+  body.reference-channel-v8.service-mic .rc-mic-hero-grid {
+    grid-template-columns: minmax(340px, 0.9fr) minmax(0, 1.1fr);
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-hero-copy {
+    padding: 36px 20px 36px 8px;
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-hero-copy h1 {
+    font-size: clamp(36px, 4vw, 42px);
+  }
+
+  body.reference-channel-v8.service-mic .rc-mic-tagline {
+    margin-top: 22px;
+    font-size: clamp(17px, 1.85vw, 20px);
+    line-height: 1.6;
+  }
+
+  body.reference-channel-v8.service-mic .rc-service-grid-six {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  body.reference-channel-v8.service-mic .rc-service-grid-six article {
+    min-height: 164px;
+    padding: 22px 18px;
+  }
+
+  body.reference-channel-v8.service-mic
+    .rc-service-grid-six
+    article:nth-child(3n) {
+    border-right: 0;
+  }
+
+  body.reference-channel-v8.service-mic
+    .rc-service-grid-six
+    article:nth-child(-n + 3) {
+    border-bottom: 1px solid var(--rc-line);
+  }
+}
